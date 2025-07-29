@@ -20,9 +20,9 @@ export function AboutSection() {
       description: 'La mayor capacidad disponible en Venezuela'
     },
     {
-      icon: '🇩🇪',
-      title: 'Marcas Premium Alemanas y Americanas',
-      description: 'Liebherr, Grove, Manitowoc, Demag'
+      icon: '🛰️',
+      title: 'Sistema Integrado de Monitoreo Satelital',
+      description: 'Sistema integrado de monitoreo Satelital y estudio de ruta bajo los lineamientos de la INTT (Instituto Nacional de Transporte terrestre)'
     },
     {
       icon: '✅',
