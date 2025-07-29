@@ -1,5 +1,4 @@
 
-
 'use client'
 
 import { useState } from 'react'
@@ -33,28 +32,56 @@ export function ContactSection() {
       title: 'Teléfonos',
       details: ['+58 414-343-2882 (Principal)', '+58 412-159-7792 (Alternativo)'],
       action: 'Llamar Ahora',
-      actionUrl: 'tel:+584143432882'
+      actionUrl: 'tel:+584143432882',
+      bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+      iconBg: '#FFC107',
+      iconColor: '#1E3A8A',
+      textColor: 'white',
+      buttonBg: '#FFC107',
+      buttonText: '#1E3A8A',
+      borderColor: '#FFC107'
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp 24/7',
       details: ['Atención inmediata', 'Cotizaciones rápidas'],
       action: 'Enviar WhatsApp',
-      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0'
+      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0',
+      bgGradient: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+      iconBg: '#1E3A8A',
+      iconColor: '#FFC107',
+      textColor: '#1E3A8A',
+      buttonBg: '#1E3A8A',
+      buttonText: '#FFC107',
+      borderColor: '#1E3A8A'
     },
     {
       icon: Mail,
       title: 'Correos Electrónicos',
       details: ['info@gruasequiser.net', 'direccionmercadeo@gruasequiser.net'],
       action: 'Enviar Email',
-      actionUrl: 'mailto:info@gruasequiser.net'
+      actionUrl: 'mailto:info@gruasequiser.net',
+      bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+      iconBg: '#FFC107',
+      iconColor: '#1E3A8A',
+      textColor: 'white',
+      buttonBg: '#FFC107',
+      buttonText: '#1E3A8A',
+      borderColor: '#FFC107'
     },
     {
       icon: MapPin,
       title: 'Ubicación',
       details: ['Autopista Puerto Cabello Morón', 'Sector La Paragüita, Morón, Carabobo'],
       action: 'Ver Mapa',
-      actionUrl: '#mapa'
+      actionUrl: 'https://maps.google.com/?q=Autopista+Puerto+Cabello+Moron+Sector+La+Paraguita+Moron+Carabobo',
+      bgGradient: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+      iconBg: '#1E3A8A',
+      iconColor: '#FFC107',
+      textColor: '#1E3A8A',
+      buttonBg: '#1E3A8A',
+      buttonText: '#FFC107',
+      borderColor: '#1E3A8A'
     }
   ]
 
@@ -130,310 +157,190 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-equiser-blue">Contacto</span> Directo
+            <span style={{ color: '#1E3A8A' }}>Contacto</span> Directo
           </h2>
-          {/* CORRECCIÓN: Cambiar texto a azul para mejor visibilidad */}
-          <p className="text-xl max-w-3xl mx-auto font-bold text-equiser-blue">
+          <p className="text-xl max-w-3xl mx-auto font-bold" style={{ color: '#1E3A8A' }}>
             Nuestro equipo está disponible 24/7 para brindarte la mejor solución para tu proyecto de izamiento o transporte pesado.
           </p>
+          <div className="w-32 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg, #FFC107, #FFD700)' }}></div>
 
-          {/* NUEVA SECCIÓN: Chat Bubbles con Colores Corporativos */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-2xl border border-gray-200">
-              <h3 className="text-2xl font-bold text-equiser-blue text-center mb-8 flex items-center justify-center gap-3">
-                <span className="text-3xl">💬</span>
-                Conversación Típica Con Nuestros Clientes
-                <span className="text-3xl">💬</span>
-              </h3>
-              
-              <div className="space-y-6">
-                {/* Chat Bubble - Cliente (Azul Corporativo) */}
-                <motion.div 
-                  className="flex justify-end"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <div 
-                    className="max-w-[75%] relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                      color: 'white',
-                      padding: '20px 25px',
-                      borderRadius: '25px 25px 5px 25px',
-                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)',
-                      border: '2px solid rgba(255, 193, 7, 0.2)'
-                    }}
-                  >
-                    <p className="text-base font-medium text-justify leading-relaxed">
-                      "Necesito una cotización urgente para el izamiento de equipos industriales de 500 toneladas. ¿Pueden ayudarme?"
-                    </p>
-                    {/* Flecha del globo */}
-                    <div 
-                      className="absolute bottom-[-8px] right-5"
-                      style={{
-                        width: 0,
-                        height: 0,
-                        borderLeft: '10px solid transparent',
-                        borderRight: '10px solid transparent',
-                        borderTop: '10px solid #1E3A8A'
-                      }}
-                    ></div>
-                  </div>
-                </motion.div>
-
-                {/* Chat Bubble - Equiser (Amarillo Corporativo) */}
-                <motion.div 
-                  className="flex justify-start"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <div 
-                    className="max-w-[75%] relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
-                      color: '#1E3A8A',
-                      padding: '20px 25px',
-                      borderRadius: '25px 25px 25px 5px',
-                      boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
-                      border: '2px solid rgba(30, 58, 138, 0.2)'
-                    }}
-                  >
-                    <p className="text-base font-bold text-justify leading-relaxed">
-                      "¡Por supuesto! Tenemos grúas especializadas para esa capacidad. Te enviamos la cotización personalizada en 15 minutos. 📋⚡"
-                    </p>
-                    {/* Flecha del globo */}
-                    <div 
-                      className="absolute bottom-[-8px] left-5"
-                      style={{
-                        width: 0,
-                        height: 0,
-                        borderLeft: '10px solid transparent',
-                        borderRight: '10px solid transparent',
-                        borderTop: '10px solid #FFC107'
-                      }}
-                    ></div>
-                  </div>
-                </motion.div>
-
-                {/* Chat Bubble - Cliente (Azul Corporativo) */}
-                <motion.div 
-                  className="flex justify-end"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                >
-                  <div 
-                    className="max-w-[75%] relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                      color: 'white',
-                      padding: '20px 25px',
-                      borderRadius: '25px 25px 5px 25px',
-                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)',
-                      border: '2px solid rgba(255, 193, 7, 0.2)'
-                    }}
-                  >
-                    <p className="text-base font-medium text-justify leading-relaxed">
-                      "Excelente servicio y rapidez. ¿También incluyen el transporte especializado y el montaje?"
-                    </p>
-                    <div 
-                      className="absolute bottom-[-8px] right-5"
-                      style={{
-                        width: 0,
-                        height: 0,
-                        borderLeft: '10px solid transparent',
-                        borderRight: '10px solid transparent',
-                        borderTop: '10px solid #1E3A8A'
-                      }}
-                    ></div>
-                  </div>
-                </motion.div>
-
-                {/* Chat Bubble - Equiser (Amarillo Corporativo) */}
-                <motion.div 
-                  className="flex justify-start"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                >
-                  <div 
-                    className="max-w-[75%] relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
-                      color: '#1E3A8A',
-                      padding: '20px 25px',
-                      borderRadius: '25px 25px 25px 5px',
-                      boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
-                      border: '2px solid rgba(30, 58, 138, 0.2)'
-                    }}
-                  >
-                    <p className="text-base font-bold text-justify leading-relaxed">
-                      "¡Absolutamente! Ofrecemos servicio integral: izamiento + transporte pesado + montaje con monitoreo satelital 24/7. 🚀🎯"
-                    </p>
-                    <div 
-                      className="absolute bottom-[-8px] left-5"
-                      style={{
-                        width: 0,
-                        height: 0,
-                        borderLeft: '10px solid transparent',
-                        borderRight: '10px solid transparent',
-                        borderTop: '10px solid #FFC107'
-                      }}
-                    ></div>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Botón de Contacto Directo */}
-              <motion.div 
-                className="text-center mt-10"
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 1.0 }}
-              >
-                <button
-                  onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
-                  className="px-12 py-5 text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl inline-flex items-center gap-4 text-lg"
-                  style={{
-                    background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    boxShadow: '0 15px 40px rgba(30, 58, 138, 0.4)',
-                    border: '3px solid #FFC107'
-                  }}
-                >
-                  <span className="text-2xl">💬</span>
-                  Iniciar Chat Directo Ahora
-                  <span className="text-xl">→</span>
-                </button>
-                
-                <div className="mt-6 p-4 rounded-2xl max-w-2xl mx-auto" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
-                  <p className="text-equiser-blue font-bold text-base">
-                    ⚡ Respuesta inmediata garantizada | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional 24/7
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Información de contacto */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Clock className="w-8 h-8 text-green-600 mr-3" />
-                Atención 24/7 Disponible
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Nuestro equipo está disponible las 24 horas del día, los 7 días de la semana 
-                para emergencias y consultas urgentes. Respuesta inmediata garantizada.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-6">
+          {/* SECCIÓN DE 4 TARJETAS DE CONTACTO CON COLORES CORPORATIVOS */}
+          <div className="mt-16 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info, index) => (
-                <div
+                <motion.div
                   key={info.title}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                    <info.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">{info.title}</h4>
-                  
-                  <div className="space-y-1 mb-4">
-                    {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-sm text-gray-600">{detail}</p>
-                    ))}
-                  </div>
-
-                  <Button
-                    onClick={() => {
-                      if (info.actionUrl.startsWith('#')) {
-                        document.getElementById('mapa')?.scrollIntoView({ behavior: 'smooth' })
-                      } else {
-                        window.open(info.actionUrl, '_blank')
-                      }
+                  <div 
+                    className="rounded-3xl p-8 text-center shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
+                    style={{
+                      background: info.bgGradient,
+                      border: `3px solid ${info.borderColor}`
                     }}
-                    variant="outline"
-                    size="sm"
-                    className="w-full text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
                   >
-                    {info.action}
-                  </Button>
-                </div>
+                    {/* Icono con colores corporativos */}
+                    <div 
+                      className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg"
+                      style={{
+                        background: info.iconBg,
+                        boxShadow: `0 8px 20px ${info.iconBg}40`
+                      }}
+                    >
+                      <info.icon 
+                        className="w-10 h-10" 
+                        style={{ color: info.iconColor }}
+                      />
+                    </div>
+                    
+                    <h3 
+                      className="text-xl font-bold mb-4"
+                      style={{ color: info.textColor === 'white' ? '#FFC107' : '#1E3A8A' }}
+                    >
+                      {info.title}
+                    </h3>
+                    
+                    <div className="space-y-2 mb-6">
+                      {info.details.map((detail, idx) => (
+                        <p 
+                          key={idx} 
+                          className="text-sm font-medium"
+                          style={{ 
+                            color: info.textColor === 'white' 
+                              ? 'rgba(255, 255, 255, 0.9)' 
+                              : '#1E3A8A' 
+                          }}
+                        >
+                          {detail}
+                        </p>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        if (info.actionUrl.startsWith('#')) {
+                          document.getElementById('mapa')?.scrollIntoView({ behavior: 'smooth' })
+                        } else {
+                          window.open(info.actionUrl, '_blank')
+                        }
+                      }}
+                      className="px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      style={{
+                        background: info.buttonBg,
+                        color: info.buttonText,
+                        boxShadow: `0 4px 15px ${info.buttonBg}30`
+                      }}
+                    >
+                      {info.action}
+                    </button>
+                  </div>
+                </motion.div>
               ))}
             </div>
+          </div>
 
-            {/* Redes sociales integradas */}
-            <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-equiser-blue/20">
-              <h4 className="text-xl font-bold text-equiser-blue mb-4 flex items-center">
-                📱 Síguenos en Redes Sociales
+          {/* SOLO BOTÓN DE LLAMADA A LA ACCIÓN (Sin conversación típica) */}
+          <motion.div 
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <button
+              onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+              className="px-16 py-6 text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl inline-flex items-center gap-4 text-xl group animate-pulse"
+              style={{
+                background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                boxShadow: '0 15px 40px rgba(30, 58, 138, 0.4)',
+                border: '3px solid #FFC107'
+              }}
+            >
+              <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💬</span>
+              INICIAR CHAT DIRECTO AHORA
+              <span className="text-2xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </button>
+            
+            <div className="mt-8 p-6 rounded-2xl max-w-3xl mx-auto" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
+              <p className="font-bold text-lg" style={{ color: '#1E3A8A' }}>
+                ⚡ Respuesta inmediata garantizada | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional 24/7
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* SECCIÓN DE REDES SOCIALES Y MAPA CON COLORES CORPORATIVOS */}
+        <div className="mt-20 space-y-16">
+          {/* Redes sociales integradas */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div 
+              className="rounded-3xl p-8 shadow-2xl border-2"
+              style={{ 
+                background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(255, 193, 7, 0.05) 100%)',
+                borderColor: '#1E3A8A'
+              }}
+            >
+              <h4 className="text-2xl font-bold mb-6 flex items-center justify-center" style={{ color: '#1E3A8A' }}>
+                <span className="text-3xl mr-3">📱</span>
+                Síguenos en Redes Sociales
               </h4>
-              <p className="text-gray-700 mb-6 text-sm">
+              <p className="text-center mb-8 font-medium" style={{ color: '#1E3A8A' }}>
                 Mantente al día con nuestros proyectos más recientes y novedades del sector.
               </p>
               
-              <div className="flex space-x-4 justify-center">
+              <div className="flex space-x-6 justify-center">
                 <Link
                   href="https://www.instagram.com/gruasequiservzla/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
                   title="Instagram @gruasequiservzla"
                 >
-                  <Instagram className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                  <Instagram className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
                 </Link>
                 <Link
                   href="https://www.facebook.com/profile.php?id=100092683147441"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-14 h-14 bg-blue-600 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  className="flex items-center justify-center w-16 h-16 text-white rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  style={{ background: '#1E3A8A' }}
                   title="Facebook Grúas Equiser"
                 >
-                  <Facebook className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                  <Facebook className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
                 </Link>
                 <Link
                   href="https://x.com/gruasequiserve"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-14 h-14 bg-black text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  className="flex items-center justify-center w-16 h-16 bg-black text-white rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
                   title="X @gruasequiserve"
                 >
-                  <Twitter className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                  <Twitter className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
                 </Link>
               </div>
-              
-              <div className="mt-6 text-sm text-gray-600 space-y-2 bg-white/50 rounded-lg p-4">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
-                  <span className="font-medium">Instagram:</span> Fotos y videos de proyectos
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                  <span className="font-medium">Facebook:</span> Comunidad y testimonios
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-black rounded-full"></span>
-                  <span className="font-medium">X (Twitter):</span> Noticias y actualizaciones
-                </div>
-              </div>
             </div>
+          </motion.div>
 
-            {/* REDISEÑO: Mapa con presentación corporativa mejorada */}
-            <div id="mapa" className="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-100">
-              {/* Título principal rediseñado */}
+          {/* MAPA CON PRESENTACIÓN CORPORATIVA */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            id="mapa"
+          >
+            <div className="bg-white rounded-3xl overflow-hidden shadow-2xl border-4" style={{ borderColor: '#1E3A8A' }}>
+              {/* Título principal */}
               <div className="text-center py-8 px-6" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
-                <h4 className="text-3xl font-bold text-equiser-blue mb-4 flex items-center justify-center gap-3">
+                <h4 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3" style={{ color: '#1E3A8A' }}>
                   <span className="text-2xl">📍</span>
                   Nuestra Ubicación Exacta
                 </h4>
@@ -443,7 +350,7 @@ export function ContactSection() {
               {/* Información corporativa destacada */}
               <div className="px-8 py-6" style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)' }}>
                 <div className="text-white text-center">
-                  <h5 className="text-xl font-bold text-yellow-400 mb-3">
+                  <h5 className="text-xl font-bold mb-3" style={{ color: '#FFC107' }}>
                     Equiser Venezuela | Grúas Telescópicas e Industriales
                   </h5>
                   <p className="text-lg mb-2">
@@ -453,7 +360,7 @@ export function ContactSection() {
                   <p className="text-blue-100 mb-4">
                     <strong>Coordenadas exactas:</strong> 10.4840568, -68.1628642
                   </p>
-                  <div className="flex items-center justify-center gap-3 text-yellow-400">
+                  <div className="flex items-center justify-center gap-3" style={{ color: '#FFC107' }}>
                     <span className="text-lg">⭐</span>
                     <span className="font-bold text-lg">4.7</span>
                     <span className="text-blue-100">| 7 reseñas</span>
@@ -461,11 +368,11 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* Mapa integrado con bordes corporativos */}
+              {/* Mapa integrado */}
               <div className="p-8">
                 <div 
                   className="rounded-2xl overflow-hidden shadow-lg"
-                  style={{ border: '4px solid #1E3A8A' }}
+                  style={{ border: '4px solid #FFC107' }}
                 >
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.894567890123!2d-68.1654391!3d10.4840621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e806f2345678901%3A0x1234567890abcdef!2sEquiser+Venezuela+%7C+Gruas+Telesc%C3%B3picas+e+Industriales!5e0!3m2!1ses!2sve!4v1234567890123!5m2!1ses!2sve"
@@ -479,169 +386,31 @@ export function ContactSection() {
                   ></iframe>
                 </div>
 
-                {/* Botón Ver en Google Maps rediseñado */}
+                {/* Botón Ver en Google Maps */}
                 <div className="text-center mt-8">
-                  <Button
+                  <button
                     onClick={() => window.open('https://www.google.com/maps/place/Equiser+Venezuela+%7C+Gruas+Telescópicas+e+Industriales/@10.4840621,-68.1654391,17z/', '_blank')}
-                    className="px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                    className="px-12 py-4 text-lg font-bold text-white rounded-full shadow-lg hover:scale-105 transition-all duration-300 inline-flex items-center gap-3"
                     style={{
                       background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
                       textTransform: 'uppercase',
                       letterSpacing: '0.5px',
-                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)'
+                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)',
+                      border: '2px solid #FFC107'
                     }}
                   >
-                    <span className="text-xl mr-2">🗺️</span>
+                    <span className="text-xl">🗺️</span>
                     Ver en Google Maps
-                    <span className="text-lg ml-2">→</span>
-                  </Button>
+                    <span className="text-lg">→</span>
+                  </button>
                 </div>
 
                 {/* Información adicional */}
                 <div className="mt-6 p-4 rounded-2xl text-center" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
-                  <p className="text-equiser-blue font-semibold">
+                  <p className="font-semibold" style={{ color: '#1E3A8A' }}>
                     ⚡ Fácil acceso vehicular | 🎯 Ubicación estratégica | 🚀 Disponibilidad 24/7
                   </p>
                 </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Formulario de contacto */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Solicitar Cotización</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre Completo *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Tu nombre completo"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+58 414-123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Correo Electrónico *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Empresa
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Nombre de tu empresa"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Servicio de Interés *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                  >
-                    <option value="">Selecciona un servicio</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje / Detalles del Proyecto *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Describe los detalles de tu proyecto: capacidad necesaria, ubicación, fechas, etc."
-                  ></textarea>
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-equiser-blue hover:bg-blue-800 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                >
-                  {isSubmitting ? (
-                    'Enviando...'
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Contactar Por WhatsApp Ahora
-                    </>
-                  )}
-                </Button>
-              </form>
-
-              <div className="mt-6 p-4 bg-blue-50 rounded-xl">
-                <p className="text-sm text-blue-800 text-center">
-                  <strong>Nota:</strong> Al enviar este formulario, serás redirigido a WhatsApp 
-                  para confirmar tu solicitud y recibir atención personalizada inmediata.
-                </p>
               </div>
             </div>
           </motion.div>
