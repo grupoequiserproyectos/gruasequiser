@@ -109,39 +109,129 @@ export function NosotrosSection() {
           })}
         </div>
 
-        {/* Sección adicional de compromiso */}
+        {/* Sección rediseñada de compromiso con legibilidad mejorada */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-equiser-blue rounded-2xl p-8 md:p-12 text-center"
+          className="relative overflow-hidden rounded-3xl"
+          style={{
+            background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #1E3A8A 100%)',
+            padding: '80px 0'
+          }}
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Nuestro Compromiso
-          </h3>
-          <p className="text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
-            En GRÚAS EQUISER C.A., cada proyecto es una oportunidad para demostrar nuestra 
-            excelencia y compromiso con la seguridad. Con más de 30 años de experiencia, 
-            continuamos siendo la empresa líder en servicios de izamiento y transporte pesado 
-            en Venezuela, siempre enfocados en superar las expectativas de nuestros clientes.
-          </p>
-          <div className="flex flex-wrap justify-center gap-8 mt-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400">30+</div>
-              <div className="text-blue-200">Años de Experiencia</div>
+          {/* Patrón de fondo decorativo */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%), 
+                radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.1) 0%, transparent 50%)
+              `
+            }}
+          />
+          
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Título Principal */}
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-5xl font-extrabold text-yellow-400 mb-5 uppercase tracking-wider">
+                🤝 Nuestro Compromiso
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto rounded-full"></div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400">1600T</div>
-              <div className="text-blue-200">Capacidad Máxima</div>
+
+            {/* Contenido Principal */}
+            <div className="bg-white bg-opacity-95 rounded-3xl p-6 md:p-12 mb-12 backdrop-blur-sm shadow-2xl">
+              <p className="text-lg md:text-xl leading-relaxed text-equiser-blue text-center font-medium">
+                En <strong className="text-equiser-blue font-bold">GRÚAS EQUISER C.A.</strong>, cada proyecto es una oportunidad para demostrar nuestra <strong className="text-yellow-500">excelencia y compromiso con la seguridad</strong>. Con más de <strong className="text-equiser-blue">30 años de experiencia</strong>, continuamos siendo la empresa <strong className="text-yellow-500">líder en servicios de izamiento y transporte pesado en Venezuela</strong>, siempre enfocados en superar las expectativas de nuestros clientes.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400">500+</div>
-              <div className="text-blue-200">Proyectos Exitosos</div>
+
+            {/* Estadísticas en Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              
+              {/* Estadística 1: Años de Experiencia */}
+              <motion.div 
+                whileHover={{ 
+                  y: -10, 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+                  borderColor: '#FFC107'
+                }}
+                transition={{ duration: 0.3 }}
+                className="bg-white bg-opacity-95 rounded-2xl p-6 md:p-8 text-center shadow-xl border-3 border-transparent hover:border-yellow-400 transition-all duration-300"
+              >
+                <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">30+</div>
+                <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
+                  Años de Experiencia
+                </h4>
+              </motion.div>
+
+              {/* Estadística 2: Capacidad Máxima */}
+              <motion.div 
+                whileHover={{ 
+                  y: -10, 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+                  borderColor: '#FFC107'
+                }}
+                transition={{ duration: 0.3 }}
+                className="bg-white bg-opacity-95 rounded-2xl p-6 md:p-8 text-center shadow-xl border-3 border-transparent hover:border-yellow-400 transition-all duration-300"
+              >
+                <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">1600T</div>
+                <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
+                  Capacidad Máxima
+                </h4>
+              </motion.div>
+
+              {/* Estadística 3: Proyectos Exitosos */}
+              <motion.div 
+                whileHover={{ 
+                  y: -10, 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+                  borderColor: '#FFC107'
+                }}
+                transition={{ duration: 0.3 }}
+                className="bg-white bg-opacity-95 rounded-2xl p-6 md:p-8 text-center shadow-xl border-3 border-transparent hover:border-yellow-400 transition-all duration-300"
+              >
+                <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">500+</div>
+                <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
+                  Proyectos Exitosos
+                </h4>
+              </motion.div>
+
+              {/* Estadística 4: Disponibilidad */}
+              <motion.div 
+                whileHover={{ 
+                  y: -10, 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+                  borderColor: '#FFC107'
+                }}
+                transition={{ duration: 0.3 }}
+                className="bg-white bg-opacity-95 rounded-2xl p-6 md:p-8 text-center shadow-xl border-3 border-transparent hover:border-yellow-400 transition-all duration-300"
+              >
+                <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">24/7</div>
+                <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
+                  Disponibilidad
+                </h4>
+              </motion.div>
             </div>
+
+            {/* Llamada a la Acción */}
             <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400">24/7</div>
-              <div className="text-blue-200">Disponibilidad</div>
+              <motion.a 
+                href="#contacto"
+                whileHover={{ 
+                  y: -3, 
+                  boxShadow: '0 12px 35px rgba(255, 193, 7, 0.6)',
+                  background: 'linear-gradient(135deg, #FFD700 0%, #FFC107 100%)'
+                }}
+                transition={{ duration: 0.3 }}
+                className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-300 text-equiser-blue px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl uppercase tracking-wide shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300"
+                style={{ boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)' }}
+              >
+                🚀 Trabajemos Juntos
+              </motion.a>
             </div>
           </div>
         </motion.div>
