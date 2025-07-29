@@ -2,7 +2,7 @@
 import { Header } from '@/components/header'
 import { HeroSection } from '@/components/hero-section'
 import { NosotrosSection } from '@/components/nosotros-section'
-import { CompromisoSection } from '@/components/compromiso-section'
+import { GaleriaSection } from '@/components/galeria-section'
 import { ServicesSection } from '@/components/services-section'
 import { AboutSection } from '@/components/about-section'
 import { EquipmentSection } from '@/components/equipment-section'
@@ -18,7 +18,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <NosotrosSection />
-      <CompromisoSection />
+      <GaleriaSection />
       <ServicesSection />
       <AboutSection />
       <EquipmentSection />
