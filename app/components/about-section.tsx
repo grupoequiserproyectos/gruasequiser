@@ -214,51 +214,7 @@ export function AboutSection() {
           </p>
         </motion.div>
 
-        {/* CORRECCIÓN: Certificaciones solo 3 en grid de 3 columnas */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">Certificaciones</h3>
-          <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-12">
-            Nuestro personal cuenta con las certificaciones más exigentes de la industria, garantizando operaciones seguras y de alta calidad en cada proyecto.
-          </p>
-          <div 
-            className="gap-8"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '30px'
-            }}
-          >
-            {/* Solo 3 certificaciones */}
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-equiser-blue" />
-              </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">ISO 9001</h4>
-              <p className="text-gray-600 text-sm">Sistema de Gestión de Calidad</p>
-            </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-green-600" />
-              </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">ISO 14001</h4>
-              <p className="text-gray-600 text-sm">Sistema de Gestión Ambiental</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-equiser-yellow" />
-              </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Certificación del INTT</h4>
-              <p className="text-gray-600 text-sm">Instituto Nacional de Transporte Terrestre</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
