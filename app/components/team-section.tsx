@@ -78,7 +78,7 @@ export function TeamSection() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">{feature.description}</p>
               
-              <div className="bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="bg-equiser-yellow/20 text-equiser-blue px-4 py-2 rounded-full text-sm font-semibold border-2 border-equiser-yellow/30">
                 {feature.stats}
               </div>
             </div>
@@ -87,42 +87,157 @@ export function TeamSection() {
 
 
 
-        {/* Estadísticas del equipo */}
-        <motion.div
+        {/* Sección del Equipo Humano rediseñada */}
+        <motion.section 
+          className="py-20 rounded-3xl relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+            position: 'relative'
+          }}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-12 text-white text-center"
         >
-          <h3 className="text-3xl font-bold mb-8">¿Por Qué Nuestro Equipo Marca la Diferencia?</h3>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="text-5xl font-bold text-green-400 mb-3">100+</div>
-              <div className="text-blue-200 font-semibold">Profesionales Certificados</div>
+          <div className="max-w-6xl mx-auto px-6">
+            
+            {/* Título */}
+            <div className="text-center mb-16">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-extrabold mb-6"
+                style={{ 
+                  color: '#1E3A8A',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.9 }}
+              >
+                ¿Por Qué Nuestro Equipo Marca la Diferencia?
+              </motion.h2>
+              <div 
+                className="w-32 h-1 mx-auto rounded-full"
+                style={{ background: '#1E3A8A' }}
+              />
             </div>
-            <div>
-              <div className="text-5xl font-bold text-green-400 mb-3">30+</div>
-              <div className="text-blue-200 font-semibold">Años de Experiencia Promedio</div>
+
+            {/* Estadísticas en tarjetas azules */}
+            <div className="grid md:grid-cols-3 gap-10 mb-12">
+              
+              {/* 100+ Profesionales */}
+              <motion.div 
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                style={{
+                  background: 'rgba(30, 58, 138, 0.95)',
+                  backdropFilter: 'blur(10px)'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                whileHover={{ y: -10 }}
+              >
+                <div 
+                  className="text-6xl font-black mb-4"
+                  style={{ 
+                    color: '#FFC107',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                  }}
+                >
+                  100+
+                </div>
+                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                  Profesionales Certificados
+                </h4>
+              </motion.div>
+
+              {/* 30+ Años */}
+              <motion.div 
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                style={{
+                  background: 'rgba(30, 58, 138, 0.95)',
+                  backdropFilter: 'blur(10px)'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.1 }}
+                whileHover={{ y: -10 }}
+              >
+                <div 
+                  className="text-6xl font-black mb-4"
+                  style={{ 
+                    color: '#FFC107',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                  }}
+                >
+                  30+
+                </div>
+                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                  Años de Experiencia Promedio
+                </h4>
+              </motion.div>
+
+              {/* 0 Accidentes */}
+              <motion.div 
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                style={{
+                  background: 'rgba(30, 58, 138, 0.95)',
+                  backdropFilter: 'blur(10px)'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                whileHover={{ y: -10 }}
+              >
+                <div 
+                  className="text-6xl font-black mb-4"
+                  style={{ 
+                    color: '#FFC107',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                  }}
+                >
+                  0
+                </div>
+                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                  Accidentes Laborales en 2024
+                </h4>
+              </motion.div>
             </div>
-            <div>
-              <div className="text-5xl font-bold text-green-400 mb-3">0</div>
-              <div className="text-blue-200 font-semibold">Accidentes Laborales en 2024</div>
+
+            {/* Texto Explicativo */}
+            <motion.div 
+              className="rounded-3xl p-10 mb-10 shadow-2xl"
+              style={{
+                background: 'rgba(30, 58, 138, 0.95)',
+                backdropFilter: 'blur(10px)'
+              }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 1.3 }}
+            >
+              <p className="text-xl text-white text-center leading-relaxed font-medium max-w-4xl mx-auto">
+                La experiencia, especialización y compromiso de nuestro equipo humano nos permite ejecutar los proyectos más complejos con <strong style={{ color: '#FFC107' }}>total seguridad y precisión</strong>.
+              </p>
+            </motion.div>
+
+            {/* Botón rediseñado */}
+            <div className="text-center">
+              <motion.button
+                onClick={() => window.open('https://wa.me/584143432882?text=Me interesa conocer más sobre el equipo especializado de EQUISER', '_blank')}
+                className="px-12 py-5 rounded-full text-xl font-bold uppercase tracking-wider shadow-2xl hover:scale-105 transition-all duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                  color: 'white',
+                  boxShadow: '0 8px 25px rgba(30, 58, 138, 0.4)'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 1.4 }}
+                whileHover={{ y: -3 }}
+              >
+                👥 Conoce Más Sobre Nuestro Equipo
+              </motion.button>
             </div>
           </div>
-
-          <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            La experiencia, especialización y compromiso de nuestro equipo humano nos permite 
-            ejecutar los proyectos más complejos con total seguridad y precisión.
-          </p>
-
-          <button
-            onClick={() => window.open('https://wa.me/584143432882?text=Me interesa conocer más sobre el equipo especializado de EQUISER', '_blank')}
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 shadow-lg"
-          >
-            Conoce Más Sobre Nuestro Equipo
-          </button>
-        </motion.div>
+        </motion.section>
       </div>
     </section>
   )

@@ -13,34 +13,34 @@ export function AboutSection() {
     threshold: 0.1
   })
 
-  const features = [
+  const servicesInfo = [
     {
-      icon: CheckCircle,
+      icon: '🏗️',
       title: 'Grúas hasta 1600 toneladas',
       description: 'La mayor capacidad disponible en Venezuela'
     },
     {
-      icon: Award,
+      icon: '🇩🇪',
       title: 'Marcas Premium Alemanas y Americanas',
       description: 'Liebherr, Grove, Manitowoc, Demag'
     },
     {
-      icon: Shield,
+      icon: '✅',
       title: 'Seguridad y Calidad Garantizada',
       description: 'Protocolos estrictos en cada operación'
     },
     {
-      icon: Clock,
+      icon: '⏰',
       title: 'Disponibilidad 24/7',
       description: 'Servicio de emergencia y respuesta inmediata'
     },
     {
-      icon: Users,
+      icon: '👷',
       title: 'Operadores Certificados',
       description: 'Personal altamente capacitado y especializado'
     },
     {
-      icon: Target,
+      icon: '🏭',
       title: '6 Sectores Industriales',
       description: 'Energético, petrolero, petroquímico, industrial, portuario, siderúrgico'
     }
@@ -94,23 +94,54 @@ export function AboutSection() {
                 </div>
               </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-equiser-yellow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-6 h-6 text-equiser-blue" />
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
-                  </motion.div>
-                ))}
-              </div>
+              {/* Sección de Información de Servicios rediseñada */}
+              <motion.section 
+                className="py-20 rounded-3xl relative overflow-hidden mb-8"
+                style={{
+                  background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+                  position: 'relative'
+                }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {/* Patrón decorativo */}
+                <div 
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.1) 0%, transparent 50%)',
+                  }}
+                />
+                
+                <div className="relative z-10 max-w-6xl mx-auto px-6">
+                  {/* Grid de Servicios */}
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {servicesInfo.map((service, index) => (
+                      <motion.div
+                        key={service.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                        className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
+                        style={{
+                          backdropFilter: 'blur(10px)',
+                          border: '2px solid rgba(255, 193, 7, 0.3)'
+                        }}
+                      >
+                        <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-xl font-bold text-equiser-blue mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
+                          {service.description}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.section>
 
               <div className="bg-gradient-to-r from-equiser-yellow to-yellow-300 p-6 rounded-2xl text-equiser-blue">
                 <div className="flex items-center mb-4">

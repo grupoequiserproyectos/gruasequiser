@@ -179,36 +179,85 @@ export function HeroSection() {
             </Button>
           </motion.div>
 
-          {/* Características destacadas */}
+          {/* Botón Ver Proyectos */}
           <motion.div
-            className="mt-16 grid md:grid-cols-3 gap-6 text-center"
+            className="mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 1 }}
           >
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-equiser-yellow rounded-full flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-equiser-blue" />
+            <Button
+              onClick={() => document.getElementById('galeria-proyectos')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-equiser-blue to-blue-600 hover:from-blue-800 hover:to-equiser-blue text-white px-10 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-300 uppercase tracking-wider"
+              style={{ 
+                background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)'
+              }}
+            >
+              🏗️ Ver Proyectos
+            </Button>
+          </motion.div>
+
+          {/* Características destacadas rediseñadas */}
+          <motion.div
+            className="mt-8 grid md:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <motion.div 
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ backdropFilter: 'blur(15px)' }}
+              whileHover={{ y: -10 }}
+            >
+              <div 
+                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                style={{ 
+                  background: 'linear-gradient(135deg, #1E3A8A, #3B82F6)',
+                  boxShadow: '0 10px 30px rgba(30, 58, 138, 0.4)'
+                }}
+              >
+                <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Máxima Seguridad</h3>
-              <p className="text-blue-200 text-sm">Protocolos estrictos y operadores especializados</p>
-            </div>
+              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Máxima Seguridad</h3>
+              <p className="text-blue-100 leading-relaxed">Protocolos estrictos y operadores especializados</p>
+            </motion.div>
             
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-equiser-yellow rounded-full flex items-center justify-center mb-4">
-                <Award className="w-8 h-8 text-equiser-blue" />
+            <motion.div 
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ backdropFilter: 'blur(15px)' }}
+              whileHover={{ y: -10 }}
+            >
+              <div 
+                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                style={{ 
+                  background: 'linear-gradient(135deg, #FFC107, #FFD700)',
+                  boxShadow: '0 10px 30px rgba(255, 193, 7, 0.4)'
+                }}
+              >
+                <Award className="w-10 h-10 text-equiser-blue" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Equipos Premium</h3>
-              <p className="text-blue-200 text-sm">Marcas alemanas y americanas de última generación</p>
-            </div>
+              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Equipos Premium</h3>
+              <p className="text-blue-100 leading-relaxed">Marcas alemanas y americanas de última generación</p>
+            </motion.div>
             
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-equiser-yellow rounded-full flex items-center justify-center mb-4">
-                <Clock className="w-8 h-8 text-equiser-blue" />
+            <motion.div 
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ backdropFilter: 'blur(15px)' }}
+              whileHover={{ y: -10 }}
+            >
+              <div 
+                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                style={{ 
+                  background: 'linear-gradient(135deg, #1E3A8A, #FFC107)',
+                  boxShadow: '0 10px 30px rgba(30, 58, 138, 0.4)'
+                }}
+              >
+                <Clock className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">Disponibilidad 24/7</h3>
-              <p className="text-blue-200 text-sm">Servicio de emergencia y respuesta inmediata</p>
-            </div>
+              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Disponibilidad 24/7</h3>
+              <p className="text-blue-100 leading-relaxed">Servicio de emergencia y respuesta inmediata</p>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
