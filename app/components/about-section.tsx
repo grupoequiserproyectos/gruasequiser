@@ -221,7 +221,10 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Nuestras Certificaciones</h3>
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">Certificaciones</h3>
+          <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-12">
+            Nuestro personal cuenta con las certificaciones más exigentes de la industria, garantizando operaciones seguras y de alta calidad en cada proyecto.
+          </p>
           <div 
             className="gap-8"
             style={{

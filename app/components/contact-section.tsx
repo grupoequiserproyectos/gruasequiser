@@ -133,7 +133,7 @@ export function ContactSection() {
             <span className="text-equiser-blue">Contacto</span> Directo
           </h2>
           {/* CORRECCIÓN: Cambiar texto a azul para mejor visibilidad */}
-          <p className="text-xl max-w-3xl mx-auto font-semibold text-equiser-blue">
+          <p className="text-xl max-w-3xl mx-auto font-bold text-equiser-blue">
             Nuestro equipo está disponible 24/7 para brindarte la mejor solución para tu proyecto de izamiento o transporte pesado.
           </p>
         </motion.div>
@@ -389,14 +389,14 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
+                  className="w-full bg-equiser-blue hover:bg-blue-800 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
                 >
                   {isSubmitting ? (
                     'Enviando...'
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Enviar Solicitud por WhatsApp
+                      Contactar Por WhatsApp Ahora
                     </>
                   )}
                 </Button>
