@@ -242,7 +242,7 @@ export function ContactSection() {
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-200">
                 <iframe
-                  src="https://i.pinimg.com/originals/1f/08/7a/1f087acf028eacb1d04840bf4ade5040.jpg"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.894567890123!2d-68.1654391!3d10.4840621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e806f2345678901%3A0x1234567890abcdef!2sEquiser+Venezuela+%7C+Gruas+Telesc%C3%B3picas+e+Industriales!5e0!3m2!1ses!2sve!4v1234567890123!5m2!1ses!2sve"
                   width="100%"
                   height="400"
                   style={{ border: 0, borderRadius: '15px' }}

@@ -33,19 +33,19 @@ export function Footer() {
             {/* Información de la empresa con logo actualizado */}
             <div className="lg:col-span-1">
               <div className="flex flex-col items-start mb-6">
-                <Link href="/" className="relative block mb-4">
+                <a href="/" style={{ textDecoration: 'none' }} className="relative block mb-4">
                   <div 
                     className="relative filter brightness-0 invert" 
-                    style={{ width: '200px', height: '80px' }}
+                    style={{ width: '250px', height: '80px', maxWidth: '250px' }}
                   >
                     <Image
-                      src="/images/logo-equiser-actualizado.png"
+                      src="/images/logo equiser actulizado sin fondo.png"
                       alt="GRÚAS EQUISER C.A. - Logo"
                       fill
                       className="object-contain hover:scale-105 transition-transform duration-200"
                     />
                   </div>
-                </Link>
+                </a>
                 <div>
                   <h3 className="text-xl font-bold">GRÚAS EQUISER C.A.</h3>
                   <p className="text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
@@ -238,7 +238,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 GRÚAS EQUISER C.A. Todos los derechos reservados.
+                © 2025 Grúas Equiser C.A. - Todos los derechos reservados. | Líder en alquiler de grúas en Venezuela
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 RIF: J-30007343-2 | Más de 30 años de experiencia en Venezuela

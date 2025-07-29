@@ -73,15 +73,26 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="space-y-6">
-              {/* CORRECCIÓN: Cambiar texto a azul en lugar de usar fondo azul */}
-              <div className="bg-white p-6 rounded-2xl border border-gray-200">
-                <h3 className="text-2xl font-bold mb-4 text-equiser-blue">¿Por Qué Elegir EQUISER?</h3>
-                <p className="text-equiser-blue font-semibold leading-relaxed">
-                  Somos la única empresa en Venezuela que combina la más moderna tecnología 
-                  de grúas con operadores certificados internacionalmente y un enfoque 
-                  integral en seguridad y calidad.
-                </p>
-              </div>
+              {/* CORRECCIÓN: Sección con fondo amarillo exacto */}
+              <section 
+                className="why-choose-us rounded-2xl text-center"
+                style={{
+                  background: '#FFD700',
+                  padding: '40px 30px',
+                  color: '#1E3A8A'
+                }}
+              >
+                <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', textAlign: 'center' }}>
+                  <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', fontWeight: '700', color: '#1E3A8A' }}>
+                    ¿Por Qué Elegir Grúas EQUISER?
+                  </h2>
+                  <p style={{ fontSize: '1.3rem', lineHeight: '1.6', color: '#1E3A8A', maxWidth: '800px', margin: '0 auto' }}>
+                    Somos la única empresa en Venezuela que combina la más moderna tecnología 
+                    de grúas con operadores certificados internacionalmente y un enfoque 
+                    integral en seguridad y calidad.
+                  </p>
+                </div>
+              </section>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {features.map((feature, index) => (
