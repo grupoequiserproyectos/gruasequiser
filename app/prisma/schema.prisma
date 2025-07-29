@@ -1,0 +1,88 @@
+// EQUISER Database Schema
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/gruas_equiser_website/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Service {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  icon        String
+  features    String[]
+  order       Int
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Equipment {
+  id          String @id @default(cuid())
+  name        String
+  brand       String // Liebherr, Grove, Manitowoc
+  category    String // mobile, crawler, transport
+  capacity    Int    // in tons
+  image       String?
+  description String?
+  features    String[]
+  available   Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Sector {
+  id          String @id @default(cuid())
+  name        String @unique
+  description String
+  icon        String
+  projects    Project[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  image       String
+  capacity    String // e.g., "600 TON", "450 TON"
+  location    String
+  year        Int?
+  featured    Boolean @default(false)
+  sectorId    String
+  sector      Sector @relation(fields: [sectorId], references: [id])
+  equipment   String[] // equipment used
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ContactForm {
+  id          String @id @default(cuid())
+  name        String
+  email       String
+  phone       String?
+  company     String?
+  service     String?
+  message     String
+  status      String @default("pending") // pending, contacted, closed
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CompanyStats {
+  id          String @id @default(cuid())
+  label       String @unique
+  value       String
+  suffix      String?
+  icon        String
+  order       Int
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
