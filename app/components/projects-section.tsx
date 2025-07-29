@@ -199,19 +199,27 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Filtros con fondo amarillo y hover azul */}
+        {/* CORRECCIÓN: Filtros con fondo amarillo completo */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
-          <div className="flex items-center justify-center mb-8">
-            <Filter className="w-5 h-5 text-gray-500 mr-3" />
-            <span className="text-gray-700 font-medium">Filtrar por sector:</span>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-3">
+          <div 
+            className="rounded-2xl p-8"
+            style={{
+              background: '#FFD700',
+              padding: '40px 20px',
+              borderRadius: '20px'
+            }}
+          >
+            <div className="flex items-center justify-center mb-8">
+              <Filter className="w-5 h-5 text-equiser-blue mr-3" />
+              <span className="text-equiser-blue font-semibold text-lg">🔍 Filtrar por sector:</span>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-3">
             {sectors.map((sector) => (
               <button
                 key={sector.id}
@@ -231,6 +239,7 @@ export function ProjectsSection() {
                 {sector.name} ({sector.count})
               </button>
             ))}
+            </div>
           </div>
         </motion.div>
 

@@ -35,11 +35,11 @@ export function Footer() {
               <div className="flex flex-col items-start mb-6">
                 <a href="/" style={{ textDecoration: 'none' }} className="relative block mb-4">
                   <div 
-                    className="relative filter brightness-0 invert" 
+                    className="relative" 
                     style={{ width: '250px', height: '80px', maxWidth: '250px' }}
                   >
                     <Image
-                      src="/images/logo equiser actulizado sin fondo.png"
+                      src="/images/logo equiser con fondo.png"
                       alt="GRÚAS EQUISER C.A. - Logo"
                       fill
                       className="object-contain hover:scale-105 transition-transform duration-200"
