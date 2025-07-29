@@ -2,7 +2,7 @@
 import { Header } from '@/components/header'
 import { HeroSection } from '@/components/hero-section'
 import { NosotrosSection } from '@/components/nosotros-section'
-import { GaleriaSection } from '@/components/galeria-section'
+import { GaleriaCarrusel } from '@/components/galeria-carrusel'
 import { ServicesSection } from '@/components/services-section'
 import { AboutSection } from '@/components/about-section'
 import { EquipmentSection } from '@/components/equipment-section'
@@ -17,8 +17,8 @@ export default function HomePage() {
     <main className="min-h-screen">
       <Header />
       <HeroSection />
+      <GaleriaCarrusel />
       <NosotrosSection />
-      <GaleriaSection />
       <ServicesSection />
       <AboutSection />
       <EquipmentSection />
