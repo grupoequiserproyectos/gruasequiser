@@ -266,27 +266,63 @@ export function GaleriaCarrusel() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <div className="mb-6">
-            <p className="text-lg text-gray-600 mb-2">
-              ⚡ Rotación automática cada 5 segundos | 🖱️ Navega manualmente con los controles
-            </p>
-            <p className="text-base text-gray-500">
+          <div className="mb-8">
+            <p className="text-lg text-gray-600 mb-8 italic font-medium">
               Desliza el cursor sobre la imagen para pausar la rotación automática
             </p>
+            
+            {/* Mensaje de Llamada a la Acción Principal */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="mensaje-principal rounded-3xl mb-6 shadow-2xl"
+              style={{ 
+                background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                padding: '2rem',
+                boxShadow: '0 10px 30px rgba(30, 58, 138, 0.3)'
+              }}
+            >
+              <h3 
+                className="font-extrabold mb-3 uppercase tracking-wide text-4xl md:text-5xl"
+                style={{ 
+                  color: '#FFC107',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                  letterSpacing: '1px'
+                }}
+              >
+                GRÚAS EQUISER
+              </h3>
+              <p 
+                className="font-semibold uppercase tracking-wider text-xl md:text-2xl"
+                style={{ 
+                  color: 'white',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                NADA ES MUY GRANDE NI PESADO PARA NOSOTROS
+              </p>
+            </motion.div>
           </div>
           
-          <a
+          <motion.a
             href="#contacto"
             onClick={handleScrollToProjects}
-            className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            whileHover={{ 
+              scale: 1.05,
+              y: -3
+            }}
+            transition={{ duration: 0.3 }}
+            className="inline-flex items-center gap-3 px-10 py-5 text-xl font-bold rounded-full transition-all duration-300 uppercase tracking-wide shadow-xl hover:shadow-2xl"
             style={{ 
-              background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-              boxShadow: '0 4px 20px rgba(30, 58, 138, 0.3)'
+              background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+              color: '#1E3A8A',
+              letterSpacing: '0.5px',
+              boxShadow: '0 5px 15px rgba(255, 193, 7, 0.4)'
             }}
           >
-            <Camera className="w-5 h-5" />
-            💬 Solicitar Cotización
-          </a>
+            <Camera className="w-6 h-6" />
+            💬 Solicitar Cotización Ahora
+          </motion.a>
         </motion.div>
       </div>
 
