@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Target, Heart, Award, Users, Globe } from 'lucide-react'
+import { Shield, Target, Heart, Award, Users, Globe, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 
 export function AboutSection() {
@@ -11,6 +11,39 @@ export function AboutSection() {
     triggerOnce: true,
     threshold: 0.1
   })
+
+  const features = [
+    {
+      icon: CheckCircle,
+      title: 'Grúas Móviles hasta 1600 toneladas',
+      description: 'La mayor capacidad de carga disponible en Venezuela'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Grúas Sobre Oruga especializadas',
+      description: 'Para proyectos de alta complejidad y precisión'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Transporte Pesado y Extrapesado',
+      description: 'Soluciones integrales de logística industrial'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Equipos Alemanes y Americanos',
+      description: 'Liebherr, Grove, Manitowoc y Demag de última generación'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Operadores Certificados',
+      description: 'Personal técnico especializado con más de 30 años de experiencia'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Ingeniería 3D y Consultoría',
+      description: 'Planificación avanzada para proyectos complejos'
+    }
+  ]
 
   const values = [
     {
@@ -53,11 +86,11 @@ export function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Conoce <span className="text-equiser-blue">GRÚAS EQUISER</span>
+            <span className="text-equiser-blue">La Flota de Alquiler Más Moderna y Completa de Venezuela</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de tres décadas liderando el mercado venezolano en alquiler de grúas móviles y sobre oruga con tecnología alemana y americana, 
-            y el equipo humano más especializado del sector industrial.
+            Más de tres décadas liderando el mercado venezolano con grúas móviles y sobre oruga de tecnología alemana y americana, 
+            respaldadas por el equipo humano más especializado del sector industrial.
           </p>
         </motion.div>
 
@@ -92,16 +125,17 @@ export function AboutSection() {
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Shield className="w-8 h-8 text-equiser-blue mr-3" />
-                  Nuestra Filosofía
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  <strong>"Líder En Alquiler De Grúas Venezuela"</strong> - Cada operación se ejecuta bajo 
-                  los más rigurosos protocolos de seguridad, garantizando la integridad de nuestro 
-                  personal, equipos y proyectos de nuestros clientes.
-                </p>
+              {/* Características principales */}
+              <div className="space-y-4">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <feature.icon className="w-6 h-6 text-equiser-yellow flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{feature.title}</h4>
+                      <p className="text-sm text-gray-600">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>

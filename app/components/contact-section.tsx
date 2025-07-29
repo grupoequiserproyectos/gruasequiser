@@ -191,7 +191,7 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* Mapa */}
+            {/* Mapa con ubicación exacta en Morón, Carabobo */}
             <div id="mapa" className="bg-white rounded-2xl p-6 shadow-lg">
               <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                 <MapPin className="w-5 h-5 text-blue-600 mr-2" />
@@ -200,7 +200,7 @@ export function ContactSection() {
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.123456789!2d-68.123456!3d10.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA3JzI0LjQiTiA2OMKwMDcnMjQuNCJX!5e0!3m2!1ses!2sve!4v1234567890123"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.8944275847!2d-68.16543908535753!3d10.484062165789588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87dc8b5f3e9de7%3A0x7b8e9c5d4a2b1f3e!2sMor%C3%B3n%2C%20Carabobo%2C%20Venezuela!5e0!3m2!1ses!2sve!4v1699123456789!5m2!1ses!2sve"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -214,6 +214,9 @@ export function ContactSection() {
               <p className="text-sm text-gray-600 mt-3">
                 <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
                 diagonal a Planta Centro, Morón estado Carabobo
+              </p>
+              <p className="text-xs text-gray-500 mt-2">
+                <strong>Coordenadas:</strong> 10.4840621, -68.1654391
               </p>
             </div>
           </motion.div>

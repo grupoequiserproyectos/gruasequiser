@@ -29,17 +29,22 @@ export function Footer() {
         {/* Sección principal del footer */}
         <div className="pt-16 pb-12">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-            {/* Información de la empresa */}
+            {/* Información de la empresa con logo más grande */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
-                <div className="relative w-16 h-16 mr-4">
-                  <Image
-                    src="/images/logo equiser actulizado sin fondo.png"
-                    alt="GRÚAS EQUISER Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                <Link href="/" className="relative block mr-4">
+                  <div 
+                    className="relative filter brightness-0 invert" 
+                    style={{ width: '120px', height: '80px' }}
+                  >
+                    <Image
+                      src="/images/logo-equiser-grande.png"
+                      alt="GRÚAS EQUISER C.A. - Logo"
+                      fill
+                      className="object-contain hover:scale-105 transition-transform duration-200"
+                    />
+                  </div>
+                </Link>
                 <div>
                   <h3 className="text-2xl font-bold">GRÚAS EQUISER C.A.</h3>
                   <p className="text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
@@ -172,7 +177,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright y certificaciones */}
+        {/* Copyright y certificaciones corregidas */}
         <div className="border-t border-gray-700 pt-8 pb-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
@@ -187,7 +192,7 @@ export function Footer() {
             <div className="flex items-center space-x-6 text-center">
               <div className="text-xs text-gray-400">
                 <div className="font-semibold text-equiser-yellow">CERTIFICACIONES</div>
-                <div>ISO 9001 • ISO 14001</div>
+                <div>ISO 9001 • ISO 14001 • INTT</div>
               </div>
               <div className="text-xs text-gray-400">
                 <div className="font-semibold text-equiser-blue">MARCAS</div>

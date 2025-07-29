@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, User, Calendar, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -20,6 +20,7 @@ interface BlogCommentsProps {
 }
 
 export function BlogComments({ articleSlug }: BlogCommentsProps) {
+  const [mounted, setMounted] = useState(false)
   const [comments, setComments] = useState<Comment[]>([
     {
       id: '1',
@@ -54,6 +55,10 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const handleSubmitComment = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!newComment.author || !newComment.email || !newComment.content) return
@@ -63,7 +68,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
     // Simulate API call
     setTimeout(() => {
       const comment: Comment = {
-        id: Date.now().toString(),
+        id: Math.random().toString(36).substr(2, 9), // Use safer ID generation
         author: newComment.author,
         email: newComment.email,
         content: newComment.content,
@@ -77,9 +82,26 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
   }
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    if (!mounted) return dateString // Return raw string during SSR
+    try {
+      const date = new Date(dateString)
+      const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+      return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    } catch {
+      return dateString
+    }
+  }
+
+  if (!mounted) {
+    return (
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center py-12">
+            <div className="w-8 h-8 border-4 border-equiser-blue border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        </div>
+      </section>
+    )
   }
 
   return (

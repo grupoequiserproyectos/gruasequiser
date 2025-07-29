@@ -198,7 +198,7 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Filtros */}
+        {/* Filtros con mejor visibilidad */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -215,11 +215,18 @@ export function ProjectsSection() {
               <button
                 key={sector.id}
                 onClick={() => setActiveFilter(sector.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 shadow-lg transform hover:scale-105 ${
                   activeFilter === sector.id
-                    ? 'bg-equiser-blue text-white shadow-lg scale-105'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-equiser-blue text-white border-equiser-blue shadow-blue-200 scale-105'
+                    : 'bg-equiser-blue/90 text-white border-equiser-blue hover:bg-equiser-yellow hover:text-equiser-blue hover:border-equiser-yellow'
                 }`}
+                style={{
+                  padding: '15px 25px',
+                  borderRadius: '25px',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  textShadow: activeFilter === sector.id ? 'none' : '1px 1px 2px rgba(0,0,0,0.1)'
+                }}
               >
                 {sector.name} ({sector.count})
               </button>
@@ -357,23 +364,56 @@ export function ProjectsSection() {
           ))}
         </motion.div>
 
+        {/* CTA mejorado con mejor legibilidad */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-equiser-blue to-blue-900 text-white p-8 rounded-3xl shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">¿Necesitas Servicios De Alquiler De Grúas O Transporte Pesado?</h3>
-            <p className="text-blue-100 mb-6">
-              Más de 30 años de experiencia con grúas hasta 1600 toneladas. Contáctanos para cotización inmediata.
-            </p>
-            <Button
-              onClick={() => window.open('https://wa.me/584143432882?text=Necesito servicios de alquiler de grúas o transporte pesado de GRÚAS EQUISER', '_blank')}
-              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
-            >
-              Solicitar Cotización Ahora
-            </Button>
+          <div 
+            className="relative rounded-3xl shadow-xl overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
+              backgroundImage: 'url("/images/imagen grua.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay'
+            }}
+          >
+            {/* Overlay fuerte para mejor legibilidad */}
+            <div className="absolute inset-0" style={{ background: 'rgba(30, 58, 138, 0.95)' }}></div>
+            
+            {/* Contenido con caja semi-transparente */}
+            <div className="relative z-10 p-8">
+              <div 
+                className="mx-auto max-w-2xl rounded-2xl p-8"
+                style={{
+                  background: 'rgba(30, 58, 138, 0.9)',
+                  border: '2px solid rgba(255, 215, 0, 0.3)',
+                  backdropFilter: 'blur(10px)'
+                }}
+              >
+                <h3 
+                  className="text-2xl font-bold mb-4 text-white"
+                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
+                >
+                  ¿Necesitas Servicios De Alquiler De Grúas O Transporte Pesado?
+                </h3>
+                <p 
+                  className="text-blue-100 mb-6"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                >
+                  Más de 30 años de experiencia con grúas hasta 1600 toneladas. Contáctanos para cotización inmediata.
+                </p>
+                <Button
+                  onClick={() => window.open('https://wa.me/584143432882?text=Necesito servicios de alquiler de grúas o transporte pesado de GRÚAS EQUISER', '_blank')}
+                  className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
+                >
+                  Solicitar Cotización Ahora
+                </Button>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

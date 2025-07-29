@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { BlogArticle, getRelatedArticles } from '@/lib/blog-data'
 import { BlogComments } from './blog-comments'
 import { BlogNewsletter } from './blog-newsletter'
+import { useState, useEffect } from 'react'
 
 interface BlogArticlePageProps {
   article: BlogArticle
@@ -20,16 +21,29 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
     threshold: 0.1
   })
   
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
   const relatedArticles = getRelatedArticles(article.slug)
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    if (!mounted) return dateString // Return raw string during SSR
+    try {
+      const date = new Date(dateString)
+      const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+      return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    } catch {
+      return dateString
+    }
   }
 
   const handleShare = async () => {
-    if (navigator.share) {
+    if (!mounted) return
+    
+    if (navigator?.share) {
       try {
         await navigator.share({
           title: article.title,
@@ -41,8 +55,10 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
       }
     } else {
       // Fallback para navegadores que no soportan Web Share API
-      navigator.clipboard.writeText(window.location.href)
-      alert('Enlace copiado al portapapeles')
+      if (navigator?.clipboard) {
+        navigator.clipboard.writeText(window.location.href)
+        alert('Enlace copiado al portapapeles')
+      }
     }
   }
 
@@ -124,6 +140,19 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
       .filter(Boolean)
   }
 
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-white">
+        <div className="py-20 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-8 h-8 border-4 border-equiser-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-gray-600">Cargando artículo...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
@@ -161,7 +190,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                 <span className="bg-equiser-yellow text-equiser-blue px-4 py-2 rounded-full font-bold">
                   {article.category}
                 </span>
-                <div className="flex items-center text-gray-500 text-sm" suppressHydrationWarning>
+                <div className="flex items-center text-gray-500 text-sm">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>{formatDate(article.publishDate)}</span>
                 </div>
@@ -238,7 +267,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                     "name": "GRÚAS EQUISER C.A.",
                     "logo": {
                       "@type": "ImageObject",
-                      "url": "/images/logo equiser actulizado sin fondo.png"
+                      "url": "/images/logo-equiser-grande.png"
                     }
                   },
                   "datePublished": article.publishDate,
@@ -264,9 +293,8 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="prose prose-lg max-w-none"
-          suppressHydrationWarning
         >
-          <div className="article-content" suppressHydrationWarning>
+          <div className="article-content">
             {renderContent(article.content)}
           </div>
         </motion.div>

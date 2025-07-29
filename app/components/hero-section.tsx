@@ -93,9 +93,9 @@ export function HeroSection() {
                 Líder En Alquiler De Grúas Móviles Y Sobre Oruga En Venezuela
               </h2>
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
-                Más de <strong>30 años de experiencia</strong> brindando soluciones de izamiento y transporte pesado 
-                con la más alta tecnología y seguridad. <strong>Grúas hasta 1600 toneladas</strong> 
-                con equipos de las mejores marcas alemanas y americanas.
+                <strong>Grúas Móviles y Sobre Oruga desde 25 hasta 1600 toneladas con equipos técnico certificados.</strong> 
+                Más de 30 años de experiencia brindando soluciones de izamiento y transporte pesado 
+                con la más alta tecnología y seguridad en todos los sectores industriales de Venezuela.
               </p>
             </motion.div>
 
