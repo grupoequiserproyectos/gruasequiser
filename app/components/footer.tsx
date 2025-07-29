@@ -325,8 +325,21 @@ export function Footer() {
             
             <div className="flex items-center justify-center text-center">
               <div className="text-xs text-gray-400">
-                <div className="font-semibold text-equiser-blue">MARCAS PREMIUM</div>
-                <div>Liebherr • Grove • Manitowoc • Demag</div>
+                <div 
+                  className="font-bold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+                  style={{
+                    background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+                    color: '#1E3A8A',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    boxShadow: '0 4px 15px rgba(255, 193, 7, 0.4)',
+                    border: '2px solid rgba(30, 58, 138, 0.2)'
+                  }}
+                >
+                  <span className="text-base mr-2">⭐</span>
+                  MARCAS PREMIUM
+                </div>
+                <div className="mt-2 text-gray-500">Liebherr • Grove • Manitowoc • Demag</div>
               </div>
             </div>
           </div>

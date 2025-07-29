@@ -136,6 +136,187 @@ export function ContactSection() {
           <p className="text-xl max-w-3xl mx-auto font-bold text-equiser-blue">
             Nuestro equipo está disponible 24/7 para brindarte la mejor solución para tu proyecto de izamiento o transporte pesado.
           </p>
+
+          {/* NUEVA SECCIÓN: Chat Bubbles con Colores Corporativos */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-2xl border border-gray-200">
+              <h3 className="text-2xl font-bold text-equiser-blue text-center mb-8 flex items-center justify-center gap-3">
+                <span className="text-3xl">💬</span>
+                Conversación Típica Con Nuestros Clientes
+                <span className="text-3xl">💬</span>
+              </h3>
+              
+              <div className="space-y-6">
+                {/* Chat Bubble - Cliente (Azul Corporativo) */}
+                <motion.div 
+                  className="flex justify-end"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <div 
+                    className="max-w-[75%] relative"
+                    style={{
+                      background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                      color: 'white',
+                      padding: '20px 25px',
+                      borderRadius: '25px 25px 5px 25px',
+                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)',
+                      border: '2px solid rgba(255, 193, 7, 0.2)'
+                    }}
+                  >
+                    <p className="text-base font-medium text-justify leading-relaxed">
+                      "Necesito una cotización urgente para el izamiento de equipos industriales de 500 toneladas. ¿Pueden ayudarme?"
+                    </p>
+                    {/* Flecha del globo */}
+                    <div 
+                      className="absolute bottom-[-8px] right-5"
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderLeft: '10px solid transparent',
+                        borderRight: '10px solid transparent',
+                        borderTop: '10px solid #1E3A8A'
+                      }}
+                    ></div>
+                  </div>
+                </motion.div>
+
+                {/* Chat Bubble - Equiser (Amarillo Corporativo) */}
+                <motion.div 
+                  className="flex justify-start"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <div 
+                    className="max-w-[75%] relative"
+                    style={{
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+                      color: '#1E3A8A',
+                      padding: '20px 25px',
+                      borderRadius: '25px 25px 25px 5px',
+                      boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
+                      border: '2px solid rgba(30, 58, 138, 0.2)'
+                    }}
+                  >
+                    <p className="text-base font-bold text-justify leading-relaxed">
+                      "¡Por supuesto! Tenemos grúas especializadas para esa capacidad. Te enviamos la cotización personalizada en 15 minutos. 📋⚡"
+                    </p>
+                    {/* Flecha del globo */}
+                    <div 
+                      className="absolute bottom-[-8px] left-5"
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderLeft: '10px solid transparent',
+                        borderRight: '10px solid transparent',
+                        borderTop: '10px solid #FFC107'
+                      }}
+                    ></div>
+                  </div>
+                </motion.div>
+
+                {/* Chat Bubble - Cliente (Azul Corporativo) */}
+                <motion.div 
+                  className="flex justify-end"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                >
+                  <div 
+                    className="max-w-[75%] relative"
+                    style={{
+                      background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                      color: 'white',
+                      padding: '20px 25px',
+                      borderRadius: '25px 25px 5px 25px',
+                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)',
+                      border: '2px solid rgba(255, 193, 7, 0.2)'
+                    }}
+                  >
+                    <p className="text-base font-medium text-justify leading-relaxed">
+                      "Excelente servicio y rapidez. ¿También incluyen el transporte especializado y el montaje?"
+                    </p>
+                    <div 
+                      className="absolute bottom-[-8px] right-5"
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderLeft: '10px solid transparent',
+                        borderRight: '10px solid transparent',
+                        borderTop: '10px solid #1E3A8A'
+                      }}
+                    ></div>
+                  </div>
+                </motion.div>
+
+                {/* Chat Bubble - Equiser (Amarillo Corporativo) */}
+                <motion.div 
+                  className="flex justify-start"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <div 
+                    className="max-w-[75%] relative"
+                    style={{
+                      background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+                      color: '#1E3A8A',
+                      padding: '20px 25px',
+                      borderRadius: '25px 25px 25px 5px',
+                      boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
+                      border: '2px solid rgba(30, 58, 138, 0.2)'
+                    }}
+                  >
+                    <p className="text-base font-bold text-justify leading-relaxed">
+                      "¡Absolutamente! Ofrecemos servicio integral: izamiento + transporte pesado + montaje con monitoreo satelital 24/7. 🚀🎯"
+                    </p>
+                    <div 
+                      className="absolute bottom-[-8px] left-5"
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderLeft: '10px solid transparent',
+                        borderRight: '10px solid transparent',
+                        borderTop: '10px solid #FFC107'
+                      }}
+                    ></div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Botón de Contacto Directo */}
+              <motion.div 
+                className="text-center mt-10"
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 1.0 }}
+              >
+                <button
+                  onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                  className="px-12 py-5 text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl inline-flex items-center gap-4 text-lg"
+                  style={{
+                    background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    boxShadow: '0 15px 40px rgba(30, 58, 138, 0.4)',
+                    border: '3px solid #FFC107'
+                  }}
+                >
+                  <span className="text-2xl">💬</span>
+                  Iniciar Chat Directo Ahora
+                  <span className="text-xl">→</span>
+                </button>
+                
+                <div className="mt-6 p-4 rounded-2xl max-w-2xl mx-auto" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
+                  <p className="text-equiser-blue font-bold text-base">
+                    ⚡ Respuesta inmediata garantizada | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional 24/7
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
