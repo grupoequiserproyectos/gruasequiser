@@ -79,8 +79,8 @@ export function StatsSection() {
       icon: Shield,
       number: animatedStats.capacity,
       suffix: 'T',
-      label: 'Capacidad Máxima',
-      description: 'Toneladas de capacidad de izamiento'
+      label: 'Grúas Hasta 1600 Toneladas',
+      description: 'Capacidad máxima de nuestras grúas'
     },
     {
       icon: MapPin,
@@ -116,7 +116,7 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Números que <span className="text-equiser-yellow">Respaldan</span> Nuestra Experiencia
+            Grúas Hasta <span className="text-equiser-yellow">1600 Toneladas</span> De Capacidad
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
             Más de tres décadas de trayectoria nos posicionan como la empresa líder 

@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Clock, ArrowUp } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen } from 'lucide-react'
 
 export function Footer() {
   const scrollToTop = () => {
@@ -127,6 +127,15 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
+                <li className="mt-2">
+                  <Link
+                    href="/blog"
+                    className="flex items-center text-equiser-yellow hover:text-yellow-300 transition-colors duration-200 text-sm font-semibold"
+                  >
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    📝 Blog
+                  </Link>
+                </li>
               </ul>
 
               <div className="mt-8">
@@ -171,7 +180,7 @@ export function Footer() {
                 © 2024 GRÚAS EQUISER C.A. Todos los derechos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                RIF: J-12345678-9 | Más de 30 años de experiencia en Venezuela
+                RIF: J-30007343-2 | Más de 30 años de experiencia en Venezuela
               </p>
             </div>
             

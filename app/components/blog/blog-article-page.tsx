@@ -1,0 +1,396 @@
+
+'use client'
+
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { Calendar, User, Clock, ArrowLeft, Share2, Tag, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { BlogArticle, getRelatedArticles } from '@/lib/blog-data'
+import { BlogComments } from './blog-comments'
+import { BlogNewsletter } from './blog-newsletter'
+
+interface BlogArticlePageProps {
+  article: BlogArticle
+}
+
+export function BlogArticlePage({ article }: BlogArticlePageProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  })
+  
+  const relatedArticles = getRelatedArticles(article.slug)
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+  }
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: article.title,
+          text: article.excerpt,
+          url: window.location.href,
+        })
+      } catch (error) {
+        console.log('Error sharing:', error)
+      }
+    } else {
+      // Fallback para navegadores que no soportan Web Share API
+      navigator.clipboard.writeText(window.location.href)
+      alert('Enlace copiado al portapapeles')
+    }
+  }
+
+  const renderContent = (content: string) => {
+    // Simple markdown-like rendering
+    return content
+      .split('\n')
+      .map((line, index) => {
+        // Headers
+        if (line.startsWith('# ')) {
+          return <h1 key={index} className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-8">{line.substring(2)}</h1>
+        }
+        if (line.startsWith('## ')) {
+          return <h2 key={index} className="text-2xl md:text-3xl font-bold text-equiser-blue mb-4 mt-8">{line.substring(3)}</h2>
+        }
+        if (line.startsWith('### ')) {
+          return <h3 key={index} className="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-6">{line.substring(4)}</h3>
+        }
+        if (line.startsWith('#### ')) {
+          return <h4 key={index} className="text-lg md:text-xl font-bold text-gray-800 mb-3 mt-6">{line.substring(5)}</h4>
+        }
+        if (line.startsWith('##### ')) {
+          return <h5 key={index} className="text-base md:text-lg font-bold text-gray-800 mb-3 mt-4">{line.substring(6)}</h5>
+        }
+        
+        // Lists
+        if (line.startsWith('- ')) {
+          return <li key={index} className="text-gray-700 mb-2 ml-4">{line.substring(2)}</li>
+        }
+        
+        // Bold text
+        const boldRegex = /\*\*(.*?)\*\*/g
+        let processedLine = line.replace(boldRegex, '<strong class="font-semibold text-equiser-blue">$1</strong>')
+        
+        // Empty lines
+        if (line.trim() === '') {
+          return <br key={index} />
+        }
+        
+        // Table detection
+        if (line.includes('|') && line.includes('---')) {
+          return null // Skip table separator lines
+        }
+        
+        if (line.includes('|') && !line.includes('---')) {
+          const cells = line.split('|').map(cell => cell.trim()).filter(cell => cell)
+          const isHeader = line.includes('Característica') || line.includes('Concepto') || line.includes('Aspecto')
+          
+          return (
+            <tr key={index} className={isHeader ? 'bg-equiser-blue text-white' : 'border-b border-gray-200'}>
+              {cells.map((cell, cellIndex) => (
+                isHeader ? (
+                  <th key={cellIndex} className="px-4 py-3 text-left font-semibold">
+                    {cell}
+                  </th>
+                ) : (
+                  <td key={cellIndex} className="px-4 py-3 text-gray-700">
+                    {cell}
+                  </td>
+                )
+              ))}
+            </tr>
+          )
+        }
+        
+        // Regular paragraphs
+        if (line.trim() && !line.startsWith('#') && !line.startsWith('-')) {
+          return (
+            <p 
+              key={index} 
+              className="text-gray-700 leading-relaxed mb-4"
+              dangerouslySetInnerHTML={{ __html: processedLine }}
+            />
+          )
+        }
+        
+        return null
+      })
+      .filter(Boolean)
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <nav className="py-6 bg-gray-50 border-b">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm">
+            <Link href="/" className="text-gray-500 hover:text-equiser-blue">Inicio</Link>
+            <span className="text-gray-400">/</span>
+            <Link href="/blog" className="text-gray-500 hover:text-equiser-blue">Blog</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-equiser-blue font-medium">{article.category}</span>
+          </div>
+        </div>
+      </nav>
+
+      {/* Article Header */}
+      <article className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-8">
+              <Link
+                href="/blog"
+                className="inline-flex items-center text-equiser-blue hover:text-blue-700 font-medium mb-6"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Volver al Blog
+              </Link>
+              
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                <span className="bg-equiser-yellow text-equiser-blue px-4 py-2 rounded-full font-bold">
+                  {article.category}
+                </span>
+                <div className="flex items-center text-gray-500 text-sm" suppressHydrationWarning>
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>{formatDate(article.publishDate)}</span>
+                </div>
+                <div className="flex items-center text-gray-500 text-sm">
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span>{article.readTime} min de lectura</span>
+                </div>
+                <button
+                  onClick={handleShare}
+                  className="flex items-center text-gray-500 hover:text-equiser-blue text-sm transition-colors"
+                >
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Compartir
+                </button>
+              </div>
+              
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                {article.title}
+              </h1>
+              
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                {article.excerpt}
+              </p>
+              
+              <div className="flex items-center mb-8">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src={article.author.image}
+                    alt={article.author.name}
+                    fill
+                    className="object-cover"
+                    onError={(e) => {
+                      // Fallback to a default avatar if image fails to load
+                      const target = e.target as HTMLImageElement
+                      target.src = '/images/default-avatar.jpg'
+                    }}
+                  />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">{article.author.name}</div>
+                  <div className="text-gray-600 text-sm">{article.author.bio}</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Featured Image */}
+            <div className="relative w-full h-96 md:h-[500px] rounded-2xl overflow-hidden mb-12">
+              <Image
+                src={article.featuredImage}
+                alt={article.title}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            
+            {/* Schema.org structured data */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "headline": article.title,
+                  "description": article.excerpt,
+                  "image": article.featuredImage,
+                  "author": {
+                    "@type": "Person",
+                    "name": article.author.name
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "GRÚAS EQUISER C.A.",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "/images/logo equiser actulizado sin fondo.png"
+                    }
+                  },
+                  "datePublished": article.publishDate,
+                  "dateModified": article.lastModified,
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `https://gruasequiser.net/blog/${article.slug}`
+                  },
+                  "keywords": article.seoKeywords,
+                  "articleSection": article.category,
+                  "wordCount": article.content.split(' ').length
+                })
+              }}
+            />
+          </motion.div>
+        </div>
+      </article>
+
+      {/* Article Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="prose prose-lg max-w-none"
+          suppressHydrationWarning
+        >
+          <div className="article-content" suppressHydrationWarning>
+            {renderContent(article.content)}
+          </div>
+        </motion.div>
+        
+        {/* Tags */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-12 pt-8 border-t border-gray-200"
+        >
+          <div className="flex items-center mb-4">
+            <Tag className="w-5 h-5 text-equiser-blue mr-2" />
+            <span className="font-semibold text-gray-900">Etiquetas:</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {article.tags.map((tag) => (
+              <span
+                key={tag}
+                className="bg-gray-100 hover:bg-equiser-yellow hover:text-equiser-blue text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-equiser-blue to-blue-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            ¿Este artículo resolvió tus dudas sobre grúas?
+          </h2>
+          <p className="text-xl text-blue-200 mb-8">
+            Si necesitas servicios especializados en grúas móviles, sobre oruga o transporte pesado, 
+            GRÚAS EQUISER tiene la experiencia y equipos que necesitas.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={`https://wa.me/584143432882?text=Leí el artículo "${article.title}" y necesito más información sobre servicios de GRÚAS EQUISER`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="equiser-yellow equiser-yellow-hover text-equiser-blue font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 shadow-lg"
+            >
+              Contactar por WhatsApp
+            </a>
+            <Link
+              href="/#servicios"
+              className="border-2 border-equiser-yellow text-equiser-yellow hover:bg-equiser-yellow hover:text-equiser-blue font-semibold px-8 py-4 rounded-full transition-all duration-200"
+            >
+              Ver Nuestros Servicios
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Comments Section */}
+      <BlogComments articleSlug={article.slug} />
+
+      {/* Related Articles */}
+      {relatedArticles.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Artículos <span className="text-equiser-blue">Relacionados</span>
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {relatedArticles.map((relatedArticle, index) => (
+                <motion.article
+                  key={relatedArticle.slug}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={relatedArticle.featuredImage}
+                      alt={relatedArticle.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-equiser-yellow text-equiser-blue px-3 py-1 rounded-full font-semibold text-xs">
+                        {relatedArticle.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-equiser-blue transition-colors line-clamp-2">
+                      {relatedArticle.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {relatedArticle.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center text-xs text-gray-500 mb-4">
+                      <Calendar className="w-3 h-3 mr-1" />
+                      <span>{formatDate(relatedArticle.publishDate)}</span>
+                      <span className="mx-2">•</span>
+                      <Clock className="w-3 h-3 mr-1" />
+                      <span>{relatedArticle.readTime}m</span>
+                    </div>
+                    
+                    <Link
+                      href={`/blog/${relatedArticle.slug}`}
+                      className="inline-flex items-center text-equiser-blue font-semibold hover:text-blue-700 transition-colors text-sm"
+                    >
+                      Leer artículo
+                      <ArrowLeft className="w-3 h-3 ml-1 rotate-180" />  
+                    </Link>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Newsletter */}
+      <BlogNewsletter />
+    </div>
+  )
+}

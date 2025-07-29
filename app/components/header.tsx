@@ -25,6 +25,7 @@ export function Header() {
     { href: '#equipos', label: 'EQUIPOS' },
     { href: '#servicios', label: 'SERVICIOS' },
     { href: '#proyectos', label: 'PROYECTOS' },
+    { href: '/blog', label: '📝 BLOG' },
     { href: '#contacto', label: 'CONTACTO' }
   ]
 
@@ -36,9 +37,9 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo y eslogan */}
-          <div className="flex items-center space-x-4">
-            <div className="relative w-20 h-20">
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className="relative w-32 h-20">
               <Image
                 src="/images/logo equiser actulizado sin fondo.png"
                 alt="GRÚAS EQUISER Logo"
@@ -46,10 +47,6 @@ export function Header() {
                 className="object-contain"
                 priority
               />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-equiser-blue">GRÚAS EQUISER C.A.</h1>
-              <p className="text-sm text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
             </div>
           </div>
 
@@ -66,12 +63,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Teléfono y CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-equiser-blue">
-              <Phone className="w-4 h-4" />
-              <span className="font-semibold">+58 414-343-2882</span>
-            </div>
+          {/* CTA */}
+          <div className="hidden md:flex items-center">
             <Button
               onClick={handleWhatsApp}
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
@@ -104,11 +97,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3">
-                <div className="flex items-center space-x-2 text-equiser-blue">
-                  <Phone className="w-4 h-4" />
-                  <span className="font-semibold">+58 414-343-2882</span>
-                </div>
+              <div className="pt-4">
                 <Button
                   onClick={handleWhatsApp}
                   className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"

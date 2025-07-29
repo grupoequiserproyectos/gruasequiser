@@ -18,24 +18,22 @@ export function ProjectsSection() {
   const [projects, setProjects] = useState<any[]>([])
 
   const sectors = [
-    { id: 'todos', name: 'Todos los Sectores', count: 12 },
-    { id: 'energetico', name: 'Energético', count: 3 },
-    { id: 'petrolero', name: 'Petrolero', count: 3 },
-    { id: 'petroquimico', name: 'Petroquímico', count: 2 },
-    { id: 'industrial', name: 'Industrial', count: 2 },
-    { id: 'portuario', name: 'Portuario', count: 1 },
-    { id: 'siderurgico', name: 'Siderúrgico', count: 1 }
+    { id: 'todos', name: 'Todos los Proyectos', count: 12 },
+    { id: 'gruas-moviles', name: 'Grúas Móviles', count: 5 },
+    { id: 'gruas-sobre-oruga', name: 'Grúas Sobre Oruga', count: 4 },
+    { id: 'transporte-pesado', name: 'Transporte Pesado', count: 2 },
+    { id: 'proyectos-especiales', name: 'Proyectos Especiales', count: 1 }
   ]
 
   const allProjects = [
     {
       id: 1,
       title: 'Izamiento Transformador 450 TON',
-      sector: 'energetico',
+      sector: 'gruas-moviles',
       capacity: '450 TON',
       location: 'Planta Eléctrica - Carabobo',
       year: 2024,
-      description: 'Izamiento y posicionamiento de transformador eléctrico de alta capacidad',
+      description: 'Izamiento y posicionamiento de transformador eléctrico de alta capacidad con grúa móvil telescópica',
       image: '/images/trabajo de grua 450 ton.png',
       equipment: ['Grúa móvil 450T', 'Transporte especializado'],
       featured: true
@@ -43,7 +41,7 @@ export function ProjectsSection() {
     {
       id: 2,
       title: 'Operación Dual Grúas 600 TON',
-      sector: 'petrolero',
+      sector: 'proyectos-especiales',
       capacity: '600 TON x2',
       location: 'Refinería - Falcón',
       year: 2024,
@@ -55,11 +53,11 @@ export function ProjectsSection() {
     {
       id: 3,
       title: 'Sistema Gantry Generador 600 TON',
-      sector: 'energetico',
+      sector: 'transporte-pesado',
       capacity: '600 TON',
       location: 'Central Termoeléctrica - Zulia',
       year: 2023,
-      description: 'Instalación de generador mediante sistema de pórtico especializado',
+      description: 'Instalación de generador mediante sistema de pórtico especializado para transporte pesado',
       image: '/images/gantry 600 ton generador.png',
       equipment: ['Sistema Gantry 600T', 'Rigging especializado'],
       featured: true
@@ -67,11 +65,11 @@ export function ProjectsSection() {
     {
       id: 4,
       title: 'Izamiento Industrial 800 TON',
-      sector: 'industrial',
+      sector: 'gruas-sobre-oruga',
       capacity: '800 TON',
       location: 'Complejo Industrial - Miranda',
       year: 2023,
-      description: 'Izamiento de estructura industrial de gran envergadura',
+      description: 'Izamiento de estructura industrial de gran envergadura con grúa sobre oruga',
       image: '/images/trabajo grua 800 ton.png',
       equipment: ['Grúa sobre oruga 800T', 'Rigging pesado'],
       featured: true
@@ -79,35 +77,35 @@ export function ProjectsSection() {
     {
       id: 5,
       title: 'Grúa Móvil 500 TON Operación',
-      sector: 'petroquimico',
+      sector: 'gruas-moviles',
       capacity: '500 TON',
       location: 'Complejo Petroquímico - Anzoátegui',
       year: 2023,
-      description: 'Mantenimiento de torres de destilación en complejo petroquímico',
+      description: 'Mantenimiento de torres de destilación con grúa móvil de gran capacidad',
       image: '/images/grua 500 ton.png',
       equipment: ['Grúa móvil 500T', 'Accesorios especiales'],
       featured: false
     },
     {
       id: 6,
-      title: 'Operación Grúa 600 TON',
-      sector: 'petrolero',
+      title: 'Operación Grúa Sobre Oruga 600 TON',
+      sector: 'gruas-sobre-oruga',
       capacity: '600 TON',
       location: 'Plataforma Marina - Anzoátegui',
       year: 2023,
-      description: 'Izamiento de equipos en plataforma petrolera marina',
+      description: 'Izamiento de equipos en plataforma petrolera marina con grúa sobre oruga',
       image: '/images/trabajo de grua de 600 ton.png',
       equipment: ['Grúa sobre oruga 600T', 'Rigging marino'],
       featured: false
     },
     {
       id: 7,
-      title: 'Grúa Industrial 130 TON',
-      sector: 'industrial',
+      title: 'Grúa Móvil Industrial 130 TON',
+      sector: 'gruas-moviles',
       capacity: '130 TON',
       location: 'Zona Industrial - Carabobo',
       year: 2024,
-      description: 'Izamiento de maquinaria industrial pesada',
+      description: 'Izamiento de maquinaria industrial pesada con grúa móvil compacta',
       image: '/images/grua de 130 ton.png',
       equipment: ['Grúa móvil 130T', 'Transporte lowboy'],
       featured: false
@@ -115,7 +113,7 @@ export function ProjectsSection() {
     {
       id: 8,
       title: 'Operación Coordinada Multi-Grúa',
-      sector: 'petroquimico',
+      sector: 'proyectos-especiales',
       capacity: '600 TON + 130 TON',
       location: 'Refinería - Carabobo',
       year: 2023,
@@ -126,24 +124,24 @@ export function ProjectsSection() {
     },
     {
       id: 9,
-      title: 'Grúa Máxima Capacidad 800 TON',
-      sector: 'siderurgico',
+      title: 'Grúa Sobre Oruga 800 TON',
+      sector: 'gruas-sobre-oruga',
       capacity: '800 TON',
       location: 'Siderúrgica - Bolívar',
       year: 2023,
-      description: 'Izamiento de hornos industriales de gran tonelaje',
+      description: 'Izamiento de hornos industriales de gran tonelaje con grúa sobre oruga',
       image: '/images/grua de 800 ton.png',
-      equipment: ['Grúa máxima capacidad', 'Rigging ultra-pesado'],
+      equipment: ['Grúa sobre oruga 800T', 'Rigging ultra-pesado'],
       featured: false
     },
     {
       id: 10,
       title: 'Transporte Gantry Especializado',
-      sector: 'portuario',
+      sector: 'transporte-pesado',
       capacity: '600 TON',
       location: 'Puerto - Carabobo',
       year: 2024,
-      description: 'Operación portuaria con sistema gantry para carga excepcional',
+      description: 'Operación portuaria con sistema gantry para carga excepcional y transporte pesado',
       image: '/images/trabajo de gantry 600 ton.png',
       equipment: ['Sistema Gantry portuario', 'Transporte marítimo'],
       featured: false
@@ -151,25 +149,25 @@ export function ProjectsSection() {
     {
       id: 11,
       title: 'Proyecto Integral Grúa Móvil',
-      sector: 'energetico',
+      sector: 'gruas-moviles',
       capacity: '400 TON',
       location: 'Subestación - Lara',
       year: 2024,
-      description: 'Proyecto integral de modernización de subestación eléctrica',
+      description: 'Proyecto integral de modernización de subestación eléctrica con grúa móvil',
       image: '/images/trabajo de grua.png',
       equipment: ['Grúa telescópica 400T', 'Equipo integral'],
       featured: false
     },
     {
       id: 12,
-      title: 'Operación Especializada Petrolera',
-      sector: 'petrolero',
+      title: 'Operación Grúa Sobre Oruga Petrolera',
+      sector: 'gruas-sobre-oruga',
       capacity: '350 TON',
       location: 'Campo Petrolero - Zulia',
       year: 2023,
-      description: 'Mantenimiento de torres de perforación en campo petrolero',
+      description: 'Mantenimiento de torres de perforación con grúa sobre oruga especializada',
       image: '/images/imagen grua.png',
-      equipment: ['Grúa especializada', 'Rigging petrolero'],
+      equipment: ['Grúa sobre oruga 350T', 'Rigging petrolero'],
       featured: false
     }
   ]
@@ -192,7 +190,7 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Proyectos <span className="text-blue-600">Ejecutados</span>
+            Proyectos <span className="text-equiser-blue">Ejecutados</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Más de 500 proyectos exitosos en los principales sectores industriales de Venezuela. 
@@ -219,7 +217,7 @@ export function ProjectsSection() {
                 onClick={() => setActiveFilter(sector.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   activeFilter === sector.id
-                    ? 'bg-blue-600 text-white shadow-lg scale-105'
+                    ? 'bg-equiser-blue text-white shadow-lg scale-105'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -253,7 +251,7 @@ export function ProjectsSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute top-4 right-4">
-                      <div className="bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
+                      <div className="bg-equiser-blue text-white px-4 py-2 rounded-full font-bold">
                         {project.capacity}
                       </div>
                     </div>
@@ -276,20 +274,20 @@ export function ProjectsSection() {
                     <div className="space-y-2 mb-4">
                       {project.equipment.map((equip, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <Wrench className="w-3 h-3 text-blue-600" />
+                          <Wrench className="w-3 h-3 text-equiser-blue" />
                           <span className="text-sm text-gray-700">{equip}</span>
                         </div>
                       ))}
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-blue-600 capitalize">
+                      <span className="text-sm font-medium text-equiser-blue capitalize">
                         {sectors.find(s => s.id === project.sector)?.name}
                       </span>
                       <Button
                         size="sm"
                         onClick={() => window.open(`https://wa.me/584143432882?text=Me interesa información sobre el proyecto: ${project.title}`, '_blank')}
-                        className="bg-green-600 hover:bg-green-700"
+                        className="equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
                       >
                         Más Info
                       </Button>
@@ -323,7 +321,7 @@ export function ProjectsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute top-3 right-3">
-                  <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="bg-equiser-blue text-white px-3 py-1 rounded-full text-sm font-bold">
                     {project.capacity}
                   </div>
                 </div>
@@ -342,14 +340,14 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-blue-600 capitalize">
+                  <span className="text-sm font-medium text-equiser-blue capitalize">
                     {sectors.find(s => s.id === project.sector)?.name}
                   </span>
                   <Button
                     size="sm"
                     variant="outline"
                     onClick={() => window.open(`https://wa.me/584143432882?text=Información sobre: ${project.title}`, '_blank')}
-                    className="text-xs"
+                    className="text-xs border-equiser-blue text-equiser-blue hover:bg-equiser-blue hover:text-white"
                   >
                     Ver Detalles
                   </Button>
@@ -365,16 +363,16 @@ export function ProjectsSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-3xl shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">¿Tienes un proyecto similar?</h3>
+          <div className="bg-gradient-to-r from-equiser-blue to-blue-900 text-white p-8 rounded-3xl shadow-xl">
+            <h3 className="text-2xl font-bold mb-4">¿Necesitas Servicios De Alquiler De Grúas O Transporte Pesado?</h3>
             <p className="text-blue-100 mb-6">
-              Cada proyecto es único. Contáctanos para una evaluación personalizada y cotización detallada.
+              Más de 30 años de experiencia con grúas hasta 1600 toneladas. Contáctanos para cotización inmediata.
             </p>
             <Button
-              onClick={() => window.open('https://wa.me/584143432882?text=Tengo un proyecto y necesito cotización de EQUISER', '_blank')}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold"
+              onClick={() => window.open('https://wa.me/584143432882?text=Necesito servicios de alquiler de grúas o transporte pesado de GRÚAS EQUISER', '_blank')}
+              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
             >
-              Solicitar Evaluación Gratuita
+              Solicitar Cotización Ahora
             </Button>
           </div>
         </motion.div>
