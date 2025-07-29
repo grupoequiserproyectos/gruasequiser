@@ -33,25 +33,23 @@ export function Header() {
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo y eslogan */}
           <div className="flex items-center space-x-4">
-            <div className="relative w-16 h-16">
+            <div className="relative w-20 h-20">
               <Image
                 src="/images/logo equiser actulizado sin fondo.png"
-                alt="EQUISER Logo"
+                alt="GRÚAS EQUISER Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-blue-900">EQUISER</h1>
-              <p className="text-sm text-green-600 font-medium">Seguridad y calidad primero</p>
+              <h1 className="text-xl font-bold text-equiser-blue">GRÚAS EQUISER C.A.</h1>
+              <p className="text-sm text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
             </div>
           </div>
 
@@ -61,7 +59,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="text-sm font-semibold text-gray-700 hover:text-equiser-blue transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -70,13 +68,13 @@ export function Header() {
 
           {/* Teléfono y CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-blue-900">
+            <div className="flex items-center space-x-2 text-equiser-blue">
               <Phone className="w-4 h-4" />
               <span className="font-semibold">+58 414-343-2882</span>
             </div>
             <Button
               onClick={handleWhatsApp}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition-all duration-200 hover:scale-105"
+              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               SOLICITAR COTIZACIÓN
@@ -100,20 +98,20 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-gray-700 hover:text-blue-600 py-2 border-b border-gray-100"
+                  className="block text-gray-700 hover:text-equiser-blue py-2 border-b border-gray-100"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
               <div className="pt-4 space-y-3">
-                <div className="flex items-center space-x-2 text-blue-900">
+                <div className="flex items-center space-x-2 text-equiser-blue">
                   <Phone className="w-4 h-4" />
                   <span className="font-semibold">+58 414-343-2882</span>
                 </div>
                 <Button
                   onClick={handleWhatsApp}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   SOLICITAR COTIZACIÓN

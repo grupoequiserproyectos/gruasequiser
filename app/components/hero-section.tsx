@@ -85,17 +85,17 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                EQUISER
-                <span className="block text-3xl md:text-4xl text-green-400 font-light">C.A.</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                GRÚAS EQUISER
+                <span className="block text-3xl md:text-4xl text-equiser-yellow font-light">C.A.</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-200">
-                Líder en Grúas Móviles y Sobre Oruga en Venezuela
+              <h2 className="text-xl md:text-2xl font-semibold mb-6 text-blue-200">
+                Líder En Alquiler De Grúas Móviles Y Sobre Oruga En Venezuela
               </h2>
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
                 Más de <strong>30 años de experiencia</strong> brindando soluciones de izamiento y transporte pesado 
-                con la más alta tecnología y seguridad. Capacidades desde <strong>25 hasta 1600 toneladas</strong> 
-                con equipos de las mejores marcas alemanas.
+                con la más alta tecnología y seguridad. <strong>Grúas hasta 1600 toneladas</strong> 
+                con equipos de las mejores marcas alemanas y americanas.
               </p>
             </motion.div>
 
@@ -108,7 +108,7 @@ export function HeroSection() {
               <Button
                 onClick={handleWhatsApp}
                 size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105 shadow-xl"
+                className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105 shadow-xl"
               >
                 Contactar Ahora
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -117,7 +117,7 @@ export function HeroSection() {
                 onClick={handleQuote}
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200"
+                className="border-2 border-equiser-yellow text-equiser-yellow hover:bg-equiser-yellow hover:text-equiser-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200"
               >
                 Solicitar Cotización
               </Button>
@@ -132,30 +132,30 @@ export function HeroSection() {
             className="grid grid-cols-2 gap-6"
           >
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20">
-              <Wrench className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">{stats.capacity}</div>
-              <div className="text-blue-200 font-medium">TON</div>
-              <div className="text-sm text-gray-300 mt-2">Capacidad Máxima</div>
+              <Wrench className="w-12 h-12 text-equiser-yellow mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stats.capacity}</div>
+              <div className="text-equiser-yellow font-medium text-lg">TONELADAS</div>
+              <div className="text-sm text-gray-300 mt-2">Grúas Hasta</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20">
-              <Award className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">{stats.experience}+</div>
-              <div className="text-blue-200 font-medium">AÑOS</div>
-              <div className="text-sm text-gray-300 mt-2">Experiencia</div>
+              <Award className="w-12 h-12 text-equiser-yellow mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stats.experience}+</div>
+              <div className="text-equiser-yellow font-medium text-lg">AÑOS</div>
+              <div className="text-sm text-gray-300 mt-2">De Experiencia En Venezuela</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20">
-              <Clock className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">{stats.sectors}</div>
-              <div className="text-blue-200 font-medium">SECTORES</div>
-              <div className="text-sm text-gray-300 mt-2">Industriales</div>
+              <Clock className="w-12 h-12 text-equiser-yellow mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stats.sectors}</div>
+              <div className="text-equiser-yellow font-medium text-lg">SECTORES</div>
+              <div className="text-sm text-gray-300 mt-2">Industriales Atendidos</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20">
-              <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">{stats.projects}+</div>
-              <div className="text-blue-200 font-medium">PROYECTOS</div>
+              <Users className="w-12 h-12 text-equiser-yellow mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stats.projects}+</div>
+              <div className="text-equiser-yellow font-medium text-lg">PROYECTOS</div>
               <div className="text-sm text-gray-300 mt-2">Ejecutados</div>
             </div>
           </motion.div>

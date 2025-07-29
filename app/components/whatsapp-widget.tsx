@@ -66,7 +66,7 @@ export function WhatsappWidget() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 left-6 z-50">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -77,22 +77,22 @@ export function WhatsappWidget() {
             className="mb-4 bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden w-80"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-4 text-equiser-blue">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6" />
+                  <div className="w-10 h-10 bg-equiser-blue/20 rounded-full flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-equiser-blue" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">EQUISER</h3>
-                    <p className="text-green-100 text-sm">¡Estamos aquí para ayudarte!</p>
+                    <h3 className="font-bold text-lg">GRÚAS EQUISER</h3>
+                    <p className="text-equiser-blue/80 text-sm">Atención 24/7</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  className="w-8 h-8 bg-equiser-blue/20 rounded-full flex items-center justify-center hover:bg-equiser-blue/30 transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 text-equiser-blue" />
                 </button>
               </div>
             </div>
@@ -101,7 +101,7 @@ export function WhatsappWidget() {
             <div className="p-4">
               <div className="mb-4">
                 <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-equiser-yellow rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-gray-700">Disponible 24/7</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -137,23 +137,23 @@ export function WhatsappWidget() {
                       onClick={() => handleDirectCall(phone.number)}
                       className={`w-full flex items-center justify-between p-3 rounded-xl transition-all ${
                         phone.primary
-                          ? 'bg-green-50 border-2 border-green-200 hover:bg-green-100'
+                          ? 'bg-yellow-50 border-2 border-equiser-yellow hover:bg-yellow-100'
                           : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'
                       }`}
                     >
                       <div className="flex items-center space-x-3">
-                        <Phone className={`w-4 h-4 ${phone.primary ? 'text-green-600' : 'text-gray-600'}`} />
+                        <Phone className={`w-4 h-4 ${phone.primary ? 'text-equiser-blue' : 'text-gray-600'}`} />
                         <div className="text-left">
-                          <div className={`text-sm font-medium ${phone.primary ? 'text-green-900' : 'text-gray-900'}`}>
+                          <div className={`text-sm font-medium ${phone.primary ? 'text-equiser-blue' : 'text-gray-900'}`}>
                             +58 {phone.number.slice(2, 5)}-{phone.number.slice(5, 8)}-{phone.number.slice(8)}
                           </div>
-                          <div className={`text-xs ${phone.primary ? 'text-green-600' : 'text-gray-500'}`}>
+                          <div className={`text-xs ${phone.primary ? 'text-equiser-blue' : 'text-gray-500'}`}>
                             {phone.label}
                             {phone.primary && ' (Recomendado)'}
                           </div>
                         </div>
                       </div>
-                      <MessageCircle className={`w-4 h-4 ${phone.primary ? 'text-green-600' : 'text-gray-400'}`} />
+                      <MessageCircle className={`w-4 h-4 ${phone.primary ? 'text-equiser-blue' : 'text-gray-400'}`} />
                     </button>
                   ))}
                 </div>
@@ -162,7 +162,7 @@ export function WhatsappWidget() {
               {/* Footer */}
               <div className="mt-4 text-center">
                 <p className="text-xs text-gray-400">
-                  Respuesta promedio: <span className="font-medium text-green-600">2 minutos</span>
+                  Respuesta promedio: <span className="font-medium text-equiser-yellow">2 minutos</span>
                 </p>
               </div>
             </div>
@@ -173,7 +173,7 @@ export function WhatsappWidget() {
       {/* Botón principal */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-2xl flex items-center justify-center hover:from-green-600 hover:to-green-700 transition-all duration-300 hover:scale-110"
+        className="relative w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full shadow-2xl flex items-center justify-center hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -186,7 +186,7 @@ export function WhatsappWidget() {
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-8 h-8 text-white" />
+              <X className="w-8 h-8 text-equiser-blue" />
             </motion.div>
           ) : (
             <motion.div
@@ -196,7 +196,7 @@ export function WhatsappWidget() {
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <MessageCircle className="w-8 h-8 text-white" />
+              <MessageCircle className="w-8 h-8 text-equiser-blue" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -209,13 +209,13 @@ export function WhatsappWidget() {
               animate={{ scale: 2, opacity: 0 }}
               exit={{ scale: 1, opacity: 0 }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="absolute inset-0 bg-green-500 rounded-full"
+              className="absolute inset-0 bg-yellow-400 rounded-full"
             />
           )}
         </AnimatePresence>
 
         {/* Indicador de disponibilidad */}
-        <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white flex items-center justify-center">
+        <div className="absolute -top-1 -right-1 w-5 h-5 bg-equiser-blue rounded-full border-2 border-white flex items-center justify-center">
           <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
         </div>
       </motion.button>

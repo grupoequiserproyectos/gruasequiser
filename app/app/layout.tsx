@@ -8,14 +8,14 @@ import { WhatsappWidget } from '@/components/whatsapp-widget'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'EQUISER - Líder en Grúas Móviles y Transporte Pesado Venezuela | Alquiler Grúas 25-1600 TON',
-  description: 'EQUISER C.A. - Más de 30 años como empresa líder en alquiler de grúas móviles, sobre oruga y transporte pesado en Venezuela. Capacidades 25-1600 toneladas. Marcas Liebherr, Grove, Manitowoc. Atención 24/7.',
-  keywords: 'grúas móviles Venezuela, alquiler grúas Venezuela, transporte pesado Venezuela, grúas sobre oruga Venezuela, super lowboy Venezuela, EQUISER, Liebherr, Grove, Manitowoc',
+  title: 'GRÚAS EQUISER C.A. - Líder En Alquiler De Grúas Móviles Y Sobre Oruga Venezuela | Grúas Hasta 1600 Toneladas',
+  description: 'GRÚAS EQUISER C.A. - Más de 30 años como empresa líder en alquiler de grúas móviles, sobre oruga y transporte pesado en Venezuela. Grúas hasta 1600 toneladas. Marcas Liebherr, Grove, Manitowoc, Demag. Atención 24/7.',
+  keywords: 'alquiler grúas móviles Venezuela, grúas sobre oruga Venezuela, transporte pesado Venezuela, grúas móviles Venezuela, super lowboy Venezuela, GRÚAS EQUISER, Liebherr, Grove, Manitowoc, Demag',
   openGraph: {
-    title: 'EQUISER - Líder en Grúas Móviles Venezuela',
-    description: '30+ años liderando el mercado venezolano con grúas de 25-1600 TON',
+    title: 'GRÚAS EQUISER C.A. - Líder En Alquiler De Grúas Móviles Venezuela',
+    description: '30+ años liderando el mercado venezolano con grúas hasta 1600 toneladas',
     url: 'https://gruasequiser.net',
-    siteName: 'EQUISER C.A.',
+    siteName: 'GRÚAS EQUISER C.A.',
     locale: 'es_VE',
     type: 'website',
   },
@@ -54,7 +54,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Grúas EQUISER C.A.",
+              "name": "GRÚAS EQUISER C.A.",
               "description": "Empresa líder en alquiler de grúas móviles, sobre oruga y transporte pesado en Venezuela",
               "url": "https://gruasequiser.net",
               "logo": "https://equisercranes.com/wp-content/uploads/2020/10/logo.png",

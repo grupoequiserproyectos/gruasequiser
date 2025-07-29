@@ -25,53 +25,53 @@ export function EquipmentSection() {
     mobile: [
       {
         name: 'Liebherr LTM 1500-8.1',
-        capacity: '500 TON',
+        capacity: '500 Toneladas',
         brand: 'Liebherr',
         description: 'Grúa móvil telescópica de alta capacidad para proyectos industriales complejos',
         image: '/images/grua 500 ton.png',
-        features: ['Boom telescópico 84m', 'Contraflecha 91m', '8 ejes', 'Capacidad 500 ton']
+        features: ['Boom Telescópico 84m', 'Contraflecha 91m', '8 Ejes', 'Capacidad 500 Toneladas']
       },
       {
-        name: 'Grove GMK6400',
-        capacity: '400 TON',
+        name: 'Grove GMK5250L',
+        capacity: '250 Toneladas',
         brand: 'Grove',
         description: 'Grúa móvil versátil para aplicaciones industriales y de construcción',
         image: '/images/grua de 600 ton y grua de 130 ton.png',
-        features: ['Boom telescópico 78m', 'Contraflecha 84m', '6 ejes', 'Capacidad 400 ton']
+        features: ['Boom Telescópico 70m', 'Contraflecha 58m', '5 Ejes', 'Capacidad 250 Toneladas']
       },
       {
-        name: 'Manitowoc MLC300',
-        capacity: '300 TON',
-        brand: 'Manitowoc',
+        name: 'Grove GMK6300L',
+        capacity: '300 Toneladas',
+        brand: 'Grove',
         description: 'Grúa móvil robusta para trabajos de alta precisión',
         image: '/images/dos gruas de 600 ton.png',
-        features: ['Boom variable', 'Sistema VPC', '5 ejes', 'Capacidad 300 ton']
+        features: ['Boom Variable 80m', 'Sistema VPC', '6 Ejes', 'Capacidad 300 Toneladas']
       }
     ],
     crawler: [
       {
-        name: 'Liebherr LR 1600/2',
-        capacity: '600 TON',
-        brand: 'Liebherr',
+        name: 'Demag CC2800',
+        capacity: '600 Toneladas Sobre Oruga',
+        brand: 'Demag',
         description: 'Grúa sobre oruga de alta capacidad para proyectos especializados',
         image: '/images/grua de 600 ton.png',
-        features: ['Boom variable 154m', 'Contraflecha 126m', 'Sistema Liebherr', 'Capacidad 600 ton']
-      },
-      {
-        name: 'Liebherr LR 1750/2',
-        capacity: '750 TON',
-        brand: 'Liebherr',
-        description: 'Grúa sobre oruga premium para aplicaciones industriales extremas',
-        image: '/images/grua de 800 ton.png',
-        features: ['Boom variable 168m', 'Contraflecha 140m', 'Tecnología alemana', 'Capacidad 750 ton']
+        features: ['Boom Variable 154m', 'Contraflecha 126m', 'Sistema Demag', 'Sobre Oruga']
       },
       {
         name: 'Manitowoc 18000',
-        capacity: '1600 TON',
+        capacity: '650 Toneladas Sobre Oruga',
+        brand: 'Manitowoc',
+        description: 'Grúa sobre oruga premium para aplicaciones industriales extremas',
+        image: '/images/grua de 800 ton.png',
+        features: ['Boom Variable 168m', 'Contraflecha 140m', 'Tecnología Americana', 'Sobre Oruga']
+      },
+      {
+        name: 'Manitowoc MLC650',
+        capacity: '1600 Toneladas',
         brand: 'Manitowoc',
         description: 'La grúa de mayor capacidad en nuestro inventario para proyectos únicos',
         image: '/images/trabajo grua 800 ton.png',
-        features: ['Boom variable 183m', 'Contraflecha 154m', 'Capacidad máxima', '1600 ton']
+        features: ['Boom Variable 183m', 'Contraflecha 154m', 'Capacidad Máxima', '1600 Toneladas']
       }
     ],
     transport: [
@@ -105,11 +105,11 @@ export function EquipmentSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Equipos de <span className="text-blue-600">Alta Capacidad</span>
+            Equipos de <span className="text-equiser-blue">Alta Capacidad</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            La flota más moderna y completa de Venezuela con grúas y equipos de transporte 
-            de las mejores marcas alemanas del mundo.
+            La flota más moderna y completa de Venezuela con grúas móviles, sobre oruga y equipos de transporte 
+            de las mejores marcas alemanas y americanas del mundo.
           </p>
         </motion.div>
 
@@ -127,7 +127,7 @@ export function EquipmentSection() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-3 px-6 py-4 rounded-xl transition-all duration-200 ${
                   activeCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-md'
+                    ? 'equiser-blue text-white shadow-md'
                     : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
@@ -160,7 +160,7 @@ export function EquipmentSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-lg">
+                  <div className="equiser-blue text-white px-4 py-2 rounded-full font-bold text-lg">
                     {item.capacity}
                   </div>
                 </div>
@@ -186,7 +186,7 @@ export function EquipmentSection() {
 
                 <Button
                   onClick={() => window.open(`https://wa.me/584143432882?text=Me interesa información sobre ${item.name} - ${item.capacity}`, '_blank')}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full equiser-blue equiser-blue-hover text-white"
                 >
                   Consultar Disponibilidad
                 </Button>
@@ -201,14 +201,14 @@ export function EquipmentSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-3xl shadow-xl">
+          <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-equiser-blue p-8 rounded-3xl shadow-xl">
             <h3 className="text-2xl font-bold mb-4">¿No encuentras el equipo que necesitas?</h3>
-            <p className="text-green-100 mb-6">
+            <p className="text-equiser-blue/80 mb-6">
               Contáctanos para una consulta personalizada sobre equipos específicos y capacidades especiales
             </p>
             <Button
-              onClick={() => window.open('https://wa.me/584143432882?text=Necesito información sobre equipos específicos de EQUISER', '_blank')}
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold"
+              onClick={() => window.open('https://wa.me/584143432882?text=Necesito información sobre equipos específicos de GRÚAS EQUISER', '_blank')}
+              className="bg-white text-equiser-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold"
             >
               Consulta Personalizada
             </Button>

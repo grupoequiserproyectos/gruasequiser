@@ -116,11 +116,11 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Números que <span className="text-green-400">Respaldan</span> Nuestra Experiencia
+            Números que <span className="text-equiser-yellow">Respaldan</span> Nuestra Experiencia
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
             Más de tres décadas de trayectoria nos posicionan como la empresa líder 
-            indiscutible en Venezuela para servicios de izamiento y transporte pesado.
+            indiscutible en Venezuela para alquiler de grúas móviles y transporte pesado.
           </p>
         </motion.div>
 
@@ -134,20 +134,20 @@ export function StatsSection() {
               className="group"
             >
               <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <div className="w-20 h-20 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-                  <stat.icon className="w-10 h-10 text-green-400" />
+                <div className="w-20 h-20 bg-equiser-yellow/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-equiser-yellow/30 transition-colors duration-300">
+                  <stat.icon className="w-10 h-10 text-equiser-yellow" />
                 </div>
                 
                 <div className="mb-4">
                   <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                     {stat.number}
-                    <span className="text-green-400">{stat.suffix}</span>
+                    <span className="text-equiser-yellow">{stat.suffix}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-blue-200 mb-3">{stat.label}</h3>
                   <p className="text-sm text-blue-300 leading-relaxed">{stat.description}</p>
                 </div>
 
-                <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-equiser-yellow to-blue-400 rounded-full mx-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </motion.div>
           ))}
@@ -161,12 +161,12 @@ export function StatsSection() {
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
             <h3 className="text-3xl font-bold mb-6">
-              ¿Por qué elegir <span className="text-green-400">EQUISER</span>?
+              ¿Por qué elegir <span className="text-equiser-yellow">GRÚAS EQUISER</span>?
             </h3>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="space-y-3">
-                <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 bg-equiser-yellow/20 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-equiser-yellow" />
                 </div>
                 <h4 className="text-xl font-semibold">Seguridad Certificada</h4>
                 <p className="text-blue-200 text-sm">
@@ -175,18 +175,18 @@ export function StatsSection() {
               </div>
               
               <div className="space-y-3">
-                <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                  <Award className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 bg-equiser-yellow/20 rounded-xl flex items-center justify-center">
+                  <Award className="w-6 h-6 text-equiser-yellow" />
                 </div>
-                <h4 className="text-xl font-semibold">Tecnología Alemana</h4>
+                <h4 className="text-xl font-semibold">Tecnología Alemana Y Americana</h4>
                 <p className="text-blue-200 text-sm">
                   Equipos de las mejores marcas mundiales: Liebherr, Grove y Manitowoc con tecnología de punta.
                 </p>
               </div>
               
               <div className="space-y-3">
-                <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 bg-equiser-yellow/20 rounded-xl flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-equiser-yellow" />
                 </div>
                 <h4 className="text-xl font-semibold">Disponibilidad 24/7</h4>
                 <p className="text-blue-200 text-sm">
@@ -201,10 +201,10 @@ export function StatsSection() {
               whileTap={{ scale: 0.95 }}
             >
               <button
-                onClick={() => window.open('https://wa.me/584143432882?text=Quiero conocer más sobre por qué EQUISER es la mejor opción para mi proyecto', '_blank')}
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+                onClick={() => window.open('https://wa.me/584143432882?text=Quiero conocer más sobre por qué GRÚAS EQUISER es la mejor opción para mi proyecto', '_blank')}
+                className="equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Descubre Por Qué Somos #1 en Venezuela
+                Descubre Por Qué Somos #1 En Venezuela
               </button>
             </motion.div>
           </div>

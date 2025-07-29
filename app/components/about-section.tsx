@@ -36,10 +36,10 @@ export function AboutSection() {
   ]
 
   const stats = [
-    { number: '1600', suffix: 'TON', label: 'Capacidad Máxima' },
-    { number: '30+', suffix: 'AÑOS', label: 'En el Mercado' },
-    { number: '6', suffix: 'SECTORES', label: 'Industriales' },
-    { number: '24/7', suffix: 'HORAS', label: 'Disponibilidad' }
+    { number: '1600', suffix: 'TONELADAS', label: 'Grúas Hasta' },
+    { number: '30+', suffix: 'AÑOS', label: 'De Experiencia En Venezuela' },
+    { number: '6', suffix: 'SECTORES', label: 'Industriales Atendidos' },
+    { number: '500+', suffix: 'PROYECTOS', label: 'Ejecutados' }
   ]
 
   return (
@@ -53,11 +53,11 @@ export function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Conoce <span className="text-blue-600">EQUISER</span>
+            Conoce <span className="text-equiser-blue">GRÚAS EQUISER</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de tres décadas liderando el mercado venezolano con tecnología alemana y 
-            el equipo humano más especializado del sector industrial.
+            Más de tres décadas liderando el mercado venezolano en alquiler de grúas móviles y sobre oruga con tecnología alemana y americana, 
+            y el equipo humano más especializado del sector industrial.
           </p>
         </motion.div>
 
@@ -70,11 +70,11 @@ export function AboutSection() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Target className="w-8 h-8 text-blue-600 mr-3" />
+                  <Target className="w-8 h-8 text-equiser-blue mr-3" />
                   Nuestra Misión
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Brindar soluciones integrales de izamiento y transporte pesado con la más alta 
+                  Brindar soluciones integrales de alquiler de grúas móviles, sobre oruga y transporte pesado con la más alta 
                   tecnología, seguridad y calidad, superando las expectativas de nuestros clientes 
                   en todos los sectores industriales de Venezuela.
                 </p>
@@ -82,23 +82,23 @@ export function AboutSection() {
 
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Heart className="w-8 h-8 text-blue-600 mr-3" />
+                  <Heart className="w-8 h-8 text-equiser-blue mr-3" />
                   Nuestra Visión
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Consolidarnos como la empresa líder indiscutible en Venezuela en servicios de 
-                  izamiento y transporte extrapesado, expandiendo nuestras capacidades y 
+                  Consolidarnos como la empresa líder indiscutible en Venezuela en alquiler de grúas móviles, sobre oruga 
+                  y transporte extrapesado, expandiendo nuestras capacidades y 
                   manteniendo los más altos estándares de excelencia operacional.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Shield className="w-8 h-8 text-blue-600 mr-3" />
+                  <Shield className="w-8 h-8 text-equiser-blue mr-3" />
                   Nuestra Filosofía
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  <strong>"Seguridad y calidad primero"</strong> - Cada operación se ejecuta bajo 
+                  <strong>"Líder En Alquiler De Grúas Venezuela"</strong> - Cada operación se ejecuta bajo 
                   los más rigurosos protocolos de seguridad, garantizando la integridad de nuestro 
                   personal, equipos y proyectos de nuestros clientes.
                 </p>
@@ -123,7 +123,7 @@ export function AboutSection() {
             </div>
             
             {/* Badge flotante */}
-            <div className="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-2xl shadow-xl">
+            <div className="absolute -bottom-6 -right-6 equiser-yellow text-equiser-blue p-6 rounded-2xl shadow-xl">
               <div className="text-center">
                 <div className="text-3xl font-bold">ISO</div>
                 <div className="text-sm">9001 & 14001</div>
@@ -144,8 +144,8 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={value.title} className="text-center group">
-                <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <value.icon className="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <div className="w-20 h-20 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-equiser-yellow transition-colors duration-300">
+                  <value.icon className="w-10 h-10 text-equiser-blue group-hover:text-equiser-blue transition-colors duration-300" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
@@ -159,14 +159,14 @@ export function AboutSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-12 text-white"
+          className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-12 text-equiser-blue"
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-                <div className="text-blue-200 font-semibold mb-1">{stat.suffix}</div>
-                <div className="text-sm text-blue-100">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2 text-equiser-blue">{stat.number}</div>
+                <div className="text-equiser-blue/80 font-semibold mb-1">{stat.suffix}</div>
+                <div className="text-sm text-equiser-blue/70">{stat.label}</div>
               </div>
             ))}
           </div>
