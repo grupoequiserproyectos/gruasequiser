@@ -191,44 +191,110 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Call to Action final con fondo legible */}
-        <div className="border-t border-gray-700 py-8">
+        {/* REDISEÑO: Call to Action con colores corporativos */}
+        <div className="border-t border-gray-700 py-12">
           <div 
-            className="relative rounded-2xl p-8 text-center overflow-hidden"
+            className="relative rounded-3xl overflow-hidden shadow-2xl"
             style={{
-              background: 'linear-gradient(135deg, #FFD700 0%, #FFC107 100%)',
-              backgroundImage: 'url("/images/imagen grua.png")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundBlendMode: 'overlay'
+              background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+              padding: '80px 20px'
             }}
           >
-            {/* Overlay fuerte para legibilidad */}
-            <div className="absolute inset-0" style={{ background: 'rgba(255, 215, 0, 0.95)' }}></div>
+            {/* Patrón decorativo de fondo */}
+            <div 
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle at 70% 30%, rgba(30, 58, 138, 0.3) 0%, transparent 50%)',
+                pointerEvents: 'none'
+              }}
+            ></div>
             
-            <div className="relative z-10">
+            <div className="relative z-10 text-center max-w-4xl mx-auto">
+              {/* Título principal rediseñado */}
               <h3 
-                className="text-2xl font-bold mb-4 text-equiser-blue"
-                style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}
+                className="text-4xl md:text-5xl font-extrabold text-equiser-blue mb-8"
+                style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
               >
                 ¿Necesitas Una Cotización Inmediata?
               </h3>
+              
+              {/* Texto explicativo mejorado */}
               <p 
-                className="text-equiser-blue/80 mb-6 max-w-2xl mx-auto"
-                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}
+                className="text-xl md:text-2xl text-equiser-blue font-medium mb-10 leading-relaxed max-w-3xl mx-auto"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
               >
-                Nuestro equipo está disponible 24/7 para brindarte la mejor solución 
+                Nuestro equipo está disponible <strong>24/7</strong> para brindarte la mejor solución 
                 para tu proyecto de izamiento o transporte pesado.
               </p>
+
+              {/* Botón principal rediseñado */}
               <motion.button
                 onClick={handleWhatsApp}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-equiser-blue text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-all duration-200 shadow-lg"
-                style={{ textShadow: 'none' }}
+                className="text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:shadow-3xl inline-flex items-center gap-4"
+                style={{
+                  background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                  padding: '25px 50px',
+                  fontSize: '1.4rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px',
+                  boxShadow: '0 15px 40px rgba(30, 58, 138, 0.4)',
+                  border: '3px solid transparent'
+                }}
               >
+                <span className="text-2xl">💬</span>
                 Contactar Por WhatsApp Ahora
+                <span className="text-xl">→</span>
               </motion.button>
+
+              {/* Información adicional destacada */}
+              <div 
+                className="mt-10 p-6 rounded-2xl max-w-4xl mx-auto"
+                style={{
+                  background: 'rgba(30, 58, 138, 0.1)',
+                  backdropFilter: 'blur(10px)',
+                  border: '2px solid rgba(30, 58, 138, 0.2)'
+                }}
+              >
+                <p 
+                  className="text-equiser-blue font-bold text-lg"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
+                >
+                  ⚡ Respuesta inmediata | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional garantizado
+                </p>
+              </div>
+
+              {/* Estadísticas adicionales */}
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div className="text-center">
+                  <div 
+                    className="text-3xl font-bold text-equiser-blue"
+                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
+                  >
+                    30+
+                  </div>
+                  <div className="text-equiser-blue font-medium">Años de Experiencia</div>
+                </div>
+                <div className="text-center">
+                  <div 
+                    className="text-3xl font-bold text-equiser-blue"
+                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
+                  >
+                    1600T
+                  </div>
+                  <div className="text-equiser-blue font-medium">Capacidad Máxima</div>
+                </div>
+                <div className="text-center">
+                  <div 
+                    className="text-3xl font-bold text-equiser-blue"
+                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
+                  >
+                    24/7
+                  </div>
+                  <div className="text-equiser-blue font-medium">Disponibilidad</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

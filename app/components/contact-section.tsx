@@ -233,41 +233,80 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Mapa con coordenadas exactas */}
-            <div id="mapa" className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                Nuestra Ubicación Exacta
-              </h4>
-              
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-200">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.894567890123!2d-68.1654391!3d10.4840621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e806f2345678901%3A0x1234567890abcdef!2sEquiser+Venezuela+%7C+Gruas+Telesc%C3%B3picas+e+Industriales!5e0!3m2!1ses!2sve!4v1234567890123!5m2!1ses!2sve"
-                  width="100%"
-                  height="400"
-                  style={{ border: 0, borderRadius: '15px' }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación EQUISER - Morón, Carabobo"
-                ></iframe>
+            {/* REDISEÑO: Mapa con presentación corporativa mejorada */}
+            <div id="mapa" className="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-100">
+              {/* Título principal rediseñado */}
+              <div className="text-center py-8 px-6" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
+                <h4 className="text-3xl font-bold text-equiser-blue mb-4 flex items-center justify-center gap-3">
+                  <span className="text-2xl">📍</span>
+                  Nuestra Ubicación Exacta
+                </h4>
+                <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(90deg, #FFC107, #FFD700)' }}></div>
               </div>
-              
-              <div className="mt-4 space-y-2">
-                <p className="text-sm text-gray-600">
-                  <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
-                  diagonal a Planta Centro, Morón estado Carabobo
-                </p>
-                <p className="text-xs text-gray-500">
-                  <strong>Coordenadas exactas:</strong> 10.4840568, -68.1628642
-                </p>
-                <Button
-                  onClick={() => window.open('https://www.google.com/maps/place/Equiser+Venezuela+%7C+Gruas+Telescópicas+e+Industriales/@10.4840621,-68.1654391,17z/', '_blank')}
-                  size="sm"
-                  className="equiser-blue equiser-blue-hover text-white mt-3"
+
+              {/* Información corporativa destacada */}
+              <div className="px-8 py-6" style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)' }}>
+                <div className="text-white text-center">
+                  <h5 className="text-xl font-bold text-yellow-400 mb-3">
+                    Equiser Venezuela | Grúas Telescópicas e Industriales
+                  </h5>
+                  <p className="text-lg mb-2">
+                    <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
+                    diagonal a Planta Centro, Morón estado Carabobo
+                  </p>
+                  <p className="text-blue-100 mb-4">
+                    <strong>Coordenadas exactas:</strong> 10.4840568, -68.1628642
+                  </p>
+                  <div className="flex items-center justify-center gap-3 text-yellow-400">
+                    <span className="text-lg">⭐</span>
+                    <span className="font-bold text-lg">4.7</span>
+                    <span className="text-blue-100">| 7 reseñas</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mapa integrado con bordes corporativos */}
+              <div className="p-8">
+                <div 
+                  className="rounded-2xl overflow-hidden shadow-lg"
+                  style={{ border: '4px solid #1E3A8A' }}
                 >
-                  Ver en Google Maps
-                </Button>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.894567890123!2d-68.1654391!3d10.4840621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e806f2345678901%3A0x1234567890abcdef!2sEquiser+Venezuela+%7C+Gruas+Telesc%C3%B3picas+e+Industriales!5e0!3m2!1ses!2sve!4v1234567890123!5m2!1ses!2sve"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Ubicación EQUISER - Morón, Carabobo"
+                  ></iframe>
+                </div>
+
+                {/* Botón Ver en Google Maps rediseñado */}
+                <div className="text-center mt-8">
+                  <Button
+                    onClick={() => window.open('https://www.google.com/maps/place/Equiser+Venezuela+%7C+Gruas+Telescópicas+e+Industriales/@10.4840621,-68.1654391,17z/', '_blank')}
+                    className="px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)'
+                    }}
+                  >
+                    <span className="text-xl mr-2">🗺️</span>
+                    Ver en Google Maps
+                    <span className="text-lg ml-2">→</span>
+                  </Button>
+                </div>
+
+                {/* Información adicional */}
+                <div className="mt-6 p-4 rounded-2xl text-center" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
+                  <p className="text-equiser-blue font-semibold">
+                    ⚡ Fácil acceso vehicular | 🎯 Ubicación estratégica | 🚀 Disponibilidad 24/7
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

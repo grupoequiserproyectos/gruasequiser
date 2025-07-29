@@ -199,7 +199,7 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* CORRECCIÓN: Filtros con fondo amarillo completo */}
+        {/* REDISEÑO: Filtros con fondo azul gradient corporativo */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -207,38 +207,74 @@ export function ProjectsSection() {
           className="mb-12"
         >
           <div 
-            className="rounded-2xl p-8"
+            className="relative rounded-3xl overflow-hidden shadow-2xl"
             style={{
-              background: '#FFD700',
-              padding: '40px 20px',
-              borderRadius: '20px'
+              background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
+              padding: '60px 20px'
             }}
           >
-            <div className="flex items-center justify-center mb-8">
-              <Filter className="w-5 h-5 text-equiser-blue mr-3" />
-              <span className="text-equiser-blue font-semibold text-lg">🔍 Filtrar por sector:</span>
-            </div>
+            {/* Patrón decorativo de fondo */}
+            <div 
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle at 30% 70%, rgba(255, 193, 7, 0.3) 0%, transparent 50%)',
+                pointerEvents: 'none'
+              }}
+            ></div>
             
-            <div className="flex flex-wrap justify-center gap-3">
-            {sectors.map((sector) => (
-              <button
-                key={sector.id}
-                onClick={() => setActiveFilter(sector.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
-                  activeFilter === sector.id
-                    ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
-                    : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
-                }`}
-                style={{
-                  padding: '15px 25px',
-                  borderRadius: '25px',
-                  fontSize: '14px',
-                  fontWeight: '600'
-                }}
-              >
-                {sector.name} ({sector.count})
-              </button>
-            ))}
+            {/* Contenido principal */}
+            <div className="relative z-10">
+              {/* Título de filtros */}
+              <div className="text-center mb-10">
+                <h3 
+                  className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2 flex items-center justify-center gap-4"
+                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
+                >
+                  <span className="text-2xl">🔽</span>
+                  <span className="text-2xl">🔍</span>
+                  Filtrar por sector:
+                </h3>
+              </div>
+
+              {/* Botones de filtro */}
+              <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+                {sectors.map((sector) => (
+                  <button
+                    key={sector.id}
+                    onClick={() => setActiveFilter(sector.id)}
+                    className={`px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg ${
+                      activeFilter === sector.id
+                        ? 'text-equiser-blue border-4 border-equiser-blue shadow-yellow-200'
+                        : 'text-equiser-blue border-2 border-white/50 hover:border-yellow-400 shadow-black/20'
+                    }`}
+                    style={{
+                      background: activeFilter === sector.id 
+                        ? 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)'
+                        : 'rgba(255, 255, 255, 0.9)',
+                      backdropFilter: 'blur(10px)',
+                      fontSize: '1.1rem',
+                      fontWeight: activeFilter === sector.id ? '700' : '600',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      boxShadow: activeFilter === sector.id 
+                        ? '0 8px 25px rgba(255, 193, 7, 0.4)' 
+                        : '0 5px 15px rgba(0, 0, 0, 0.15)'
+                    }}
+                  >
+                    {sector.name} ({sector.count})
+                  </button>
+                ))}
+              </div>
+
+              {/* Información adicional */}
+              <div className="text-center mt-8">
+                <p 
+                  className="text-white/90 text-lg font-medium"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                >
+                  ⚡ Proyectos exitosos | 🎯 Tecnología avanzada | 🚀 Respuesta inmediata
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
