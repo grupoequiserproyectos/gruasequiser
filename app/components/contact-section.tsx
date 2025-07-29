@@ -130,11 +130,11 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-blue-600">Contacto</span> Directo
+            <span className="text-equiser-blue">Contacto</span> Directo
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos disponibles 24/7 para atender tus consultas y brindarte 
-            la mejor solución para tu proyecto de izamiento o transporte pesado.
+          {/* CORRECCIÓN: Cambiar texto a azul para mejor visibilidad */}
+          <p className="text-xl max-w-3xl mx-auto font-semibold text-equiser-blue">
+            Nuestro equipo está disponible 24/7 para brindarte la mejor solución para tu proyecto de izamiento o transporte pesado.
           </p>
         </motion.div>
 
@@ -242,10 +242,10 @@ export function ContactSection() {
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.8799!2d-68.1628642!3d10.4840568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87dc8b5f3e9de7%3A0x7b8e9c5d4a2b1f3e!2sEquiser%20Venezuela%20%7C%20Gruas%20Telesc%C3%B3picas%20e%20Industriales!5e0!3m2!1ses!2sve!4v1699123456789!5m2!1ses!2sve"
+                  src="https://i.pinimg.com/originals/1f/08/7a/1f087acf028eacb1d04840bf4ade5040.jpg"
                   width="100%"
                   height="400"
-                  style={{ border: 0 }}
+                  style={{ border: 0, borderRadius: '15px' }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

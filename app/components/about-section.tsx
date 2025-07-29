@@ -73,9 +73,10 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="space-y-6">
-              <div className="bg-equiser-blue text-white p-6 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">¿Por Qué Elegir EQUISER?</h3>
-                <p className="text-blue-100 leading-relaxed">
+              {/* CORRECCIÓN: Cambiar texto a azul en lugar de usar fondo azul */}
+              <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                <h3 className="text-2xl font-bold mb-4 text-equiser-blue">¿Por Qué Elegir EQUISER?</h3>
+                <p className="text-equiser-blue font-semibold leading-relaxed">
                   Somos la única empresa en Venezuela que combina la más moderna tecnología 
                   de grúas con operadores certificados internacionalmente y un enfoque 
                   integral en seguridad y calidad.
@@ -168,33 +169,81 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Sección de experiencia y compromiso */}
+        {/* CORRECCIÓN: Sección de compromiso con fondo amarillo y texto azul */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-r from-equiser-blue to-blue-800 rounded-3xl p-8 md:p-12 text-white text-center"
+          className="rounded-3xl p-8 md:p-12 text-center"
+          style={{
+            background: '#FFD700',
+            padding: '60px 0',
+            borderRadius: '15px'
+          }}
         >
-          <h3 className="text-3xl font-bold mb-6">Nuestro Compromiso Con La Excelencia</h3>
+          <h3 className="text-3xl font-bold mb-6 text-equiser-blue">Nuestro Compromiso Con La Excelencia</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-4xl font-bold text-equiser-yellow mb-2">500+</div>
-              <div className="text-blue-200">Proyectos Ejecutados</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">500+</div>
+              <div className="text-equiser-blue font-semibold">Proyectos Ejecutados</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-equiser-yellow mb-2">100%</div>
-              <div className="text-blue-200">Éxito en Operaciones</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">100%</div>
+              <div className="text-equiser-blue font-semibold">Éxito en Operaciones</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-equiser-yellow mb-2">24/7</div>
-              <div className="text-blue-200">Disponibilidad</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">24/7</div>
+              <div className="text-equiser-blue font-semibold">Disponibilidad</div>
             </div>
           </div>
-          <p className="mt-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="mt-8 text-equiser-blue font-medium max-w-3xl mx-auto">
             Cada proyecto que ejecutamos refleja nuestro compromiso inquebrantable con la seguridad, 
             la calidad y la satisfacción del cliente. Somos el socio estratégico que las empresas 
             venezolanas necesitan para sus operaciones más complejas.
           </p>
+        </motion.div>
+
+        {/* CORRECCIÓN: Certificaciones solo 3 en grid de 3 columnas */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Nuestras Certificaciones</h3>
+          <div 
+            className="gap-8"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '30px'
+            }}
+          >
+            {/* Solo 3 certificaciones */}
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-equiser-blue" />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">ISO 9001</h4>
+              <p className="text-gray-600 text-sm">Sistema de Gestión de Calidad</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-green-600" />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">ISO 14001</h4>
+              <p className="text-gray-600 text-sm">Sistema de Gestión Ambiental</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-equiser-yellow" />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Certificación del INTT</h4>
+              <p className="text-gray-600 text-sm">Instituto Nacional de Transporte Terrestre</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

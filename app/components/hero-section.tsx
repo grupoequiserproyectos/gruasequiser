@@ -58,7 +58,7 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ paddingTop: '120px' }}>
       {/* Imagen de fondo con parallax */}
       <div className="absolute inset-0">
         <div 

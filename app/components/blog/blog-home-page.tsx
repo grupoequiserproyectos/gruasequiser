@@ -174,7 +174,7 @@ export function BlogHomePage() {
         </div>
       </section>
 
-      {/* Botones de filtro corregidos */}
+      {/* CORRECCIÓN: Botones de filtro con fondo amarillo y hover azul */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -195,7 +195,7 @@ export function BlogHomePage() {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                     activeCategory === category
                       ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
-                      : 'bg-equiser-blue text-white border-2 border-equiser-blue hover:bg-equiser-yellow hover:text-equiser-blue hover:border-equiser-yellow'
+                      : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
                   }`}
                   style={{
                     padding: '15px 25px',
@@ -265,7 +265,7 @@ export function BlogHomePage() {
                           <div className="flex items-center justify-between mb-4">
                             <div className="flex items-center text-sm text-gray-500">
                               <User className="w-4 h-4 mr-1" />
-                              <span>{article.author.name}</span>
+                              <span>{article.author?.name || 'Autor'}</span>
                             </div>
                             <div className="flex items-center text-sm text-gray-500">
                               <Clock className="w-4 h-4 mr-1" />
@@ -275,7 +275,7 @@ export function BlogHomePage() {
 
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
-                              {article.tags.slice(0, 2).map((tag: string) => (
+                              {article.tags?.slice(0, 2).map((tag: string) => (
                                 <span
                                   key={tag}
                                   className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
