@@ -191,7 +191,7 @@ export function HeroSection() {
                 <Shield className="w-8 h-8 text-equiser-blue" />
               </div>
               <h3 className="text-lg font-bold mb-2">Máxima Seguridad</h3>
-              <p className="text-blue-200 text-sm">Certificaciones ISO y operadores especializados</p>
+              <p className="text-blue-200 text-sm">Protocolos estrictos y operadores especializados</p>
             </div>
             
             <div className="flex flex-col items-center">

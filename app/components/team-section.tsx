@@ -38,23 +38,7 @@ export function TeamSection() {
     }
   ]
 
-  const certifications = [
-    { name: 'NCCCO', description: 'National Commission for the Certification of Crane Operators' },
-    { name: 'OSHA', description: 'Occupational Safety and Health Administration' },
-    { name: 'ISO 9001', description: 'Sistema de Gestión de Calidad' },
-    { name: 'ISO 14001', description: 'Sistema de Gestión Ambiental' },
-    { name: 'COVENIN', description: 'Normas Venezolanas de Seguridad Industrial' },
-    { name: 'API', description: 'American Petroleum Institute Standards' }
-  ]
 
-  const trainingPrograms = [
-    'Operación segura de grúas móviles y sobre oruga',
-    'Mantenimiento preventivo y correctivo',
-    'Planificación de izamientos complejos',
-    'Seguridad industrial y prevención de accidentes',
-    'Rigging y aparejos especializados',
-    'Normativas internacionales de calidad'
-  ]
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -101,69 +85,7 @@ export function TeamSection() {
           ))}
         </motion.div>
 
-        {/* Certificaciones y capacitación */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="flex items-center mb-8">
-              <Award className="w-8 h-8 text-blue-600 mr-3" />
-              <h3 className="text-3xl font-bold text-gray-900">Certificaciones</h3>
-            </div>
-            
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Nuestro personal cuenta con las certificaciones más exigentes de la industria, 
-              garantizando operaciones seguras y de alta calidad en cada proyecto.
-            </p>
-            
-            <div className="space-y-4">
-              {certifications.map((cert, index) => (
-                <div
-                  key={cert.name}
-                  className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <Shield className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">{cert.name}</h4>
-                    <p className="text-sm text-gray-600">{cert.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="flex items-center mb-8">
-              <BookOpen className="w-8 h-8 text-blue-600 mr-3" />
-              <h3 className="text-3xl font-bold text-gray-900">Capacitación Continua</h3>
-            </div>
-            
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Invertimos constantemente en la formación de nuestro personal para mantenernos 
-              a la vanguardia en tecnología y mejores prácticas de la industria.
-            </p>
-            
-            <div className="bg-blue-50 rounded-2xl p-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-6">Programas de Formación:</h4>
-              <div className="space-y-3">
-                {trainingPrograms.map((program, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700 font-medium">{program}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
 
         {/* Estadísticas del equipo */}
         <motion.div
@@ -190,7 +112,7 @@ export function TeamSection() {
           </div>
 
           <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            La experiencia, certificaciones y compromiso de nuestro equipo humano nos permite 
+            La experiencia, especialización y compromiso de nuestro equipo humano nos permite 
             ejecutar los proyectos más complejos con total seguridad y precisión.
           </p>
 

@@ -248,13 +248,9 @@ export function Footer() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-6 text-center">
+            <div className="flex items-center justify-center text-center">
               <div className="text-xs text-gray-400">
-                <div className="font-semibold text-equiser-yellow">CERTIFICACIONES</div>
-                <div>ISO 9001 • ISO 14001 • INTT</div>
-              </div>
-              <div className="text-xs text-gray-400">
-                <div className="font-semibold text-equiser-blue">MARCAS</div>
+                <div className="font-semibold text-equiser-blue">MARCAS PREMIUM</div>
                 <div>Liebherr • Grove • Manitowoc • Demag</div>
               </div>
             </div>

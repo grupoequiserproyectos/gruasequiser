@@ -26,8 +26,8 @@ export function AboutSection() {
     },
     {
       icon: Shield,
-      title: 'Certificaciones ISO 9001 e ISO 14001',
-      description: 'Calidad y gestión ambiental garantizadas'
+      title: 'Seguridad y Calidad Garantizada',
+      description: 'Protocolos estrictos en cada operación'
     },
     {
       icon: Clock,
