@@ -185,7 +185,7 @@ export function EquipmentSection() {
                 </div>
 
                 <Button
-                  onClick={() => window.open(`https://wa.me/584143432882?text=Me interesa información sobre ${item.name} - ${item.capacity}`, '_blank')}
+                  onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
                   className="w-full equiser-blue equiser-blue-hover text-white"
                 >
                   Consultar Disponibilidad
@@ -207,7 +207,7 @@ export function EquipmentSection() {
               Contáctanos para una consulta personalizada sobre equipos específicos y capacidades especiales
             </p>
             <Button
-              onClick={() => window.open('https://wa.me/584143432882?text=Necesito información sobre equipos específicos de GRÚAS EQUISER', '_blank')}
+              onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
               className="bg-white text-equiser-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold"
             >
               Consulta Personalizada

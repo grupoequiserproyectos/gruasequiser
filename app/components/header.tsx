@@ -31,7 +31,7 @@ export function Header() {
   ]
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/584143432882?text=¡Hola! Me interesa conocer más sobre los servicios de EQUISER para alquiler de grúas y transporte pesado.', '_blank')
+    window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
   }
 
   return (

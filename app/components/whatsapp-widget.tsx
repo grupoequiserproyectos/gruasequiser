@@ -54,13 +54,13 @@ export function WhatsappWidget() {
   ]
 
   const handleQuickMessage = (message: string, phoneNumber = '584143432882') => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    const whatsappUrl = 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0'
     window.open(whatsappUrl, '_blank')
     setIsOpen(false)
   }
 
   const handleDirectCall = (phoneNumber: string) => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=¡Hola! Me pongo en contacto desde la página web de EQUISER.`
+    const whatsappUrl = 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0'
     window.open(whatsappUrl, '_blank')
     setIsOpen(false)
   }

@@ -76,7 +76,7 @@ export default function RootLayout({
                 }
               ],
               "sameAs": [
-                "https://wa.me/584143432882"
+                "https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0"
               ]
             })
           }}

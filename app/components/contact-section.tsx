@@ -40,7 +40,7 @@ export function ContactSection() {
       title: 'WhatsApp 24/7',
       details: ['Atención inmediata', 'Cotizaciones rápidas'],
       action: 'Enviar WhatsApp',
-      actionUrl: 'https://wa.me/584143432882'
+      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0'
     },
     {
       icon: Mail,
@@ -88,7 +88,7 @@ export function ContactSection() {
         
         // Redireccionar a WhatsApp con el mensaje
         const whatsappMessage = `¡Hola! Soy ${formData.name} de ${formData.company || 'mi empresa'}. Me interesa el servicio de ${formData.service}. ${formData.message}. Mi teléfono: ${formData.phone}, email: ${formData.email}`
-        window.open(`https://wa.me/584143432882?text=${encodeURIComponent(whatsappMessage)}`, '_blank')
+        window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
         
         setFormData({
           name: '',

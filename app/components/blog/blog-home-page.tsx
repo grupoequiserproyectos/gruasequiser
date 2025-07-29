@@ -103,7 +103,7 @@ export function BlogHomePage() {
             {/* CTA Button */}
             <div className="hidden md:flex items-center">
               <Button
-                onClick={() => window.open('https://wa.me/584143432882?text=¡Hola! Me interesa conocer más sobre los servicios de EQUISER.', '_blank')}
+                onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
                 className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full font-semibold"
               >
                 Solicitar Cotización
@@ -358,7 +358,7 @@ export function BlogHomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => window.open('https://wa.me/584143432882?text=¡Hola! Me interesa conocer más sobre los servicios de EQUISER.', '_blank')}
+                onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
                 className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
               >
                 Contactar WhatsApp

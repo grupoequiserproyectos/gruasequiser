@@ -13,7 +13,7 @@ export function Footer() {
   }
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/584143432882?text=¡Hola! Me interesa conocer más sobre los servicios de EQUISER.', '_blank')
+    window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
   }
 
   return (
@@ -135,7 +135,7 @@ export function Footer() {
                 ].map((service) => (
                   <li key={service}>
                     <button
-                      onClick={() => window.open(`https://wa.me/584143432882?text=Me interesa información sobre: ${service}`, '_blank')}
+                      onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
                       className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm text-left"
                     >
                       {service}
