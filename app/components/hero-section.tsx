@@ -154,48 +154,68 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Botones de acción */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            <Button
-              onClick={handleWhatsApp}
-              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-4 rounded-full text-lg font-bold shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-yellow-300"
-            >
-              Solicitar Cotización WhatsApp
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-
-            <Button
-              onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-equiser-blue px-8 py-4 rounded-full text-lg font-bold shadow-2xl hover:scale-105 transition-all duration-300 backdrop-blur-sm"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              Ver Proyectos
-            </Button>
-          </motion.div>
-
-          {/* Botón Ver Proyectos */}
+          {/* Sección de Botones Principales - SIN DUPLICACIONES */}
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
           >
-            <Button
-              onClick={() => document.getElementById('galeria-proyectos')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-equiser-blue to-blue-600 hover:from-blue-800 hover:to-equiser-blue text-white px-10 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-300 uppercase tracking-wider"
-              style={{ 
-                background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                boxShadow: '0 8px 25px rgba(30, 58, 138, 0.3)'
-              }}
+            {/* Container para botones */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
+              
+              {/* Botón Principal: Solicitar Cotización WhatsApp */}
+              <Button
+                onClick={handleWhatsApp}
+                className="group relative overflow-hidden px-10 py-5 rounded-full text-lg font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 border-transparent hover:border-equiser-blue"
+                style={{
+                  background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+                  color: '#1E3A8A',
+                  boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                <span className="flex items-center gap-3">
+                  <span className="text-xl">💬</span>
+                  Solicitar Cotización WhatsApp
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Button>
+
+              {/* Botón Secundario: Ver Proyectos (ÚNICO) */}
+              <Button
+                onClick={() => document.getElementById('galeria-proyectos')?.scrollIntoView({ behavior: 'smooth' })}
+                variant="outline"
+                className="group relative overflow-hidden px-10 py-5 rounded-full text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-equiser-blue"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  color: '#1E3A8A',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(10px)',
+                  borderColor: 'rgba(30, 58, 138, 0.3)'
+                }}
+              >
+                <span className="flex items-center gap-3">
+                  <span className="text-xl">🏗️</span>
+                  Ver Proyectos
+                </span>
+              </Button>
+            </div>
+
+            {/* Información adicional */}
+            <motion.div 
+              className="mt-6 text-center"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ duration: 1, delay: 1.2 }}
             >
-              🏗️ Ver Proyectos
-            </Button>
+              <p 
+                className="text-blue-100 text-base font-medium italic"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}
+              >
+                ⚡ Respuesta inmediata por WhatsApp | 🎯 Cotizaciones personalizadas
+              </p>
+            </motion.div>
           </motion.div>
 
           {/* Características destacadas rediseñadas */}
