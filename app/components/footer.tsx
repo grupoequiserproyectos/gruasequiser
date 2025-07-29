@@ -58,31 +58,40 @@ export function Footer() {
               </p>
 
               {/* Redes sociales integradas */}
-              <div className="space-y-3">
-                <h4 className="text-lg font-semibold">Síguenos</h4>
-                <div className="flex space-x-4">
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white">Síguenos</h4>
+                <div className="flex space-x-3">
                   <Link
-                    href="https://www.instagram.com/gruasequiservzla"
+                    href="https://www.instagram.com/gruasequiservzla/"
                     target="_blank"
-                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    title="Instagram @gruasequiservzla"
                   >
                     <Instagram className="w-6 h-6" />
                   </Link>
                   <Link
-                    href="https://x.com/gruasequiserve"
+                    href="https://www.facebook.com/profile.php?id=100092683147441"
                     target="_blank"
-                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
-                  >
-                    <Twitter className="w-6 h-6" />
-                  </Link>
-                  <Link
-                    href="https://www.facebook.com/people/Gruasequiservzla/100092683147441"
-                    target="_blank"
-                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    title="Facebook Grúas Equiser"
                   >
                     <Facebook className="w-6 h-6" />
                   </Link>
+                  <Link
+                    href="https://x.com/gruasequiserve"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-black text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    title="X @gruasequiserve"
+                  >
+                    <Twitter className="w-6 h-6" />
+                  </Link>
                 </div>
+                <p className="text-gray-400 text-sm">
+                  Mantente conectado con nuestras actualizaciones y proyectos
+                </p>
               </div>
             </div>
 

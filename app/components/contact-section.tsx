@@ -194,42 +194,57 @@ export function ContactSection() {
             </div>
 
             {/* Redes sociales integradas */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+            <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-equiser-blue/20">
+              <h4 className="text-xl font-bold text-equiser-blue mb-4 flex items-center">
                 📱 Síguenos en Redes Sociales
               </h4>
-              <p className="text-gray-600 mb-6 text-sm">
+              <p className="text-gray-700 mb-6 text-sm">
                 Mantente al día con nuestros proyectos más recientes y novedades del sector.
               </p>
               
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center">
                 <Link
-                  href="https://www.instagram.com/gruasequiservzla"
+                  href="https://www.instagram.com/gruasequiservzla/"
                   target="_blank"
-                  className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  title="Instagram @gruasequiservzla"
                 >
-                  <Instagram className="w-6 h-6" />
+                  <Instagram className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/profile.php?id=100092683147441"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-14 h-14 bg-blue-600 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  title="Facebook Grúas Equiser"
+                >
+                  <Facebook className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
                 </Link>
                 <Link
                   href="https://x.com/gruasequiserve"
                   target="_blank"
-                  className="flex items-center justify-center w-12 h-12 bg-black text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-14 h-14 bg-black text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  title="X @gruasequiserve"
                 >
-                  <Twitter className="w-6 h-6" />
-                </Link>
-                <Link
-                  href="https://www.facebook.com/people/Gruasequiservzla/100092683147441"
-                  target="_blank"
-                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
-                >
-                  <Facebook className="w-6 h-6" />
+                  <Twitter className="w-7 h-7 group-hover:rotate-12 transition-transform duration-300" />
                 </Link>
               </div>
               
-              <div className="mt-4 text-xs text-gray-500 space-y-1">
-                <div>📷 Instagram: Fotos y videos de proyectos</div>
-                <div>🐦 Twitter: Noticias y actualizaciones</div>
-                <div>📘 Facebook: Comunidad y testimonios</div>
+              <div className="mt-6 text-sm text-gray-600 space-y-2 bg-white/50 rounded-lg p-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
+                  <span className="font-medium">Instagram:</span> Fotos y videos de proyectos
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="font-medium">Facebook:</span> Comunidad y testimonios
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-black rounded-full"></span>
+                  <span className="font-medium">X (Twitter):</span> Noticias y actualizaciones
+                </div>
               </div>
             </div>
 
