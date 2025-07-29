@@ -1,10 +1,11 @@
 
+
 'use client'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen, Instagram, Twitter, Facebook } from 'lucide-react'
 
 export function Footer() {
   const scrollToTop = () => {
@@ -26,19 +27,19 @@ export function Footer() {
       </button>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Sección principal del footer */}
+        {/* Sección principal del footer con 4 columnas */}
         <div className="pt-16 pb-12">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-            {/* Información de la empresa con logo más grande */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center mb-6">
-                <Link href="/" className="relative block mr-4">
+            {/* Información de la empresa con logo actualizado */}
+            <div className="lg:col-span-1">
+              <div className="flex flex-col items-start mb-6">
+                <Link href="/" className="relative block mb-4">
                   <div 
                     className="relative filter brightness-0 invert" 
-                    style={{ width: '120px', height: '80px' }}
+                    style={{ width: '200px', height: '80px' }}
                   >
                     <Image
-                      src="/images/logo-equiser-grande.png"
+                      src="/images/logo-equiser-actualizado.png"
                       alt="GRÚAS EQUISER C.A. - Logo"
                       fill
                       className="object-contain hover:scale-105 transition-transform duration-200"
@@ -46,20 +47,51 @@ export function Footer() {
                   </div>
                 </Link>
                 <div>
-                  <h3 className="text-2xl font-bold">GRÚAS EQUISER C.A.</h3>
+                  <h3 className="text-xl font-bold">GRÚAS EQUISER C.A.</h3>
                   <p className="text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-lg">
+              <p className="text-gray-300 leading-relaxed mb-6 text-sm">
                 Más de 30 años como empresa líder en Venezuela en alquiler de grúas móviles, 
-                sobre oruga y transporte pesado. Grúas hasta 1600 toneladas 
-                con equipos de las mejores marcas alemanas y americanas.
+                sobre oruga y transporte pesado. Grúas hasta 1600 toneladas.
               </p>
 
+              {/* Redes sociales integradas */}
               <div className="space-y-3">
-                <div className="flex items-center text-gray-300">
-                  <MapPin className="w-5 h-5 text-equiser-yellow mr-3 flex-shrink-0" />
+                <h4 className="text-lg font-semibold">Síguenos</h4>
+                <div className="flex space-x-4">
+                  <Link
+                    href="https://www.instagram.com/gruasequiservzla"
+                    target="_blank"
+                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
+                  >
+                    <Instagram className="w-6 h-6" />
+                  </Link>
+                  <Link
+                    href="https://x.com/gruasequiserve"
+                    target="_blank"
+                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
+                  >
+                    <Twitter className="w-6 h-6" />
+                  </Link>
+                  <Link
+                    href="https://www.facebook.com/people/Gruasequiservzla/100092683147441"
+                    target="_blank"
+                    className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200"
+                  >
+                    <Facebook className="w-6 h-6" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Información de contacto */}
+            <div>
+              <h4 className="text-xl font-bold mb-6">Contacto</h4>
+              <div className="space-y-4">
+                <div className="flex items-start text-gray-300">
+                  <MapPin className="w-5 h-5 text-equiser-yellow mr-3 flex-shrink-0 mt-1" />
                   <span className="text-sm">
                     Autopista Puerto Cabello Morón, sector la Paragüita, 
                     diagonal a Planta Centro, Morón estado Carabobo
@@ -69,8 +101,8 @@ export function Footer() {
                 <div className="flex items-center text-gray-300">
                   <Phone className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
-                    <div>+58 414-343-2882 (Principal)</div>
-                    <div>+58 412-159-7792 (Alternativo)</div>
+                    <div>+58 414-343-2882</div>
+                    <div>+58 412-159-7792</div>
                   </div>
                 </div>
                 
@@ -104,7 +136,7 @@ export function Footer() {
                   <li key={service}>
                     <button
                       onClick={() => window.open(`https://wa.me/584143432882?text=Me interesa información sobre: ${service}`, '_blank')}
-                      className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm"
+                      className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm text-left"
                     >
                       {service}
                     </button>
@@ -113,7 +145,7 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Navegación rápida */}
+            {/* Navegación rápida y blog */}
             <div>
               <h4 className="text-xl font-bold mb-6">Navegación</h4>
               <ul className="space-y-3">
@@ -121,7 +153,8 @@ export function Footer() {
                   { href: '#inicio', label: 'Inicio' },
                   { href: '#nosotros', label: 'Nosotros' },
                   { href: '#equipos', label: 'Equipos' },
-                  { href: '#proyectos', label: 'Proyectos' }
+                  { href: '#proyectos', label: 'Proyectos' },
+                  { href: '#contacto', label: 'Contacto' }
                 ].map((item) => (
                   <li key={item.href}>
                     <Link
@@ -132,13 +165,13 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
-                <li className="mt-2">
+                <li className="mt-4">
                   <Link
                     href="/blog"
                     className="flex items-center text-equiser-yellow hover:text-yellow-300 transition-colors duration-200 text-sm font-semibold"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    📝 Blog
+                    📝 Blog de Grúas
                   </Link>
                 </li>
               </ul>
@@ -158,26 +191,49 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Call to Action final */}
+        {/* Call to Action final con fondo legible */}
         <div className="border-t border-gray-700 py-8">
-          <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4 text-equiser-blue">¿Necesitas Una Cotización Inmediata?</h3>
-            <p className="text-equiser-blue/80 mb-6 max-w-2xl mx-auto">
-              Nuestro equipo está disponible 24/7 para brindarte la mejor solución 
-              para tu proyecto de izamiento o transporte pesado.
-            </p>
-            <motion.button
-              onClick={handleWhatsApp}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-equiser-blue font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 shadow-lg"
-            >
-              Contactar Por WhatsApp Ahora
-            </motion.button>
+          <div 
+            className="relative rounded-2xl p-8 text-center overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #FFD700 0%, #FFC107 100%)',
+              backgroundImage: 'url("/images/imagen grua.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay'
+            }}
+          >
+            {/* Overlay fuerte para legibilidad */}
+            <div className="absolute inset-0" style={{ background: 'rgba(255, 215, 0, 0.95)' }}></div>
+            
+            <div className="relative z-10">
+              <h3 
+                className="text-2xl font-bold mb-4 text-equiser-blue"
+                style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}
+              >
+                ¿Necesitas Una Cotización Inmediata?
+              </h3>
+              <p 
+                className="text-equiser-blue/80 mb-6 max-w-2xl mx-auto"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}
+              >
+                Nuestro equipo está disponible 24/7 para brindarte la mejor solución 
+                para tu proyecto de izamiento o transporte pesado.
+              </p>
+              <motion.button
+                onClick={handleWhatsApp}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-equiser-blue text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-all duration-200 shadow-lg"
+                style={{ textShadow: 'none' }}
+              >
+                Contactar Por WhatsApp Ahora
+              </motion.button>
+            </div>
           </div>
         </div>
 
-        {/* Copyright y certificaciones corregidas */}
+        {/* Copyright y certificaciones */}
         <div className="border-t border-gray-700 pt-8 pb-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
@@ -187,6 +243,9 @@ export function Footer() {
               <p className="text-gray-500 text-xs mt-1">
                 RIF: J-30007343-2 | Más de 30 años de experiencia en Venezuela
               </p>
+              <div className="text-xs text-gray-400 mt-2">
+                📧 Instagram | 🐦 Twitter | 📘 Facebook
+              </div>
             </div>
             
             <div className="flex items-center space-x-6 text-center">

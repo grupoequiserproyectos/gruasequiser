@@ -1,9 +1,10 @@
 
+
 'use client'
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Target, Heart, Award, Users, Globe, CheckCircle } from 'lucide-react'
+import { CheckCircle, Award, Shield, Clock, MapPin, Users, Wrench, Target } from 'lucide-react'
 import Image from 'next/image'
 
 export function AboutSection() {
@@ -15,68 +16,38 @@ export function AboutSection() {
   const features = [
     {
       icon: CheckCircle,
-      title: 'Grúas Móviles hasta 1600 toneladas',
-      description: 'La mayor capacidad de carga disponible en Venezuela'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Grúas Sobre Oruga especializadas',
-      description: 'Para proyectos de alta complejidad y precisión'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Transporte Pesado y Extrapesado',
-      description: 'Soluciones integrales de logística industrial'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Equipos Alemanes y Americanos',
-      description: 'Liebherr, Grove, Manitowoc y Demag de última generación'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Operadores Certificados',
-      description: 'Personal técnico especializado con más de 30 años de experiencia'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Ingeniería 3D y Consultoría',
-      description: 'Planificación avanzada para proyectos complejos'
-    }
-  ]
-
-  const values = [
-    {
-      icon: Shield,
-      title: 'Seguridad',
-      description: 'Certificaciones ISO 9001 e ISO 14001 garantizan los más altos estándares de seguridad'
+      title: 'Grúas hasta 1600 toneladas',
+      description: 'La mayor capacidad disponible en Venezuela'
     },
     {
       icon: Award,
-      title: 'Calidad',
-      description: 'Equipos de marcas alemanas reconocidas mundialmente: Liebherr, Grove y Manitowoc'
+      title: 'Marcas Premium Alemanas y Americanas',
+      description: 'Liebherr, Grove, Manitowoc, Demag'
+    },
+    {
+      icon: Shield,
+      title: 'Certificaciones ISO 9001 e ISO 14001',
+      description: 'Calidad y gestión ambiental garantizadas'
+    },
+    {
+      icon: Clock,
+      title: 'Disponibilidad 24/7',
+      description: 'Servicio de emergencia y respuesta inmediata'
     },
     {
       icon: Users,
-      title: 'Experiencia',
-      description: 'Más de 30 años formando el equipo humano más capacitado del sector industrial'
+      title: 'Operadores Certificados',
+      description: 'Personal altamente capacitado y especializado'
     },
     {
-      icon: Globe,
-      title: 'Liderazgo',
-      description: 'Empresa líder en Venezuela en alquiler de grúas móviles y transporte extrapesado'
+      icon: Target,
+      title: '6 Sectores Industriales',
+      description: 'Energético, petrolero, petroquímico, industrial, portuario, siderúrgico'
     }
   ]
 
-  const stats = [
-    { number: '1600', suffix: 'TONELADAS', label: 'Grúas Hasta' },
-    { number: '30+', suffix: 'AÑOS', label: 'De Experiencia En Venezuela' },
-    { number: '6', suffix: 'SECTORES', label: 'Industriales Atendidos' },
-    { number: '500+', suffix: 'PROYECTOS', label: 'Ejecutados' }
-  ]
-
   return (
-    <section id="nosotros" className="py-20 bg-white">
+    <section id="nosotros" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -86,124 +57,144 @@ export function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-equiser-blue">La Flota de Alquiler Más Moderna y Completa de Venezuela</span>
+            La Flota de Alquiler <span className="text-equiser-blue">Más Moderna y Completa</span> de Venezuela
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de tres décadas liderando el mercado venezolano con grúas móviles y sobre oruga de tecnología alemana y americana, 
-            respaldadas por el equipo humano más especializado del sector industrial.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Con más de 30 años de experiencia, GRÚAS EQUISER C.A. se ha consolidado como la empresa 
+            líder en Venezuela en alquiler de grúas móviles, sobre oruga y servicios de transporte pesado.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          {/* Contenido */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Target className="w-8 h-8 text-equiser-blue mr-3" />
-                  Nuestra Misión
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Brindar soluciones integrales de alquiler de grúas móviles, sobre oruga y transporte pesado con la más alta 
-                  tecnología, seguridad y calidad, superando las expectativas de nuestros clientes 
-                  en todos los sectores industriales de Venezuela.
+            <div className="space-y-6">
+              <div className="bg-equiser-blue text-white p-6 rounded-2xl">
+                <h3 className="text-2xl font-bold mb-4">¿Por Qué Elegir EQUISER?</h3>
+                <p className="text-blue-100 leading-relaxed">
+                  Somos la única empresa en Venezuela que combina la más moderna tecnología 
+                  de grúas con operadores certificados internacionalmente y un enfoque 
+                  integral en seguridad y calidad.
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <Heart className="w-8 h-8 text-equiser-blue mr-3" />
-                  Nuestra Visión
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Consolidarnos como la empresa líder indiscutible en Venezuela en alquiler de grúas móviles, sobre oruga 
-                  y transporte extrapesado, expandiendo nuestras capacidades y 
-                  manteniendo los más altos estándares de excelencia operacional.
-                </p>
-              </div>
-
-              {/* Características principales */}
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <feature.icon className="w-6 h-6 text-equiser-yellow flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">{feature.title}</h4>
-                      <p className="text-sm text-gray-600">{feature.description}</p>
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-equiser-yellow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon className="w-6 h-6 text-equiser-blue" />
                     </div>
-                  </div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
+                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                  </motion.div>
                 ))}
+              </div>
+
+              <div className="bg-gradient-to-r from-equiser-yellow to-yellow-300 p-6 rounded-2xl text-equiser-blue">
+                <div className="flex items-center mb-4">
+                  <MapPin className="w-6 h-6 mr-3" />
+                  <h4 className="text-xl font-bold">Ubicación Estratégica</h4>
+                </div>
+                <p className="font-medium">
+                  Autopista Puerto Cabello Morón, sector la Paragüita, diagonal a Planta Centro, 
+                  Morón estado Carabobo - Posición ideal para atender todo el territorio nacional.
+                </p>
               </div>
             </div>
           </motion.div>
 
+          {/* Imagen */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/dos gruas de 600 ton.png"
-                alt="Grúas EQUISER en operación"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
-            </div>
-            
-            {/* Badge flotante */}
-            <div className="absolute -bottom-6 -right-6 equiser-yellow text-equiser-blue p-6 rounded-2xl shadow-xl">
-              <div className="text-center">
-                <div className="text-3xl font-bold">ISO</div>
-                <div className="text-sm">9001 & 14001</div>
-                <div className="text-xs mt-1">Certificados</div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/grua de 800 ton.png"
+                    alt="Grúa de 800 toneladas EQUISER"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/trabajo de grua 450 ton.png"
+                    alt="Trabajo con grúa de 450 toneladas"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
+              
+              <div className="space-y-4 pt-8">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/dos gruas de 600 ton.png"
+                    alt="Operación con dos grúas de 600 toneladas"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/ingenieria 3d.png"
+                    alt="Ingeniería 3D EQUISER"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Badge flotante */}
+            <div className="absolute -top-4 -left-4 bg-equiser-blue text-white p-4 rounded-2xl shadow-xl">
+              <div className="text-2xl font-bold">30+</div>
+              <div className="text-sm">Años de Experiencia</div>
             </div>
           </motion.div>
         </div>
 
-        {/* Valores */}
+        {/* Sección de experiencia y compromiso */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-20"
+          className="bg-gradient-to-r from-equiser-blue to-blue-800 rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Valores</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={value.title} className="text-center group">
-                <div className="w-20 h-20 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-equiser-yellow transition-colors duration-300">
-                  <value.icon className="w-10 h-10 text-equiser-blue group-hover:text-equiser-blue transition-colors duration-300" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-              </div>
-            ))}
+          <h3 className="text-3xl font-bold mb-6">Nuestro Compromiso Con La Excelencia</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-4xl font-bold text-equiser-yellow mb-2">500+</div>
+              <div className="text-blue-200">Proyectos Ejecutados</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-equiser-yellow mb-2">100%</div>
+              <div className="text-blue-200">Éxito en Operaciones</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-equiser-yellow mb-2">24/7</div>
+              <div className="text-blue-200">Disponibilidad</div>
+            </div>
           </div>
-        </motion.div>
-
-        {/* Estadísticas */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-12 text-equiser-blue"
-        >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2 text-equiser-blue">{stat.number}</div>
-                <div className="text-equiser-blue/80 font-semibold mb-1">{stat.suffix}</div>
-                <div className="text-sm text-equiser-blue/70">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          <p className="mt-8 text-blue-100 max-w-3xl mx-auto">
+            Cada proyecto que ejecutamos refleja nuestro compromiso inquebrantable con la seguridad, 
+            la calidad y la satisfacción del cliente. Somos el socio estratégico que las empresas 
+            venezolanas necesitan para sus operaciones más complejas.
+          </p>
         </motion.div>
       </div>
     </section>

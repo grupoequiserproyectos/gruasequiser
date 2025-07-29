@@ -1,4 +1,5 @@
 
+
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -198,7 +199,7 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Filtros con mejor visibilidad */}
+        {/* Filtros con fondo amarillo y hover azul */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -215,17 +216,16 @@ export function ProjectsSection() {
               <button
                 key={sector.id}
                 onClick={() => setActiveFilter(sector.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 shadow-lg transform hover:scale-105 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                   activeFilter === sector.id
-                    ? 'bg-equiser-blue text-white border-equiser-blue shadow-blue-200 scale-105'
-                    : 'bg-equiser-blue/90 text-white border-equiser-blue hover:bg-equiser-yellow hover:text-equiser-blue hover:border-equiser-yellow'
+                    ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
+                    : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
                 }`}
                 style={{
                   padding: '15px 25px',
                   borderRadius: '25px',
                   fontSize: '14px',
-                  fontWeight: '600',
-                  textShadow: activeFilter === sector.id ? 'none' : '1px 1px 2px rgba(0,0,0,0.1)'
+                  fontWeight: '600'
                 }}
               >
                 {sector.name} ({sector.count})
@@ -364,7 +364,7 @@ export function ProjectsSection() {
           ))}
         </motion.div>
 
-        {/* CTA mejorado con mejor legibilidad */}
+        {/* CTA con fondo legible mejorado */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

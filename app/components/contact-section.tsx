@@ -1,12 +1,14 @@
 
+
 'use client'
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { MapPin, Phone, Clock, Mail, MessageCircle, Send } from 'lucide-react'
+import { MapPin, Phone, Clock, Mail, MessageCircle, Send, Instagram, Twitter, Facebook } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
+import Link from 'next/link'
 
 export function ContactSection() {
   const [ref, inView] = useInView({
@@ -191,18 +193,58 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* Mapa con ubicación exacta en Morón, Carabobo */}
+            {/* Redes sociales integradas */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                📱 Síguenos en Redes Sociales
+              </h4>
+              <p className="text-gray-600 mb-6 text-sm">
+                Mantente al día con nuestros proyectos más recientes y novedades del sector.
+              </p>
+              
+              <div className="flex space-x-4">
+                <Link
+                  href="https://www.instagram.com/gruasequiservzla"
+                  target="_blank"
+                  className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
+                >
+                  <Instagram className="w-6 h-6" />
+                </Link>
+                <Link
+                  href="https://x.com/gruasequiserve"
+                  target="_blank"
+                  className="flex items-center justify-center w-12 h-12 bg-black text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
+                >
+                  <Twitter className="w-6 h-6" />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/people/Gruasequiservzla/100092683147441"
+                  target="_blank"
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl hover:scale-110 transition-all duration-300 shadow-lg"
+                >
+                  <Facebook className="w-6 h-6" />
+                </Link>
+              </div>
+              
+              <div className="mt-4 text-xs text-gray-500 space-y-1">
+                <div>📷 Instagram: Fotos y videos de proyectos</div>
+                <div>🐦 Twitter: Noticias y actualizaciones</div>
+                <div>📘 Facebook: Comunidad y testimonios</div>
+              </div>
+            </div>
+
+            {/* Mapa con coordenadas exactas */}
             <div id="mapa" className="bg-white rounded-2xl p-6 shadow-lg">
               <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                 <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                Nuestra Ubicación
+                Nuestra Ubicación Exacta
               </h4>
               
               <div className="aspect-video rounded-xl overflow-hidden bg-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.8944275847!2d-68.16543908535753!3d10.484062165789588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87dc8b5f3e9de7%3A0x7b8e9c5d4a2b1f3e!2sMor%C3%B3n%2C%20Carabobo%2C%20Venezuela!5e0!3m2!1ses!2sve!4v1699123456789!5m2!1ses!2sve"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.8799!2d-68.1628642!3d10.4840568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87dc8b5f3e9de7%3A0x7b8e9c5d4a2b1f3e!2sEquiser%20Venezuela%20%7C%20Gruas%20Telesc%C3%B3picas%20e%20Industriales!5e0!3m2!1ses!2sve!4v1699123456789!5m2!1ses!2sve"
                   width="100%"
-                  height="100%"
+                  height="400"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
@@ -211,13 +253,22 @@ export function ContactSection() {
                 ></iframe>
               </div>
               
-              <p className="text-sm text-gray-600 mt-3">
-                <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
-                diagonal a Planta Centro, Morón estado Carabobo
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                <strong>Coordenadas:</strong> 10.4840621, -68.1654391
-              </p>
+              <div className="mt-4 space-y-2">
+                <p className="text-sm text-gray-600">
+                  <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
+                  diagonal a Planta Centro, Morón estado Carabobo
+                </p>
+                <p className="text-xs text-gray-500">
+                  <strong>Coordenadas exactas:</strong> 10.4840568, -68.1628642
+                </p>
+                <Button
+                  onClick={() => window.open('https://www.google.com/maps/place/Equiser+Venezuela+%7C+Gruas+Telescópicas+e+Industriales/@10.4840621,-68.1654391,17z/', '_blank')}
+                  size="sm"
+                  className="equiser-blue equiser-blue-hover text-white mt-3"
+                >
+                  Ver en Google Maps
+                </Button>
+              </div>
             </div>
           </motion.div>
 
