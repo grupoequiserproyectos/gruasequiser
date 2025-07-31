@@ -71,12 +71,12 @@ export function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <div className="relative h-64">
+              <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute top-6 left-6">
