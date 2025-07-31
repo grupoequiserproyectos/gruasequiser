@@ -363,13 +363,13 @@ export function GaleriaCarrusel() {
                 GRÚAS EQUISER
               </h3>
               <p 
-                className="font-semibold uppercase tracking-wider text-xl md:text-2xl"
+                className="font-semibold uppercase tracking-wider text-xl md:text-2xl text-center"
                 style={{ 
                   color: 'white',
                   letterSpacing: '0.5px'
                 }}
               >
-                NADA ES MUY GRANDE NI PESADO PARA NOSOTROS
+                #1 Empresa Líder En Venezuela En Alquiler de Grúas Móviles Telescópicas y Grúas Sobre Oruga
               </p>
             </motion.div>
           </div>
