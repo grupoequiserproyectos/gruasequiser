@@ -108,7 +108,7 @@
   }
 }
 
-/* OPTIMIZACIÓN GLOBAL DE TEXTOS - JUSTIFICACIÓN */
+/* OPTIMIZACIÓN GLOBAL DE TEXTOS - CORRECCIÓN WORD-BREAKING */
 @layer base {
   /* Justificación global para párrafos y contenido de texto */
   p, 
@@ -126,13 +126,20 @@
   .contact-description {
     text-align: justify !important;
     text-justify: inter-word;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
+    /* CORRECCIÓN CRÍTICA: Prevenir corte inadecuado de palabras */
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
     line-height: 1.7;
     word-spacing: 0.05em;
     margin-bottom: 1.2em;
+    /* Contenedores seguros */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Mantener centrado para títulos y elementos específicos */
@@ -159,6 +166,34 @@
   .contact-info,
   .meta-info {
     text-align: left !important;
+  }
+
+  /* CLASES ESPECÍFICAS PARA CONTENEDORES DE TEXTO EXTENSO */
+  .texto-contenido,
+  .contenedor-texto,
+  .description-long,
+  .mission-text,
+  .vision-text,
+  .service-text {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 15px;
+    word-spacing: normal;
+  }
+
+  /* PROTECCIÓN ESPECÍFICA PARA PALABRAS PROBLEMÁTICAS */
+  .protect-words {
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
   }
 }
 
@@ -272,7 +307,11 @@
     p, .text-content, .description {
       text-align: justify !important;
       text-justify: inter-word;
-      hyphens: auto;
+      /* CORRECCIÓN: Prevenir word-breaking inadecuado en desktop */
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      hyphens: none !important;
+      -webkit-hyphens: none !important;
       line-height: 1.8;
       font-size: 1.1rem;
       word-spacing: 0.1em;
@@ -307,7 +346,11 @@
     p, .text-content, .description {
       text-align: justify !important;
       text-justify: inter-word;
-      hyphens: auto;
+      /* CORRECCIÓN: Prevenir word-breaking inadecuado en tablet */
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      hyphens: none !important;
+      -webkit-hyphens: none !important;
       line-height: 1.7;
       font-size: 1rem;
       word-spacing: 0.05em;
@@ -342,8 +385,13 @@
     p, .text-content, .description {
       text-align: justify !important;
       text-justify: inter-word;
-      hyphens: auto;
-      -webkit-hyphens: auto;
+      /* CORRECCIÓN CRÍTICA: Prevenir word-breaking inadecuado en mobile */
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      hyphens: none !important;
+      -webkit-hyphens: none !important;
+      -moz-hyphens: none !important;
+      -ms-hyphens: none !important;
       line-height: 1.6;
       font-size: 1rem;
       word-spacing: normal;
@@ -381,8 +429,13 @@
       text-align: justify !important;
       line-height: 1.5;
       font-size: 0.95rem;
-      hyphens: auto;
-      -webkit-hyphens: auto;
+      /* CORRECCIÓN FINAL: Prevenir word-breaking inadecuado en mobile pequeño */
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      hyphens: none !important;
+      -webkit-hyphens: none !important;
+      -moz-hyphens: none !important;
+      -ms-hyphens: none !important;
     }
     
     /* Imágenes en mobile pequeño */
