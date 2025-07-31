@@ -8,6 +8,7 @@ import { MapPin, Phone, Clock, Mail, MessageCircle, Send, Instagram, Twitter, Fa
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
 import Link from 'next/link'
+import { ContactForm } from './contact-form'
 
 export function ContactSection() {
   const [ref, inView] = useInView({
@@ -272,6 +273,9 @@ export function ContactSection() {
             </div>
           </motion.div>
         </motion.div>
+
+        {/* FORMULARIO DE CONTACTO COMPLETO */}
+        <ContactForm />
 
         {/* SECCIÓN DE REDES SOCIALES Y MAPA CON COLORES CORPORATIVOS */}
         <div className="mt-20 space-y-16">
