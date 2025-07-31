@@ -286,21 +286,21 @@ export function GaleriaCarrusel() {
             ))}
           </div>
 
-          {/* Botones de Navegación */}
+          {/* Botones de Navegación - REPOSICIONADOS PARA EVITAR LÍNEA AMARILLA */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-yellow-400/90 hover:bg-yellow-400 text-blue-900 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-10"
+            className="absolute left-2 sm:left-4 md:left-6 bottom-20 sm:bottom-24 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-20"
             aria-label="Slide anterior"
           >
-            <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-yellow-400/90 hover:bg-yellow-400 text-blue-900 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-10"
+            className="absolute right-2 sm:right-4 md:right-6 bottom-20 sm:bottom-24 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-20"
             aria-label="Slide siguiente"
           >
-            <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
           </button>
 
           {/* Indicadores */}

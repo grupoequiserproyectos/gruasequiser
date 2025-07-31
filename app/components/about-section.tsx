@@ -162,48 +162,54 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Grid de Imágenes - Optimizado para Desktop */}
+          {/* Grid de Imágenes - CORREGIDO PARA MOBILE: IMÁGENES COMPLETAS SIN CORTES */}
           <motion.div
             className="xl:col-span-3 relative"
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="grid grid-cols-2 gap-3 lg:gap-4 xl:gap-6">
-              <div className="space-y-3 lg:space-y-4 xl:space-y-6">
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 lg:gap-4 xl:gap-6">
+              {/* Primera columna */}
+              <div className="space-y-4 sm:space-y-3 lg:space-y-4 xl:space-y-6">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '200px' }}>
                   <Image
                     src="/images/grua de 800 ton.png"
                     alt="Grúa de 800 toneladas EQUISER"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '150px' }}>
                   <Image
                     src="/images/trabajo de grua 450 ton.png"
                     alt="Trabajo con grúa de 450 toneladas"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </div>
               
-              <div className="space-y-3 lg:space-y-4 xl:space-y-6 pt-4 lg:pt-6 xl:pt-8">
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              {/* Segunda columna */}
+              <div className="space-y-4 sm:space-y-3 lg:space-y-4 xl:space-y-6 sm:pt-4 lg:pt-6 xl:pt-8">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '150px' }}>
                   <Image
                     src="/images/dos gruas de 600 ton.png"
                     alt="Operación con dos grúas de 600 toneladas"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '200px' }}>
                   <Image
                     src="/images/ingenieria 3d.png"
                     alt="Ingeniería 3D EQUISER"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </div>
