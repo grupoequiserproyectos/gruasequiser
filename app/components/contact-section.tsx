@@ -33,7 +33,7 @@ export function ContactSection() {
       title: 'Teléfonos',
       details: ['+58 414-343-2882 (Principal)', '+58 412-159-7792 (Alternativo)'],
       action: 'Llamar Ahora',
-      actionUrl: 'tel:+584143432882',
+      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
       iconBg: '#FFC107',
       iconColor: '#1E3A8A',

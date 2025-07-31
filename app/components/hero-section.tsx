@@ -184,7 +184,7 @@ export function HeroSection() {
 
               {/* Botón Secundario: Ver Proyectos (ÚNICO) */}
               <Button
-                onClick={() => document.getElementById('galeria-proyectos')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
                 variant="outline"
                 className="group relative overflow-hidden px-10 py-5 rounded-full text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-equiser-blue"
                 style={{

@@ -209,12 +209,9 @@ export function GaleriaCarrusel() {
   const handleMouseEnter = () => setIsAutoPlaying(false)
   const handleMouseLeave = () => setIsAutoPlaying(true)
 
-  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleWhatsAppRedirect = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    const projectsSection = document.getElementById('proyectos')
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' })
-    }
+    window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
   }
 
   return (
@@ -378,8 +375,8 @@ export function GaleriaCarrusel() {
           </div>
           
           <motion.a
-            href="#contacto"
-            onClick={handleScrollToProjects}
+            href="#"
+            onClick={handleWhatsAppRedirect}
             whileHover={{ 
               scale: 1.05,
               y: -3
