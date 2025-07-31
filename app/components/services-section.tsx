@@ -25,7 +25,7 @@ export function ServicesSection() {
       title: 'Transporte Pesado Y Extrapesado',
       description: 'Transporte especializado con equipos super lowboy y modular para cargas excepcionales.',
       features: ['Super Lowboy', 'Transporte Modular', 'Rutas Especializadas', 'Permisos Incluidos'],
-      image: '/images/trabajo de grua.png'
+      image: '/images/transporte-250-toneladas.png'
     },
     {
       icon: Package,
