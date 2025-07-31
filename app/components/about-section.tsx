@@ -65,107 +65,113 @@ export function AboutSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Contenido */}
+        {/* SECCIÓN OPTIMIZADA PARA DESKTOP VIEW */}
+        <div className="mb-16">
+          {/* Sección "¿Por Qué Elegir Grúas EQUISER?" - Optimizada para Desktop */}
+          <motion.section 
+            className="why-choose-us rounded-3xl text-center mb-12 px-4 sm:px-6 lg:px-8"
+            style={{
+              background: '#FFD700',
+              padding: '50px 40px',
+              color: '#1E3A8A'
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="container max-w-5xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-equiser-blue mb-8 leading-tight">
+                ¿Por Qué Elegir Grúas EQUISER?
+              </h2>
+              <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-equiser-blue max-w-4xl mx-auto font-medium">
+                Somos la única empresa en Venezuela que combina la más moderna tecnología 
+                de grúas con operadores certificados internacionalmente y un enfoque 
+                integral en seguridad y calidad.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Grid de Características - OPTIMIZADO PARA DESKTOP VIEW */}
+          <motion.section 
+            className="py-16 lg:py-20 xl:py-24 rounded-3xl relative overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+              position: 'relative'
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            {/* Patrón decorativo mejorado */}
+            <div 
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 193, 7, 0.05) 0%, transparent 50%)',
+              }}
+            />
+            
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* GRID OPTIMIZADO: 2 filas de 3 columnas balanceadas en desktop */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
+                {servicesInfo.map((service, index) => (
+                  <motion.div
+                    key={service.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                    className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 xl:p-10 text-center hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl group min-h-[280px] lg:min-h-[320px] xl:min-h-[350px]"
+                    style={{
+                      backdropFilter: 'blur(10px)',
+                      border: '2px solid rgba(255, 193, 7, 0.3)'
+                    }}
+                  >
+                    <div className="text-4xl lg:text-5xl xl:text-6xl mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-equiser-blue mb-3 lg:mb-4 group-hover:text-blue-800 transition-colors duration-300 leading-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm lg:text-base xl:text-lg group-hover:text-gray-700 transition-colors duration-300">
+                      {service.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+        </div>
+
+        {/* Sección de Imágenes y Stats - Optimizada para Desktop */}
+        <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-12 lg:gap-16 items-center mb-16">
+          {/* Contenido de Ubicación - Optimizado para Desktop */}
           <motion.div
+            className="xl:col-span-2"
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="space-y-6">
-              {/* CORRECCIÓN: Sección con fondo amarillo exacto */}
-              <section 
-                className="why-choose-us rounded-2xl text-center"
-                style={{
-                  background: '#FFD700',
-                  padding: '40px 30px',
-                  color: '#1E3A8A'
-                }}
-              >
-                <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', textAlign: 'center' }}>
-                  <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', fontWeight: '700', color: '#1E3A8A' }}>
-                    ¿Por Qué Elegir Grúas EQUISER?
-                  </h2>
-                  <p style={{ fontSize: '1.3rem', lineHeight: '1.6', color: '#1E3A8A', maxWidth: '800px', margin: '0 auto' }}>
-                    Somos la única empresa en Venezuela que combina la más moderna tecnología 
-                    de grúas con operadores certificados internacionalmente y un enfoque 
-                    integral en seguridad y calidad.
-                  </p>
-                </div>
-              </section>
-
-              {/* Sección de Información de Servicios rediseñada */}
-              <motion.section 
-                className="py-20 rounded-3xl relative overflow-hidden mb-8"
-                style={{
-                  background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
-                  position: 'relative'
-                }}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                {/* Patrón decorativo */}
-                <div 
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.1) 0%, transparent 50%)',
-                  }}
-                />
-                
-                <div className="relative z-10 max-w-6xl mx-auto px-6">
-                  {/* Grid de Servicios */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {servicesInfo.map((service, index) => (
-                      <motion.div
-                        key={service.title}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={inView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                        className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
-                        style={{
-                          backdropFilter: 'blur(10px)',
-                          border: '2px solid rgba(255, 193, 7, 0.3)'
-                        }}
-                      >
-                        <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                          {service.icon}
-                        </div>
-                        <h3 className="text-xl font-bold text-equiser-blue mb-3 group-hover:text-blue-800 transition-colors duration-300">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
-                          {service.description}
-                        </p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </motion.section>
-
-              <div className="bg-gradient-to-r from-equiser-yellow to-yellow-300 p-6 rounded-2xl text-equiser-blue">
-                <div className="flex items-center mb-4">
-                  <MapPin className="w-6 h-6 mr-3" />
-                  <h4 className="text-xl font-bold">Ubicación Estratégica</h4>
-                </div>
-                <p className="font-medium">
-                  Autopista Puerto Cabello Morón, sector la Paragüita, diagonal a Planta Centro, 
-                  Morón estado Carabobo - Posición ideal para atender todo el territorio nacional.
-                </p>
+            <div className="bg-gradient-to-r from-equiser-yellow to-yellow-300 p-6 lg:p-8 xl:p-10 rounded-2xl text-equiser-blue shadow-xl">
+              <div className="flex items-center mb-4 lg:mb-6">
+                <MapPin className="w-6 h-6 lg:w-8 lg:h-8 mr-3" />
+                <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold">Ubicación Estratégica</h4>
               </div>
+              <p className="font-medium text-base lg:text-lg xl:text-xl leading-relaxed">
+                Autopista Puerto Cabello Morón, sector la Paragüita, diagonal a Planta Centro, 
+                Morón estado Carabobo - Posición ideal para atender todo el territorio nacional.
+              </p>
             </div>
           </motion.div>
 
-          {/* Imagen */}
+          {/* Grid de Imágenes - Optimizado para Desktop */}
           <motion.div
+            className="xl:col-span-3 relative"
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+            <div className="grid grid-cols-2 gap-3 lg:gap-4 xl:gap-6">
+              <div className="space-y-3 lg:space-y-4 xl:space-y-6">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <Image
                     src="/images/grua de 800 ton.png"
                     alt="Grúa de 800 toneladas EQUISER"
@@ -173,7 +179,7 @@ export function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <Image
                     src="/images/trabajo de grua 450 ton.png"
                     alt="Trabajo con grúa de 450 toneladas"
@@ -183,8 +189,8 @@ export function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-4 pt-8">
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <div className="space-y-3 lg:space-y-4 xl:space-y-6 pt-4 lg:pt-6 xl:pt-8">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <Image
                     src="/images/dos gruas de 600 ton.png"
                     alt="Operación con dos grúas de 600 toneladas"
@@ -192,7 +198,7 @@ export function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <Image
                     src="/images/ingenieria 3d.png"
                     alt="Ingeniería 3D EQUISER"
@@ -203,10 +209,10 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Badge flotante */}
-            <div className="absolute -top-4 -left-4 bg-equiser-blue text-white p-4 rounded-2xl shadow-xl">
-              <div className="text-2xl font-bold">30+</div>
-              <div className="text-sm">Años de Experiencia</div>
+            {/* Badge flotante optimizado para desktop */}
+            <div className="absolute -top-2 lg:-top-4 xl:-top-6 -left-2 lg:-left-4 xl:-left-6 bg-equiser-blue text-white p-3 lg:p-4 xl:p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <div className="text-xl lg:text-2xl xl:text-3xl font-bold">30+</div>
+              <div className="text-xs lg:text-sm xl:text-base">Años de Experiencia</div>
             </div>
           </motion.div>
         </div>
