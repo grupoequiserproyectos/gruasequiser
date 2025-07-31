@@ -16,7 +16,7 @@ export function AboutSection() {
   const servicesInfo = [
     {
       icon: '🏗️',
-      title: 'Grúas hasta 1600 toneladas',
+      title: 'Grúas Móviles y Sobre Oruga desde 25 hasta 1600 toneladas',
       description: 'La mayor capacidad disponible en Venezuela'
     },
     {

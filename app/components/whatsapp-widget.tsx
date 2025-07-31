@@ -36,9 +36,9 @@ export function WhatsappWidget() {
     },
     {
       icon: Phone,
-      title: 'Emergencia 24/7',
-      message: '¡EMERGENCIA! Necesito asistencia inmediata para un proyecto urgente. Por favor contactenme ya.',
-      color: 'bg-red-500'
+      title: 'Contacto Directo',
+      message: '¡Hola! Necesito información personalizada sobre sus servicios. ¿Podrían contactarme?',
+      color: 'bg-blue-600'
     },
     {
       icon: Clock,

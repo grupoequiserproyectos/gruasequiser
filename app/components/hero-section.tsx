@@ -258,26 +258,10 @@ export function HeroSection() {
                 <Award className="w-10 h-10 text-equiser-blue" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Equipos Premium</h3>
-              <p className="text-blue-100 leading-relaxed">Marcas alemanas y americanas de última generación</p>
+              <p className="text-blue-100 leading-relaxed">Grúas Moviles y Sobre Oruga Tecnológicas de las Mejores Marcas Alemanas: Liebherr • Grove • Manitowoc • Demag de última generación.</p>
             </motion.div>
             
-            <motion.div 
-              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              style={{ backdropFilter: 'blur(15px)' }}
-              whileHover={{ y: -10 }}
-            >
-              <div 
-                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-                style={{ 
-                  background: 'linear-gradient(135deg, #1E3A8A, #FFC107)',
-                  boxShadow: '0 10px 30px rgba(30, 58, 138, 0.4)'
-                }}
-              >
-                <Clock className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Disponibilidad 24/7</h3>
-              <p className="text-blue-100 leading-relaxed">Servicio de emergencia y respuesta inmediata</p>
-            </motion.div>
+
           </motion.div>
         </motion.div>
       </div>
