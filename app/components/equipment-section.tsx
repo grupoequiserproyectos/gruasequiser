@@ -151,12 +151,12 @@ export function EquipmentSection() {
               key={item.name}
               className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
             >
-              <div className="relative h-64">
+              <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4">

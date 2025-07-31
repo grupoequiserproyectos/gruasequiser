@@ -417,12 +417,12 @@ export function ProjectsSection() {
                   key={project.id}
                   className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
                 >
-                  <div className="relative h-64">
+                  <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute top-4 right-4">
@@ -487,12 +487,12 @@ export function ProjectsSection() {
               key={project.id}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
-              <div className="relative h-48">
+              <div className="relative h-48 sm:h-56 lg:h-64 bg-gray-100">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute top-3 right-3">
