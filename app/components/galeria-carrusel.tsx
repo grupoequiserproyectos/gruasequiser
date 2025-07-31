@@ -98,6 +98,79 @@ const carouselItems: CarouselItem[] = [
     title: 'Grúa 800T Izando',
     description: 'Manejo de Equipos Ultra Pesados',
     alt: 'Grúa de 800 toneladas izando equipo pesado'
+  },
+  // NUEVAS IMÁGENES - SECTOR ENERGÉTICO
+  {
+    id: 13,
+    src: '/images/grua-130-ton-transformador.png',
+    title: 'Grúa 130T - Transformador',
+    description: 'Izamiento de Transformador Eléctrico',
+    alt: 'Grúa móvil de 130 toneladas izando transformador eléctrico'
+  },
+  {
+    id: 14,
+    src: '/images/montaje-transformador.png',
+    title: 'Montaje de Transformador',
+    description: 'Movilización y Montaje Industrial',
+    alt: 'Proceso de movilización y montaje de transformador industrial'
+  },
+  {
+    id: 15,
+    src: '/images/movilizacion-generador-sobredimensionado.png',
+    title: 'Generador Sobredimensionado',
+    description: 'Transporte de Equipos Especiales',
+    alt: 'Movilización de generador sobredimensionado con equipos especializados'
+  },
+  {
+    id: 16,
+    src: '/images/izamiento-grua-300-ton.png',
+    title: 'Grúa 300 Toneladas',
+    description: 'Izamiento Industrial de Gran Escala',
+    alt: 'Izamiento con grúa de 300 toneladas en proyecto industrial'
+  },
+  // NUEVAS IMÁGENES - SECTOR TRANSPORTE
+  {
+    id: 17,
+    src: '/images/movilizacion-vagones-metro.jpg',
+    title: 'Vagones de Metro',
+    description: 'Transporte de Sistemas Ferroviarios',
+    alt: 'Movilización especializada de vagones de metro'
+  },
+  {
+    id: 18,
+    src: '/images/movilizacion-vagones-ferrocarril.jpg',
+    title: 'Vagones de Ferrocarril',
+    description: 'Logística Ferroviaria Especializada',
+    alt: 'Movilización de vagones de ferrocarril con equipos especializados'
+  },
+  {
+    id: 19,
+    src: '/images/movilizacion-topas-metro-caracas.png',
+    title: 'TOPAS Metro Caracas',
+    description: 'Proyecto Metro Caracas',
+    alt: 'Movilización de TOPAS para el sistema Metro de Caracas'
+  },
+  {
+    id: 20,
+    src: '/images/transporte-pieza-250-ton.png',
+    title: 'Transporte 250 Toneladas',
+    description: 'Logística de Cargas Ultra Pesadas',
+    alt: 'Servicios de transporte especializado de pieza de 250 toneladas'
+  },
+  // NUEVAS IMÁGENES - SECTOR INDUSTRIAL
+  {
+    id: 21,
+    src: '/images/grua-movil-130-ton.png',
+    title: 'Grúa Móvil 130T',
+    description: 'Versatilidad Industrial Compacta',
+    alt: 'Grúa móvil de 130 toneladas en operación industrial'
+  },
+  {
+    id: 22,
+    src: '/images/proyecto-seguridad-calidad.png',
+    title: 'Seguridad y Calidad',
+    description: 'Proyectos con Estándares Certificados',
+    alt: 'Proyecto realizado con altos estándares de seguridad y calidad'
   }
 ]
 

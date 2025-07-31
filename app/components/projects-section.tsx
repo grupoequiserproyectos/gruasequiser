@@ -19,11 +19,11 @@ export function ProjectsSection() {
   const [projects, setProjects] = useState<any[]>([])
 
   const sectors = [
-    { id: 'todos', name: 'Todos los Proyectos', count: 12 },
-    { id: 'gruas-moviles', name: 'Grúas Móviles', count: 5 },
+    { id: 'todos', name: 'Todos los Proyectos', count: 22 },
+    { id: 'gruas-moviles', name: 'Grúas Móviles', count: 8 },
     { id: 'gruas-sobre-oruga', name: 'Grúas Sobre Oruga', count: 4 },
-    { id: 'transporte-pesado', name: 'Transporte Pesado', count: 2 },
-    { id: 'proyectos-especiales', name: 'Proyectos Especiales', count: 1 }
+    { id: 'transporte-pesado', name: 'Transporte Pesado', count: 6 },
+    { id: 'proyectos-especiales', name: 'Proyectos Especiales', count: 4 }
   ]
 
   const allProjects = [
@@ -169,6 +169,129 @@ export function ProjectsSection() {
       description: 'Mantenimiento de torres de perforación con grúa sobre oruga especializada',
       image: '/images/imagen grua.png',
       equipment: ['Grúa sobre oruga 350T', 'Rigging petrolero'],
+      featured: false
+    },
+    // NUEVOS PROYECTOS - SECTOR GRÚAS MÓVILES
+    {
+      id: 13,
+      title: 'Grúa 130T Izando Transformador',
+      sector: 'gruas-moviles',
+      capacity: '130 TON',
+      location: 'Subestación Eléctrica - Carabobo',
+      year: 2024,
+      description: 'Izamiento y posicionamiento de transformador eléctrico de alta tensión con precisión milimétrica',
+      image: '/images/grua-130-ton-transformador.png',
+      equipment: ['Grúa móvil 130T', 'Rigging eléctrico especializado', 'Sistema de posicionamiento GPS'],
+      featured: true
+    },
+    {
+      id: 14,
+      title: 'Grúa Móvil 130T Industrial',
+      sector: 'gruas-moviles',
+      capacity: '130 TON',
+      location: 'Complejo Industrial - Miranda',
+      year: 2024,
+      description: 'Operación de grúa móvil compacta para instalación de maquinaria industrial pesada',
+      image: '/images/grua-movil-130-ton.png',
+      equipment: ['Grúa móvil telescópica 130T', 'Accesorios industriales'],
+      featured: false
+    },
+    {
+      id: 15,
+      title: 'Izamiento con Grúa 300T',
+      sector: 'gruas-moviles',
+      capacity: '300 TON',
+      location: 'Planta Petroquímica - Anzoátegui',
+      year: 2024,
+      description: 'Izamiento de gran envergadura con grúa móvil de 300 toneladas para reactor industrial',
+      image: '/images/izamiento-grua-300-ton.png',
+      equipment: ['Grúa móvil 300T', 'Rigging ultra-pesado', 'Sistema de monitoreo'],
+      featured: true
+    },
+    // NUEVOS PROYECTOS - SECTOR TRANSPORTE PESADO
+    {
+      id: 16,
+      title: 'Movilización Vagones de Metro',
+      sector: 'transporte-pesado',
+      capacity: '45 TON/VAGÓN',
+      location: 'Sistema Metro - Distrito Capital',
+      year: 2024,
+      description: 'Transporte especializado de vagones de metro con equipos de carga y descarga especializados',
+      image: '/images/movilizacion-vagones-metro.jpg',
+      equipment: ['Transporte multi-eje', 'Grúas auxiliares', 'Sistema de sujeción ferroviario'],
+      featured: true
+    },
+    {
+      id: 17,
+      title: 'Vagones de Ferrocarril',
+      sector: 'transporte-pesado',
+      capacity: '50 TON/VAGÓN',
+      location: 'Red Ferroviaria Nacional - Aragua',
+      year: 2024,
+      description: 'Logística ferroviaria especializada para movilización de vagones de carga pesada',
+      image: '/images/movilizacion-vagones-ferrocarril.jpg',
+      equipment: ['Transporte ferroviario', 'Grúas de carga', 'Rieles temporales'],
+      featured: false
+    },
+    {
+      id: 18,
+      title: 'TOPAS Metro Caracas',
+      sector: 'transporte-pesado',
+      capacity: '80 TON',
+      location: 'Metro de Caracas - Distrito Capital',
+      year: 2024,
+      description: 'Movilización de TOPAS (Tren de Obra) para mantenimiento del sistema Metro de Caracas',
+      image: '/images/movilizacion-topas-metro-caracas.png',
+      equipment: ['Transporte especializado TOPAS', 'Grúas pórtico', 'Sistema de rieles'],
+      featured: true
+    },
+    {
+      id: 19,
+      title: 'Transporte 250 Toneladas',
+      sector: 'transporte-pesado',
+      capacity: '250 TON',
+      location: 'Puerto Industrial - Carabobo',
+      year: 2024,
+      description: 'Servicios de transporte especializado de pieza industrial ultra-pesada de 250 toneladas',
+      image: '/images/transporte-pieza-250-ton.png',
+      equipment: ['Transporte modular 250T', 'Grúas auxiliares', 'Sistema hidráulico'],
+      featured: false
+    },
+    // NUEVOS PROYECTOS - SECTOR PROYECTOS ESPECIALES
+    {
+      id: 20,
+      title: 'Montaje de Transformador',
+      sector: 'proyectos-especiales',
+      capacity: '180 TON',
+      location: 'Central Eléctrica - Bolívar',
+      year: 2024,
+      description: 'Proyecto integral de movilización y montaje de transformador de potencia con coordinación multi-equipo',
+      image: '/images/montaje-transformador.png',
+      equipment: ['Grúas coordinadas', 'Transporte especializado', 'Rigging eléctrico'],
+      featured: true
+    },
+    {
+      id: 21,
+      title: 'Generador Sobredimensionado',
+      sector: 'proyectos-especiales',
+      capacity: '320 TON',
+      location: 'Central Termoeléctrica - Zulia',
+      year: 2024,
+      description: 'Movilización de generador sobredimensionado con equipos especializados y planificación logística compleja',
+      image: '/images/movilizacion-generador-sobredimensionado.png',
+      equipment: ['Transporte sobredimensionado', 'Grúas múltiples', 'Ingeniería de ruta'],
+      featured: false
+    },
+    {
+      id: 22,
+      title: 'Proyecto Seguridad y Calidad',
+      sector: 'proyectos-especiales',
+      capacity: 'MÚLTIPLE',
+      location: 'Diversas Ubicaciones - Venezuela',
+      year: 2024,
+      description: 'Proyecto realizado con los más altos estándares de seguridad y calidad certificados internacionalmente',
+      image: '/images/proyecto-seguridad-calidad.png',
+      equipment: ['Equipos certificados', 'Personal especializado', 'Sistemas de seguridad'],
       featured: false
     }
   ]
