@@ -1,4 +1,3 @@
-
 export interface BlogArticle {
   slug: string
   title: string
@@ -28,10 +27,7 @@ export const BLOG_CATEGORIES = {
   PETROLERO: 'Petrolero y Energético', 
   INDUSTRIAL: 'Industrial y Minero',
   CONSTRUCCION: 'Construcción e Infraestructura',
-  COMPETITIVIDAD: 'Competitividad y Diferenciación',
-  GRUAS_MOVILES: 'Grúas Móviles',
-  SEGURIDAD: 'Seguridad',
-  TRANSPORTE: 'Transporte Pesado'
+  COMPETITIVIDAD: 'Competitividad y Diferenciación'
 } as const
 
 // Autores especializados
@@ -178,7 +174,7 @@ Si tu proyecto requiere la tecnología más avanzada en grúas móviles, la Lieb
 *GRÚAS EQUISER C.A. - RIF: J-30007343-2 - Líder en alquiler de grúas móviles y sobre oruga en Venezuela*
     `,
     featuredImage: '/images/trabajo de grua 450 ton.png',
-    category: BLOG_CATEGORIES.GRUAS_MOVILES,
+    category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Liebherr', 'LTM 1500', 'Grúas Móviles', 'Tecnología Alemana', 'Proyectos Industriales'],
     author: AUTHORS.CARLOS_RODRIGUEZ,
     publishDate: '2024-01-15',
@@ -388,7 +384,7 @@ Email: seguridad@gruasequiser.net
 *La seguridad no es negociable. En cada operación, la vida humana es nuestra máxima prioridad.*
     `,
     featuredImage: '/images/grua de 800 ton.png',
-    category: BLOG_CATEGORIES.SEGURIDAD,
+    category: BLOG_CATEGORIES.INDUSTRIAL,
     tags: ['Seguridad Industrial', 'Grúas Sobre Oruga', 'Protocolos', 'Normativas Venezuela', 'LOPCYMAT'],
     author: AUTHORS.MARIA_GONZALEZ,
     publishDate: '2024-01-10',
@@ -734,7 +730,7 @@ Un **super lowboy** es un remolque especializado de plataforma baja diseñado pa
 *GRÚAS EQUISER C.A. - Tu socio confiable para transporte pesado en Venezuela desde 1994*
     `,
     featuredImage: '/images/trabajo de gantry 600 ton.png',
-    category: BLOG_CATEGORIES.TRANSPORTE,
+    category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Super Lowboy', 'Transporte Pesado', 'INTT', 'Permisos Especiales', 'Logística Industrial'],
     author: AUTHORS.EDUARDO_MARTINEZ,
     publishDate: '2024-01-05',
@@ -1108,6 +1104,112 @@ Teléfono Alternativo: +58 412-159-7792
     lastModified: '2025-01-31',
     readTime: 10,
     seoKeywords: 'alquiler grúas móviles Caracas, grúas Caracas precios 2025, grúas móviles región capital, alquiler grúas Venezuela',
+    featured: true,
+    priority: 'high'
+  },
+
+  // Blog 8: Alquiler Grúas Móviles Caracas
+  {
+    slug: 'alquiler-gruas-moviles-caracas-precios-2025',
+    title: 'Alquiler Grúas Móviles Caracas - Precios Competitivos 2025',
+    excerpt: 'Descubre las mejores tarifas para alquiler de grúas móviles en Caracas. GRÚAS EQUISER ofrece equipos alemanes desde 25 hasta 1600 toneladas con precios competitivos.',
+    metaDescription: 'Alquiler de grúas móviles en Caracas con precios competitivos 2025. Equipos alemanes 25-1600t, disponibilidad 24/7. GRÚAS EQUISER líder en Venezuela.',
+    canonicalUrl: 'https://gruasequiser.net/blog/alquiler-gruas-moviles-caracas-precios-2025',
+    content: `
+# Alquiler Grúas Móviles Caracas - Precios Competitivos 2025
+
+El **alquiler de grúas móviles en Caracas** se ha convertido en un servicio esencial para el desarrollo industrial y de construcción de la capital venezolana. GRÚAS EQUISER lidera este mercado con equipos alemanes de última generación y precios altamente competitivos.
+
+**IMPORTANTE**: Nos especializamos exclusivamente en grúas industriales y de construcción. NO ofrecemos servicios de grúas para automóviles o vehículos particulares. Nuestros equipos están diseñados para proyectos industriales, construcción, sector petrolero y transporte pesado.
+
+## Flota de Grúas Móviles Disponibles en Caracas
+
+### Grúas Móviles Telescópicas (25-300 Toneladas)
+- **Liebherr LTM 1055**: 55 toneladas, ideal para construcción urbana
+- **Terex Quadstar 1100**: 110 toneladas, versátil para múltiples aplicaciones  
+- **Demag AC 220-5**: 220 toneladas, perfecta para montajes industriales
+- **Grove GMK5250L**: 250 toneladas, especializada en refinerías
+
+🔥 **COTIZACIÓN INMEDIATA CARACAS**  
+📞 +58 414-343-2882 (Principal)  
+📞 +58 412-159-7792 (Alternativo)
+
+## Casos de Éxito Recientes en Caracas
+
+### Torre Humboldt - Altamira (2024)
+**Proyecto**: Montaje de antena de telecomunicaciones 25 toneladas  
+**Equipo**: Liebherr LTM 1055 con configuración especial  
+**Resultado**: Instalación nocturna exitosa sin afectación al tráfico
+
+📞 **CONTACTO DIRECTO CARACAS**
++58 414-343-2882 (Principal)
++58 412-159-7792 (Alternativo)  
+✉️ info@gruasequiser.net
+✉️ direccionmercadeo@gruasequiser.net
+
+---
+
+*GRÚAS EQUISER C.A. - RIF: J-30007343-2*  
+*Líder en alquiler de grúas móviles en Caracas y toda Venezuela*
+    `,
+    featuredImage: '/images/grua de 130 ton.png',
+    category: BLOG_CATEGORIES.TRANSACCIONAL,
+    tags: ['Alquiler Grúas', 'Caracas', 'Grúas Móviles', 'Precios 2025', 'Construcción'],
+    author: AUTHORS.CARLOS_RODRIGUEZ,
+    publishDate: '2025-01-28',
+    lastModified: '2025-01-28',
+    readTime: 12,
+    seoKeywords: 'alquiler grúas móviles Caracas, precios grúas Caracas 2025, grúas telescópicas Caracas, alquiler grúas Venezuela, GRÚAS EQUISER Caracas',
+    featured: true,
+    priority: 'high'
+  },
+
+  // Blog 9: Servicio de Bateas y Transporte Pesado
+  {
+    slug: 'servicio-bateas-transporte-pesado-venezuela-24-7',
+    title: 'Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7',
+    excerpt: 'Transporte especializado con bateas y equipos de carga extrapesada en Venezuela. GRÚAS EQUISER ofrece servicio 24/7 con flota moderna y operadores certificados.',
+    metaDescription: 'Servicio de bateas y transporte pesado en Venezuela 24/7. Capacidad hasta 200 toneladas, flota moderna, permisos INTT. GRÚAS EQUISER líder nacional.',
+    canonicalUrl: 'https://gruasequiser.net/blog/servicio-bateas-transporte-pesado-venezuela-24-7',
+    content: `
+# Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7
+
+El **servicio de bateas y transporte pesado** es fundamental para el desarrollo industrial de Venezuela. GRÚAS EQUISER ofrece la flota más moderna del país con disponibilidad 24/7, operadores certificados y permisos INTT pre-aprobados para operaciones inmediatas.
+
+**ACLARACIÓN IMPORTANTE**: Nuestros servicios están dirigidos exclusivamente al transporte industrial, construcción y sector energético. NO realizamos transporte de vehículos particulares o servicios de grúa para automóviles.
+
+## Flota de Bateas y Equipos de Transporte
+
+### Super Lowboy Especializados (80-200 Toneladas)
+- **Lowboy 80 toneladas**: 4 ejes, altura 80cm, para equipos de gran volumen
+- **Lowboy 120 toneladas**: 6 ejes modulares, extensible hasta 24 metros
+- **Lowboy 200 toneladas**: 10-12 ejes, máxima capacidad disponible en Venezuela
+
+🚛 **DISPONIBILIDAD INMEDIATA**  
+24 horas - 7 días - 365 días al año  
+📞 +58 414-343-2882 (Principal)  
+📞 +58 412-159-7792 (Alternativo)
+
+🚛 **RESPUESTA GARANTIZADA**  
+Cotización en menos de 2 horas  
+📞 +58 414-343-2882 (Principal)  
+📞 +58 412-159-7792 (Alternativo)  
+✉️ info@gruasequiser.net  
+✉️ direccionmercadeo@gruasequiser.net
+
+---
+
+*GRÚAS EQUISER C.A. - RIF: J-30007343-2*  
+*Servicio de bateas y transporte pesado 24/7 en toda Venezuela*
+    `,
+    featuredImage: '/images/transporte-250-toneladas.png',
+    category: BLOG_CATEGORIES.TRANSACCIONAL,
+    tags: ['Bateas', 'Transporte Pesado', 'Venezuela', '24/7', 'Lowboy'],
+    author: AUTHORS.EDUARDO_MARTINEZ,
+    publishDate: '2025-01-27',
+    lastModified: '2025-01-27',
+    readTime: 14,
+    seoKeywords: 'servicio bateas Venezuela, transporte pesado 24/7, lowboy Venezuela, transporte industrial Venezuela, GRÚAS EQUISER bateas',
     featured: true,
     priority: 'high'
   }

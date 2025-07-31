@@ -40,8 +40,7 @@ export function BlogHomePage() {
   // Agrupar artículos por fecha
   const groupArticlesByDate = (articles: any[]) => {
     const grouped = articles.reduce((acc, article) => {
-      const date = new Date(article.date)
-      const dateString = formatDate(article.date)
+      const dateString = formatDate(article.publishDate || article.date || '2024-01-01')
       
       if (!acc[dateString]) {
         acc[dateString] = []
@@ -50,7 +49,11 @@ export function BlogHomePage() {
       return acc
     }, {} as Record<string, any[]>)
     
-    return Object.entries(grouped).sort(([a], [b]) => new Date(b).getTime() - new Date(a).getTime())
+    return Object.entries(grouped).sort(([a], [b]) => {
+      const dateA = new Date(a.split(' de ').reverse().join('-'))
+      const dateB = new Date(b.split(' de ').reverse().join('-'))
+      return dateB.getTime() - dateA.getTime()
+    })
   }
 
   const groupedArticles = groupArticlesByDate(filteredArticles)
