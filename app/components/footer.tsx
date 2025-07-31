@@ -161,7 +161,6 @@ export function Footer() {
                 {[
                   { href: '#inicio', label: 'Inicio' },
                   { href: '#nosotros', label: 'Nosotros' },
-                  { href: '#equipos', label: 'Equipos' },
                   { href: '#proyectos', label: 'Proyectos' },
                   { href: '#contacto', label: 'Contacto' }
                 ].map((item) => (

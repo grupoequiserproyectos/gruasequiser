@@ -89,9 +89,6 @@ export function BlogHomePage() {
               <Link href="/#nosotros" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
                 Nosotros
               </Link>
-              <Link href="/#equipos" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                Equipos
-              </Link>
               <Link href="/#proyectos" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
                 Proyectos
               </Link>
