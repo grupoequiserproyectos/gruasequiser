@@ -75,30 +75,30 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center text-white">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          {/* Título principal actualizado */}
+          {/* Título principal - RESPONSIVE OPTIMIZADO */}
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-equiser-yellow">Grúas Móviles y Sobre Oruga</span>
+            <span className="text-equiser-yellow block sm:inline">Grúas Móviles y Sobre Oruga</span>
             <br />
-            <span className="text-white">desde 25 hasta 1600 toneladas</span>
+            <span className="text-white block sm:inline">desde 25 hasta 1600 toneladas</span>
             <br />
-            <span className="text-blue-200 text-4xl md:text-5xl">con equipos técnico certificados</span>
+            <span className="text-blue-200 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl block mt-2 sm:mt-0">con equipos técnico certificados</span>
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-blue-100"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed text-blue-100 px-2 sm:px-0"
             style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -109,65 +109,65 @@ export function HeroSection() {
             industrial, portuario y siderúrgico.
           </motion.p>
 
-          {/* Estadísticas animadas */}
+          {/* Estadísticas animadas - RESPONSIVE OPTIMIZADO */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 px-2 sm:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
           >
             <div 
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20"
+              className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
               style={{ backdropFilter: 'blur(10px)' }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-equiser-yellow">
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.capacity)}T
               </div>
-              <div className="text-sm text-blue-200 font-medium">Grúas Hasta</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">Grúas Hasta</div>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20"
+              className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
               style={{ backdropFilter: 'blur(10px)' }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-equiser-yellow">
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.experience)}+
               </div>
-              <div className="text-sm text-blue-200 font-medium">Años de Experiencia</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">Años de Experiencia</div>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20"
+              className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
               style={{ backdropFilter: 'blur(10px)' }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-equiser-yellow">
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.sectors)}
               </div>
-              <div className="text-sm text-blue-200 font-medium">Sectores Atendidos</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">Sectores Atendidos</div>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20"
+              className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
               style={{ backdropFilter: 'blur(10px)' }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-equiser-yellow">
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.projects)}+
               </div>
-              <div className="text-sm text-blue-200 font-medium">Proyectos Ejecutados</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">Proyectos Ejecutados</div>
             </div>
           </motion.div>
 
-          {/* Sección de Botones Principales - SIN DUPLICACIONES */}
+          {/* Sección de Botones Principales - RESPONSIVE OPTIMIZADO */}
           <motion.div
-            className="mb-12"
+            className="mb-8 sm:mb-12 px-2 sm:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.8 }}
           >
             {/* Container para botones */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-4xl mx-auto">
               
               {/* Botón Principal: Solicitar Cotización WhatsApp */}
               <Button
                 onClick={handleWhatsApp}
-                className="group relative overflow-hidden px-10 py-5 rounded-full text-lg font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 border-transparent hover:border-equiser-blue"
+                className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 border-transparent hover:border-equiser-blue w-full sm:w-auto"
                 style={{
                   background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
                   color: '#1E3A8A',
@@ -175,18 +175,19 @@ export function HeroSection() {
                   letterSpacing: '0.5px'
                 }}
               >
-                <span className="flex items-center gap-3">
-                  <MessageCircle className="w-5 h-5" />
-                  Solicitar Cotización WhatsApp
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <span className="flex items-center justify-center gap-2 sm:gap-3">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="hidden sm:inline">Solicitar Cotización WhatsApp</span>
+                  <span className="sm:hidden">Cotización WhatsApp</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </Button>
 
-              {/* Botón Secundario: Ver Proyectos (ÚNICO) */}
+              {/* Botón Secundario: Ver Proyectos */}
               <Button
                 onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
                 variant="outline"
-                className="group relative overflow-hidden px-10 py-5 rounded-full text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-equiser-blue"
+                className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-equiser-blue w-full sm:w-auto"
                 style={{
                   background: 'rgba(255, 255, 255, 0.95)',
                   color: '#1E3A8A',
@@ -195,73 +196,75 @@ export function HeroSection() {
                   borderColor: 'rgba(30, 58, 138, 0.3)'
                 }}
               >
-                <span className="flex items-center gap-3">
-                  <Play className="w-5 h-5" />
+                <span className="flex items-center justify-center gap-2 sm:gap-3">
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                   Ver Proyectos
                 </span>
               </Button>
             </div>
 
-            {/* Información adicional */}
+            {/* Información adicional - RESPONSIVE */}
             <motion.div 
-              className="mt-6 text-center"
+              className="mt-4 sm:mt-6 text-center px-2 sm:px-0"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 1, delay: 1.2 }}
             >
               <p 
-                className="text-blue-100 text-base font-medium italic"
+                className="text-blue-100 text-xs sm:text-sm md:text-base font-medium italic leading-relaxed"
                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}
               >
-                Respuesta inmediata por WhatsApp | Cotizaciones personalizadas
+                <span className="hidden sm:inline">Respuesta inmediata por WhatsApp | Cotizaciones personalizadas</span>
+                <span className="sm:hidden">Respuesta inmediata por WhatsApp<br />Cotizaciones personalizadas</span>
               </p>
             </motion.div>
           </motion.div>
 
-          {/* Características destacadas rediseñadas */}
+          {/* Características destacadas - RESPONSIVE OPTIMIZADO */}
           <motion.div
-            className="mt-8 grid md:grid-cols-3 gap-8"
+            className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 px-2 sm:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 1.2 }}
           >
             <motion.div 
-              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               style={{ backdropFilter: 'blur(15px)' }}
               whileHover={{ y: -10 }}
             >
               <div 
-                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
                 style={{ 
                   background: 'linear-gradient(135deg, #1E3A8A, #3B82F6)',
                   boxShadow: '0 10px 30px rgba(30, 58, 138, 0.4)'
                 }}
               >
-                <Shield className="w-10 h-10 text-white" />
+                <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Máxima Seguridad</h3>
-              <p className="text-blue-100 leading-relaxed">Protocolos estrictos y operadores especializados</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-equiser-yellow">Máxima Seguridad</h3>
+              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">Protocolos estrictos y operadores especializados</p>
             </motion.div>
             
             <motion.div 
-              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               style={{ backdropFilter: 'blur(15px)' }}
               whileHover={{ y: -10 }}
             >
               <div 
-                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
                 style={{ 
                   background: 'linear-gradient(135deg, #FFC107, #FFD700)',
                   boxShadow: '0 10px 30px rgba(255, 193, 7, 0.4)'
                 }}
               >
-                <Award className="w-10 h-10 text-equiser-blue" />
+                <Award className="w-8 h-8 sm:w-10 sm:h-10 text-equiser-blue" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-equiser-yellow">Equipos Premium</h3>
-              <p className="text-blue-100 leading-relaxed">Grúas Moviles y Sobre Oruga Tecnológicas de las Mejores Marcas Alemanas: Liebherr • Grove • Manitowoc • Demag de última generación.</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-equiser-yellow">Equipos Premium</h3>
+              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
+                <span className="hidden sm:inline">Grúas Móviles y Sobre Oruga Tecnológicas de las Mejores Marcas Alemanas: Liebherr • Grove • Manitowoc • Demag de última generación.</span>
+                <span className="sm:hidden">Grúas Móviles y Sobre Oruga de las Mejores Marcas Alemanas: Liebherr, Grove, Manitowoc, Demag.</span>
+              </p>
             </motion.div>
-            
-
           </motion.div>
         </motion.div>
       </div>

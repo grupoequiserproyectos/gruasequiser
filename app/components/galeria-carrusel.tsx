@@ -215,20 +215,20 @@ export function GaleriaCarrusel() {
   }
 
   return (
-    <section id="galeria-carrusel" className="py-20" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
-      <div className="container mx-auto max-w-7xl px-6">
-        {/* Título de la Sección */}
+    <section id="galeria-carrusel" className="py-12 sm:py-16 md:py-20" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
+      <div className="container mx-auto max-w-7xl px-3 sm:px-4 md:px-6">
+        {/* Título de la Sección - RESPONSIVE OPTIMIZADO */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-4 sm:px-0"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1E3A8A' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6" style={{ color: '#1E3A8A' }}>
             Galería de Proyectos
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             Descubre nuestros proyectos más destacados con grúas de alta capacidad en diversos sectores industriales de Venezuela
           </p>
         </motion.div>
@@ -341,19 +341,19 @@ export function GaleriaCarrusel() {
               Desliza el cursor sobre la imagen para pausar la rotación automática
             </p>
             
-            {/* Mensaje de Llamada a la Acción Principal */}
+            {/* Mensaje de Llamada a la Acción Principal - RESPONSIVE OPTIMIZADO */}
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="mensaje-principal rounded-3xl mb-6 shadow-2xl"
+              className="mensaje-principal rounded-2xl sm:rounded-3xl mb-6 shadow-2xl mx-2 sm:mx-0"
               style={{ 
                 background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
-                padding: '2rem',
+                padding: '1.5rem',
                 boxShadow: '0 10px 30px rgba(30, 58, 138, 0.3)'
               }}
             >
               <h3 
-                className="font-extrabold mb-3 uppercase tracking-wide text-4xl md:text-5xl"
+                className="font-extrabold mb-3 uppercase tracking-wide text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
                 style={{ 
                   color: '#FFC107',
                   textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
@@ -363,13 +363,21 @@ export function GaleriaCarrusel() {
                 GRÚAS EQUISER
               </h3>
               <p 
-                className="font-semibold uppercase tracking-wider text-xl md:text-2xl text-center"
+                className="font-semibold uppercase tracking-wider text-center leading-relaxed"
                 style={{ 
                   color: 'white',
                   letterSpacing: '0.5px'
                 }}
               >
-                #1 Empresa Líder En Venezuela En Alquiler de Grúas Móviles Telescópicas, Grúas Sobre Oruga y Equipos de Transporte Pesado y Sobredimensionado
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
+                  #1 Empresa Líder En Venezuela En Alquiler de
+                </span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
+                  Grúas Móviles Telescópicas, Grúas Sobre Oruga
+                </span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
+                  y Equipos de Transporte Pesado y Sobredimensionado
+                </span>
               </p>
             </motion.div>
           </div>
@@ -382,7 +390,7 @@ export function GaleriaCarrusel() {
               y: -3
             }}
             transition={{ duration: 0.3 }}
-            className="inline-flex items-center gap-3 px-10 py-5 text-xl font-bold rounded-full transition-all duration-300 uppercase tracking-wide shadow-xl hover:shadow-2xl"
+            className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg lg:text-xl font-bold rounded-full transition-all duration-300 uppercase tracking-wide shadow-xl hover:shadow-2xl w-full sm:w-auto max-w-sm sm:max-w-none mx-auto"
             style={{ 
               background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
               color: '#1E3A8A',
@@ -390,15 +398,61 @@ export function GaleriaCarrusel() {
               boxShadow: '0 5px 15px rgba(255, 193, 7, 0.4)'
             }}
           >
-            <Camera className="w-6 h-6" />
-            💬 Solicitar Cotización Ahora
+            <Camera className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            <span className="hidden sm:inline">💬 Solicitar Cotización Ahora</span>
+            <span className="sm:hidden">💬 Cotización</span>
           </motion.a>
         </motion.div>
       </div>
 
-      {/* Responsive Styles */}
+      {/* Responsive Styles - OPTIMIZADO COMPLETO */}
       <style jsx>{`
-        @media (max-width: 768px) {
+        /* Mobile Phones - 320px to 480px */
+        @media (max-width: 480px) {
+          .container {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+          }
+          
+          .carousel-container {
+            height: 280px !important;
+            margin: 0 0.5rem;
+            border-radius: 1rem !important;
+          }
+          
+          .slide-info {
+            padding: 1rem !important;
+          }
+          
+          .slide-info h3 {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          
+          .slide-info p {
+            font-size: 0.875rem !important;
+            line-height: 1.4 !important;
+          }
+          
+          .mensaje-principal {
+            padding: 1rem !important;
+            margin-left: 0.5rem !important;
+            margin-right: 0.5rem !important;
+          }
+          
+          .mensaje-principal h3 {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+          
+          .mensaje-principal p span {
+            font-size: 0.75rem !important;
+            line-height: 1.3 !important;
+          }
+        }
+
+        /* Large Mobile Phones - 481px to 768px */
+        @media (min-width: 481px) and (max-width: 768px) {
           .container {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -406,25 +460,56 @@ export function GaleriaCarrusel() {
           
           .carousel-container {
             height: 350px !important;
-          }
-          
-          .slide-info h3 {
-            font-size: 1.5rem !important;
-          }
-          
-          .slide-info p {
-            font-size: 1rem !important;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .carousel-container {
-            height: 280px !important;
-            margin: 0 0.5rem;
+            margin: 0;
           }
           
           .slide-info {
             padding: 1.5rem !important;
+          }
+          
+          .slide-info h3 {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+          
+          .slide-info p {
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+          }
+          
+          .mensaje-principal {
+            padding: 1.25rem !important;
+          }
+          
+          .mensaje-principal h3 {
+            font-size: 2rem !important;
+          }
+          
+          .mensaje-principal p span {
+            font-size: 0.875rem !important;
+          }
+        }
+
+        /* Tablets - 769px to 1024px */
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .carousel-container {
+            height: 400px !important;
+          }
+          
+          .slide-info h3 {
+            font-size: 1.75rem !important;
+          }
+          
+          .slide-info p {
+            font-size: 1.125rem !important;
+          }
+          
+          .mensaje-principal h3 {
+            font-size: 2.5rem !important;
+          }
+          
+          .mensaje-principal p span {
+            font-size: 1rem !important;
           }
         }
       `}</style>
