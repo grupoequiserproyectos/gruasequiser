@@ -10,6 +10,12 @@ async function sendEmailNotification(contactData: any) {
   // - SendGrid, Mailgun, AWS SES, etc.
   // Por ahora, solo logueamos la información
   
+  const tipoServicioLabels = {
+    'alquiler_gruas': 'Alquiler de Grúas',
+    'transporte_pesado': 'Transporte Pesado y Sobredimensionado',
+    'servicio_bateas': 'Servicio con Bateas'
+  }
+
   const emailContent = `
   NUEVO CONTACTO DESDE EL SITIO WEB - GRÚAS EQUISER
   
@@ -21,7 +27,8 @@ async function sendEmailNotification(contactData: any) {
   Ubicación: ${contactData.ubicacion || 'No especificada'}
   
   DETALLES DEL SERVICIO:
-  Tonelaje requerido: ${contactData.tonelaje || 'No especificado'}
+  Tipo de servicio: ${tipoServicioLabels[contactData.tipo_servicio as keyof typeof tipoServicioLabels] || contactData.tipo_servicio || 'No especificado'}${contactData.tipo_servicio === 'alquiler_gruas' && contactData.tonelaje ? `
+  Tonelaje requerido: ${contactData.tonelaje}` : ''}
   Asunto: ${contactData.asunto}
   Mensaje: ${contactData.message}
   
@@ -48,12 +55,30 @@ export async function POST(request: NextRequest) {
       ubicacion, 
       asunto, 
       message, 
+      tipo_servicio,
       tonelaje,
       service // mantener compatibilidad con formulario anterior
     } = body
 
-    // Validación para nuevo formulario (con asunto)
-    if (asunto) {
+    // Validación para nuevo formulario con tipo de servicio
+    if (tipo_servicio) {
+      if (!name || !email || !phone || !asunto || !message || !tipo_servicio) {
+        return NextResponse.json(
+          { error: 'Los campos Nombre, Correo, Teléfono, Tipo de Servicio, Asunto y Mensaje son obligatorios' },
+          { status: 400 }
+        )
+      }
+      
+      // Validar que si es alquiler de grúas, debe tener tonelaje
+      if (tipo_servicio === 'alquiler_gruas' && !tonelaje) {
+        return NextResponse.json(
+          { error: 'Para el servicio de Alquiler de Grúas debe seleccionar una opción de tonelaje' },
+          { status: 400 }
+        )
+      }
+    }
+    // Validación para formulario anterior (con asunto pero sin tipo_servicio)  
+    else if (asunto) {
       if (!name || !email || !phone || !asunto || !message) {
         return NextResponse.json(
           { error: 'Los campos Nombre, Correo, Teléfono, Asunto y Mensaje son obligatorios' },
@@ -88,6 +113,7 @@ export async function POST(request: NextRequest) {
         ubicacion: ubicacion?.trim() || null,
         asunto: asunto?.trim() || 'Consulta general',
         message: message.trim(),
+        tipo_servicio: tipo_servicio?.trim() || null,
         tonelaje: tonelaje?.trim() || null,
         service: service?.trim() || null, // mantener compatibilidad
         status: 'pending'

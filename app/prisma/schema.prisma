@@ -63,19 +63,20 @@ model Project {
 }
 
 model ContactForm {
-  id          String @id @default(cuid())
-  tonelaje    String? // "65-100", "100-200", "300-1000"
-  name        String
-  email       String
-  phone       String
-  company     String?
-  ubicacion   String?
-  asunto      String
-  message     String
-  service     String? // para mantener compatibilidad con formulario anterior
-  status      String @default("pending") // pending, contacted, closed
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id            String @id @default(cuid())
+  tipo_servicio String? // "alquiler_gruas", "transporte_pesado", "servicio_bateas"
+  tonelaje      String? // "65-100", "100-200", "300-1000" (solo para alquiler de grúas)
+  name          String
+  email         String
+  phone         String
+  company       String?
+  ubicacion     String?
+  asunto        String
+  message       String
+  service       String? // para mantener compatibilidad con formulario anterior
+  status        String @default("pending") // pending, contacted, closed
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }
 
 model CompanyStats {

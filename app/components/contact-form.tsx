@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
 
 interface ContactFormData {
+  tipo_servicio: string
   tonelaje: string
   name: string
   email: string
@@ -29,6 +30,7 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [formData, setFormData] = useState<ContactFormData>({
+    tipo_servicio: '',
     tonelaje: '',
     name: '',
     email: '',
@@ -41,6 +43,12 @@ export function ContactForm() {
 
   const [errors, setErrors] = useState<Partial<ContactFormData>>({})
 
+  const tipoServicioOptions = [
+    { value: 'alquiler_gruas', label: 'Alquiler de Grúas' },
+    { value: 'transporte_pesado', label: 'Transporte Pesado y Sobredimensionado' },
+    { value: 'servicio_bateas', label: 'Servicio con Bateas' }
+  ]
+
   const tonelajeOptions = [
     { value: '65-100', label: '65 toneladas a 100 toneladas' },
     { value: '100-200', label: '100 toneladas a 200 toneladas' },
@@ -49,6 +57,13 @@ export function ContactForm() {
 
   const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {}
+
+    if (!formData.tipo_servicio.trim()) newErrors.tipo_servicio = 'Debe seleccionar un tipo de servicio'
+    
+    // Si es alquiler de grúas, el tonelaje es obligatorio
+    if (formData.tipo_servicio === 'alquiler_gruas' && !formData.tonelaje.trim()) {
+      newErrors.tonelaje = 'Debe seleccionar una opción de tonelaje para alquiler de grúas'
+    }
 
     if (!formData.name.trim()) newErrors.name = 'El nombre es obligatorio'
     if (!formData.email.trim()) {
@@ -92,6 +107,7 @@ export function ContactForm() {
       if (response.ok) {
         setShowSuccess(true)
         setFormData({
+          tipo_servicio: '',
           tonelaje: '',
           name: '',
           email: '',
@@ -131,8 +147,30 @@ export function ContactForm() {
     }
   }
 
+  const handleTipoServicioChange = (value: string) => {
+    setFormData(prev => ({ 
+      ...prev, 
+      tipo_servicio: value,
+      // Limpiar el tonelaje si no es alquiler de grúas
+      tonelaje: value === 'alquiler_gruas' ? prev.tonelaje : ''
+    }))
+    
+    // Limpiar errores relacionados
+    if (errors.tipo_servicio) {
+      setErrors(prev => ({ ...prev, tipo_servicio: undefined }))
+    }
+    if (value !== 'alquiler_gruas' && errors.tonelaje) {
+      setErrors(prev => ({ ...prev, tonelaje: undefined }))
+    }
+  }
+
   const handleTonelajeChange = (value: string) => {
     setFormData(prev => ({ ...prev, tonelaje: value }))
+    
+    // Limpiar error de tonelaje cuando se selecciona
+    if (errors.tonelaje) {
+      setErrors(prev => ({ ...prev, tonelaje: undefined }))
+    }
   }
 
   if (showSuccess) {
@@ -199,26 +237,26 @@ export function ContactForm() {
           className="bg-white p-8 rounded-3xl shadow-2xl border-4"
           style={{ borderColor: '#1E3A8A' }}
         >
-          {/* Opción de Tonelajes */}
+          {/* Tipo de Servicio */}
           <div className="mb-8">
             <h4 
               className="text-lg font-bold mb-4"
               style={{ color: '#1E3A8A' }}
             >
-              Opción de Tonelajes
+              Tipo de Servicio
             </h4>
             <div className="space-y-3">
-              {tonelajeOptions.map((option) => (
+              {tipoServicioOptions.map((option) => (
                 <label 
                   key={option.value} 
                   className="flex items-center cursor-pointer group"
                 >
                   <input
                     type="radio"
-                    name="tonelaje"
+                    name="tipo_servicio"
                     value={option.value}
-                    checked={formData.tonelaje === option.value}
-                    onChange={(e) => handleTonelajeChange(e.target.value)}
+                    checked={formData.tipo_servicio === option.value}
+                    onChange={(e) => handleTipoServicioChange(e.target.value)}
                     className="mr-3 w-4 h-4 accent-blue-800"
                   />
                   <span 
@@ -230,7 +268,60 @@ export function ContactForm() {
                 </label>
               ))}
             </div>
+            {errors.tipo_servicio && (
+              <p className="text-red-500 text-sm mt-2 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.tipo_servicio}
+              </p>
+            )}
           </div>
+
+          {/* Opción de Tonelajes - Solo para Alquiler de Grúas */}
+          {formData.tipo_servicio === 'alquiler_gruas' && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mb-8"
+            >
+              <h4 
+                className="text-lg font-bold mb-4"
+                style={{ color: '#1E3A8A' }}
+              >
+                Opción de Tonelajes
+              </h4>
+              <div className="space-y-3">
+                {tonelajeOptions.map((option) => (
+                  <label 
+                    key={option.value} 
+                    className="flex items-center cursor-pointer group"
+                  >
+                    <input
+                      type="radio"
+                      name="tonelaje"
+                      value={option.value}
+                      checked={formData.tonelaje === option.value}
+                      onChange={(e) => handleTonelajeChange(e.target.value)}
+                      className="mr-3 w-4 h-4 accent-blue-800"
+                    />
+                    <span 
+                      className="text-sm font-medium group-hover:font-bold transition-all duration-200"
+                      style={{ color: '#1E3A8A' }}
+                    >
+                      {option.label}
+                    </span>
+                  </label>
+                ))}
+              </div>
+              {errors.tonelaje && (
+                <p className="text-red-500 text-sm mt-2 flex items-center">
+                  <AlertCircle className="w-4 h-4 mr-1" />
+                  {errors.tonelaje}
+                </p>
+              )}
+            </motion.div>
+          )}
 
           {/* Nombre completo */}
           <div className="mb-6">
