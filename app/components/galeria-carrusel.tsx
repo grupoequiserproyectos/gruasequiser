@@ -369,7 +369,7 @@ export function GaleriaCarrusel() {
                   letterSpacing: '0.5px'
                 }}
               >
-                #1 Empresa Líder En Venezuela En Alquiler de Grúas Móviles Telescópicas y Grúas Sobre Oruga
+                #1 Empresa Líder En Venezuela En Alquiler de Grúas Móviles Telescópicas, Grúas Sobre Oruga y Equipos de Transporte Pesado y Sobredimensionado
               </p>
             </motion.div>
           </div>
