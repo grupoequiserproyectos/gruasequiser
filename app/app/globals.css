@@ -703,4 +703,81 @@
       display: none;
     }
   }
+
+  /* OPTIMIZACIONES PARA EL NUEVO CARRUSEL - SEGÚN EJEMPLO */
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  /* Estilos específicos para thumbnails del carrusel */
+  .carousel-thumbnail-mobile {
+    width: 80px !important;
+    height: 60px !important;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-thumbnail-mobile {
+      width: 100px !important;
+      height: 75px !important;
+    }
+  }
+
+  /* Optimización para flechas de navegación del carrusel */
+  .carousel-nav-arrow {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(30, 58, 138, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .carousel-nav-arrow:hover {
+    background: #FFD700;
+    border-color: #1E3A8A;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  }
+
+  /* Efectos de hover para thumbnails */
+  .carousel-thumbnail-hover {
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .carousel-thumbnail-hover:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estados del thumbnail activo */
+  .carousel-thumbnail-active {
+    ring-width: 4px;
+    ring-color: #1E3A8A;
+    ring-opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+  }
+
+  /* Optimización para la imagen principal del carrusel */
+  .carousel-main-image {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive para las flechas en mobile */
+  @media (max-width: 768px) {
+    .carousel-nav-arrow {
+      left: 10px !important;
+      right: 10px !important;
+      width: 40px !important;
+      height: 40px !important;
+      font-size: 18px !important;
+    }
+  }
 }

@@ -82,19 +82,27 @@ export function HeroSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          {/* Título principal - RESPONSIVE OPTIMIZADO */}
+          {/* Título principal - TEXTO CORREGIDO SEGÚN ESPECIFICACIONES */}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight max-w-6xl mx-auto"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-equiser-yellow block sm:inline">Grúas Móviles y Sobre Oruga</span>
-            <br />
-            <span className="text-white block sm:inline">desde 25 hasta 1600 toneladas</span>
-            <br />
-            <span className="text-blue-200 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl block mt-2 sm:mt-0">con equipos técnico certificados</span>
+            <span className="text-equiser-yellow block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4">
+              GRÚAS EQUISER
+            </span>
+            <span className="text-white block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3">
+              #1 Empresa Líder En Venezuela
+            </span>
+            <span className="text-blue-200 block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-relaxed">
+              En Alquiler de Grúas Móviles Telescópicas,
+              <br className="hidden sm:block" />
+              Grúas Sobre Oruga y Equipos de Transporte
+              <br className="hidden sm:block" />
+              Pesado y Sobredimensionado
+            </span>
           </motion.h1>
 
           <motion.p

@@ -233,118 +233,107 @@ export function GaleriaCarrusel() {
           </p>
         </motion.div>
 
-        {/* Carrusel Container */}
+        {/* NUEVO CARRUSEL BASADO EN EL EJEMPLO - IMAGEN PRINCIPAL + THUMBNAILS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-3xl shadow-2xl mb-12"
+          className="relative max-w-6xl mx-auto"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          style={{ height: '500px' }}
         >
-          {/* Carrusel Wrapper */}
-          <div 
-            className="flex transition-transform duration-700 ease-in-out h-full"
-            style={{ 
-              transform: `translateX(-${currentSlide * 100}%)`,
-              willChange: 'transform'
-            }}
-          >
-            {carouselItems.map((item, index) => (
-              <div key={item.id} className="min-w-full relative h-full">
-                <div className="relative h-full bg-gray-100">
+          {/* CONTENEDOR PRINCIPAL DE LA IMAGEN */}
+          <div className="relative mb-5 bg-white rounded-2xl shadow-2xl overflow-hidden">
+            {/* IMAGEN PRINCIPAL GRANDE */}
+            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] bg-gray-100">
+              <Image
+                src={carouselItems[currentSlide]?.src}
+                alt={carouselItems[currentSlide]?.alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                priority
+              />
+              
+              {/* Overlay sutil para el texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              
+              {/* INFORMACIÓN DEL SLIDE */}
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute bottom-6 left-6 right-6 text-white"
+              >
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                  {carouselItems[currentSlide]?.title}
+                </h3>
+                <p className="text-lg opacity-90 max-w-2xl">
+                  {carouselItems[currentSlide]?.description}
+                </p>
+              </motion.div>
+            </div>
+
+            {/* FLECHAS DE NAVEGACIÓN LATERALES - FUERA DE LA IMAGEN */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-[-25px] top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-yellow-400 text-equiser-blue hover:text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-20 flex items-center justify-center"
+              aria-label="Imagen anterior"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-[-25px] top-1/2 -translate-y-1/2 w-12 h-12 bg-white hover:bg-yellow-400 text-equiser-blue hover:text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-20 flex items-center justify-center"
+              aria-label="Imagen siguiente"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Auto-play Indicator */}
+            <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm z-10">
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-red-400'}`} />
+                {isAutoPlaying ? 'Auto' : 'Manual'}
+              </div>
+            </div>
+          </div>
+
+          {/* STRIP DE THUMBNAILS EN LA PARTE INFERIOR - DISEÑO DEL EJEMPLO */}
+          <div className="flex gap-3 overflow-x-auto pb-4 px-4 md:px-0 scrollbar-hide">
+            <div className="flex gap-3 min-w-full justify-center md:justify-start">
+              {carouselItems.map((item, index) => (
+                <motion.button
+                  key={item.id}
+                  onClick={() => goToSlide(index)}
+                  className={`flex-shrink-0 relative overflow-hidden rounded-lg transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'ring-4 ring-equiser-blue scale-105 shadow-lg'
+                      : 'hover:scale-105 hover:ring-2 hover:ring-yellow-400 opacity-70 hover:opacity-100'
+                  }`}
+                  whileHover={{ y: -2 }}
+                  style={{
+                    width: '100px', // Desktop
+                    height: '75px', // Desktop
+                  }}
+                >
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
-                    className="object-contain"
-                    sizes="100vw"
-                    priority={index === 0}
+                    className="object-cover"
+                    sizes="100px"
                   />
                   
-                  {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  
-                  {/* Slide Info */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="absolute bottom-0 left-0 right-0 text-center text-white p-8 md:p-12"
-                  >
-                    <h3 className="text-3xl md:text-4xl font-bold mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-                      {item.description}
-                    </p>
-                  </motion.div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Botones de Navegación - MINIMALISTAS SIN INTERFERIR */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-3 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 bg-transparent hover:bg-white/10 text-white/80 hover:text-white rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 z-20"
-            style={{
-              background: 'rgba(0, 0, 0, 0.1)',
-              backdropFilter: 'blur(4px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)'
-            }}
-            aria-label="Slide anterior"
-          >
-            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-3 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 bg-transparent hover:bg-white/10 text-white/80 hover:text-white rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 z-20"
-            style={{
-              background: 'rgba(0, 0, 0, 0.1)',
-              backdropFilter: 'blur(4px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)'
-            }}
-            aria-label="Slide siguiente"
-          >
-            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-          </button>
-
-          {/* Indicadores - COMPLETAMENTE TRANSPARENTES PARA EVITAR BARRA GRIS */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1 z-10">
-            {carouselItems.slice(0, 8).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-yellow-400/90 scale-110'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-                style={{
-                  background: index === currentSlide ? 'rgba(255, 212, 0, 0.9)' : 'rgba(255, 255, 255, 0.3)',
-                  backdropFilter: 'none',
-                  border: 'none',
-                  boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
-                }}
-                aria-label={`Ir al slide ${index + 1}`}
-              />
-            ))}
-            {carouselItems.length > 8 && (
-              <div className="w-2 h-2 bg-white/30 rounded-full flex items-center justify-center">
-                <span className="text-[8px] text-white">+{carouselItems.length - 8}</span>
-              </div>
-            )}
-          </div>
-
-          {/* Auto-play Indicator */}
-          <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm z-10">
-            <div className="flex items-center gap-2">
-              <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-red-400'}`} />
-              {isAutoPlaying ? 'Auto' : 'Manual'}
+                  {/* Overlay para thumbnail activo */}
+                  {index === currentSlide && (
+                    <div className="absolute inset-0 bg-equiser-blue/20 border-2 border-equiser-blue rounded-lg" />
+                  )}
+                </motion.button>
+              ))}
             </div>
           </div>
         </motion.div>
