@@ -169,10 +169,10 @@ export function AboutSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 lg:gap-4 xl:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-4 lg:gap-6 xl:gap-8">
               {/* Primera columna */}
-              <div className="space-y-4 sm:space-y-3 lg:space-y-4 xl:space-y-6">
-                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '200px' }}>
+              <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <Image
                     src="/images/grua de 800 ton.png"
                     alt="Grúa de 800 toneladas EQUISER"
@@ -181,7 +181,7 @@ export function AboutSection() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '150px' }}>
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <Image
                     src="/images/trabajo de grua 450 ton.png"
                     alt="Trabajo con grúa de 450 toneladas"
@@ -193,8 +193,8 @@ export function AboutSection() {
               </div>
               
               {/* Segunda columna */}
-              <div className="space-y-4 sm:space-y-3 lg:space-y-4 xl:space-y-6 sm:pt-4 lg:pt-6 xl:pt-8">
-                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '150px' }}>
+              <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8 sm:pt-6 lg:pt-8 xl:pt-10">
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <Image
                     src="/images/dos gruas de 600 ton.png"
                     alt="Operación con dos grúas de 600 toneladas"
@@ -203,7 +203,7 @@ export function AboutSection() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300" style={{ height: '200px' }}>
+                <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <Image
                     src="/images/ingenieria 3d.png"
                     alt="Ingeniería 3D EQUISER"
@@ -215,10 +215,19 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Badge flotante optimizado para desktop */}
-            <div className="absolute -top-2 lg:-top-4 xl:-top-6 -left-2 lg:-left-4 xl:-left-6 bg-equiser-blue text-white p-3 lg:p-4 xl:p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <div className="text-xl lg:text-2xl xl:text-3xl font-bold">30+</div>
-              <div className="text-xs lg:text-sm xl:text-base">Años de Experiencia</div>
+            {/* Badge flotante - MEJORADO PARA MAYOR VISIBILIDAD */}
+            <div 
+              className="absolute -top-3 lg:-top-5 xl:-top-7 -left-3 lg:-left-5 xl:-left-7 text-equiser-blue p-4 lg:p-5 xl:p-7 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                border: '3px solid #1E3A8A',
+                boxShadow: '0 15px 35px rgba(255, 215, 0, 0.4), 0 5px 15px rgba(30, 58, 138, 0.3)'
+              }}
+            >
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-equiser-blue text-center">30+</div>
+              <div className="text-sm lg:text-base xl:text-lg font-bold text-equiser-blue text-center whitespace-nowrap">
+                Años de<br />Experiencia
+              </div>
             </div>
           </motion.div>
         </div>

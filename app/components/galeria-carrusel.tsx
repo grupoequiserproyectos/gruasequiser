@@ -286,37 +286,58 @@ export function GaleriaCarrusel() {
             ))}
           </div>
 
-          {/* Botones de Navegación - REPOSICIONADOS PARA EVITAR LÍNEA AMARILLA */}
+          {/* Botones de Navegación - MINIMALISTAS SIN INTERFERIR */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 sm:left-4 md:left-6 bottom-20 sm:bottom-24 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-20"
+            className="absolute left-3 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 bg-transparent hover:bg-white/10 text-white/80 hover:text-white rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 z-20"
+            style={{
+              background: 'rgba(0, 0, 0, 0.1)',
+              backdropFilter: 'blur(4px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)'
+            }}
             aria-label="Slide anterior"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-2 sm:right-4 md:right-6 bottom-20 sm:bottom-24 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 hover:scale-110 shadow-lg z-20"
+            className="absolute right-3 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 bg-transparent hover:bg-white/10 text-white/80 hover:text-white rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 z-20"
+            style={{
+              background: 'rgba(0, 0, 0, 0.1)',
+              backdropFilter: 'blur(4px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)'
+            }}
             aria-label="Slide siguiente"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
 
-          {/* Indicadores */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-            {carouselItems.map((_, index) => (
+          {/* Indicadores - COMPLETAMENTE TRANSPARENTES PARA EVITAR BARRA GRIS */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1 z-10">
+            {carouselItems.slice(0, 8).map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? 'bg-yellow-400 scale-125'
-                    : 'bg-white/50 hover:bg-white/80'
+                    ? 'bg-yellow-400/90 scale-110'
+                    : 'bg-white/30 hover:bg-white/50'
                 }`}
+                style={{
+                  background: index === currentSlide ? 'rgba(255, 212, 0, 0.9)' : 'rgba(255, 255, 255, 0.3)',
+                  backdropFilter: 'none',
+                  border: 'none',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                }}
                 aria-label={`Ir al slide ${index + 1}`}
               />
             ))}
+            {carouselItems.length > 8 && (
+              <div className="w-2 h-2 bg-white/30 rounded-full flex items-center justify-center">
+                <span className="text-[8px] text-white">+{carouselItems.length - 8}</span>
+              </div>
+            )}
           </div>
 
           {/* Auto-play Indicator */}
@@ -405,8 +426,41 @@ export function GaleriaCarrusel() {
         </motion.div>
       </div>
 
-      {/* Responsive Styles - OPTIMIZADO COMPLETO */}
+      {/* Responsive Styles - OPTIMIZADO COMPLETO CON CORRECCIONES DE CARRUSEL */}
       <style jsx>{`
+        /* CORRECCIONES GLOBALES DEL CARRUSEL */
+        @media (max-width: 768px) {
+          /* Mobile - Ocultar indicadores excesivos */
+          .carousel-indicators button:nth-child(n+6) {
+            display: none;
+          }
+          
+          /* Navigation buttons más pequeños en mobile */
+          .carousel-nav-btn {
+            width: 32px !important;
+            height: 32px !important;
+            padding: 6px !important;
+          }
+          
+          /* Ocultar auto-play indicator en mobile */
+          .absolute.top-4.right-4 {
+            display: none;
+          }
+        }
+
+        @media (min-width: 769px) {
+          /* Desktop - Navigation más elegante */
+          .carousel-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.15) !important;
+            transform: scale(1.1);
+          }
+          
+          /* Limitar indicadores en desktop también */
+          .carousel-indicators button:nth-child(n+10) {
+            display: none;
+          }
+        }
+
         /* Mobile Phones - 320px to 480px */
         @media (max-width: 480px) {
           .container {
