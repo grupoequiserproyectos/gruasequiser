@@ -171,6 +171,42 @@ const carouselItems: CarouselItem[] = [
     title: 'Seguridad y Calidad',
     description: 'Proyectos con Estándares Certificados',
     alt: 'Proyecto realizado con altos estándares de seguridad y calidad'
+  },
+  // NUEVAS IMÁGENES - PROYECTOS PETROMONAGAS
+  {
+    id: 23,
+    src: '/images/trabajo-petromonagas.jpg',
+    title: 'Trabajo Petromonagas',
+    description: 'Grúa Amarilla Izando Tanque Industrial',
+    alt: 'Trabajo Petromonagas con grúa amarilla izando tanque blanco grande'
+  },
+  {
+    id: 24,
+    src: '/images/petromonagas-grua-200-toneladas.png',
+    title: 'Petromonagas Grúa 200T',
+    description: 'Grúa Roja en Estructura Industrial',
+    alt: 'Grúa roja de 200 toneladas trabajando en torre/estructura en Petromonagas'
+  },
+  {
+    id: 25,
+    src: '/images/gruas-equiser-petromonagas.jpg',
+    title: 'Grúas Equiser Petromonagas',
+    description: 'Operación Coordinada con Múltiples Grúas',
+    alt: 'Grúas Equiser amarillas izando tanques blancos grandes en Petromonagas'
+  },
+  {
+    id: 26,
+    src: '/images/movilizacion-transformador-siemens.png',
+    title: 'Transformador SIEMENS',
+    description: 'Movilización Especializada de Transformador',
+    alt: 'Transporte de transformador SIEMENS con grúa especializada'
+  },
+  {
+    id: 27,
+    src: '/images/movilizacion-gruas-izamiento-portuario.jpg',
+    title: 'Izamiento Portuario',
+    description: 'Operaciones Portuarias con Grúa Móvil',
+    alt: 'Movilización de grúas para izamiento portuario, grúa amarilla en barco/puerto'
   }
 ]
 

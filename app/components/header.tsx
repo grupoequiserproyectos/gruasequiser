@@ -37,10 +37,10 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo actualizado más grande y clickeable */}
+          {/* Logo actualizado MÁS GRANDE y clickeable */}
           <div className="flex items-center">
             <Link href="/" className="relative block">
-              <div className="relative w-32 h-12 sm:w-40 sm:h-14 md:w-48 md:h-16 lg:w-56 lg:h-18 xl:w-64 xl:h-20">
+              <div className="relative w-40 h-16 sm:w-48 sm:h-18 md:w-56 md:h-20 lg:w-64 lg:h-22 xl:w-72 xl:h-24">
                 <Image
                   src="/images/logo-equiser-actualizado.png"
                   alt="GRÚAS EQUISER C.A. - Logo"
