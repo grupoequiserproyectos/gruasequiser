@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Wrench, Truck, Package, Compass } from 'lucide-react'
+
 import Image from 'next/image'
 
 export function ServicesSection() {
@@ -14,28 +14,24 @@ export function ServicesSection() {
 
   const services = [
     {
-      icon: Wrench,
       title: 'Alquiler De Grúas Móviles Y Sobre Oruga',
       description: 'Grúas móviles y sobre oruga de 25 a 1600 toneladas para proyectos industriales complejos.',
       features: ['Grúas Liebherr', 'Grúas Grove', 'Grúas Manitowoc', 'Operadores Certificados'],
       image: '/images/grua de 800 ton.png'
     },
     {
-      icon: Truck,
       title: 'Transporte Pesado Y Extrapesado',
       description: 'Transporte especializado con equipos super lowboy y modular para cargas excepcionales.',
       features: ['Super Lowboy', 'Transporte Modular', 'Rutas Especializadas', 'Permisos Incluidos'],
       image: '/images/transporte-250-toneladas.png'
     },
     {
-      icon: Package,
       title: 'Manejo De Carga Excepcional',
       description: 'Manipulación especializada de cargas industriales con máxima seguridad y precisión.',
       features: ['Carga Y Descarga', 'Manipulación Industrial', 'Embalaje Especializado', 'Logística Integral'],
       image: '/images/trabajo de gantry 600 ton.png'
     },
     {
-      icon: Compass,
       title: 'Ingeniería 3D',
       description: 'Planificación avanzada con modelado 3D para optimizar cada operación de izamiento.',
       features: ['Modelado 3D', 'Análisis De Cargas', 'Planificación Detallada', 'Simulación Virtual'],
@@ -69,7 +65,7 @@ export function ServicesSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                 <Image
@@ -79,11 +75,7 @@ export function ServicesSection() {
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute top-6 left-6">
-                  <div className="w-16 h-16 equiser-blue rounded-2xl flex items-center justify-center shadow-lg">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                </div>
+
               </div>
               
               <div className="p-8">

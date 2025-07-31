@@ -4,7 +4,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ArrowRight, Play, Shield, Award, Clock } from 'lucide-react'
+import { ArrowRight, Play, Shield, Award, Clock, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
@@ -58,7 +58,7 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ paddingTop: '120px' }}>
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32">
       {/* Imagen de fondo con parallax */}
       <div className="absolute inset-0">
         <div 
@@ -111,7 +111,7 @@ export function HeroSection() {
 
           {/* Estadísticas animadas */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
@@ -176,7 +176,7 @@ export function HeroSection() {
                 }}
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-xl">💬</span>
+                  <MessageCircle className="w-5 h-5" />
                   Solicitar Cotización WhatsApp
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </span>
@@ -196,7 +196,7 @@ export function HeroSection() {
                 }}
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-xl">🏗️</span>
+                  <Play className="w-5 h-5" />
                   Ver Proyectos
                 </span>
               </Button>
@@ -213,7 +213,7 @@ export function HeroSection() {
                 className="text-blue-100 text-base font-medium italic"
                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}
               >
-                ⚡ Respuesta inmediata por WhatsApp | 🎯 Cotizaciones personalizadas
+                Respuesta inmediata por WhatsApp | Cotizaciones personalizadas
               </p>
             </motion.div>
           </motion.div>

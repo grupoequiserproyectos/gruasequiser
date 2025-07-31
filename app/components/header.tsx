@@ -26,7 +26,7 @@ export function Header() {
     { href: '#equipos', label: 'EQUIPOS' },
     { href: '#servicios', label: 'SERVICIOS' },
     { href: '#proyectos', label: 'PROYECTOS' },
-    { href: '/blog', label: '📝 BLOG' },
+    { href: '/blog', label: 'BLOG' },
     { href: '#contacto', label: 'CONTACTO' }
   ]
 
@@ -41,7 +41,7 @@ export function Header() {
           {/* Logo actualizado más grande y clickeable */}
           <div className="flex items-center">
             <Link href="/" className="relative block">
-              <div className="relative" style={{ width: '250px', height: '80px' }}>
+              <div className="relative w-32 h-12 sm:w-40 sm:h-14 md:w-48 md:h-16 lg:w-56 lg:h-18 xl:w-64 xl:h-20">
                 <Image
                   src="/images/logo-equiser-actualizado.png"
                   alt="GRÚAS EQUISER C.A. - Logo"

@@ -415,7 +415,7 @@ export function ProjectsSection() {
               {allProjects.filter(p => p.featured).slice(0, 4).map((project, index) => (
                 <div
                   key={project.id}
-                  className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
                 >
                   <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                     <Image
@@ -485,7 +485,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="relative h-48 sm:h-56 lg:h-64 bg-gray-100">
                 <Image

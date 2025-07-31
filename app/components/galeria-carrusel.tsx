@@ -229,7 +229,7 @@ export function GaleriaCarrusel() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1E3A8A' }}>
-            🏗️ Galería de Proyectos
+            Galería de Proyectos
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Descubre nuestros proyectos más destacados con grúas de alta capacidad en diversos sectores industriales de Venezuela

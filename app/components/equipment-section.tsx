@@ -149,7 +149,7 @@ export function EquipmentSection() {
           {equipment[activeCategory as keyof typeof equipment]?.map((item, index) => (
             <div
               key={item.name}
-              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100"
             >
               <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
                 <Image
