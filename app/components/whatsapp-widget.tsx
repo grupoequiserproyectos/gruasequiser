@@ -22,22 +22,22 @@ export function WhatsappWidget() {
 
   const quickOptions = [
     {
+      icon: Wrench,
+      title: 'Solicitar Grúa Móvil o Oruga 25-1600 ton',
+      description: 'Equipos certificados disponibles',
+      color: 'bg-gradient-to-r from-green-500 to-green-600'
+    },
+    {
       icon: Truck,
-      title: '🚛 Cotiza Transporte Especializado',
-      description: 'Transporte pesado hasta 1600 ton',
+      title: 'Cotiza Transporte Especial',
+      description: 'Transporte pesado y sobredimensionado',
       color: 'bg-gradient-to-r from-purple-500 to-purple-600'
     },
     {
       icon: Zap,
-      title: '⚡ Asesoría Inmediata GRATIS',
+      title: 'Asesoría Personalizada',
       description: 'Consulta técnica sin costo',
       color: 'bg-gradient-to-r from-blue-500 to-blue-600'
-    },
-    {
-      icon: Wrench,
-      title: '🏗️ Equipos 25-1600 Toneladas',
-      description: 'Grúas móviles y sobre oruga',
-      color: 'bg-gradient-to-r from-green-500 to-green-600'
     }
   ]
 
