@@ -30,8 +30,9 @@ export const lazyLoadImages = () => {
   if ('loading' in HTMLImageElement.prototype) {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach(img => {
-      if (img.dataset.src) {
-        img.setAttribute('src', img.dataset.src);
+      const htmlImg = img as HTMLImageElement;
+      if (htmlImg.dataset.src) {
+        htmlImg.setAttribute('src', htmlImg.dataset.src);
       }
     });
   } else {

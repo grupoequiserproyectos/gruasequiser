@@ -37,6 +37,8 @@
     ".build/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "blog_BACKUP",
+    ".build/types/app/blog_temp_disabled"
   ]
 }

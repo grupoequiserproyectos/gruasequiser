@@ -11,7 +11,7 @@ export const LazyMotion = dynamic(
 )
 
 export const m = dynamic(
-  () => import('framer-motion').then((mod) => mod.m),
+  () => import('framer-motion').then((mod) => mod.m as any),
   { ssr: false }
 ) as any
 

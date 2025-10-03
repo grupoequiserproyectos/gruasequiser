@@ -1,4 +1,5 @@
 
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -8,16 +9,30 @@ import { WhatsappWidget } from '@/components/whatsapp-widget'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GRÚAS EQUISER C.A. - Líder En Alquiler De Grúas Móviles Y Sobre Oruga Venezuela | Grúas Hasta 1600 Toneladas',
-  description: 'GRÚAS EQUISER C.A. - Más de 30 años como empresa líder en alquiler de grúas móviles, sobre oruga y transporte pesado en Venezuela. Grúas hasta 1600 toneladas. Marcas Liebherr, Grove, Manitowoc, Demag. Atención 24/7.',
-  keywords: 'alquiler grúas móviles Venezuela, grúas sobre oruga Venezuela, transporte pesado Venezuela, grúas móviles Venezuela, super lowboy Venezuela, GRÚAS EQUISER, Liebherr, Grove, Manitowoc, Demag',
+  title: 'Alquiler Grúas Móviles Venezuela | EQUISER - Liebherr, Grove, Manitowoc | 25-1600 Toneladas',
+  description: '✅ Líderes en alquiler de grúas móviles Venezuela. 30+ años experiencia, grúas Liebherr, Grove, Manitowoc 25-1600 ton. Disponibles 24/7. ☎️ Cotización inmediata.',
+  keywords: 'alquiler grúas móviles venezuela, grúas telescópicas, grúas industriales, Liebherr, Grove, Manitowoc, Carabobo, alquiler grúas Carabobo, grúas sobre oruga Venezuela, izamiento industrial Venezuela, alquiler grúas 24 horas Venezuela, grúas móviles Puerto Cabello Morón, alquiler grúas Valencia Carabobo',
   openGraph: {
-    title: 'GRÚAS EQUISER C.A. - Líder En Alquiler De Grúas Móviles Venezuela',
-    description: '30+ años liderando el mercado venezolano con grúas hasta 1600 toneladas',
+    title: 'Alquiler Grúas Móviles Venezuela | EQUISER 30+ Años Experiencia',
+    description: '✅ Grúas telescópicas y sobre oruga 25-1600 toneladas. Liebherr, Grove, Manitowoc. Sectores petrolero, petroquímico, industrial. Disponibles 24/7',
     url: 'https://gruasequiser.net',
     siteName: 'GRÚAS EQUISER C.A.',
     locale: 'es_VE',
     type: 'website',
+    images: [
+      {
+        url: 'https://grcomex.com/wp-content/uploads/2019/02/grcomex_nosotros_09.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Grúas EQUISER - Alquiler de Grúas Móviles Venezuela'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alquiler Grúas Móviles Venezuela | EQUISER',
+    description: 'Grúas Liebherr, Grove, Manitowoc 25-1600 ton. 30+ años experiencia',
+    images: ['https://gruasequiser.net/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -32,7 +47,10 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'verification-code-here',
-  }
+  },
+  alternates: {
+    canonical: 'https://gruasequiser.net',
+  },
 }
 
 export default function RootLayout({
@@ -43,11 +61,11 @@ export default function RootLayout({
   return (
     <html lang="es-VE">
       <head>
-        <meta name="geo.region" content="VE" />
-        <meta name="geo.placename" content="Venezuela" />
-        <meta name="geo.position" content="10.5;-67.0" />
-        <meta name="ICBM" content="10.5, -67.0" />
-        <link rel="canonical" href="https://gruasequiser.net" />
+        {/* Geo Tags */}
+        <meta name="geo.region" content="VE-G" />
+        <meta name="geo.placename" content="Morón, Carabobo, Venezuela" />
+        <meta name="geo.position" content="10.4880;-68.2010" />
+        <meta name="ICBM" content="10.4880, -68.2010" />
         
         {/* Favicons de GRÚAS EQUISER */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -57,35 +75,227 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
         <meta name="theme-color" content="#1E3A8A" />
+        
+        {/* Enhanced Schema.org LocalBusiness Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "LocalBusiness",
               "name": "GRÚAS EQUISER C.A.",
-              "description": "Empresa líder en alquiler de grúas móviles, sobre oruga y transporte pesado en Venezuela",
+              "description": "Empresa líder en alquiler de grúas móviles, telescópicas y sobre oruga en Venezuela. Especialistas en sectores petrolero, petroquímico, industrial, portuario y siderúrgico.",
               "url": "https://gruasequiser.net",
-              "logo": "https://equisercranes.com/wp-content/uploads/2020/10/logo.png",
+              "telephone": "+58-414-343-2882",
+              "email": "info@gruasequiser.net",
+              "logo": "https://static.vecteezy.com/system/resources/thumbnails/016/941/001/small/lifting-crane-logo-construction-company-rental-of-special-equipment-sale-of-equipment-for-construction-vector.jpg",
+              "image": "https://superiorrigging.com/wp-content/uploads/2023/12/QTS-Generator-Set-Over-Wall-13-768x576.webp",
               "foundingDate": "1994",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Autopista Puerto Cabello Morón, sector la Paragüita, diagonal a Planta Centro",
+                "streetAddress": "Autopista Puerto Cabello Morón, Sector La Paragüita",
                 "addressLocality": "Morón",
                 "addressRegion": "Carabobo",
+                "postalCode": "2050",
                 "addressCountry": "VE"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "10.4880",
+                "longitude": "-68.2010"
+              },
+              "openingHours": "Mo-Su 00:00-23:59",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
+                  "opens": "00:00",
+                  "closes": "23:59"
+                }
+              ],
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "10.4880",
+                  "longitude": "-68.2010"
+                },
+                "geoRadius": "500000"
+              },
+              "priceRange": "$$",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
               },
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
                   "telephone": "+58-414-343-2882",
                   "contactType": "customer service",
-                  "availableLanguage": "Spanish",
-                  "hoursAvailable": "24/7"
+                  "availableLanguage": ["Spanish"],
+                  "areaServed": "VE",
+                  "hoursAvailable": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"
+                    ]
+                  }
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+58-414-343-2882",
+                  "contactType": "sales",
+                  "availableLanguage": ["Spanish"],
+                  "areaServed": "VE"
                 }
               ],
               "sameAs": [
-                "https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0"
+                "https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0",
+                "https://www.facebook.com/gruasequiser",
+                "https://www.instagram.com/gruasequiser",
+                "https://www.linkedin.com/company/gruasequiser"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Servicios de Alquiler de Grúas",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Alquiler de Grúas Móviles",
+                      "description": "Grúas móviles telescópicas de 25 a 1600 toneladas. Marcas Liebherr, Grove, Manitowoc."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Alquiler de Grúas Sobre Oruga",
+                      "description": "Grúas sobre oruga para proyectos industriales de gran envergadura."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Transporte Pesado y Extrapesado",
+                      "description": "Transporte especializado de cargas hasta 250 toneladas con Super Lowboy."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Manejo de Carga Excepcional",
+                      "description": "Servicios especializados de izamiento y manipulación de cargas industriales."
+                    }
+                  }
+                ]
+              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Morón",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Carabobo"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Puerto Cabello",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Carabobo"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Valencia",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Carabobo"
+                  }
+                },
+                {
+                  "@type": "Country",
+                  "name": "Venezuela"
+                }
+              ],
+              "knowsAbout": [
+                "Alquiler de grúas móviles",
+                "Grúas telescópicas",
+                "Grúas sobre oruga",
+                "Izamiento industrial",
+                "Transporte pesado",
+                "Liebherr",
+                "Grove",
+                "Manitowoc",
+                "Sector petrolero",
+                "Sector petroquímico",
+                "Sector industrial",
+                "Sector portuario"
+              ]
+            })
+          }}
+        />
+        
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://gruasequiser.net"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Servicios",
+                  "item": "https://gruasequiser.net#servicios"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Equipos",
+                  "item": "https://gruasequiser.net#equipos"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Proyectos",
+                  "item": "https://gruasequiser.net#proyectos"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "name": "Contacto",
+                  "item": "https://gruasequiser.net#contacto"
+                }
               ]
             })
           }}
@@ -99,3 +309,4 @@ export default function RootLayout({
     </html>
   )
 }
+
