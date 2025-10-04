@@ -17,25 +17,25 @@ export function ServicesSection() {
       title: 'Alquiler De Grúas Móviles Y Sobre Oruga',
       description: 'Grúas móviles y sobre oruga de 25 a 1600 toneladas para proyectos industriales complejos.',
       features: ['Grúas Liebherr', 'Grúas Grove', 'Grúas Manitowoc', 'Operadores Certificados'],
-      image: '/images/grua de 800 ton.png'
+      image: '/images/grua de 800 ton.webp'
     },
     {
       title: 'Transporte Pesado Y Extrapesado',
       description: 'Transporte especializado con equipos super lowboy y modular para cargas excepcionales.',
       features: ['Super Lowboy', 'Transporte Modular', 'Rutas Especializadas', 'Permisos Incluidos'],
-      image: '/images/transporte-250-toneladas.png'
+      image: '/images/transporte-250-toneladas.webp'
     },
     {
       title: 'Manejo De Carga Excepcional',
       description: 'Manipulación especializada de cargas industriales con máxima seguridad y precisión.',
       features: ['Carga Y Descarga', 'Manipulación Industrial', 'Embalaje Especializado', 'Logística Integral'],
-      image: '/images/trabajo de gantry 600 ton.png'
+      image: '/images/trabajo de gantry 600 ton.webp'
     },
     {
       title: 'Ingeniería 3D',
       description: 'Planificación avanzada con modelado 3D para optimizar cada operación de izamiento.',
       features: ['Modelado 3D', 'Análisis De Cargas', 'Planificación Detallada', 'Simulación Virtual'],
-      image: '/images/ingenieria 3d.png'
+      image: '/images/ingenieria 3d.webp'
     }
   ]
 

@@ -174,7 +174,7 @@ export function AboutSection() {
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <Image
-                    src="/images/grua de 800 ton.png"
+                    src="/images/grua de 800 ton.webp"
                     alt="Grúa de 800 toneladas EQUISER"
                     fill
                     className="object-contain hover:scale-105 transition-transform duration-300"
@@ -183,7 +183,7 @@ export function AboutSection() {
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <Image
-                    src="/images/trabajo de grua 450 ton.png"
+                    src="/images/trabajo de grua 450 ton.webp"
                     alt="Trabajo con grúa de 450 toneladas"
                     fill
                     className="object-contain hover:scale-105 transition-transform duration-300"
@@ -196,7 +196,7 @@ export function AboutSection() {
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8 sm:pt-6 lg:pt-8 xl:pt-10">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <Image
-                    src="/images/dos gruas de 600 ton.png"
+                    src="/images/dos gruas de 600 ton.webp"
                     alt="Operación con dos grúas de 600 toneladas"
                     fill
                     className="object-contain hover:scale-105 transition-transform duration-300"
@@ -205,7 +205,7 @@ export function AboutSection() {
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <Image
-                    src="/images/ingenieria 3d.png"
+                    src="/images/ingenieria 3d.webp"
                     alt="Ingeniería 3D EQUISER"
                     fill
                     className="object-contain hover:scale-105 transition-transform duration-300"

@@ -39,7 +39,7 @@ export function Footer() {
                     style={{ width: '250px', height: '80px', maxWidth: '250px' }}
                   >
                     <Image
-                      src="/images/logo equiser con fondo.png"
+                      src="/images/logo equiser con fondo.webp"
                       alt="GRÚAS EQUISER C.A. - Logo"
                       fill
                       className="object-contain hover:scale-105 transition-transform duration-200"

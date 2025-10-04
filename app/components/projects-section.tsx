@@ -35,7 +35,7 @@ export function ProjectsSection() {
       location: 'Planta Eléctrica - Carabobo',
       year: 2024,
       description: 'Izamiento y posicionamiento de transformador eléctrico de alta capacidad con grúa móvil telescópica',
-      image: '/images/trabajo de grua 450 ton.png',
+      image: '/images/trabajo de grua 450 ton.webp',
       equipment: ['Grúa móvil 450T', 'Transporte especializado'],
       featured: true
     },
@@ -47,7 +47,7 @@ export function ProjectsSection() {
       location: 'Refinería - Falcón',
       year: 2024,
       description: 'Operación coordinada con dos grúas de 600 toneladas para reactor petroquímico',
-      image: '/images/dos gruas de 600 ton.png',
+      image: '/images/dos gruas de 600 ton.webp',
       equipment: ['2x Grúas 600T', 'Sistema coordinado'],
       featured: true
     },
@@ -59,7 +59,7 @@ export function ProjectsSection() {
       location: 'Central Termoeléctrica - Zulia',
       year: 2023,
       description: 'Instalación de generador mediante sistema de pórtico especializado para transporte pesado',
-      image: '/images/gantry 600 ton generador.png',
+      image: '/images/gantry 600 ton generador.webp',
       equipment: ['Sistema Gantry 600T', 'Rigging especializado'],
       featured: true
     },
@@ -71,7 +71,7 @@ export function ProjectsSection() {
       location: 'Complejo Industrial - Miranda',
       year: 2023,
       description: 'Izamiento de estructura industrial de gran envergadura con grúa sobre oruga',
-      image: '/images/trabajo grua 800 ton.png',
+      image: '/images/trabajo grua 800 ton.webp',
       equipment: ['Grúa sobre oruga 800T', 'Rigging pesado'],
       featured: true
     },
@@ -83,7 +83,7 @@ export function ProjectsSection() {
       location: 'Complejo Petroquímico - Anzoátegui',
       year: 2023,
       description: 'Mantenimiento de torres de destilación con grúa móvil de gran capacidad',
-      image: '/images/grua 500 ton.png',
+      image: '/images/grua 500 ton.webp',
       equipment: ['Grúa móvil 500T', 'Accesorios especiales'],
       featured: false
     },
@@ -95,7 +95,7 @@ export function ProjectsSection() {
       location: 'Plataforma Marina - Anzoátegui',
       year: 2023,
       description: 'Izamiento de equipos en plataforma petrolera marina con grúa sobre oruga',
-      image: '/images/trabajo de grua de 600 ton.png',
+      image: '/images/trabajo de grua de 600 ton.webp',
       equipment: ['Grúa sobre oruga 600T', 'Rigging marino'],
       featured: false
     },
@@ -107,7 +107,7 @@ export function ProjectsSection() {
       location: 'Zona Industrial - Carabobo',
       year: 2024,
       description: 'Izamiento de maquinaria industrial pesada con grúa móvil compacta',
-      image: '/images/grua de 130 ton.png',
+      image: '/images/grua de 130 ton.webp',
       equipment: ['Grúa móvil 130T', 'Transporte lowboy'],
       featured: false
     },
@@ -119,7 +119,7 @@ export function ProjectsSection() {
       location: 'Refinería - Carabobo',
       year: 2023,
       description: 'Operación coordinada con múltiples grúas para reactor complejo',
-      image: '/images/grua de 600 ton y grua de 130 ton.png',
+      image: '/images/grua de 600 ton y grua de 130 ton.webp',
       equipment: ['Grúa 600T', 'Grúa 130T', 'Coordinación especializada'],
       featured: false
     },
@@ -131,7 +131,7 @@ export function ProjectsSection() {
       location: 'Siderúrgica - Bolívar',
       year: 2023,
       description: 'Izamiento de hornos industriales de gran tonelaje con grúa sobre oruga',
-      image: '/images/grua de 800 ton.png',
+      image: '/images/grua de 800 ton.webp',
       equipment: ['Grúa sobre oruga 800T', 'Rigging ultra-pesado'],
       featured: false
     },
@@ -143,7 +143,7 @@ export function ProjectsSection() {
       location: 'Puerto - Carabobo',
       year: 2024,
       description: 'Operación portuaria con sistema gantry para carga excepcional y transporte pesado',
-      image: '/images/trabajo de gantry 600 ton.png',
+      image: '/images/trabajo de gantry 600 ton.webp',
       equipment: ['Sistema Gantry portuario', 'Transporte marítimo'],
       featured: false
     },
@@ -155,7 +155,7 @@ export function ProjectsSection() {
       location: 'Subestación - Lara',
       year: 2024,
       description: 'Proyecto integral de modernización de subestación eléctrica con grúa móvil',
-      image: '/images/trabajo de grua.png',
+      image: '/images/trabajo de grua.webp',
       equipment: ['Grúa telescópica 400T', 'Equipo integral'],
       featured: false
     },
@@ -167,7 +167,7 @@ export function ProjectsSection() {
       location: 'Campo Petrolero - Zulia',
       year: 2023,
       description: 'Mantenimiento de torres de perforación con grúa sobre oruga especializada',
-      image: '/images/imagen grua.png',
+      image: '/images/imagen grua.webp',
       equipment: ['Grúa sobre oruga 350T', 'Rigging petrolero'],
       featured: false
     },
@@ -180,7 +180,7 @@ export function ProjectsSection() {
       location: 'Subestación Eléctrica - Carabobo',
       year: 2024,
       description: 'Izamiento y posicionamiento de transformador eléctrico de alta tensión con precisión milimétrica',
-      image: '/images/grua-130-ton-transformador.png',
+      image: '/images/grua-130-ton-transformador.webp',
       equipment: ['Grúa móvil 130T', 'Rigging eléctrico especializado', 'Sistema de posicionamiento GPS'],
       featured: true
     },
@@ -192,7 +192,7 @@ export function ProjectsSection() {
       location: 'Complejo Industrial - Miranda',
       year: 2024,
       description: 'Operación de grúa móvil compacta para instalación de maquinaria industrial pesada',
-      image: '/images/grua-movil-130-ton.png',
+      image: '/images/grua-movil-130-ton.webp',
       equipment: ['Grúa móvil telescópica 130T', 'Accesorios industriales'],
       featured: false
     },
@@ -204,7 +204,7 @@ export function ProjectsSection() {
       location: 'Planta Petroquímica - Anzoátegui',
       year: 2024,
       description: 'Izamiento de gran envergadura con grúa móvil de 300 toneladas para reactor industrial',
-      image: '/images/izamiento-grua-300-ton.png',
+      image: '/images/izamiento-grua-300-ton.webp',
       equipment: ['Grúa móvil 300T', 'Rigging ultra-pesado', 'Sistema de monitoreo'],
       featured: true
     },
@@ -217,7 +217,7 @@ export function ProjectsSection() {
       location: 'Sistema Metro - Distrito Capital',
       year: 2024,
       description: 'Transporte especializado de vagones de metro con equipos de carga y descarga especializados',
-      image: '/images/movilizacion-vagones-metro.jpg',
+      image: '/images/movilizacion-vagones-metro.webp',
       equipment: ['Transporte multi-eje', 'Grúas auxiliares', 'Sistema de sujeción ferroviario'],
       featured: true
     },
@@ -229,7 +229,7 @@ export function ProjectsSection() {
       location: 'Red Ferroviaria Nacional - Aragua',
       year: 2024,
       description: 'Logística ferroviaria especializada para movilización de vagones de carga pesada',
-      image: '/images/movilizacion-vagones-ferrocarril.jpg',
+      image: '/images/movilizacion-vagones-ferrocarril.webp',
       equipment: ['Transporte ferroviario', 'Grúas de carga', 'Rieles temporales'],
       featured: false
     },
@@ -241,7 +241,7 @@ export function ProjectsSection() {
       location: 'Metro de Caracas - Distrito Capital',
       year: 2024,
       description: 'Movilización de TOPAS (Tren de Obra) para mantenimiento del sistema Metro de Caracas',
-      image: '/images/movilizacion-topas-metro-caracas.png',
+      image: '/images/movilizacion-topas-metro-caracas.webp',
       equipment: ['Transporte especializado TOPAS', 'Grúas pórtico', 'Sistema de rieles'],
       featured: true
     },
@@ -253,7 +253,7 @@ export function ProjectsSection() {
       location: 'Puerto Industrial - Carabobo',
       year: 2024,
       description: 'Servicios de transporte especializado de pieza industrial ultra-pesada de 250 toneladas',
-      image: '/images/transporte-pieza-250-ton.png',
+      image: '/images/transporte-pieza-250-ton.webp',
       equipment: ['Transporte modular 250T', 'Grúas auxiliares', 'Sistema hidráulico'],
       featured: false
     },
@@ -266,7 +266,7 @@ export function ProjectsSection() {
       location: 'Central Eléctrica - Bolívar',
       year: 2024,
       description: 'Proyecto integral de movilización y montaje de transformador de potencia con coordinación multi-equipo',
-      image: '/images/montaje-transformador.png',
+      image: '/images/montaje-transformador.webp',
       equipment: ['Grúas coordinadas', 'Transporte especializado', 'Rigging eléctrico'],
       featured: true
     },
@@ -278,7 +278,7 @@ export function ProjectsSection() {
       location: 'Central Termoeléctrica - Zulia',
       year: 2024,
       description: 'Movilización de generador sobredimensionado con equipos especializados y planificación logística compleja',
-      image: '/images/movilizacion-generador-sobredimensionado.png',
+      image: '/images/movilizacion-generador-sobredimensionado.webp',
       equipment: ['Transporte sobredimensionado', 'Grúas múltiples', 'Ingeniería de ruta'],
       featured: false
     },
@@ -290,7 +290,7 @@ export function ProjectsSection() {
       location: 'Diversas Ubicaciones - Venezuela',
       year: 2024,
       description: 'Proyecto realizado con los más altos estándares de seguridad y calidad certificados internacionalmente',
-      image: '/images/proyecto-seguridad-calidad.png',
+      image: '/images/proyecto-seguridad-calidad.webp',
       equipment: ['Equipos certificados', 'Personal especializado', 'Sistemas de seguridad'],
       featured: false
     }
@@ -543,7 +543,7 @@ export function ProjectsSection() {
             className="relative rounded-3xl shadow-xl overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
-              backgroundImage: 'url("/images/imagen grua.png")',
+              backgroundImage: 'url("/images/imagen grua.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundBlendMode: 'overlay'

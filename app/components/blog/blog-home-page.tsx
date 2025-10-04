@@ -69,7 +69,7 @@ export function BlogHomePage() {
               <Link href="/" className="relative block mr-6">
                 <div className="relative" style={{ width: '250px', height: '80px' }}>
                   <Image
-                    src="/images/logo-equiser-actualizado.png"
+                    src="/images/logo-equiser-actualizado.webp"
                     alt="GRÚAS EQUISER C.A. - Logo"
                     fill
                     className="object-contain hover:scale-105 transition-transform duration-200"
@@ -118,7 +118,7 @@ export function BlogHomePage() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
-          backgroundImage: 'url("/images/imagen grua.png")',
+          backgroundImage: 'url("/images/imagen grua.webp")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'
@@ -194,14 +194,15 @@ export function BlogHomePage() {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                     activeCategory === category
-                      ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
-                      : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
+                      ? 'bg-equiser-blue border-2 border-equiser-blue shadow-blue-200 scale-105'
+                      : 'bg-equiser-yellow border-2 border-equiser-yellow hover:bg-equiser-blue hover:border-equiser-blue'
                   }`}
                   style={{
                     padding: '15px 25px',
                     borderRadius: '25px',
                     fontSize: '14px',
-                    fontWeight: '600'
+                    fontWeight: '600',
+                    color: activeCategory === category ? '#ffffff' : '#1E3A8A'
                   }}
                 >
                   {category}
@@ -325,7 +326,7 @@ export function BlogHomePage() {
         className="py-16 text-white relative"
         style={{
           background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
-          backgroundImage: 'url("/images/trabajo de grua.png")',
+          backgroundImage: 'url("/images/trabajo de grua.webp")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'

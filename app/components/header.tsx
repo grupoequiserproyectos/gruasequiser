@@ -42,7 +42,7 @@ export function Header() {
             <Link href="/" className="relative block">
               <div className="relative w-40 h-16 sm:w-48 sm:h-18 md:w-56 md:h-20 lg:w-64 lg:h-22 xl:w-72 xl:h-24">
                 <Image
-                  src="/images/logo-equiser-actualizado.png"
+                  src="/images/logo-equiser-actualizado.webp"
                   alt="GRÚAS EQUISER C.A. - Logo"
                   fill
                   className="object-contain hover:scale-105 transition-transform duration-200"

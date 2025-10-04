@@ -64,7 +64,7 @@ export function HeroSection() {
         <div 
           className="w-full h-full bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url("/images/imagen grua.png")',
+            backgroundImage: 'url("/images/imagen grua.webp")',
             backgroundAttachment: 'fixed'
           }}
         />

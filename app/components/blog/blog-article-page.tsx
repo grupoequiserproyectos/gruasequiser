@@ -225,7 +225,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                     onError={(e) => {
                       // Fallback to a default avatar if image fails to load
                       const target = e.target as HTMLImageElement
-                      target.src = '/images/default-avatar.jpg'
+                      target.src = '/images/default-avatar.webp'
                     }}
                   />
                 </div>
@@ -267,7 +267,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                     "name": "GRÚAS EQUISER C.A.",
                     "logo": {
                       "@type": "ImageObject",
-                      "url": "/images/logo-equiser-grande.png"
+                      "url": "/images/logo-equiser-grande.webp"
                     }
                   },
                   "datePublished": article.publishDate,

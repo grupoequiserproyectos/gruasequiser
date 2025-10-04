@@ -17,84 +17,84 @@ interface CarouselItem {
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    src: '/images/grua de 130 ton.png',
+    src: '/images/grua de 130 ton.webp',
     title: 'Grúa 130 Toneladas',
     description: 'Proyecto de Construcción Residencial',
     alt: 'Grúa de 130 toneladas en construcción'
   },
   {
     id: 2,
-    src: '/images/ingenieria 3d.png',
+    src: '/images/ingenieria 3d.webp',
     title: 'Ingeniería 3D',
     description: 'Planificación y Diseño de Proyectos',
     alt: 'Diseño 3D de ingeniería con grúas'
   },
   {
     id: 3,
-    src: '/images/trabajo de grua 450 ton.png',
+    src: '/images/trabajo de grua 450 ton.webp',
     title: 'Grúa 450 Toneladas',
     description: 'Sector Industrial Pesado',
     alt: 'Grúa de 450 toneladas en proyecto industrial'
   },
   {
     id: 4,
-    src: '/images/grua 500 ton.png',
+    src: '/images/grua 500 ton.webp',
     title: 'Grúa 500 Toneladas',
     description: 'Instalación Industrial Compleja',
     alt: 'Grúa de 500 toneladas en instalación industrial'
   },
   {
     id: 5,
-    src: '/images/imagen grua.png',
+    src: '/images/imagen grua.webp',
     title: 'Instalación Industrial',
     description: 'Sector Petrolero y Energético',
     alt: 'Grúa en instalación industrial'
   },
   {
     id: 6,
-    src: '/images/grua de 600 ton y grua de 130 ton.png',
+    src: '/images/grua de 600 ton y grua de 130 ton.webp',
     title: 'Grúas 600T + 130T',
     description: 'Trabajo Coordinado en Equipo',
     alt: 'Grúas de 600 y 130 toneladas trabajando juntas'
   },
   {
     id: 7,
-    src: '/images/trabajo de grua de 600 ton.png',
+    src: '/images/trabajo de grua de 600 ton.webp',
     title: 'Grúa 600 Toneladas',
     description: 'Sector Refinería y Petroquímica',
     alt: 'Grúa de 600 toneladas en refinería'
   },
   {
     id: 8,
-    src: '/images/grua de 800 ton.png',
+    src: '/images/grua de 800 ton.webp',
     title: 'Grúa 800 Toneladas',
     description: 'Proyecto Industrial de Gran Escala',
     alt: 'Grúa de 800 toneladas en proyecto industrial'
   },
   {
     id: 9,
-    src: '/images/trabajo de grua.png',
+    src: '/images/trabajo de grua.webp',
     title: 'Proyecto Complejo',
     description: 'Múltiples Grúas Coordinadas',
     alt: 'Múltiples grúas en proyecto complejo'
   },
   {
     id: 10,
-    src: '/images/trabajo estadio copa america.png',
+    src: '/images/trabajo estadio copa america.webp',
     title: 'Estadio Copa América',
     description: 'Proyecto Deportivo Nacional',
     alt: 'Grúas en construcción del estadio Copa América'
   },
   {
     id: 11,
-    src: '/images/trabajo gruas de 600 ton demag.png',
+    src: '/images/trabajo gruas de 600 ton demag.webp',
     title: 'Grúas Demag 600T',
     description: 'Izamiento de Equipos Pesados',
     alt: 'Grúas Demag de 600 toneladas'
   },
   {
     id: 12,
-    src: '/images/trabajo grua 800 ton.png',
+    src: '/images/trabajo grua 800 ton.webp',
     title: 'Grúa 800T Izando',
     description: 'Manejo de Equipos Ultra Pesados',
     alt: 'Grúa de 800 toneladas izando equipo pesado'
@@ -102,28 +102,28 @@ const carouselItems: CarouselItem[] = [
   // NUEVAS IMÁGENES - SECTOR ENERGÉTICO
   {
     id: 13,
-    src: '/images/grua-130-ton-transformador.png',
+    src: '/images/grua-130-ton-transformador.webp',
     title: 'Grúa 130T - Transformador',
     description: 'Izamiento de Transformador Eléctrico',
     alt: 'Grúa móvil de 130 toneladas izando transformador eléctrico'
   },
   {
     id: 14,
-    src: '/images/montaje-transformador.png',
+    src: '/images/montaje-transformador.webp',
     title: 'Montaje de Transformador',
     description: 'Movilización y Montaje Industrial',
     alt: 'Proceso de movilización y montaje de transformador industrial'
   },
   {
     id: 15,
-    src: '/images/movilizacion-generador-sobredimensionado.png',
+    src: '/images/movilizacion-generador-sobredimensionado.webp',
     title: 'Generador Sobredimensionado',
     description: 'Transporte de Equipos Especiales',
     alt: 'Movilización de generador sobredimensionado con equipos especializados'
   },
   {
     id: 16,
-    src: '/images/izamiento-grua-300-ton.png',
+    src: '/images/izamiento-grua-300-ton.webp',
     title: 'Grúa 300 Toneladas',
     description: 'Izamiento Industrial de Gran Escala',
     alt: 'Izamiento con grúa de 300 toneladas en proyecto industrial'
@@ -131,28 +131,28 @@ const carouselItems: CarouselItem[] = [
   // NUEVAS IMÁGENES - SECTOR TRANSPORTE
   {
     id: 17,
-    src: '/images/movilizacion-vagones-metro.jpg',
+    src: '/images/movilizacion-vagones-metro.webp',
     title: 'Vagones de Metro',
     description: 'Transporte de Sistemas Ferroviarios',
     alt: 'Movilización especializada de vagones de metro'
   },
   {
     id: 18,
-    src: '/images/movilizacion-vagones-ferrocarril.jpg',
+    src: '/images/movilizacion-vagones-ferrocarril.webp',
     title: 'Vagones de Ferrocarril',
     description: 'Logística Ferroviaria Especializada',
     alt: 'Movilización de vagones de ferrocarril con equipos especializados'
   },
   {
     id: 19,
-    src: '/images/movilizacion-topas-metro-caracas.png',
+    src: '/images/movilizacion-topas-metro-caracas.webp',
     title: 'TOPAS Metro Caracas',
     description: 'Proyecto Metro Caracas',
     alt: 'Movilización de TOPAS para el sistema Metro de Caracas'
   },
   {
     id: 20,
-    src: '/images/transporte-pieza-250-ton.png',
+    src: '/images/transporte-pieza-250-ton.webp',
     title: 'Transporte 250 Toneladas',
     description: 'Logística de Cargas Ultra Pesadas',
     alt: 'Servicios de transporte especializado de pieza de 250 toneladas'
@@ -160,14 +160,14 @@ const carouselItems: CarouselItem[] = [
   // NUEVAS IMÁGENES - SECTOR INDUSTRIAL
   {
     id: 21,
-    src: '/images/grua-movil-130-ton.png',
+    src: '/images/grua-movil-130-ton.webp',
     title: 'Grúa Móvil 130T',
     description: 'Versatilidad Industrial Compacta',
     alt: 'Grúa móvil de 130 toneladas en operación industrial'
   },
   {
     id: 22,
-    src: '/images/proyecto-seguridad-calidad.png',
+    src: '/images/proyecto-seguridad-calidad.webp',
     title: 'Seguridad y Calidad',
     description: 'Proyectos con Estándares Certificados',
     alt: 'Proyecto realizado con altos estándares de seguridad y calidad'
@@ -175,35 +175,35 @@ const carouselItems: CarouselItem[] = [
   // NUEVAS IMÁGENES - PROYECTOS PETROMONAGAS
   {
     id: 23,
-    src: '/images/trabajo-petromonagas.jpg',
+    src: '/images/trabajo-petromonagas.webp',
     title: 'Trabajo Petromonagas',
     description: 'Grúa Amarilla Izando Tanque Industrial',
     alt: 'Trabajo Petromonagas con grúa amarilla izando tanque blanco grande'
   },
   {
     id: 24,
-    src: '/images/petromonagas-grua-200-toneladas.png',
+    src: '/images/petromonagas-grua-200-toneladas.webp',
     title: 'Petromonagas Grúa 200T',
     description: 'Grúa Roja en Estructura Industrial',
     alt: 'Grúa roja de 200 toneladas trabajando en torre/estructura en Petromonagas'
   },
   {
     id: 25,
-    src: '/images/gruas-equiser-petromonagas.jpg',
+    src: '/images/gruas-equiser-petromonagas.webp',
     title: 'Grúas Equiser Petromonagas',
     description: 'Operación Coordinada con Múltiples Grúas',
     alt: 'Grúas Equiser amarillas izando tanques blancos grandes en Petromonagas'
   },
   {
     id: 26,
-    src: '/images/movilizacion-transformador-siemens.png',
+    src: '/images/movilizacion-transformador-siemens.webp',
     title: 'Transformador SIEMENS',
     description: 'Movilización Especializada de Transformador',
     alt: 'Transporte de transformador SIEMENS con grúa especializada'
   },
   {
     id: 27,
-    src: '/images/movilizacion-gruas-izamiento-portuario.jpg',
+    src: '/images/movilizacion-gruas-izamiento-portuario.webp',
     title: 'Izamiento Portuario',
     description: 'Operaciones Portuarias con Grúa Móvil',
     alt: 'Movilización de grúas para izamiento portuario, grúa amarilla en barco/puerto'

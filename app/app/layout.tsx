@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://grcomex.com/wp-content/uploads/2019/02/grcomex_nosotros_09.jpg',
+        url: 'https://grcomex.com/wp-content/uploads/2019/02/grcomex_nosotros_09.webp',
         width: 1200,
         height: 630,
         alt: 'Grúas EQUISER - Alquiler de Grúas Móviles Venezuela'
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alquiler Grúas Móviles Venezuela | EQUISER',
     description: 'Grúas Liebherr, Grove, Manitowoc 25-1600 ton. 30+ años experiencia',
-    images: ['https://gruasequiser.net/og-image.jpg'],
+    images: ['https://gruasequiser.net/og-image.webp'],
   },
   robots: {
     index: true,
@@ -69,11 +69,11 @@ export default function RootLayout({
         
         {/* Favicons de GRÚAS EQUISER */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.webp" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.webp" />
         <meta name="theme-color" content="#1E3A8A" />
         
         {/* Enhanced Schema.org LocalBusiness Markup */}
@@ -88,7 +88,7 @@ export default function RootLayout({
               "url": "https://gruasequiser.net",
               "telephone": "+58-414-343-2882",
               "email": "info@gruasequiser.net",
-              "logo": "https://static.vecteezy.com/system/resources/thumbnails/016/941/001/small/lifting-crane-logo-construction-company-rental-of-special-equipment-sale-of-equipment-for-construction-vector.jpg",
+              "logo": "https://static.vecteezy.com/system/resources/thumbnails/016/941/001/small/lifting-crane-logo-construction-company-rental-of-special-equipment-sale-of-equipment-for-construction-vector.webp",
               "image": "https://superiorrigging.com/wp-content/uploads/2023/12/QTS-Generator-Set-Over-Wall-13-768x576.webp",
               "foundingDate": "1994",
               "address": {
