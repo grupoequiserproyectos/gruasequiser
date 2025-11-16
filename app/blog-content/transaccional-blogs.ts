@@ -27,8 +27,8 @@ Venezuela presenta condiciones geográficas únicas que demandan equipos especia
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 800 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Capacidades Técnicas Superiores de GRÚAS EQUISER
 
@@ -119,8 +119,8 @@ Ingenieros 3D a tu disposición
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 800 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Conclusión: La Solución para Terrenos Imposibles
 
@@ -133,8 +133,8 @@ No comprometas la seguridad ni el éxito de tu proyecto. La diferencia entre com
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -201,8 +201,8 @@ La industria venezolana está experimentando su mayor crecimiento en 15 años. P
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 300 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Capacidades Técnicas de Transporte Especializado
 
@@ -322,8 +322,8 @@ Ingenieros 3D a tu disposición
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 300 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas Competitivas Exclusivas
 
@@ -356,8 +356,8 @@ Con la reactivación industrial de Venezuela, la demanda de transporte especiali
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  

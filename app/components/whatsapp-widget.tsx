@@ -42,7 +42,7 @@ export function WhatsappWidget() {
   ]
 
   const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0'
+    const whatsappUrl = 'https://wa.me/message/IOBBJVBBVWNOI1'
     window.open(whatsappUrl, '_blank')
     setIsOpen(false)
   }

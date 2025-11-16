@@ -13,7 +13,7 @@ export function Footer() {
   }
 
   const handleWhatsApp = () => {
-    window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
+    window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')
   }
 
   return (
@@ -110,8 +110,7 @@ export function Footer() {
                 <div className="flex items-center text-gray-300">
                   <Phone className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
-                    <div>+58 414-343-2882</div>
-                    <div>+58 412-159-7792</div>
+                    <div>+58 422-6347624</div>
                   </div>
                 </div>
                 
@@ -144,7 +143,7 @@ export function Footer() {
                 ].map((service) => (
                   <li key={service}>
                     <button
-                      onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                      onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                       className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm text-left"
                     >
                       {service}

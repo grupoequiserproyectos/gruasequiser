@@ -27,8 +27,8 @@ Fundada en 1949, Liebherr ha perfeccionado la ingeniería de grúas durante tres
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Flota Liebherr disponible inmediatamente  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Flota Liebherr Disponible en Venezuela
 
@@ -132,8 +132,8 @@ Ingenieros Liebherr certificados disponibles
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Flota Liebherr disponible inmediatamente  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas Exclusivas GRÚAS EQUISER - Liebherr
 
@@ -206,8 +206,8 @@ Elegir **Liebherr** no es solo alquilar una grúa, es acceder a 75 años de inno
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -274,8 +274,8 @@ PDVSA opera la infraestructura petrolera más compleja de Latinoamérica: 6 refi
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Certificados PDVSA vigentes  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Certificaciones GRÚAS EQUISER para PDVSA
 
@@ -388,8 +388,8 @@ Especialistas PDVSA disponibles
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Certificados PDVSA vigentes  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Instalaciones PDVSA Atendidas
 
@@ -465,8 +465,8 @@ Certificados PDVSA vigentes
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  

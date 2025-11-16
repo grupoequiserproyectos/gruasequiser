@@ -36,8 +36,8 @@ Las **grúas Terex de alta capacidad** representan la ingeniería alemana más a
 
 🏗️ **ALTA CAPACIDAD CERTIFICADA**  
 500-1000 toneladas disponibles en Venezuela  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Tecnología Terex de Vanguardia
 
@@ -153,7 +153,7 @@ Proyectos de alta complejidad técnica
 
 💎 **TEREX PREMIUM VENEZUELA**  
 Máxima capacidad - Tecnología alemana  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Consulta técnica especializada
 
 ## Tarifas Especializadas Terex 2025
@@ -237,8 +237,8 @@ Máxima capacidad - Tecnología alemana
 
 🏗️ **TEREX ALTA CAPACIDAD VENEZUELA**  
 Únicos especialistas certificados  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -296,8 +296,8 @@ El **transporte sobredimensionado para PDVSA** requiere los más altos estándar
 
 🛢️ **CERTIFICACIÓN PDVSA ACTIVA**  
 Proveedor homologado sector petrolero  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Flota Especializada para PDVSA
 
@@ -438,7 +438,7 @@ Especialistas en proyectos PDVSA
 
 💰 **COTIZACIÓN PDVSA INMEDIATA**  
 Proyectos petroleros prioritarios  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Coordinación con PDVSA
 
 ## Coordinación con PDVSA
@@ -492,8 +492,8 @@ Proyectos petroleros prioritarios
 
 🛢️ **PDVSA CERTIFIED TRANSPORT**  
 Homologación activa sector petrolero  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -551,8 +551,8 @@ Las **grúas Demag** son sinónimo de tecnología alemana confiable y precisión
 
 🏭 **TECNOLOGÍA DEMAG CERTIFICADA**  
 Confiabilidad alemana en Venezuela  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas de la Tecnología Demag
 
@@ -671,7 +671,7 @@ Técnicos certificados en Alemania
 
 💎 **DEMAG PREMIUM VENEZUELA**  
 Confiabilidad alemana certificada  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Soporte técnico inmediato
 
 ## Tarifas Alquiler Demag 2025
@@ -746,8 +746,8 @@ Confiabilidad alemana certificada
 
 🏭 **DEMAG TECHNOLOGY VENEZUELA**  
 Distribuidor certificado exclusivo  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -805,8 +805,8 @@ El **sector petrolero venezolano** requiere servicios de grúas altamente especi
 
 🛢️ **CERTIFICACIÓN PETROLERA ACTIVA**  
 25+ años sirviendo al sector petrolero  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Flota Certificada para Sector Petrolero
 
@@ -976,7 +976,7 @@ Técnicos homologados PDVSA
 
 💰 **COTIZACIÓN PETROLERA INMEDIATA**  
 Especialistas sector energético  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Coordinación técnica petrolera
 
 ## Coordinación con PDVSA
@@ -1030,8 +1030,8 @@ Especialistas sector energético
 
 🛢️ **PETROLERO CERTIFIED VENEZUELA**  
 25 años de experiencia sector petrolero  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 

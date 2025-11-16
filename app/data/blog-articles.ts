@@ -152,7 +152,7 @@ Manitowoc ofrece soluciones para los proyectos más exigentes:
 ### 1. Consulta Inicial
 
 Contáctenos a través de:
-- WhatsApp: +58-414-343-2882 (disponible 24/7)
+- WhatsApp: +58-422-6347624 (disponible 24/7)
 - Formulario web en gruasequiser.net
 - Visita a nuestras instalaciones en Morón, Carabobo
 
@@ -343,7 +343,7 @@ Para proyectos urgentes, podemos movilizar equipos en menos de 24 horas.
 
 Para solicitar una cotización o consultar disponibilidad:
 
-**WhatsApp**: +58-414-343-2882 (24/7)  
+**WhatsApp**: +58-422-6347624 (24/7)  
 **Email**: info@gruasequiser.net  
 **Dirección**: Autopista Puerto Cabello - Morón, Sector La Paragüita, Morón, Carabobo
 
@@ -983,7 +983,7 @@ La elección correcta depende de:
 En GRÚAS EQUISER, nuestro equipo de ingeniería evaluará tu proyecto sin costo y recomendará el equipo óptimo, independientemente de la marca. Contamos con la flota más moderna y completa de Venezuela, con las tres marcas líderes mundiales.
 
 **Contacta con nuestros expertos:**  
-WhatsApp: +58-414-343-2882 (24/7)  
+WhatsApp: +58-422-6347624 (24/7)  
 Web: gruasequiser.net  
 Email: info@gruasequiser.net
 
@@ -1688,7 +1688,7 @@ En GRÚAS EQUISER, con más de 30 años de experiencia, hemos participado en los
 
 Si tu proyecto requiere experiencia comprobada, equipos certificados y compromiso con la excelencia, contáctanos:
 
-**WhatsApp**: +58-414-343-2882 (24/7)  
+**WhatsApp**: +58-422-6347624 (24/7)  
 **Web**: gruasequiser.net  
 **Email**: info@gruasequiser.net
 
@@ -2464,7 +2464,7 @@ En GRÚAS EQUISER, con más de 30 años de experiencia, hemos desarrollado siste
 
 Si necesitas asesoría sobre cumplimiento normativo o deseas alquilar equipos totalmente certificados, contáctanos:
 
-**WhatsApp**: +58-414-343-2882 (24/7)  
+**WhatsApp**: +58-422-6347624 (24/7)  
 **Web**: gruasequiser.net  
 **Email**: info@gruasequiser.net  
 **Ubicación**: Autopista Puerto Cabello - Morón, Sector La Paragüita, Morón, Carabobo

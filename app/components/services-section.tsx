@@ -106,7 +106,7 @@ export function ServicesSection() {
               Contáctanos las 24 horas del día, los 7 días de la semana para recibir atención inmediata
             </p>
             <button
-              onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+              onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg text-sm sm:text-base w-full sm:w-auto"
             >
               Solicitar Cotización Ahora

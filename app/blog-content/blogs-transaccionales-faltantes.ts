@@ -45,8 +45,8 @@ El **alquiler de grúas móviles en Caracas** se ha convertido en un servicio es
 **INCLUYE**: Operador certificado, combustible, traslados Área Metropolitana de Caracas, seguro de responsabilidad civil.
 
 🔥 **COTIZACIÓN INMEDIATA CARACAS**  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ### Factores que Afectan el Precio
 - **Duración del proyecto**: Descuentos progresivos por alquileres extensos
@@ -124,7 +124,7 @@ Ingenieros 3D para tu proyecto
 ## Proceso de Contratación en Caracas
 
 ### 1. Solicitud de Cotización (Inmediata)
-- **Canal preferido**: WhatsApp +58 414-343-2882
+- **Canal preferido**: WhatsApp +58 422-6347624
 - **Información requerida**: Tipo de carga, peso, dimensiones, ubicación
 - **Tiempo de respuesta**: Máximo 2 horas en horario comercial
 - **Pre-cotización**: Tarifa estimada con equipos recomendados
@@ -143,7 +143,7 @@ Ingenieros 3D para tu proyecto
 
 🚀 **CONTRATA AHORA - CARACAS**  
 Disponibilidad inmediata  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Respuesta en 30 minutos
 
 ### 4. Ejecución del Proyecto
@@ -188,8 +188,8 @@ Disponibilidad inmediata
 - Restricciones especiales: _______________
 
 📞 **CONTACTO DIRECTO CARACAS**
-+58 414-343-2882 (Principal)
-+58 412-159-7792 (Alternativo)  
++58 422-6347624 (Principal)
++58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -246,8 +246,8 @@ El **servicio de bateas y transporte pesado** es fundamental para el desarrollo 
 
 🚛 **DISPONIBILIDAD INMEDIATA**  
 24 horas - 7 días - 365 días al año  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Cobertura Nacional 24/7
 
@@ -374,7 +374,7 @@ Ingeniería de transporte certificada
 
 💰 **COTIZACIÓN PERSONALIZADA**  
 Descuentos por volumen y contratos anuales  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Respuesta inmediata
 
 ## Ventajas Competitivas GRÚAS EQUISER
@@ -422,8 +422,8 @@ Descuentos por volumen y contratos anuales
 
 🚛 **RESPUESTA GARANTIZADA**  
 Cotización en menos de 2 horas  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -483,8 +483,8 @@ Las **grúas Liebherr** representan la excelencia alemana en tecnología de izam
 
 🏆 **TECNOLOGÍA ALEMANA PREMIUM**  
 Única flota Liebherr certificada en Venezuela  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas de la Tecnología Liebherr
 
@@ -599,7 +599,7 @@ Técnicos certificados en fábrica
 
 💎 **CALIDAD ALEMANA GARANTIZADA**  
 Certificación Liebherr original  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Consulta técnica inmediata
 
 ## Tarifas Alquiler Liebherr 2025
@@ -671,8 +671,8 @@ Certificación Liebherr original
 
 🏆 **LIEBHERR VENEZUELA CERTIFICADO**  
 Único distribuidor autorizado  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -730,8 +730,8 @@ Certificación Liebherr original
 
 🚢 **OPERACIONES PORTUARIAS 24/7**  
 Especialistas en logística marítima  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Servicios Especializados en Puerto Cabello
 
@@ -847,7 +847,7 @@ Ingenieros especializados en logística marítima
 
 💰 **COTIZACIÓN PORTUARIA INMEDIATA**  
 Especialistas en logística marítima  
-📞 +58 414-343-2882  
+📞 +58 422-6347624  
 💬 WhatsApp: Coordinación en tiempo real
 
 ## Coordinación con Autoridades Portuarias
@@ -901,8 +901,8 @@ Especialistas en logística marítima
 
 🚢 **RESPUESTA PORTUARIA GARANTIZADA**  
 Coordinación directa con Bolipuertos  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 

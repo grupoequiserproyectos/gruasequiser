@@ -461,7 +461,7 @@ export function ProjectsSection() {
                       </span>
                       <Button
                         size="sm"
-                        onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                        onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                         className="equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
                       >
                         Más Info
@@ -521,7 +521,7 @@ export function ProjectsSection() {
                   <Button
                     size="sm"
                     variant="outline"
-                    onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                    onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                     className="text-xs border-equiser-blue text-equiser-blue hover:bg-equiser-blue hover:text-white"
                   >
                     Ver Detalles
@@ -575,7 +575,7 @@ export function ProjectsSection() {
                   Más de 30 años de experiencia con grúas hasta 1600 toneladas. Contáctanos para cotización inmediata.
                 </p>
                 <Button
-                  onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                  onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                   className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
                 >
                   Solicitar Cotización Ahora

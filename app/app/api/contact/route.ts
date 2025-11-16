@@ -289,7 +289,7 @@ async function sendEmailNotification(contactData: any) {
           <p style="font-size: 18px; margin-bottom: 5px;">GRÚAS EQUISER C.A.</p>
           <p style="font-size: 14px;">Líder en Alquiler de Grúas en Venezuela</p>
           <p style="font-size: 13px; margin-top: 12px;">
-            📱 WhatsApp: <a href="https://api.whatsapp.com/message/E6H4WASHIL6LB1">+58 414 343 2882</a><br>
+            📱 WhatsApp: <a href="https://wa.me/message/IOBBJVBBVWNOI1">+58 422 6347624</a><br>
             🌐 Web: <a href="https://gruasequiser.net">gruasequiser.net</a><br>
             📧 Email: <a href="mailto:info@gruasequiser.net">info@gruasequiser.net</a>
           </p>
@@ -352,7 +352,7 @@ ID de contacto: ${contactData.id}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GRÚAS EQUISER C.A. - Líder en Alquiler de Grúas en Venezuela
-WhatsApp: +58 414 343 2882 | Web: gruasequiser.net
+WhatsApp: +58 422 6347624 | Web: gruasequiser.net
         `,
         html: emailHTML
       }).then(() => {

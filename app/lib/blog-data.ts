@@ -165,7 +165,7 @@ GRÚAS EQUISER ofrece:
 Si tu proyecto requiere la tecnología más avanzada en grúas móviles, la Liebherr LTM 1500 de GRÚAS EQUISER es tu mejor opción. Con más de 30 años de experiencia y el único distribuidor autorizado de Liebherr en Venezuela.
 
 **Solicita tu cotización personalizada:**
-- WhatsApp: +58 414-343-2882
+- WhatsApp: +58 422-6347624
 - Email: info@gruasequiser.net
 - Disponibilidad: 24/7
 
@@ -376,7 +376,7 @@ La **seguridad en operaciones con grúas sobre oruga** es fundamental para el é
 - **Soporte 24/7:** Asistencia técnica inmediata
 
 **Contacto:**  
-WhatsApp: +58 414-343-2882  
+WhatsApp: +58 422-6347624  
 Email: seguridad@gruasequiser.net
 
 ---
@@ -715,7 +715,7 @@ Un **super lowboy** es un remolque especializado de plataforma baja diseñado pa
 ¿Necesitas transportar equipos pesados en Venezuela? GRÚAS EQUISER te ofrece:
 
 **Cotización Gratuita en 24 Horas:**
-- WhatsApp: +58 414-343-2882
+- WhatsApp: +58 422-6347624
 - Email: transportepesado@gruasequiser.net
 - Web: gruasequiser.net
 
@@ -804,8 +804,8 @@ El gobierno venezolano ha establecido metas ambiciosas: 15 nuevas plantas petroq
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 1000 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Casos de Éxito en Proyectos Venezolanos
 
@@ -891,15 +891,15 @@ Ingenieros 3D a tu disposición
 - **Calidad**: Reemplazo inmediato en caso de falla de equipo
 
 ### Soporte Técnico 24/7
-- **Línea directa**: +58 414-343-2882 disponible 24/7/365
+- **Línea directa**: +58 422-6347624 disponible 24/7/365
 - **WhatsApp técnico**: Comunicación instantánea con supervisores
 - **Email prioritario**: Respuesta garantizada en 2 horas
 - **Soporte remoto**: Diagnóstico por video llamada si requerido
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Capacidad hasta 1000 toneladas disponible  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Conclusión: La Decisión Inteligente para tu Proyecto
 
@@ -921,8 +921,8 @@ Con la demanda creciente y la disponibilidad limitada de equipos de alta capacid
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -984,8 +984,8 @@ Las **grúas sobre orugas** representan la solución definitiva para proyectos i
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -1045,8 +1045,8 @@ El **transporte de carga sobredimensionada** en Venezuela requiere experiencia t
 📋 **SOLICITA TU COTIZACIÓN PERSONALIZADA**
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -1087,8 +1087,8 @@ El **alquiler de grúas móviles en Caracas** experimenta su mayor demanda en 15
 📋 **SOLICITA TU COTIZACIÓN PERSONALIZADA**
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 💬 **Respuesta garantizada en menos de 2 horas**
 
@@ -1131,8 +1131,8 @@ El **alquiler de grúas móviles en Caracas** se ha convertido en un servicio es
 - **Grove GMK5250L**: 250 toneladas, especializada en refinerías
 
 🔥 **COTIZACIÓN INMEDIATA CARACAS**  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Casos de Éxito Recientes en Caracas
 
@@ -1142,8 +1142,8 @@ El **alquiler de grúas móviles en Caracas** se ha convertido en un servicio es
 **Resultado**: Instalación nocturna exitosa sin afectación al tráfico
 
 📞 **CONTACTO DIRECTO CARACAS**
-+58 414-343-2882 (Principal)
-+58 412-159-7792 (Alternativo)  
++58 422-6347624 (Principal)
++58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net
 ✉️ direccionmercadeo@gruasequiser.net
 
@@ -1187,13 +1187,13 @@ El **servicio de bateas y transporte pesado** es fundamental para el desarrollo 
 
 🚛 **DISPONIBILIDAD INMEDIATA**  
 24 horas - 7 días - 365 días al año  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 🚛 **RESPUESTA GARANTIZADA**  
 Cotización en menos de 2 horas  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)  
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)  
 ✉️ info@gruasequiser.net  
 ✉️ direccionmercadeo@gruasequiser.net
 

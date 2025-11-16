@@ -86,7 +86,7 @@ export default function RootLayout({
               "name": "GRÚAS EQUISER C.A.",
               "description": "Empresa líder en alquiler de grúas móviles, telescópicas y sobre oruga en Venezuela. Especialistas en sectores petrolero, petroquímico, industrial, portuario y siderúrgico.",
               "url": "https://gruasequiser.net",
-              "telephone": "+58-414-343-2882",
+              "telephone": "+58-422-6347624",
               "email": "info@gruasequiser.net",
               "logo": "https://static.vecteezy.com/system/resources/thumbnails/016/941/001/small/lifting-crane-logo-construction-company-rental-of-special-equipment-sale-of-equipment-for-construction-vector.webp",
               "image": "https://superiorrigging.com/wp-content/uploads/2023/12/QTS-Generator-Set-Over-Wall-13-768x576.webp",
@@ -141,7 +141,7 @@ export default function RootLayout({
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+58-414-343-2882",
+                  "telephone": "+58-422-6347624",
                   "contactType": "customer service",
                   "availableLanguage": ["Spanish"],
                   "areaServed": "VE",
@@ -160,14 +160,14 @@ export default function RootLayout({
                 },
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+58-414-343-2882",
+                  "telephone": "+58-422-6347624",
                   "contactType": "sales",
                   "availableLanguage": ["Spanish"],
                   "areaServed": "VE"
                 }
               ],
               "sameAs": [
-                "https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0",
+                "https://wa.me/message/IOBBJVBBVWNOI1",
                 "https://www.facebook.com/gruasequiser",
                 "https://www.instagram.com/gruasequiser",
                 "https://www.linkedin.com/company/gruasequiser"

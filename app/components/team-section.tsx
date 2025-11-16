@@ -221,7 +221,7 @@ export function TeamSection() {
             {/* Botón rediseñado */}
             <div className="text-center">
               <motion.button
-                onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+                onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                 className="px-12 py-5 rounded-full text-xl font-bold uppercase tracking-wider shadow-2xl hover:scale-105 transition-all duration-300"
                 style={{
                   background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',

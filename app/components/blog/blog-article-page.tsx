@@ -335,7 +335,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0"
+              href="https://wa.me/message/IOBBJVBBVWNOI1"
               target="_blank"
               rel="noopener noreferrer"
               className="equiser-yellow equiser-yellow-hover text-equiser-blue font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 shadow-lg"

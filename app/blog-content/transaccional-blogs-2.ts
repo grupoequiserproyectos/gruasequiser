@@ -27,8 +27,8 @@ Caracas lidera la reactivación inmobiliaria venezolana con 45 nuevos proyectos 
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Precios especiales región capital 2025  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Tarifas Competitivas GRÚAS EQUISER 2025
 
@@ -126,8 +126,8 @@ Cotización inmediata región capital
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Precios especiales región capital 2025  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas Competitivas en Caracas
 
@@ -182,8 +182,8 @@ En un mercado con demanda creciente y opciones limitadas, **GRÚAS EQUISER** ofr
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  
@@ -250,8 +250,8 @@ La industria venezolana no se detiene. PDVSA opera refinerías 24 horas, CVG man
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Disponibilidad 24/7 los 365 días del año  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Flota de Bateas Especializada
 
@@ -362,8 +362,8 @@ Servicio 24/7 disponible ahora
 
 🔥 **SOLICITA COTIZACIÓN GRATUITA AHORA**  
 Disponibilidad 24/7 los 365 días del año  
-📞 +58 414-343-2882 (Principal)  
-📞 +58 412-159-7792 (Alternativo)
+📞 +58 422-6347624 (Principal)  
+📞 +58 422-6347624 (Alternativo)
 
 ## Ventajas del Servicio 24/7
 
@@ -388,7 +388,7 @@ Disponibilidad 24/7 los 365 días del año
 ## Proceso de Solicitud Express
 
 ### Llamada de Emergencia (24/7)
-1. **Línea directa**: +58 414-343-2882 siempre disponible
+1. **Línea directa**: +58 422-6347624 siempre disponible
 2. **Evaluación inmediata**: Especificaciones de carga y ubicación
 3. **Confirmación**: Disponibilidad y tiempo de movilización
 4. **Activación**: Equipo en ruta con confirmación GPS
@@ -410,8 +410,8 @@ En una industria que no se detiene, **GRÚAS EQUISER** garantiza que tu logísti
 ¿Necesitas servicios de grúas industriales o transporte sobredimensionado en Venezuela?
 
 📞 **CONTACTO DIRECTO**  
-Teléfono Principal: +58 414-343-2882  
-Teléfono Alternativo: +58 412-159-7792
+Teléfono Principal: +58 422-6347624  
+Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
 Información General: info@gruasequiser.net  

@@ -247,7 +247,7 @@ export function GaleriaCarrusel() {
 
   const handleWhatsAppRedirect = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
+    window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')
   }
 
   return (

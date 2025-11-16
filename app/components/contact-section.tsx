@@ -30,10 +30,10 @@ export function ContactSection() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Teléfonos',
-      details: ['+58 414-343-2882 (Principal)', '+58 412-159-7792 (Alternativo)'],
+      title: 'Teléfono',
+      details: ['+58 422-6347624'],
       action: 'Llamar Ahora',
-      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0',
+      actionUrl: 'tel:+584226347624',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
       iconBg: '#FFC107',
       iconColor: '#1E3A8A',
@@ -47,7 +47,7 @@ export function ContactSection() {
       title: 'WhatsApp 24/7',
       details: ['Atención inmediata', 'Cotizaciones rápidas'],
       action: 'Enviar WhatsApp',
-      actionUrl: 'https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0',
+      actionUrl: 'https://wa.me/message/IOBBJVBBVWNOI1',
       bgGradient: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
       iconBg: '#1E3A8A',
       iconColor: '#FFC107',
@@ -116,7 +116,7 @@ export function ContactSection() {
         
         // Redireccionar a WhatsApp con el mensaje
         const whatsappMessage = `¡Hola! Soy ${formData.name} de ${formData.company || 'mi empresa'}. Me interesa el servicio de ${formData.service}. ${formData.message}. Mi teléfono: ${formData.phone}, email: ${formData.email}`
-        window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')
+        window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')
         
         setFormData({
           name: '',
@@ -251,7 +251,7 @@ export function ContactSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <button
-              onClick={() => window.open('https://api.whatsapp.com/message/E6H4WASHIL6LB1?autoload=1&app_absent=0', '_blank')}
+              onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
               className="px-16 py-6 text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl inline-flex items-center gap-4 text-xl group animate-pulse"
               style={{
                 background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
