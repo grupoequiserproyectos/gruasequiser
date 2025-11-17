@@ -26,7 +26,7 @@ export function Header() {
     { href: '#servicios', label: 'SERVICIOS' },
     { href: '#proyectos', label: 'PROYECTOS' },
     { href: '/blog', label: 'BLOG' },
-    { href: '#contacto', label: 'CONTACTO' }
+    { href: '/#contacto', label: 'CONTACTO' }
   ]
 
   const handleWhatsApp = () => {

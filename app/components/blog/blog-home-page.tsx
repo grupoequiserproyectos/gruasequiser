@@ -194,14 +194,16 @@ export function BlogHomePage() {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                     activeCategory === category
-                      ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
-                      : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
+                      ? 'border-2 border-equiser-blue shadow-blue-200 scale-105'
+                      : 'border-2 border-equiser-yellow hover:border-equiser-blue'
                   }`}
                   style={{
                     padding: '15px 25px',
                     borderRadius: '25px',
                     fontSize: '14px',
-                    fontWeight: '600'
+                    fontWeight: '600',
+                    backgroundColor: activeCategory === category ? '#1E3A8A' : '#FFC107',
+                    color: activeCategory === category ? '#FFFFFF' : '#1E3A8A'
                   }}
                 >
                   {category}

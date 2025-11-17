@@ -220,7 +220,7 @@ export function NosotrosSection() {
             {/* Llamada a la Acción */}
             <div className="text-center">
               <motion.a 
-                href="#contacto"
+                href="/#contacto"
                 whileHover={{ 
                   y: -3, 
                   boxShadow: '0 12px 35px rgba(255, 193, 7, 0.6)',

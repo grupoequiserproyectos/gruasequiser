@@ -7,7 +7,7 @@ import path from 'path'
 
 export const dynamic = 'force-dynamic'
 
-// 📧 CONFIGURACIÓN DE CORREOS DESTINATARIOS - ACTUALIZADO CON 5 CORREOS
+// 📧 CONFIGURACIÓN DE CORREOS DESTINATARIOS - 5 CORREOS
 const EMAIL_RECIPIENTS = [
   'equiserdominios@gmail.com',
   'equisercadominios@gmail.com',
@@ -24,9 +24,9 @@ const logSubmission = (data: any, status: 'success' | 'error', details?: any) =>
     status,
     data: {
       id: data.id,
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
+      nombre: data.nombre || data.name,
+      correo_contacto: data.correo_contacto || data.email,
+      telefono: data.telefono || data.phone,
       tipo_servicio: data.tipo_servicio
     },
     recipients: EMAIL_RECIPIENTS,
@@ -34,7 +34,7 @@ const logSubmission = (data: any, status: 'success' | 'error', details?: any) =>
   }
 
   try {
-    const logPath = path.join(process.cwd(), 'logs', 'contact-forms.json')
+    const logPath = path.join(process.cwd(), 'logs', 'contactos-recibidos.json')
     const logDir = path.dirname(logPath)
     
     // Crear directorio de logs si no existe
@@ -46,7 +46,7 @@ const logSubmission = (data: any, status: 'success' | 'error', details?: any) =>
     const logLine = JSON.stringify(logEntry) + '\n'
     fs.appendFileSync(logPath, logLine)
     
-    console.log(`📝 Log guardado: ${status.toUpperCase()} - ${data.name}`)
+    console.log(`📝 Log guardado: ${status.toUpperCase()} - ${data.nombre || data.name}`)
   } catch (error) {
     console.error('❌ Error al guardar log:', error)
   }
@@ -143,9 +143,6 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
           margin-top: 0;
           margin-bottom: 15px;
           font-size: 18px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
         }
         .info-row {
           margin: 12px 0;
@@ -189,18 +186,6 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
           font-weight: bold;
           margin-top: 10px;
         }
-        @media only screen and (max-width: 600px) {
-          .email-container {
-            margin: 0;
-            border-radius: 0;
-          }
-          .header h1 {
-            font-size: 24px;
-          }
-          .content {
-            padding: 20px 15px;
-          }
-        }
       </style>
     </head>
     <body>
@@ -216,42 +201,20 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
             <h3>👤 INFORMACIÓN DEL CLIENTE</h3>
             <div class="info-row">
               <span class="label">Nombre:</span>
-              <span class="value">${contactData.name}</span>
+              <span class="value">${contactData.nombre}</span>
             </div>
             <div class="info-row">
               <span class="label">Email:</span>
-              <span class="value"><a href="mailto:${contactData.email}">${contactData.email}</a></span>
+              <span class="value"><a href="mailto:${contactData.correo_contacto}">${contactData.correo_contacto}</a></span>
             </div>
             <div class="info-row">
               <span class="label">Teléfono:</span>
-              <span class="value"><a href="tel:${contactData.phone}">${contactData.phone}</a></span>
+              <span class="value"><a href="tel:${contactData.telefono}">${contactData.telefono}</a></span>
             </div>
-            ${contactData.company ? `
-            <div class="info-row">
-              <span class="label">Empresa:</span>
-              <span class="value">${contactData.company}</span>
-            </div>
-            ` : ''}
-            ${contactData.ubicacion ? `
-            <div class="info-row">
-              <span class="label">Ubicación:</span>
-              <span class="value">${contactData.ubicacion}</span>
-            </div>
-            ` : ''}
           </div>
           
           <div class="info-section">
             <h3>🚚 DETALLES DEL SERVICIO</h3>
-            <div class="info-row">
-              <span class="label">Tipo de servicio:</span>
-              <span class="value"><strong>${tipoServicioLabels[contactData.tipo_servicio as keyof typeof tipoServicioLabels] || contactData.tipo_servicio || 'No especificado'}</strong></span>
-            </div>
-            ${contactData.tipo_servicio === 'alquiler_gruas' && contactData.tonelaje ? `
-            <div class="info-row">
-              <span class="label">Tonelaje requerido:</span>
-              <span class="value"><strong>${contactData.tonelaje}</strong></span>
-            </div>
-            ` : ''}
             <div class="info-row">
               <span class="label">Asunto:</span>
               <span class="value"><strong>${contactData.asunto}</strong></span>
@@ -259,7 +222,7 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
             <div class="info-row">
               <span class="label">Mensaje:</span>
               <div class="value" style="margin-top: 8px; padding: 12px; background: white; border-radius: 6px; border: 1px solid #e9ecef;">
-                ${contactData.message.replace(/\n/g, '<br>')}
+                ${contactData.mensaje.replace(/\n/g, '<br>')}
               </div>
             </div>
           </div>
@@ -275,8 +238,8 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
               })}</span>
             </div>
             <div class="info-row">
-              <span class="label">ID de contacto:</span>
-              <span class="value"><code>${contactData.id}</code></span>
+              <span class="label">Canal:</span>
+              <span class="value">${contactData.canal || 'web'}</span>
             </div>
           </div>
 
@@ -306,10 +269,9 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
     console.error('❌ CRÍTICO: Variables EMAIL_USER y EMAIL_PASS no configuradas')
     console.log('=== DATOS DEL CONTACTO (MODO DESARROLLO - EMAIL NO ENVIADO) ===')
     console.log('📧 Destinatarios:', EMAIL_RECIPIENTS.join(', '))
-    console.log('👤 Cliente:', contactData.name)
-    console.log('📞 Teléfono:', contactData.phone)
-    console.log('✉️ Email:', contactData.email)
-    console.log('🚚 Servicio:', contactData.tipo_servicio)
+    console.log('👤 Cliente:', contactData.nombre)
+    console.log('📞 Teléfono:', contactData.telefono)
+    console.log('✉️ Email:', contactData.correo_contacto)
     console.log('📝 Asunto:', contactData.asunto)
     console.log('=== FIN DEL LOG ===')
     
@@ -327,30 +289,26 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
       return transporter.sendMail({
         from: '"GRÚAS EQUISER - Sitio Web" <noreply@gruasequiser.net>',
         to: recipient,
-        subject: `🏗️ Nueva Consulta Web - ${contactData.name} - ${contactData.asunto}`,
+        subject: `🏗️ Nueva Consulta Web - ${contactData.nombre} - ${contactData.asunto}`,
         text: `
 NUEVO CONTACTO DESDE EL SITIO WEB - GRÚAS EQUISER
 
 INFORMACIÓN DEL CLIENTE:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Nombre: ${contactData.name}
-Email: ${contactData.email}
-Teléfono: ${contactData.phone}
-Empresa: ${contactData.company || 'No especificada'}
-Ubicación: ${contactData.ubicacion || 'No especificada'}
+Nombre: ${contactData.nombre}
+Email: ${contactData.correo_contacto}
+Teléfono: ${contactData.telefono}
 
-DETALLES DEL SERVICIO:
+DETALLES:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Tipo de servicio: ${tipoServicioLabels[contactData.tipo_servicio as keyof typeof tipoServicioLabels] || contactData.tipo_servicio || 'No especificado'}${contactData.tipo_servicio === 'alquiler_gruas' && contactData.tonelaje ? `
-Tonelaje requerido: ${contactData.tonelaje}` : ''}
 Asunto: ${contactData.asunto}
 Mensaje: 
-${contactData.message}
+${contactData.mensaje}
 
 INFORMACIÓN DEL SISTEMA:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Formulario enviado: ${new Date().toLocaleString('es-VE', { timeZone: 'America/Caracas' })}
-ID de contacto: ${contactData.id}
+Canal: ${contactData.canal || 'web'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GRÚAS EQUISER C.A. - Líder en Alquiler de Grúas en Venezuela
@@ -403,11 +361,10 @@ WhatsApp: +58 422 6347624 | Web: gruasequiser.net
     // Fallback: log the information if email fails
     console.log('\n=== FALLBACK: DATOS DEL CONTACTO (EMAIL FALLÓ) ===')
     console.log('📧 Destinatarios:', EMAIL_RECIPIENTS.join(', '))
-    console.log('👤 Cliente:', contactData.name)
-    console.log('📞 Teléfono:', contactData.phone)
-    console.log('✉️ Email:', contactData.email)
-    console.log('🚚 Servicio:', contactData.tipo_servicio)
-    console.log('📝 Mensaje:', contactData.message)
+    console.log('👤 Cliente:', contactData.nombre)
+    console.log('📞 Teléfono:', contactData.telefono)
+    console.log('✉️ Email:', contactData.correo_contacto)
+    console.log('📝 Mensaje:', contactData.mensaje)
     console.log('=== FIN DEL FALLBACK ===\n')
     
     logSubmission(contactData, 'error', error.message)
@@ -420,55 +377,25 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { 
-      name, 
-      email, 
-      phone, 
-      company, 
-      ubicacion, 
+      nombre, 
+      correo_contacto, 
+      telefono, 
       asunto, 
-      message, 
-      tipo_servicio,
-      tonelaje,
-      service // mantener compatibilidad con formulario anterior
+      mensaje,
+      canal
     } = body
 
-    // Validación para nuevo formulario con tipo de servicio
-    if (tipo_servicio) {
-      if (!name || !email || !phone || !asunto || !message || !tipo_servicio) {
-        return NextResponse.json(
-          { error: 'Los campos Nombre, Correo, Teléfono, Tipo de Servicio, Asunto y Mensaje son obligatorios' },
-          { status: 400 }
-        )
-      }
-      
-      // Validar que si es alquiler de grúas, debe tener tonelaje
-      if (tipo_servicio === 'alquiler_gruas' && !tonelaje) {
-        return NextResponse.json(
-          { error: 'Para el servicio de Alquiler de Grúas debe seleccionar una opción de tonelaje' },
-          { status: 400 }
-        )
-      }
-    }
-    // Validación para formulario anterior (con asunto pero sin tipo_servicio)  
-    else if (asunto) {
-      if (!name || !email || !phone || !asunto || !message) {
-        return NextResponse.json(
-          { error: 'Los campos Nombre, Correo, Teléfono, Asunto y Mensaje son obligatorios' },
-          { status: 400 }
-        )
-      }
-    } 
-    // Validación para formulario anterior (con service)
-    else if (!name || !email || !phone || !service || !message) {
+    // Validación de campos obligatorios
+    if (!nombre || !correo_contacto || !telefono || !asunto || !mensaje) {
       return NextResponse.json(
-        { error: 'Todos los campos obligatorios deben ser completados' },
+        { error: 'Los campos Nombre, Correo, Teléfono, Asunto y Mensaje son obligatorios' },
         { status: 400 }
       )
     }
 
     // Validar formato de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(correo_contacto)) {
       return NextResponse.json(
         { error: 'Por favor ingresa un email válido' },
         { status: 400 }
@@ -481,15 +408,12 @@ export async function POST(request: NextRequest) {
     
     try {
       const emailResult = await sendEmailNotification({
-        name: name.trim(),
-        email: email.trim().toLowerCase(),
-        phone: phone.trim(),
-        company: company?.trim() || null,
-        ubicacion: ubicacion?.trim() || null,
-        asunto: asunto?.trim() || 'Consulta general',
-        message: message.trim(),
-        tipo_servicio: tipo_servicio?.trim() || null,
-        tonelaje: tonelaje?.trim() || null
+        nombre: nombre.trim(),
+        correo_contacto: correo_contacto.trim().toLowerCase(),
+        telefono: telefono.trim(),
+        asunto: asunto.trim(),
+        mensaje: mensaje.trim(),
+        canal: canal?.trim() || 'web'
       })
       
       emailSent = emailResult.success
@@ -505,56 +429,33 @@ export async function POST(request: NextRequest) {
       // No fallar el request si falla el email, solo loguear
     }
 
-    // Guardar en la base de datos con los correos notificados
-    const contactForm = await prisma.contactForm.create({
+    // Guardar en la tabla Contactos_recibidos
+    const contactoRecibido = await prisma.contactos_recibidos.create({
       data: {
-        name: name.trim(),
-        email: email.trim().toLowerCase(),
-        phone: phone.trim(),
-        company: company?.trim() || null,
-        ubicacion: ubicacion?.trim() || null,
-        asunto: asunto?.trim() || 'Consulta general',
-        message: message.trim(),
-        tipo_servicio: tipo_servicio?.trim() || null,
-        tonelaje: tonelaje?.trim() || null,
-        service: service?.trim() || null, // mantener compatibilidad
-        canal: 'web',
-        status: 'pending',
-        correos_notificados: correosNotificados
-      }
-    })
-
-    // También guardar en la tabla Contactos_recibidos (tabla espejo con nombres descriptivos)
-    await prisma.contactos_recibidos.create({
-      data: {
-        id: contactForm.id, // Usar el mismo ID para mantener sincronización
-        nombre: contactForm.name,
-        correo_contacto: contactForm.email,
-        telefono: contactForm.phone,
-        empresa: contactForm.company,
-        ubicacion: contactForm.ubicacion,
-        asunto: contactForm.asunto,
-        mensaje: contactForm.message,
-        tipo_servicio: contactForm.tipo_servicio,
-        tonelaje: contactForm.tonelaje,
-        canal: 'web',
+        nombre: nombre.trim(),
+        correo_contacto: correo_contacto.trim().toLowerCase(),
+        telefono: telefono.trim(),
+        asunto: asunto.trim(),
+        mensaje: mensaje.trim(),
+        canal: canal?.trim() || 'web',
         estado: 'pending',
         correos_notificados: correosNotificados
       }
     })
 
-    console.log(`\n📝 Nuevo formulario recibido: ID ${contactForm.id}`)
-    console.log(`👤 Cliente: ${contactForm.name}`)
-    console.log(`📧 Email: ${contactForm.email}`)
-    console.log(`🚚 Servicio: ${contactForm.tipo_servicio || contactForm.service}`)
+    console.log(`\n📝 Nuevo contacto recibido: ID ${contactoRecibido.id}`)
+    console.log(`👤 Cliente: ${contactoRecibido.nombre}`)
+    console.log(`📧 Email: ${contactoRecibido.correo_contacto}`)
+    console.log(`📞 Teléfono: ${contactoRecibido.telefono}`)
     console.log(`📬 Notificados: ${correosNotificados.join(', ')}`)
 
     return NextResponse.json(
       { 
         success: true, 
-        message: '¡Gracias por contactarnos! Pronto un asesor de venta se está comunicando con usted. Muchas gracias por preferirnos.',
-        id: contactForm.id,
-        emailSent
+        message: '¡Gracias por contactarnos! Pronto un asesor de venta se está comunicando con usted.',
+        id: contactoRecibido.id,
+        emailSent,
+        correos_notificados: correosNotificados
       },
       { status: 201 }
     )

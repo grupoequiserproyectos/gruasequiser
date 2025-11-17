@@ -63,20 +63,42 @@ model Project {
 }
 
 model ContactForm {
-  id            String @id @default(cuid())
-  tipo_servicio String? // "alquiler_gruas", "transporte_pesado", "servicio_bateas"
-  tonelaje      String? // "65-100", "100-200", "300-1000" (solo para alquiler de grúas)
-  name          String
-  email         String
-  phone         String
-  company       String?
-  ubicacion     String?
-  asunto        String
-  message       String
-  service       String? // para mantener compatibilidad con formulario anterior
-  status        String @default("pending") // pending, contacted, closed
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id                  String @id @default(cuid())
+  tipo_servicio       String? // "alquiler_gruas", "transporte_pesado", "servicio_bateas"
+  tonelaje            String? // "65-100", "100-200", "300-1000" (solo para alquiler de grúas)
+  name                String
+  email               String
+  phone               String
+  company             String?
+  ubicacion           String?
+  asunto              String
+  message             String
+  service             String? // para mantener compatibilidad con formulario anterior
+  canal               String @default("web") // web, whatsapp, telefono, email
+  status              String @default("pending") // pending, contacted, closed
+  correos_notificados String[] // Lista de correos a los que se envió notificación
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+// Vista alternativa para reportes con nombres más descriptivos
+// Esta es una tabla espejo para facilitar queries y reportes
+model Contactos_recibidos {
+  id                  String @id @default(cuid())
+  fecha_recibido      DateTime @default(now())
+  nombre              String
+  correo_contacto     String
+  telefono            String
+  asunto              String
+  mensaje             String
+  canal               String @default("web")
+  estado              String @default("pending")
+  correos_notificados String[]
+  tipo_servicio       String?
+  tonelaje            String?
+  empresa             String?
+  ubicacion           String?
+  updatedAt           DateTime @updatedAt
 }
 
 model CompanyStats {

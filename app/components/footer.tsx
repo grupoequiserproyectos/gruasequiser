@@ -161,7 +161,7 @@ export function Footer() {
                   { href: '#inicio', label: 'Inicio' },
                   { href: '#nosotros', label: 'Nosotros' },
                   { href: '#proyectos', label: 'Proyectos' },
-                  { href: '#contacto', label: 'Contacto' }
+                  { href: '/#contacto', label: 'Contacto' }
                 ].map((item) => (
                   <li key={item.href}>
                     <Link
