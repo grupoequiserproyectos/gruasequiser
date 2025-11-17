@@ -63,81 +63,124 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
   }
 
   const renderContent = (content: string) => {
-    // Simple markdown-like rendering
-    return content
-      .split('\n')
-      .map((line, index) => {
-        // Headers
-        if (line.startsWith('# ')) {
-          return <h1 key={index} className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-8">{line.substring(2)}</h1>
-        }
-        if (line.startsWith('## ')) {
-          return <h2 key={index} className="text-2xl md:text-3xl font-bold text-equiser-blue mb-4 mt-8">{line.substring(3)}</h2>
-        }
-        if (line.startsWith('### ')) {
-          return <h3 key={index} className="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-6">{line.substring(4)}</h3>
-        }
-        if (line.startsWith('#### ')) {
-          return <h4 key={index} className="text-lg md:text-xl font-bold text-gray-800 mb-3 mt-6">{line.substring(5)}</h4>
-        }
-        if (line.startsWith('##### ')) {
-          return <h5 key={index} className="text-base md:text-lg font-bold text-gray-800 mb-3 mt-4">{line.substring(6)}</h5>
-        }
+    const lines = content.split('\n')
+    const elements: React.ReactNode[] = []
+    let tableRows: JSX.Element[] = []
+    let inTable = false
+    
+    lines.forEach((line, index) => {
+      // Table detection
+      const isTableRow = line.includes('|') && !line.includes('---')
+      const isTableSeparator = line.includes('|') && line.includes('---')
+      
+      if (isTableSeparator) {
+        inTable = true
+        return // Skip separator lines
+      }
+      
+      if (isTableRow) {
+        inTable = true
+        const cells = line.split('|').map(cell => cell.trim()).filter(cell => cell)
+        const isHeader = line.includes('Característica') || line.includes('Concepto') || line.includes('Aspecto')
         
-        // Lists
-        if (line.startsWith('- ')) {
-          return <li key={index} className="text-gray-700 mb-2 ml-4">{line.substring(2)}</li>
-        }
-        
-        // Bold text
-        const boldRegex = /\*\*(.*?)\*\*/g
-        let processedLine = line.replace(boldRegex, '<strong class="font-semibold text-equiser-blue">$1</strong>')
-        
-        // Empty lines
-        if (line.trim() === '') {
-          return <br key={index} />
-        }
-        
-        // Table detection
-        if (line.includes('|') && line.includes('---')) {
-          return null // Skip table separator lines
-        }
-        
-        if (line.includes('|') && !line.includes('---')) {
-          const cells = line.split('|').map(cell => cell.trim()).filter(cell => cell)
-          const isHeader = line.includes('Característica') || line.includes('Concepto') || line.includes('Aspecto')
-          
-          return (
-            <tr key={index} className={isHeader ? 'bg-equiser-blue text-white' : 'border-b border-gray-200'}>
-              {cells.map((cell, cellIndex) => (
-                isHeader ? (
-                  <th key={cellIndex} className="px-4 py-3 text-left font-semibold">
-                    {cell}
-                  </th>
-                ) : (
-                  <td key={cellIndex} className="px-4 py-3 text-gray-700">
-                    {cell}
-                  </td>
-                )
-              ))}
-            </tr>
-          )
-        }
-        
-        // Regular paragraphs
-        if (line.trim() && !line.startsWith('#') && !line.startsWith('-')) {
-          return (
-            <p 
-              key={index} 
-              className="text-gray-700 leading-relaxed mb-4"
-              dangerouslySetInnerHTML={{ __html: processedLine }}
-            />
-          )
-        }
-        
-        return null
-      })
-      .filter(Boolean)
+        const row = (
+          <tr key={`table-row-${index}`} className={isHeader ? 'bg-equiser-blue text-white' : 'border-b border-gray-200'}>
+            {cells.map((cell, cellIndex) => (
+              isHeader ? (
+                <th key={cellIndex} className="px-4 py-3 text-left font-semibold">
+                  {cell}
+                </th>
+              ) : (
+                <td key={cellIndex} className="px-4 py-3 text-gray-700">
+                  {cell}
+                </td>
+              )
+            ))}
+          </tr>
+        )
+        tableRows.push(row)
+        return
+      }
+      
+      // If we were in a table and hit a non-table line, wrap and add the table
+      if (inTable && !isTableRow) {
+        elements.push(
+          <div key={`table-${index}`} className="overflow-x-auto mb-8">
+            <table className="w-full border border-gray-200 rounded-lg">
+              <tbody>
+                {tableRows}
+              </tbody>
+            </table>
+          </div>
+        )
+        tableRows = []
+        inTable = false
+      }
+      
+      // Headers
+      if (line.startsWith('# ')) {
+        elements.push(<h1 key={index} className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-8">{line.substring(2)}</h1>)
+        return
+      }
+      if (line.startsWith('## ')) {
+        elements.push(<h2 key={index} className="text-2xl md:text-3xl font-bold text-equiser-blue mb-4 mt-8">{line.substring(3)}</h2>)
+        return
+      }
+      if (line.startsWith('### ')) {
+        elements.push(<h3 key={index} className="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-6">{line.substring(4)}</h3>)
+        return
+      }
+      if (line.startsWith('#### ')) {
+        elements.push(<h4 key={index} className="text-lg md:text-xl font-bold text-gray-800 mb-3 mt-6">{line.substring(5)}</h4>)
+        return
+      }
+      if (line.startsWith('##### ')) {
+        elements.push(<h5 key={index} className="text-base md:text-lg font-bold text-gray-800 mb-3 mt-4">{line.substring(6)}</h5>)
+        return
+      }
+      
+      // Lists
+      if (line.startsWith('- ')) {
+        elements.push(<li key={index} className="text-gray-700 mb-2 ml-4">{line.substring(2)}</li>)
+        return
+      }
+      
+      // Bold text
+      const boldRegex = /\*\*(.*?)\*\*/g
+      let processedLine = line.replace(boldRegex, '<strong class="font-semibold text-equiser-blue">$1</strong>')
+      
+      // Empty lines
+      if (line.trim() === '') {
+        elements.push(<br key={index} />)
+        return
+      }
+      
+      // Regular paragraphs
+      if (line.trim() && !line.startsWith('#') && !line.startsWith('-')) {
+        elements.push(
+          <p 
+            key={index} 
+            className="text-gray-700 leading-relaxed mb-4"
+            dangerouslySetInnerHTML={{ __html: processedLine }}
+          />
+        )
+      }
+    })
+    
+    // Handle any remaining table rows
+    if (tableRows.length > 0) {
+      elements.push(
+        <div key="table-final" className="overflow-x-auto mb-8">
+          <table className="w-full border border-gray-200 rounded-lg">
+            <tbody>
+              {tableRows}
+            </tbody>
+          </table>
+        </div>
+      )
+    }
+    
+    return elements
   }
 
   if (!mounted) {

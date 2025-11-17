@@ -683,6 +683,54 @@
     }
   }
   
+  /* Mejoras de performance táctil */
+  * {
+    -webkit-tap-highlight-color: rgba(30, 58, 138, 0.1);
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    user-select: text;
+  }
+  
+  a, button, [role="button"], [onclick] {
+    -webkit-tap-highlight-color: rgba(255, 215, 0, 0.3);
+    touch-action: manipulation;
+  }
+  
+  /* Smooth scrolling optimizado */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Optimización de fuentes para dispositivos móviles */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Aceleración de hardware para animaciones */
+  .animate,
+  [class*="motion"],
+  [class*="transition"] {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Prevenir el rebote en iOS (pero permitir scroll) */
+  body {
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Optimizar imágenes para dispositivos de alta densidad */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+  
   /* Clases de utilidad responsive */
   .mobile-hidden {
     display: none;

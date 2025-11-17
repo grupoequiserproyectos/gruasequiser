@@ -8,10 +8,34 @@ import { WhatsappWidget } from '@/components/whatsapp-widget'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// Configuración viewport separada para optimizaciones móviles
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
+  themeColor: '#1E3A8A',
+}
+
 export const metadata: Metadata = {
   title: 'Alquiler Grúas Móviles Venezuela | EQUISER - Liebherr, Grove, Manitowoc | 25-1600 Toneladas',
   description: '✅ Líderes en alquiler de grúas móviles Venezuela. 30+ años experiencia, grúas Liebherr, Grove, Manitowoc 25-1600 ton. Disponibles 24/7. ☎️ Cotización inmediata.',
   keywords: 'alquiler grúas móviles venezuela, grúas telescópicas, grúas industriales, Liebherr, Grove, Manitowoc, Carabobo, alquiler grúas Carabobo, grúas sobre oruga Venezuela, izamiento industrial Venezuela, alquiler grúas 24 horas Venezuela, grúas móviles Puerto Cabello Morón, alquiler grúas Valencia Carabobo',
+  
+  // Configuración para PWA y móviles
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'GRÚAS EQUISER',
+  },
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  
   openGraph: {
     title: 'Alquiler Grúas Móviles Venezuela | EQUISER 30+ Años Experiencia',
     description: '✅ Grúas telescópicas y sobre oruga 25-1600 toneladas. Liebherr, Grove, Manitowoc. Sectores petrolero, petroquímico, industrial. Disponibles 24/7',
@@ -21,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://grcomex.com/wp-content/uploads/2019/02/grcomex_nosotros_09.webp',
+        url: 'https://vpl-ve.com/images/crane.jpg',
         width: 1200,
         height: 630,
         alt: 'Grúas EQUISER - Alquiler de Grúas Móviles Venezuela'
@@ -61,6 +85,24 @@ export default function RootLayout({
   return (
     <html lang="es-VE">
       <head>
+        {/* Optimizaciones específicas para móviles iOS y Android */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="GRÚAS EQUISER" />
+        
+        {/* Prevenir zoom automático en inputs iOS */}
+        <meta name="format-detection" content="telephone=yes" />
+        
+        {/* Optimización táctil para Windows */}
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="msapplication-TileColor" content="#1E3A8A" />
+        
+        {/* DNS Prefetch para recursos externos */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        
         {/* Geo Tags */}
         <meta name="geo.region" content="VE-G" />
         <meta name="geo.placename" content="Morón, Carabobo, Venezuela" />
@@ -75,6 +117,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.webp" />
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.webp" />
         <meta name="theme-color" content="#1E3A8A" />
+        <meta name="msapplication-TileImage" content="/android-chrome-512x512.webp" />
         
         {/* Enhanced Schema.org LocalBusiness Markup */}
         <script
@@ -309,4 +352,3 @@ export default function RootLayout({
     </html>
   )
 }
-

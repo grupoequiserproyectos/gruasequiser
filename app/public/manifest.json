@@ -1,0 +1,72 @@
+
+{
+  "name": "GRÚAS EQUISER C.A. - Alquiler de Grúas Móviles Venezuela",
+  "short_name": "GRÚAS EQUISER",
+  "description": "Líderes en alquiler de grúas móviles Venezuela. 30+ años experiencia. Grúas Liebherr, Grove, Manitowoc 25-1600 toneladas. Disponibles 24/7",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1E3A8A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "industrial", "utilities"],
+  "lang": "es-VE",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Contactar por WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Contacta con GRÚAS EQUISER por WhatsApp",
+      "url": "https://wa.me/message/IOBBJVBBVWNOI1",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Ver Servicios",
+      "short_name": "Servicios",
+      "description": "Descubre nuestros servicios de alquiler de grúas",
+      "url": "/#servicios",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Formulario de contacto directo",
+      "url": "/#contacto",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "scope": "/"
+}

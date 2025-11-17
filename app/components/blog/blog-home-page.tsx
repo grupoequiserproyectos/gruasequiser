@@ -194,15 +194,14 @@ export function BlogHomePage() {
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                     activeCategory === category
-                      ? 'bg-equiser-blue border-2 border-equiser-blue shadow-blue-200 scale-105'
-                      : 'bg-equiser-yellow border-2 border-equiser-yellow hover:bg-equiser-blue hover:border-equiser-blue'
+                      ? 'bg-equiser-blue text-white border-2 border-equiser-blue shadow-blue-200 scale-105'
+                      : 'bg-equiser-yellow text-equiser-blue border-2 border-equiser-yellow hover:bg-equiser-blue hover:text-white hover:border-equiser-blue'
                   }`}
                   style={{
                     padding: '15px 25px',
                     borderRadius: '25px',
                     fontSize: '14px',
-                    fontWeight: '600',
-                    color: activeCategory === category ? '#ffffff' : '#1E3A8A'
+                    fontWeight: '600'
                   }}
                 >
                   {category}
@@ -367,7 +366,8 @@ export function BlogHomePage() {
               <Link href="/#contacto">
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
+                  style={{ backgroundColor: 'transparent' }}
                 >
                   Ver Más Información
                 </Button>
