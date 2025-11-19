@@ -112,3 +112,38 @@ model CompanyStats {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model Blog {
+  id              String @id @default(cuid())
+  title           String
+  slug            String @unique
+  excerpt         String // Resumen breve para listings
+  content         String // Contenido completo en formato Markdown
+  featuredImage   String? // URL de imagen destacada
+  category        String // Categoría principal
+  tags            String[] // Tags/etiquetas para clasificación
+  author          String @default("Equipo EQUISER")
+  readTime        Int @default(5) // Tiempo de lectura en minutos
+  
+  // SEO Optimization
+  metaTitle       String?
+  metaDescription String?
+  keywords        String[] // Palabras clave para SEO
+  
+  // Status and Visibility
+  published       Boolean @default(false)
+  featured        Boolean @default(false) // Destacado en homepage
+  
+  // Analytics (opcional, para tracking futuro)
+  views           Int @default(0)
+  
+  // Timestamps
+  publishedAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([category])
+  @@index([published])
+  @@index([publishedAt])
+}
