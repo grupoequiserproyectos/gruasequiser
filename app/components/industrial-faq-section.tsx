@@ -192,29 +192,50 @@ export function IndustrialFAQSection() {
           ))}
         </motion.div>
 
-        {/* CTA Final */}
+        {/* CTA Final con mejor legibilidad */}
         <motion.div
-          className="mt-12 text-center bg-gradient-to-r from-equiser-blue to-blue-700 rounded-2xl p-8 sm:p-10"
+          className="mt-12 text-center rounded-2xl shadow-2xl overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
+          style={{
+            background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+            border: '3px solid #FFC107'
+          }}
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            ¿Su proyecto requiere equipos industriales pesados?
-          </h3>
-          <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
-            Si su empresa necesita grúas industriales, transporte de carga sobredimensionada o servicios de izamiento especializado, estamos listos para atenderle.
-          </p>
-          <motion.a
-            href="https://wa.me/message/IOBBJVBBVWNOI1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-equiser-yellow text-equiser-blue font-bold text-lg px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Solicitar Cotización Industrial →
-          </motion.a>
+          <div className="p-8 sm:p-12" style={{ background: 'rgba(30, 58, 138, 0.95)' }}>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ 
+              color: '#FFC107',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+            }}>
+              ¿Su proyecto requiere equipos industriales pesados?
+            </h3>
+            <p className="text-base sm:text-lg mb-8 max-w-2xl mx-auto font-medium" style={{ 
+              color: 'white',
+              textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+            }}>
+              Si su empresa necesita grúas industriales, transporte de carga sobredimensionada o servicios de izamiento especializado, estamos listos para atenderle.
+            </p>
+            <motion.a
+              href="https://wa.me/message/IOBBJVBBVWNOI1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 shadow-2xl"
+              style={{
+                background: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
+                color: '#1E3A8A',
+                boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)'
+              }}
+              whileHover={{ scale: 1.05, boxShadow: '0 12px 35px rgba(255, 193, 7, 0.6)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="flex items-center gap-3">
+                <span>💬</span>
+                Solicitar Cotización Industrial
+                <span>→</span>
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>
