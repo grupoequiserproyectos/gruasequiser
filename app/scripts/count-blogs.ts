@@ -21,7 +21,7 @@ async function countBlogs() {
     })
     
     console.log('📂 Por categoría:')
-    categories.forEach(cat => {
+    categories.forEach((cat: any) => {
       console.log(`   - ${cat.category}: ${cat._count} blogs`)
     })
   } catch (error) {

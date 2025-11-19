@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ChevronDown, AlertTriangle, CheckCircle2, XCircle, Building2, Factory } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export function IndustrialFAQSection() {
   const [ref, inView] = useInView({
@@ -12,43 +13,44 @@ export function IndustrialFAQSection() {
     threshold: 0.1
   })
 
+  const t = useTranslations('faq')
   const [openIndex, setOpenIndex] = useState<number | null>(0) // Primera pregunta abierta por defecto
 
   const faqs = [
     {
       icon: <XCircle className="w-6 h-6 text-red-500" />,
-      question: "¿EQUISER remolca carros o vehículos particulares?",
-      answer: "NO. EQUISER se especializa EXCLUSIVAMENTE en proyectos industriales de gran escala. Nuestras grúas móviles y de oruga tienen capacidades de 25 a 1,600 toneladas, diseñadas para sectores petrolero, petroquímico, energético, siderúrgico, portuario y construcción pesada. NO ofrecemos servicios de grúas de remolque para vehículos ligeros.",
+      question: t('q1Question'),
+      answer: t('q1Answer'),
       type: "negative"
     },
     {
       icon: <AlertTriangle className="w-6 h-6 text-orange-500" />,
-      question: "¿Cuál es la capacidad MÍNIMA de sus grúas?",
-      answer: "Nuestra grúa de menor capacidad es de 25 toneladas, ideal para proyectos industriales medianos. Para referencia, esto equivale a levantar aproximadamente 35-40 vehículos compactos simultáneamente. Trabajamos exclusivamente con empresas en proyectos de infraestructura, petróleo, petroquímica, energía, siderurgia y manufactura pesada.",
+      question: t('q2Question'),
+      answer: t('q2Answer'),
       type: "warning"
     },
     {
       icon: <XCircle className="w-6 h-6 text-red-500" />,
-      question: "¿Atienden proyectos residenciales o particulares?",
-      answer: "NO. EQUISER está enfocado en el sector industrial B2B. Atendemos proyectos de PDVSA, empresas petroleras, plantas eléctricas, constructoras de infraestructura mayor, siderúrgicas (SIDOR), puertos y manufactura pesada. Nuestros servicios incluyen transporte de transformadores, turbinas, reactores, generadores, estructuras metálicas mayores y equipos industriales de gran tonelaje.",
+      question: t('q3Question'),
+      answer: t('q3Answer'),
       type: "negative"
     },
     {
       icon: <CheckCircle2 className="w-6 h-6 text-green-500" />,
-      question: "¿Qué tipos de proyectos industriales realizan?",
-      answer: "Realizamos proyectos de alta complejidad: instalación de transformadores eléctricos (50-250 ton), montaje de turbinas en plantas térmicas, izamiento de reactores petroquímicos, transporte de generadores industriales, movilización de equipos para PDVSA/Petromonagas, proyectos siderúrgicos en Ciudad Guayana, operaciones portuarias de carga pesada, y montajes industriales en refinería. Contamos con certificaciones específicas para el sector petrolero venezolano.",
+      question: t('q4Question'),
+      answer: t('q4Answer'),
       type: "positive"
     },
     {
       icon: <Building2 className="w-6 h-6 text-blue-500" />,
-      question: "¿En qué ciudades de Venezuela operan?",
-      answer: "Tenemos cobertura nacional con base de operaciones en Barcelona, Anzoátegui. Operamos regularmente en: Maracaibo (Zulia) - sector petrolero, Valencia y Puerto Cabello (Carabobo) - industrial/portuario, Faja del Orinoco (Anzoátegui/Monagas) - proyectos PDVSA, Puerto La Cruz - operaciones portuarias, Ciudad Guayana (Bolívar) - sector siderúrgico, Complejo José - refinería, Caracas y Miranda - proyectos energéticos, Maturín (Monagas) - sector petrolero, y todo el territorio nacional según requerimientos del proyecto.",
+      question: t('q5Question'),
+      answer: t('q5Answer'),
       type: "info"
     },
     {
       icon: <Factory className="w-6 h-6 text-purple-500" />,
-      question: "¿Qué sectores industriales son sus clientes principales?",
-      answer: "Nuestros clientes principales son: SECTOR PETROLERO (PDVSA, Petromonagas, empresas mixtas), PETROQUÍMICO (Complejo José, refinerías), ENERGÉTICO (plantas eléctricas, generación térmica), SIDERÚRGICO (SIDOR, manufactura de acero), PORTUARIO (puertos de Puerto La Cruz, Puerto Cabello, La Guaira), INDUSTRIAL (manufactura pesada, plantas químicas), CONSTRUCCIÓN MAYOR (infraestructura, puentes, viaductos), y MINERÍA (proyectos de extracción y procesamiento).",
+      question: t('q6Question'),
+      answer: t('q6Answer'),
       type: "info"
     }
   ]
@@ -105,19 +107,19 @@ export function IndustrialFAQSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="text-equiser-blue text-sm font-bold uppercase tracking-wider">
-              Servicios B2B Exclusivamente
+              {t('sectionBadge')}
             </span>
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-equiser-blue mb-4">
-            Preguntas Frecuentes
+            {t('sectionTitle')}
             <span className="block text-2xl sm:text-3xl md:text-4xl text-gray-600 mt-2">
-              Sobre Nuestros Servicios Industriales
+              {t('sectionSubtitle')}
             </span>
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Aclaramos las dudas más comunes sobre nuestros servicios de <span className="font-bold text-equiser-blue">grúas industriales de alta capacidad</span> y transporte de carga pesada
+            {t('sectionDescription')} <span className="font-bold text-equiser-blue">{t('sectionDescriptionBold')}</span> {t('sectionDescriptionEnd')}
           </p>
 
           {/* Advertencia destacada */}
@@ -131,8 +133,7 @@ export function IndustrialFAQSection() {
               <AlertTriangle className="w-6 h-6 text-red-600 mr-3 mt-1 flex-shrink-0" />
               <div className="text-left">
                 <p className="text-sm sm:text-base text-gray-800 font-semibold">
-                  <span className="text-red-700 font-bold">IMPORTANTE:</span> EQUISER NO realiza servicios de grúas de remolque para vehículos ligeros, asistencia vial, ni proyectos residenciales. 
-                  Somos especialistas en <span className="underline">equipos industriales pesados</span> para el sector B2B.
+                  <span className="text-red-700 font-bold">{t('warningLabel')}</span> {t('warningText')} <span className="underline">{t('warningTextUnderline')}</span> {t('warningTextEnd')}
                 </p>
               </div>
             </div>
@@ -208,13 +209,13 @@ export function IndustrialFAQSection() {
               color: '#FFC107',
               textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
             }}>
-              ¿Su proyecto requiere equipos industriales pesados?
+              {t('ctaTitle')}
             </h3>
             <p className="text-base sm:text-lg mb-8 max-w-2xl mx-auto font-medium" style={{ 
               color: 'white',
               textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
             }}>
-              Si su empresa necesita grúas industriales, transporte de carga sobredimensionada o servicios de izamiento especializado, estamos listos para atenderle.
+              {t('ctaDescription')}
             </p>
             <motion.a
               href="https://wa.me/message/IOBBJVBBVWNOI1"
@@ -230,8 +231,8 @@ export function IndustrialFAQSection() {
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center gap-3">
-                <span>💬</span>
-                Solicitar Cotización Industrial
+                <span>{t('ctaButtonIcon')}</span>
+                {t('ctaButton')}
                 <span>→</span>
               </span>
             </motion.a>

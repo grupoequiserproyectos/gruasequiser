@@ -12,8 +12,43 @@ import useSWR from 'swr'
 import { BlogNewsletter } from './blog-newsletter'
 import { Button } from '@/components/ui/button'
 import { useLocale } from '@/lib/i18n-utils'
+import { useTranslations } from 'next-intl'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
+
+// Helper para traducir categorías
+const getCategoryTranslationKey = (category: string): string => {
+  const categoryMap: Record<string, string> = {
+    'Todos': 'categoryAll',
+    'All': 'categoryAll',
+    'Ingeniería y Técnicas': 'categoryEngineering',
+    'Engineering & Techniques': 'categoryEngineering',
+    'Equipos y Accesorios': 'categoryEquipment',
+    'Equipment & Accessories': 'categoryEquipment',
+    'Casos de Éxito': 'categorySuccessCases',
+    'Success Cases': 'categorySuccessCases',
+    'Capacitación': 'categoryTraining',
+    'Training': 'categoryTraining',
+    'Servicios por Ciudad': 'categoryServicesByCity',
+    'Services by City': 'categoryServicesByCity',
+    'Servicios de Grúas': 'categoryCraneServices',
+    'Crane Services': 'categoryCraneServices',
+    'Guías y Costos': 'categoryGuidesAndCosts',
+    'Guides & Costs': 'categoryGuidesAndCosts',
+    'Transporte de Carga': 'categoryLoadTransport',
+    'Load Transport': 'categoryLoadTransport',
+    'Equipos y Tecnología': 'categoryEquipmentTech',
+    'Equipment & Technology': 'categoryEquipmentTech',
+    'Aplicaciones Industriales': 'categoryIndustrialApplications',
+    'Industrial Applications': 'categoryIndustrialApplications',
+    'Services': 'categoryServices',
+    'Transporte Especializado': 'categorySpecializedTransport',
+    'Specialized Transport': 'categorySpecializedTransport',
+    'Seguridad y Normativas': 'categorySafetyRegulations',
+    'Safety & Regulations': 'categorySafetyRegulations'
+  }
+  return categoryMap[category] || 'categoryAll'
+}
 
 export function BlogHomePage() {
   const [ref, inView] = useInView({
@@ -22,6 +57,8 @@ export function BlogHomePage() {
   })
   
   const locale = useLocale() // Obtener el idioma actual
+  const t = useTranslations('blog')
+  const tHeader = useTranslations('header')
   const [activeCategory, setActiveCategory] = useState('Todos')
   const [searchTerm, setSearchTerm] = useState('')
   
@@ -115,8 +152,8 @@ export function BlogHomePage() {
                 </div>
               </Link>
               <div className="hidden md:block text-left">
-                <h1 className="text-xl font-bold text-equiser-blue">📝 Blog de Grúas</h1>
-                <p className="text-sm text-gray-600">Noticias y actualidades del sector</p>
+                <h1 className="text-xl font-bold text-equiser-blue">📝 {t('title')}</h1>
+                <p className="text-sm text-gray-600">{t('subtitle')}</p>
               </div>
             </div>
 
@@ -124,16 +161,16 @@ export function BlogHomePage() {
             <nav className="hidden lg:flex items-center space-x-6">
               <Link href="/" className="flex items-center text-gray-700 hover:text-equiser-blue transition-colors duration-200">
                 <Home className="w-4 h-4 mr-2" />
-                Inicio
+                {tHeader('inicio')}
               </Link>
               <Link href="/#nosotros" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                Nosotros
+                {tHeader('nosotros')}
               </Link>
               <Link href="/#proyectos" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                Proyectos
+                {tHeader('proyectos')}
               </Link>
               <Link href="/#contacto" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                Contacto
+                {tHeader('contacto')}
               </Link>
             </nav>
 
@@ -143,7 +180,7 @@ export function BlogHomePage() {
                 onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                 className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full font-semibold"
               >
-                Solicitar Cotización
+                {t('ctaButton')}
               </Button>
             </div>
           </div>
@@ -185,14 +222,13 @@ export function BlogHomePage() {
                 className="text-4xl md:text-6xl font-bold mb-6"
                 style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
               >
-                📝 <span className="text-equiser-yellow">Blog</span> de Grúas
+                📝 <span className="text-equiser-yellow">{t('title')}</span>
               </h1>
               <p 
                 className="text-xl md:text-2xl mb-8 text-blue-100"
                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
               >
-                Mantente actualizado con las últimas noticias, tecnologías y proyectos 
-                del sector de alquiler de grúas y transporte pesado en Venezuela
+                {t('description')}
               </p>
 
               {/* Búsqueda */}
@@ -200,7 +236,7 @@ export function BlogHomePage() {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Buscar artículos..."
+                  placeholder={t('searchPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-full border-0 text-gray-900 text-lg focus:ring-2 focus:ring-equiser-yellow shadow-xl"
@@ -221,11 +257,14 @@ export function BlogHomePage() {
           >
             <div className="flex items-center justify-center mb-8">
               <Filter className="w-5 h-5 text-gray-500 mr-3" />
-              <span className="text-gray-700 font-medium">Filtrar por categoría:</span>
+              <span className="text-gray-700 font-medium">{t('categories')}:</span>
             </div>
             
             <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category) => (
+              {categories.map((category) => {
+                const translationKey = getCategoryTranslationKey(category)
+                const translatedCategory = t(translationKey as any)
+                return (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
@@ -243,9 +282,10 @@ export function BlogHomePage() {
                     color: activeCategory === category ? '#FFFFFF' : '#1E3A8A'
                   }}
                 >
-                  {category}
+                  {translatedCategory}
                 </button>
-              ))}
+                )
+              })}
             </div>
           </motion.div>
         </div>
@@ -271,7 +311,7 @@ export function BlogHomePage() {
                       <Calendar className="w-6 h-6 mr-3" />
                       {dateString}
                     </h2>
-                    <p className="text-gray-600 mt-2">{articleList.length} artículo{articleList.length !== 1 ? 's' : ''} publicado{articleList.length !== 1 ? 's' : ''}</p>
+                    <p className="text-gray-600 mt-2">{articleList.length} {locale === 'es' ? `artículo${articleList.length !== 1 ? 's' : ''} publicado${articleList.length !== 1 ? 's' : ''}` : `article${articleList.length !== 1 ? 's' : ''} published`}</p>
                   </div>
                   
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -327,7 +367,7 @@ export function BlogHomePage() {
                               href={`/blog/${article.slug}`}
                               className="inline-flex items-center text-equiser-blue hover:text-blue-800 font-semibold text-sm transition-colors duration-200"
                             >
-                              Leer más
+                              {t('readMore')}
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </Link>
                           </div>
@@ -341,7 +381,7 @@ export function BlogHomePage() {
             </div>
           ) : (
             <div className="text-center py-16">
-              <div className="text-gray-500 text-lg">No se encontraron artículos que coincidan con tu búsqueda.</div>
+              <div className="text-gray-500 text-lg">{t('noResults')}</div>
               <Button
                 onClick={() => {
                   setSearchTerm('')
@@ -349,7 +389,7 @@ export function BlogHomePage() {
                 }}
                 className="mt-4 equiser-blue equiser-blue-hover text-white"
               >
-                Ver todos los artículos
+                {t('allCategories')}
               </Button>
             </div>
           )}
@@ -386,21 +426,20 @@ export function BlogHomePage() {
               className="text-3xl font-bold mb-6"
               style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
             >
-              ¿Necesitas Servicios de Alquiler de Grúas?
+              {t('ctaTitle')}
             </h2>
             <p 
               className="text-xl mb-8 text-blue-100"
               style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
             >
-              Más de 30 años de experiencia con grúas hasta 1600 toneladas. 
-              Contáctanos para una cotización inmediata.
+              {t('ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                 className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
               >
-                Contactar WhatsApp
+                {tHeader('contactWhatsApp')}
               </Button>
               <Link href="/#contacto">
                 <Button
@@ -408,7 +447,7 @@ export function BlogHomePage() {
                   className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
                   style={{ backgroundColor: 'transparent' }}
                 >
-                  Ver Más Información
+                  {locale === 'es' ? 'Ver Más Información' : 'View More Information'}
                 </Button>
               </Link>
             </div>

@@ -59,5 +59,5 @@ export async function getCategories() {
     distinct: ['category'],
   });
 
-  return categories.map((c) => c.category);
+  return categories.map((c: any) => c.category);
 }

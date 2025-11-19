@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState } from 'react'
@@ -7,6 +6,7 @@ import { useInView } from 'react-intersection-observer'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
+import { useTranslations } from 'next-intl'
 
 interface ContactFormData {
   tipo_servicio: string
@@ -26,6 +26,7 @@ export function ContactForm() {
     threshold: 0.1
   })
 
+  const t = useTranslations('contactForm')
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -44,36 +45,36 @@ export function ContactForm() {
   const [errors, setErrors] = useState<Partial<ContactFormData>>({})
 
   const tipoServicioOptions = [
-    { value: 'alquiler_gruas', label: 'Alquiler de Grúas' },
-    { value: 'transporte_pesado', label: 'Transporte Pesado y Sobredimensionado' },
-    { value: 'servicio_bateas', label: 'Servicio con Bateas' }
+    { value: 'alquiler_gruas', label: t('serviceOption1') },
+    { value: 'transporte_pesado', label: t('serviceOption2') },
+    { value: 'servicio_bateas', label: t('serviceOption3') }
   ]
 
   const tonelajeOptions = [
-    { value: '65-100', label: '65 toneladas a 100 toneladas' },
-    { value: '100-200', label: '100 toneladas a 200 toneladas' },
-    { value: '300-1000', label: '300 toneladas a 1000 toneladas' }
+    { value: '65-100', label: t('tonnageOption1') },
+    { value: '100-200', label: t('tonnageOption2') },
+    { value: '300-1000', label: t('tonnageOption3') }
   ]
 
   const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {}
 
-    if (!formData.tipo_servicio.trim()) newErrors.tipo_servicio = 'Debe seleccionar un tipo de servicio'
+    if (!formData.tipo_servicio.trim()) newErrors.tipo_servicio = t('errorServiceRequired')
     
     // Si es alquiler de grúas, el tonelaje es obligatorio
     if (formData.tipo_servicio === 'alquiler_gruas' && !formData.tonelaje.trim()) {
-      newErrors.tonelaje = 'Debe seleccionar una opción de tonelaje para alquiler de grúas'
+      newErrors.tonelaje = t('errorTonnageRequired')
     }
 
-    if (!formData.name.trim()) newErrors.name = 'El nombre es obligatorio'
+    if (!formData.name.trim()) newErrors.name = t('errorNameRequired')
     if (!formData.email.trim()) {
-      newErrors.email = 'El correo es obligatorio'
+      newErrors.email = t('errorEmailRequired')
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Ingresa un correo válido'
+      newErrors.email = t('errorEmailInvalid')
     }
-    if (!formData.phone.trim()) newErrors.phone = 'El teléfono es obligatorio'
-    if (!formData.asunto.trim()) newErrors.asunto = 'El asunto es obligatorio'
-    if (!formData.message.trim()) newErrors.message = 'El mensaje es obligatorio'
+    if (!formData.phone.trim()) newErrors.phone = t('errorPhoneRequired')
+    if (!formData.asunto.trim()) newErrors.asunto = t('errorSubjectRequired')
+    if (!formData.message.trim()) newErrors.message = t('errorMessageRequired')
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -84,8 +85,8 @@ export function ContactForm() {
     
     if (!validateForm()) {
       toast({
-        title: "Error en el formulario",
-        description: "Por favor completa todos los campos obligatorios.",
+        title: t('toastErrorTitle'),
+        description: t('toastErrorDesc'),
         variant: "destructive"
       })
       return
@@ -128,8 +129,8 @@ export function ContactForm() {
       }
     } catch (error) {
       toast({
-        title: "Error al enviar",
-        description: "Por favor intenta nuevamente o contáctanos directamente por WhatsApp.",
+        title: t('toastErrorSendTitle'),
+        description: t('toastErrorSendDesc'),
         variant: "destructive"
       })
     } finally {
@@ -189,11 +190,10 @@ export function ContactForm() {
         >
           <CheckCircle className="w-20 h-20 mx-auto mb-6 text-white" />
           <h3 className="text-2xl font-bold mb-4 text-white">
-            ¡MENSAJE ENVIADO EXITOSAMENTE!
+            {t('successTitle')}
           </h3>
           <p className="text-lg text-white font-semibold leading-relaxed">
-            ¡Gracias por contactarnos! Pronto un asesor de venta se está comunicando con usted. 
-            Muchas gracias por preferirnos.
+            {t('successMessage')}
           </p>
           <div className="mt-8">
             <button
@@ -201,7 +201,7 @@ export function ContactForm() {
               className="px-8 py-3 bg-white rounded-full font-bold transition-all duration-300 hover:scale-105"
               style={{ color: '#1E3A8A' }}
             >
-              Enviar Otro Mensaje
+              {t('successButtonRetry')}
             </button>
           </div>
         </div>
@@ -223,7 +223,7 @@ export function ContactForm() {
           className="text-3xl md:text-4xl font-bold mb-4"
           style={{ color: '#1E3A8A' }}
         >
-          CONTÁCTANOS Y ¡CONOCE MÁS!
+          {t('mainTitle')}
         </h3>
         <div 
           className="w-24 h-1 mx-auto rounded-full"
@@ -243,7 +243,7 @@ export function ContactForm() {
               className="text-lg font-bold mb-4"
               style={{ color: '#1E3A8A' }}
             >
-              Tipo de Servicio
+              {t('serviceTypeTitle')}
             </h4>
             <div className="space-y-3">
               {tipoServicioOptions.map((option) => (
@@ -289,7 +289,7 @@ export function ContactForm() {
                 className="text-lg font-bold mb-4"
                 style={{ color: '#1E3A8A' }}
               >
-                Opción de Tonelajes
+                {t('tonnageTitle')}
               </h4>
               <div className="space-y-3">
                 {tonelajeOptions.map((option) => (
@@ -328,7 +328,7 @@ export function ContactForm() {
             <input
               type="text"
               name="name"
-              placeholder="NOMBRE"
+              placeholder={t('placeholderName')}
               value={formData.name}
               onChange={handleChange}
               className={`w-full px-4 py-3 border-2 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
@@ -352,7 +352,7 @@ export function ContactForm() {
               <input
                 type="email"
                 name="email"
-                placeholder="CORREO"
+                placeholder={t('placeholderEmail')}
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border-2 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
@@ -373,7 +373,7 @@ export function ContactForm() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="TELÉFONO"
+                placeholder={t('placeholderPhone')}
                 value={formData.phone}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border-2 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
@@ -397,7 +397,7 @@ export function ContactForm() {
             <input
               type="text"
               name="company"
-              placeholder="EMPRESA"
+              placeholder={t('placeholderCompany')}
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:border-blue-800 focus:ring-2 focus:ring-blue-100 transition-all duration-300"
@@ -406,7 +406,7 @@ export function ContactForm() {
             <input
               type="text"
               name="ubicacion"
-              placeholder="UBICACIÓN"
+              placeholder={t('placeholderLocation')}
               value={formData.ubicacion}
               onChange={handleChange}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:border-blue-800 focus:ring-2 focus:ring-blue-100 transition-all duration-300"
@@ -419,7 +419,7 @@ export function ContactForm() {
             <input
               type="text"
               name="asunto"
-              placeholder="ASUNTO"
+              placeholder={t('placeholderSubject')}
               value={formData.asunto}
               onChange={handleChange}
               className={`w-full px-4 py-3 border-2 rounded-lg font-medium placeholder-gray-400 focus:outline-none focus:ring-2 transition-all duration-300 ${
@@ -441,7 +441,7 @@ export function ContactForm() {
           <div className="mb-8">
             <textarea
               name="message"
-              placeholder="Mensaje"
+              placeholder={t('placeholderMessage')}
               rows={5}
               value={formData.message}
               onChange={handleChange}
@@ -476,12 +476,12 @@ export function ContactForm() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Enviando...
+                  {t('submitButtonSending')}
                 </>
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  Enviar
+                  {t('submitButton')}
                 </>
               )}
             </button>

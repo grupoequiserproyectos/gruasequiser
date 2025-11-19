@@ -177,7 +177,7 @@ async function translateBlogs() {
       const englishCategory = categoryTranslations[blog.category] || blog.category
 
       // Traducir tags
-      const englishTags = blog.tags.map(tag => tagTranslations[tag] || tag)
+      const englishTags = blog.tags.map((tag: any) => tagTranslations[tag] || tag)
 
       // Crear contenido en inglés (versión simplificada del español)
       const englishContent = blog.content

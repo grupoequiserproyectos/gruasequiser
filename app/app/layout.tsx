@@ -75,6 +75,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://gruasequiser.com',
+    languages: {
+      'es-VE': 'https://gruasequiser.com',
+      'es': 'https://gruasequiser.com',
+      'en': 'https://gruasequiser.com?lang=en',
+      'en-US': 'https://gruasequiser.com?lang=en',
+      'x-default': 'https://gruasequiser.com',
+    },
   },
 }
 
@@ -119,6 +126,13 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.webp" />
         <meta name="theme-color" content="#1E3A8A" />
         <meta name="msapplication-TileImage" content="/android-chrome-512x512.webp" />
+        
+        {/* HREFLANG TAGS - CRÍTICO PARA SEO MULTILINGUAL */}
+        <link rel="alternate" hrefLang="es-VE" href="https://gruasequiser.com" />
+        <link rel="alternate" hrefLang="es" href="https://gruasequiser.com" />
+        <link rel="alternate" hrefLang="en" href="https://gruasequiser.com?lang=en" />
+        <link rel="alternate" hrefLang="en-US" href="https://gruasequiser.com?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://gruasequiser.com" />
         
         {/* Enhanced Schema.org LocalBusiness Markup Ultra-Específico Industrial */}
         <script

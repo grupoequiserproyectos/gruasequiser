@@ -318,7 +318,7 @@ WhatsApp: +58 422 6347624 | Web: gruasequiser.net
       }).then(() => {
         console.log(`✅ Email enviado exitosamente a: ${recipient}`)
         return { recipient, status: 'success' }
-      }).catch((error) => {
+      }).catch((error: any) => {
         console.error(`❌ Error enviando a ${recipient}:`, error.message)
         return { recipient, status: 'error', error: error.message }
       })
@@ -329,7 +329,7 @@ WhatsApp: +58 422 6347624 | Web: gruasequiser.net
     
     // Contar exitosos y fallidos
     const successful = results.filter(r => r.status === 'success').length
-    const failed = results.filter(r => r.status === 'error').length
+    const failed = results.filter((r: any) => r.status === 'error').length
     
     // Obtener lista de correos notificados exitosamente
     const notifiedEmails = results

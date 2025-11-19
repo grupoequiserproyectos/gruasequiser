@@ -368,13 +368,13 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Columna derecha: Selector de Idioma */}
+            {/* Columna derecha: Selector de Idioma - OPTIMIZADO MOBILE Y DESKTOP */}
             <div className="flex items-center justify-center lg:justify-end">
-              <div className="flex items-center gap-2 bg-gray-800 rounded-full px-3 py-2 shadow-lg border border-gray-700">
-                <span className="text-gray-400 text-xs font-medium hidden sm:inline">
-                  Idioma:
+              <div className="flex items-center gap-3 bg-gray-800 rounded-full px-4 py-3 shadow-lg border-2 border-gray-700 hover:border-equiser-yellow transition-colors duration-300">
+                <span className="text-gray-300 text-sm font-semibold hidden sm:inline">
+                  🌐 Idioma:
                 </span>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   {languages.map((language) => {
                     const isActive = currentLocale === language.code
                     
@@ -382,26 +382,31 @@ export function Footer() {
                       <motion.button
                         key={language.code}
                         onClick={() => handleLanguageChange(language.code)}
-                        className={`relative group ${isActive ? 'ring-2 ring-equiser-yellow ring-offset-2 ring-offset-gray-900' : ''}`}
-                        whileHover={{ scale: 1.15 }}
-                        whileTap={{ scale: 0.9 }}
+                        className={`relative group ${isActive ? 'ring-3 ring-equiser-yellow ring-offset-2 ring-offset-gray-900' : ''}`}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.85 }}
                         transition={{ duration: 0.2 }}
                         aria-label={`Cambiar a ${language.name}`}
                         title={language.name}
+                        style={{
+                          minWidth: '44px',
+                          minHeight: '44px',
+                          padding: '2px'
+                        }}
                       >
-                        {/* Bandera */}
+                        {/* Bandera - TAMAÑO OPTIMIZADO: 40px móvil, 36px desktop */}
                         <div 
                           className={`
-                            w-8 h-8 
+                            w-10 h-10 sm:w-9 sm:h-9
                             rounded-full 
                             overflow-hidden 
-                            shadow-md
-                            border-2
+                            shadow-lg
+                            border-3
                             ${isActive 
-                              ? 'border-equiser-yellow shadow-lg shadow-equiser-yellow/30' 
+                              ? 'border-equiser-yellow shadow-2xl shadow-equiser-yellow/50' 
                               : 'border-gray-600 group-hover:border-equiser-blue'
                             }
-                            transition-all duration-200
+                            transition-all duration-300
                           `}
                         >
                           <img 
@@ -412,15 +417,22 @@ export function Footer() {
                           />
                         </div>
 
-                        {/* Indicador activo */}
+                        {/* Indicador activo mejorado */}
                         {isActive && (
                           <motion.div
                             layoutId="active-language-footer"
-                            className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-equiser-yellow rounded-full"
+                            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-equiser-yellow rounded-full shadow-lg"
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.2 }}
                           />
+                        )}
+                        
+                        {/* Label móvil debajo de bandera */}
+                        {isActive && (
+                          <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-equiser-yellow font-bold whitespace-nowrap sm:hidden">
+                            {language.code.toUpperCase()}
+                          </span>
                         )}
                       </motion.button>
                     )
