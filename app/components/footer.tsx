@@ -342,6 +342,24 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Banner de advertencia - Servicios B2B exclusivamente */}
+        <div className="border-t border-gray-700 py-6">
+          <motion.div 
+            className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 py-3 px-4 rounded-lg text-center shadow-2xl border-2 border-orange-600"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-blue-900 text-xs sm:text-sm md:text-base font-extrabold tracking-wide leading-tight">
+              ⚠️ <span className="uppercase">ATENCIÓN:</span> Servicios <span className="underline">EXCLUSIVOS</span> para Industria Pesada B2B | 
+              Grúas <span className="font-black">25-1600 Toneladas</span> | 
+              <span className="hidden sm:inline">Sectores: <span className="font-bold">Petrolero, Petroquímico, Siderúrgico, Portuario y Energético</span> | </span>
+              <span className="font-black text-red-900">NO</span> Grúas de Remolque para Vehículos
+            </p>
+          </motion.div>
+        </div>
       </div>
     </footer>
   )

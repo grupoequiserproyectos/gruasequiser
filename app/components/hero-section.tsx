@@ -59,22 +59,6 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
-      {/* Banner Aclaratorio Prominente - NO GRÚAS DE REMOLQUE */}
-      <div className="absolute top-16 sm:top-20 md:top-24 left-0 right-0 z-30">
-        <motion.div 
-          className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 py-2 sm:py-3 px-3 sm:px-4 text-center shadow-2xl border-b-4 border-orange-600"
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <p className="text-blue-900 text-xs sm:text-sm md:text-base lg:text-lg font-extrabold tracking-wide leading-tight">
-            ⚠️ <span className="uppercase">ATENCIÓN:</span> Servicios <span className="underline">EXCLUSIVOS</span> para Industria Pesada B2B | 
-            <span className="hidden sm:inline"> Grúas <span className="font-black">25-1600 Toneladas</span> | Proyectos PDVSA, Petroleros, Petroquímicos, Siderúrgicos | </span>
-            <span className="font-black text-red-900">NO</span> Grúas de Remolque para Vehículos
-          </p>
-        </motion.div>
-      </div>
-
       {/* Imagen de fondo con parallax */}
       <div className="absolute inset-0">
         <div 
