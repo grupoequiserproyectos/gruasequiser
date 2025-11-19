@@ -293,27 +293,6 @@ export function GaleriaCarrusel() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                 priority
               />
-              
-              {/* Overlay fuerte para mejor legibilidad del texto */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              
-              {/* INFORMACIÓN DEL SLIDE con fondo semi-transparente */}
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/70 to-transparent"
-              >
-                <div className="max-w-4xl">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    {carouselItems[currentSlide]?.title}
-                  </h3>
-                  <p className="text-base md:text-lg text-white/95 max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    {carouselItems[currentSlide]?.description}
-                  </p>
-                </div>
-              </motion.div>
 
               {/* Contador de Proyectos estilo Transervica */}
               <motion.div
