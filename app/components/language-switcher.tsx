@@ -11,9 +11,19 @@ export function LanguageSwitcher() {
   const changeLocale = useChangeLocale();
   const [isOpen, setIsOpen] = useState(false);
 
-  const languages: { code: Locale; name: string; flag: string }[] = [
-    { code: 'es', name: 'Español', flag: '🇻🇪' },
-    { code: 'en', name: 'English', flag: '🇬🇧' }
+  const languages: { code: Locale; name: string; flag: string; alt: string }[] = [
+    { 
+      code: 'es', 
+      name: 'Español', 
+      flag: 'https://flagcdn.com/ve.svg',
+      alt: '🇻🇪 Español Venezuela'
+    },
+    { 
+      code: 'en', 
+      name: 'English', 
+      flag: 'https://flagcdn.com/gb.svg',
+      alt: '🇬🇧 English UK'
+    }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
@@ -32,7 +42,15 @@ export function LanguageSwitcher() {
         aria-label="Change language"
       >
         <Globe className="w-4 h-4 text-white" />
-        <span className="text-white font-semibold text-sm">{currentLanguage.flag}</span>
+        {/* Bandera actual usando SVG */}
+        <div className="w-5 h-5 rounded-sm overflow-hidden">
+          <img 
+            src={currentLanguage.flag} 
+            alt={currentLanguage.alt}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
         <span className="text-white font-semibold text-sm hidden sm:inline">{currentLanguage.code.toUpperCase()}</span>
       </button>
 
@@ -62,7 +80,15 @@ export function LanguageSwitcher() {
                     currentLocale === language.code ? 'bg-blue-50' : ''
                   }`}
                 >
-                  <span className="text-2xl">{language.flag}</span>
+                  {/* Bandera SVG en dropdown */}
+                  <div className="w-7 h-7 rounded-sm overflow-hidden flex-shrink-0">
+                    <img 
+                      src={language.flag} 
+                      alt={language.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   <span className={`font-medium ${
                     currentLocale === language.code ? 'text-equiser-blue' : 'text-gray-700'
                   }`}>

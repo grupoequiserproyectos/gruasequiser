@@ -125,6 +125,10 @@ model Blog {
   author          String @default("Equipo EQUISER")
   readTime        Int @default(5) // Tiempo de lectura en minutos
   
+  // Internationalization
+  locale          String @default("es") // "es" para español, "en" para inglés
+  translationId   String? // ID compartido entre todas las traducciones del mismo artículo
+  
   // SEO Optimization
   metaTitle       String?
   metaDescription String?
@@ -146,4 +150,6 @@ model Blog {
   @@index([category])
   @@index([published])
   @@index([publishedAt])
+  @@index([locale])
+  @@index([translationId])
 }
