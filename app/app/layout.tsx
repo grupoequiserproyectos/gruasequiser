@@ -19,9 +19,9 @@ export const viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Alquiler Grúas Móviles Venezuela | EQUISER - Liebherr, Grove, Manitowoc | 25-1600 Toneladas',
-  description: '✅ Líderes en alquiler de grúas móviles Venezuela. 30+ años experiencia, grúas Liebherr, Grove, Manitowoc 25-1600 ton. Disponibles 24/7. ☎️ Cotización inmediata.',
-  keywords: 'alquiler grúas móviles venezuela, grúas telescópicas, grúas industriales, Liebherr, Grove, Manitowoc, Carabobo, alquiler grúas Carabobo, grúas sobre oruga Venezuela, izamiento industrial Venezuela, alquiler grúas 24 horas Venezuela, grúas móviles Puerto Cabello Morón, alquiler grúas Valencia Carabobo',
+  title: 'Grúas Industriales 25-1600 Ton Venezuela | Transporte Carga Pesada | EQUISER',
+  description: '✓ Grúas móviles y oruga 25-1600 ton ✓ Super lowboy hidráulico ✓ Transporte sobredimensionado ✓ Proyectos PDVSA ✓ Izamiento industrial ✓ NO grúas de remolque. Maracaibo, Barcelona, Valencia, Faja Orinoco, Puerto La Cruz ☎️ +58 422-6347624',
+  keywords: 'grúas industriales Venezuela, alquiler grúas móviles hidráulicas, grúas sobre oruga 600 toneladas, super lowboy hidráulico, transporte carga sobredimensionada Venezuela, grúas telescópicas industriales, grúas alta capacidad, equipos izamiento industrial, grúas PDVSA certificadas, rigging industrial Venezuela, grúas Maracaibo, grúas Barcelona Anzoátegui, grúas Valencia Carabobo, grúas Faja del Orinoco, grúas Puerto La Cruz, grúas Ciudad Guayana, grúas sector petrolero, grúas sector petroquímico, grúas sector siderúrgico, transporte transformadores industriales',
   
   // Configuración para PWA y móviles
   manifest: '/manifest.json',
@@ -37,26 +37,26 @@ export const metadata: Metadata = {
   },
   
   openGraph: {
-    title: 'Alquiler Grúas Móviles Venezuela | EQUISER 30+ Años Experiencia',
-    description: '✅ Grúas telescópicas y sobre oruga 25-1600 toneladas. Liebherr, Grove, Manitowoc. Sectores petrolero, petroquímico, industrial. Disponibles 24/7',
-    url: 'https://gruasequiser.net',
-    siteName: 'GRÚAS EQUISER C.A.',
+    title: 'Grúas Industriales 25-1600 Ton Venezuela | EQUISER B2B',
+    description: '✓ Grúas móviles hidráulicas y de oruga ✓ Super lowboy hidráulico ✓ Proyectos PDVSA, petroleros, petroquímicos ✓ Cobertura nacional: Maracaibo, Valencia, Barcelona, Faja Orinoco ✓ NO grúas de remolque',
+    url: 'https://gruasequiser.com',
+    siteName: 'EQUISER - Equipos Industriales Pesados',
     locale: 'es_VE',
     type: 'website',
     images: [
       {
-        url: 'https://vpl-ve.com/images/crane.jpg',
+        url: 'https://i.ytimg.com/vi/k-WYI8oXIDw/maxresdefault.jpg',
         width: 1200,
         height: 630,
-        alt: 'Grúas EQUISER - Alquiler de Grúas Móviles Venezuela'
+        alt: 'EQUISER - Grúas Industriales de Alta Capacidad Venezuela'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler Grúas Móviles Venezuela | EQUISER',
-    description: 'Grúas Liebherr, Grove, Manitowoc 25-1600 ton. 30+ años experiencia',
-    images: ['https://gruasequiser.net/og-image.webp'],
+    title: 'Grúas Industriales 25-1600 Ton Venezuela | EQUISER',
+    description: '✓ Grúas móviles hidráulicas ✓ Grúas de oruga ✓ Super lowboy ✓ Proyectos PDVSA ✓ NO grúas de remolque',
+    images: ['/images/grua-600-ton-y-grua-de-130-ton.webp'],
   },
   robots: {
     index: true,
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     google: 'verification-code-here',
   },
   alternates: {
-    canonical: 'https://gruasequiser.net',
+    canonical: 'https://gruasequiser.com',
   },
 }
 
@@ -119,33 +119,38 @@ export default function RootLayout({
         <meta name="theme-color" content="#1E3A8A" />
         <meta name="msapplication-TileImage" content="/android-chrome-512x512.webp" />
         
-        {/* Enhanced Schema.org LocalBusiness Markup */}
+        {/* Enhanced Schema.org LocalBusiness Markup Ultra-Específico Industrial */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "GRÚAS EQUISER C.A.",
-              "description": "Empresa líder en alquiler de grúas móviles, telescópicas y sobre oruga en Venezuela. Especialistas en sectores petrolero, petroquímico, industrial, portuario y siderúrgico.",
-              "url": "https://gruasequiser.net",
+              "@id": "https://gruasequiser.com/#organization",
+              "additionalType": [
+                "https://schema.org/IndustrialEquipmentRental",
+                "https://schema.org/HeavyEquipmentRental"
+              ],
+              "name": "Grúas EQUISER C.A. - Equipos Industriales Pesados",
+              "alternateName": "EQUISER",
+              "description": "Proveedor especializado en alquiler de grúas industriales de alta capacidad (25-1600 toneladas), grúas móviles hidráulicas, grúas sobre oruga, super lowboy hidráulico y transporte de carga sobredimensionada para sectores petrolero, petroquímico, energético, siderúrgico, portuario e industrial en Venezuela. NO servicios de grúas de remolque para vehículos.",
+              "url": "https://gruasequiser.com",
               "telephone": "+58-422-6347624",
-              "email": "info@gruasequiser.net",
-              "logo": "https://static.vecteezy.com/system/resources/thumbnails/016/941/001/small/lifting-crane-logo-construction-company-rental-of-special-equipment-sale-of-equipment-for-construction-vector.webp",
-              "image": "https://superiorrigging.com/wp-content/uploads/2023/12/QTS-Generator-Set-Over-Wall-13-768x576.webp",
+              "email": "info@gruasequiser.com",
+              "logo": "https://gruasequiser.com/images/logo-equiser-actualizado.webp",
+              "image": "https://cdn.allcrane.com/sitefinity/images/default-source/case-studies/bigharvest-inset.jpg?sfvrsn=288371d7_2",
               "foundingDate": "1994",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Autopista Puerto Cabello Morón, Sector La Paragüita",
-                "addressLocality": "Morón",
-                "addressRegion": "Carabobo",
-                "postalCode": "2050",
+                "streetAddress": "Barcelona",
+                "addressLocality": "Barcelona",
+                "addressRegion": "Anzoátegui",
                 "addressCountry": "VE"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "10.4880",
-                "longitude": "-68.2010"
+                "latitude": "10.1339",
+                "longitude": "-64.6861"
               },
               "openingHours": "Mo-Su 00:00-23:59",
               "openingHoursSpecification": [
@@ -164,20 +169,114 @@ export default function RootLayout({
                   "closes": "23:59"
                 }
               ],
-              "serviceArea": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "10.4880",
-                  "longitude": "-68.2010"
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Maracaibo",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Zulia"
+                  }
                 },
-                "geoRadius": "500000"
-              },
-              "priceRange": "$$",
+                {
+                  "@type": "City",
+                  "name": "Barcelona",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Anzoátegui"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Puerto La Cruz",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Anzoátegui"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Valencia",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Carabobo"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Ciudad Guayana",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Bolívar"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Maturín",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Monagas"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Caracas",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Distrito Capital"
+                  }
+                },
+                {
+                  "@type": "City",
+                  "name": "Puerto Cabello",
+                  "containedInPlace": {
+                    "@type": "State",
+                    "name": "Carabobo"
+                  }
+                },
+                {
+                  "@type": "Place",
+                  "name": "Faja Petrolífera del Orinoco"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Complejo José Antonio Anzoátegui"
+                },
+                {
+                  "@type": "State",
+                  "name": "Anzoátegui"
+                },
+                {
+                  "@type": "State",
+                  "name": "Zulia"
+                },
+                {
+                  "@type": "State",
+                  "name": "Carabobo"
+                },
+                {
+                  "@type": "State",
+                  "name": "Bolívar"
+                },
+                {
+                  "@type": "State",
+                  "name": "Monagas"
+                },
+                {
+                  "@type": "State",
+                  "name": "Falcón"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Venezuela"
+                }
+              ],
+              "priceRange": "$$$",
+              "paymentAccepted": ["Transferencia bancaria", "Efectivo", "Cheque"],
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "127",
+                "ratingValue": "4.9",
+                "reviewCount": "47",
                 "bestRating": "5",
                 "worstRating": "1"
               },
@@ -186,7 +285,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   "telephone": "+58-422-6347624",
                   "contactType": "customer service",
-                  "availableLanguage": ["Spanish"],
+                  "availableLanguage": ["Spanish", "English"],
                   "areaServed": "VE",
                   "hoursAvailable": {
                     "@type": "OpeningHoursSpecification",
@@ -205,7 +304,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   "telephone": "+58-422-6347624",
                   "contactType": "sales",
-                  "availableLanguage": ["Spanish"],
+                  "availableLanguage": ["Spanish", "English"],
                   "areaServed": "VE"
                 }
               ],
@@ -215,87 +314,101 @@ export default function RootLayout({
                 "https://www.instagram.com/gruasequiser",
                 "https://www.linkedin.com/company/gruasequiser"
               ],
+              "audience": {
+                "@type": "BusinessAudience",
+                "audienceType": "Empresas del sector industrial, petrolero, petroquímico, energético, siderúrgico, portuario y construcción pesada"
+              },
+              "memberOf": {
+                "@type": "Organization",
+                "name": "Proveedores Certificados PDVSA"
+              },
+              "knowsAbout": [
+                "Grúas móviles hidráulicas",
+                "Grúas sobre oruga",
+                "Transporte de carga sobredimensionada",
+                "Izamiento industrial",
+                "Rigging especializado",
+                "Ingeniería de izamiento",
+                "Proyectos petroleros",
+                "Proyectos petroquímicos",
+                "Proyectos siderúrgicos"
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Servicios de Alquiler de Grúas",
+                "name": "Equipos Industriales Pesados",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Alquiler de Grúas Móviles",
-                      "description": "Grúas móviles telescópicas de 25 a 1600 toneladas. Marcas Liebherr, Grove, Manitowoc."
+                      "name": "Alquiler Grúas Móviles Hidráulicas 25-130 Toneladas",
+                      "description": "Grúas móviles todo terreno marca Grove, Liebherr y Manitowoc para proyectos industriales medianos, petroleros y de construcción pesada. Capacidades 25, 65, 80, 100, 130 toneladas",
+                      "serviceType": "Industrial Mobile Crane Rental"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Alquiler de Grúas Sobre Oruga",
-                      "description": "Grúas sobre oruga para proyectos industriales de gran envergadura."
+                      "name": "Alquiler Grúas Móviles Hidráulicas 200-500 Toneladas",
+                      "description": "Grúas móviles de alta capacidad para proyectos de gran envergadura en sectores petrolero, petroquímico y energético. Capacidades 200, 300, 400, 500 toneladas",
+                      "serviceType": "Heavy Duty Mobile Crane Rental"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Transporte Pesado y Extrapesado",
-                      "description": "Transporte especializado de cargas hasta 250 toneladas con Super Lowboy."
+                      "name": "Alquiler Grúas de Oruga 300-1600 Toneladas",
+                      "description": "Grúas lattice boom sobre orugas marca Demag, Manitowoc y Liebherr para proyectos de alta complejidad en sectores petrolero, petroquímico, energético y siderúrgico. Capacidades 300, 450, 600, 800, 1600 toneladas",
+                      "serviceType": "Heavy Crawler Crane Rental"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Manejo de Carga Excepcional",
-                      "description": "Servicios especializados de izamiento y manipulación de cargas industriales."
+                      "name": "Transporte Carga Sobredimensionada con Super Lowboy Hidráulico",
+                      "description": "Camas bajas especializadas, super lowboys hidráulicos y transporte de equipos industriales hasta 250 toneladas. Especializado en transporte de transformadores, turbinas, reactores y equipos industriales de gran tonelaje",
+                      "serviceType": "Heavy Haul Transportation"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Servicios de Rigging e Ingeniería de Izamiento",
+                      "description": "Cálculos estructurales, planes de izamiento, rigging especializado, aparejamiento industrial para sectores petrolero, petroquímico, energético y siderúrgico",
+                      "serviceType": "Industrial Rigging Services"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Izamiento y Montaje Industrial para PDVSA",
+                      "description": "Servicios especializados para proyectos PDVSA, Petromonagas, Complejo José y sector petrolero venezolano. Certificaciones y estándares específicos del sector",
+                      "serviceType": "PDVSA Certified Industrial Lifting"
                     }
                   }
                 ]
               },
-              "areaServed": [
+              "makesOffer": [
                 {
-                  "@type": "City",
-                  "name": "Morón",
-                  "containedInPlace": {
-                    "@type": "State",
-                    "name": "Carabobo"
-                  }
+                  "@type": "Offer",
+                  "name": "Servicios 24/7 Disponibles",
+                  "description": "Disponibilidad inmediata para proyectos de emergencia"
                 },
                 {
-                  "@type": "City",
-                  "name": "Puerto Cabello",
-                  "containedInPlace": {
-                    "@type": "State",
-                    "name": "Carabobo"
-                  }
+                  "@type": "Offer",
+                  "name": "Cobertura Nacional Venezuela",
+                  "description": "Servicio en Maracaibo, Barcelona, Valencia, Faja del Orinoco, Puerto La Cruz, Ciudad Guayana y todo el territorio nacional"
                 },
                 {
-                  "@type": "City",
-                  "name": "Valencia",
-                  "containedInPlace": {
-                    "@type": "State",
-                    "name": "Carabobo"
-                  }
-                },
-                {
-                  "@type": "Country",
-                  "name": "Venezuela"
+                  "@type": "Offer",
+                  "name": "Operadores Certificados",
+                  "description": "Personal altamente capacitado y certificado para operaciones de alto riesgo"
                 }
-              ],
-              "knowsAbout": [
-                "Alquiler de grúas móviles",
-                "Grúas telescópicas",
-                "Grúas sobre oruga",
-                "Izamiento industrial",
-                "Transporte pesado",
-                "Liebherr",
-                "Grove",
-                "Manitowoc",
-                "Sector petrolero",
-                "Sector petroquímico",
-                "Sector industrial",
-                "Sector portuario"
               ]
             })
           }}
@@ -313,31 +426,37 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Inicio",
-                  "item": "https://gruasequiser.net"
+                  "item": "https://gruasequiser.com"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Servicios",
-                  "item": "https://gruasequiser.net#servicios"
+                  "item": "https://gruasequiser.com#servicios"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Equipos",
-                  "item": "https://gruasequiser.net#equipos"
+                  "item": "https://gruasequiser.com#equipos"
                 },
                 {
                   "@type": "ListItem",
                   "position": 4,
                   "name": "Proyectos",
-                  "item": "https://gruasequiser.net#proyectos"
+                  "item": "https://gruasequiser.com#proyectos"
                 },
                 {
                   "@type": "ListItem",
                   "position": 5,
+                  "name": "Blog",
+                  "item": "https://gruasequiser.com/blog"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
                   "name": "Contacto",
-                  "item": "https://gruasequiser.net#contacto"
+                  "item": "https://gruasequiser.com#contacto"
                 }
               ]
             })

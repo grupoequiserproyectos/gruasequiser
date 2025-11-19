@@ -58,7 +58,23 @@ export function HeroSection() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
+      {/* Banner Aclaratorio Prominente - NO GRÚAS DE REMOLQUE */}
+      <div className="absolute top-16 sm:top-20 md:top-24 left-0 right-0 z-30">
+        <motion.div 
+          className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 py-2 sm:py-3 px-3 sm:px-4 text-center shadow-2xl border-b-4 border-orange-600"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <p className="text-blue-900 text-xs sm:text-sm md:text-base lg:text-lg font-extrabold tracking-wide leading-tight">
+            ⚠️ <span className="uppercase">ATENCIÓN:</span> Servicios <span className="underline">EXCLUSIVOS</span> para Industria Pesada B2B | 
+            <span className="hidden sm:inline"> Grúas <span className="font-black">25-1600 Toneladas</span> | Proyectos PDVSA, Petroleros, Petroquímicos, Siderúrgicos | </span>
+            <span className="font-black text-red-900">NO</span> Grúas de Remolque para Vehículos
+          </p>
+        </motion.div>
+      </div>
+
       {/* Imagen de fondo con parallax */}
       <div className="absolute inset-0">
         <div 
@@ -75,14 +91,14 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center text-white pt-6 sm:pt-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          {/* Título principal - TEXTO CORREGIDO SEGÚN ESPECIFICACIONES */}
+          {/* Título principal - COPY ULTRA-ESPECÍFICO INDUSTRIAL B2B */}
           <motion.h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight max-w-6xl mx-auto"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
@@ -91,17 +107,20 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <span className="text-equiser-yellow block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4">
-              GRÚAS EQUISER
+              EQUISER C.A.
             </span>
             <span className="text-white block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3">
-              #1 Empresa Líder En Venezuela
+              Líder en Equipos Industriales Pesados Venezuela
             </span>
             <span className="text-blue-200 block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-relaxed">
-              En Alquiler de Grúas Móviles Telescópicas,
+              Grúas Móviles Hidráulicas y de Oruga 
+              <span className="text-equiser-yellow font-bold"> 25-1600 Toneladas</span>
               <br className="hidden sm:block" />
-              Grúas Sobre Oruga y Equipos de Transporte
+              Super Lowboy Hidráulico • Transporte Carga Sobredimensionada
               <br className="hidden sm:block" />
-              Pesado y Sobredimensionado
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2 block">
+                Sectores: Petrolero | Petroquímico | Siderúrgico | Portuario | Energético
+              </span>
             </span>
           </motion.h1>
 
@@ -112,9 +131,12 @@ export function HeroSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Más de 30 años como empresa líder en Venezuela en alquiler de grúas móviles, 
-            sobre oruga y transporte pesado para los sectores energético, petrolero, petroquímico, 
-            industrial, portuario y siderúrgico.
+            <span className="font-bold text-equiser-yellow">30+ años de experiencia</span> sirviendo a la industria pesada venezolana. 
+            Proveedor certificado PDVSA con cobertura nacional:
+            <br />
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold mt-2 block">
+              📍 Maracaibo • Barcelona • Valencia • Puerto La Cruz • Faja del Orinoco • Ciudad Guayana • Caracas
+            </span>
           </motion.p>
 
           {/* Estadísticas animadas - RESPONSIVE OPTIMIZADO */}

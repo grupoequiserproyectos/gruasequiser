@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/hero-section'
 import { NosotrosSection } from '@/components/nosotros-section'
 import { GaleriaCarrusel } from '@/components/galeria-carrusel'
 import { ServicesSection } from '@/components/services-section'
+import { IndustrialFAQSection } from '@/components/industrial-faq-section'
 import { AboutSection } from '@/components/about-section'
 import { StatsSection } from '@/components/stats-section'
 import { ProjectsSection } from '@/components/projects-section'
@@ -19,6 +20,7 @@ export default function HomePage() {
       <GaleriaCarrusel />
       <NosotrosSection />
       <ServicesSection />
+      <IndustrialFAQSection />
       <AboutSection />
       <StatsSection />
       <ProjectsSection />
