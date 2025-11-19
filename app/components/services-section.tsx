@@ -15,26 +15,26 @@ export function ServicesSection() {
   const services = [
     {
       title: 'Alquiler De Grúas Móviles Y Sobre Oruga',
-      description: 'Grúas móviles y sobre oruga de 25 a 1600 toneladas para proyectos industriales complejos.',
-      features: ['Grúas Liebherr', 'Grúas Grove', 'Grúas Manitowoc', 'Operadores Certificados'],
+      description: 'Grúas móviles hidráulicas 25-500 ton y de oruga 300-1600 ton para sectores petrolero, petroquímico, siderúrgico y energético en toda Venezuela.',
+      features: ['Grúas Liebherr, Grove, Manitowoc', 'Certificadas PDVSA', '24/7 Disponibles', 'Operadores Certificados'],
       image: '/images/grua de 800 ton.webp'
     },
     {
       title: 'Transporte Pesado Y Extrapesado',
-      description: 'Transporte especializado con equipos super lowboy y modular para cargas excepcionales.',
-      features: ['Super Lowboy', 'Transporte Modular', 'Rutas Especializadas', 'Permisos Incluidos'],
+      description: 'Super lowboy hidráulico hasta 250 ton para transformadores, turbinas y equipos industriales. Cobertura Maracaibo, Valencia, Barcelona, Ciudad Guayana.',
+      features: ['Super Lowboy Hidráulico', 'Hasta 250 Toneladas', 'Escoltas Especializadas', 'Permisos Gestionados'],
       image: '/images/transporte-250-toneladas.webp'
     },
     {
-      title: 'Manejo De Carga Excepcional',
-      description: 'Manipulación especializada de cargas industriales con máxima seguridad y precisión.',
-      features: ['Carga Y Descarga', 'Manipulación Industrial', 'Embalaje Especializado', 'Logística Integral'],
+      title: 'Izamiento Industrial Especializado',
+      description: 'Rigging e ingeniería de izamiento para proyectos complejos en refinerías, plantas petroquímicas, siderúrgicas y puertos.',
+      features: ['Cálculos Estructurales', 'Planes de Izamiento', 'Certificación ISO 9001', 'Supervisión Técnica'],
       image: '/images/trabajo de gantry 600 ton.webp'
     },
     {
-      title: 'Ingeniería 3D',
-      description: 'Planificación avanzada con modelado 3D para optimizar cada operación de izamiento.',
-      features: ['Modelado 3D', 'Análisis De Cargas', 'Planificación Detallada', 'Simulación Virtual'],
+      title: 'Ingeniería y Planificación 3D',
+      description: 'Modelado 3D avanzado para proyectos PDVSA, Petromonagas, SIDOR y sector energético. Optimización de rutas y procedimientos.',
+      features: ['Modelado 3D Detallado', 'Análisis De Cargas', 'Simulación de Izamiento', 'Reportes Técnicos'],
       image: '/images/ingenieria 3d.webp'
     }
   ]
@@ -53,8 +53,9 @@ export function ServicesSection() {
             Nuestros <span className="text-equiser-blue">Servicios</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
-            Soluciones integrales de alquiler de grúas móviles, sobre oruga y transporte pesado con más de 30 años de experiencia 
-            y la tecnología más avanzada del mercado venezolano.
+            Soluciones integrales de alquiler de grúas industriales 25-1600 toneladas con cobertura nacional. 
+            Más de 30 años sirviendo a Maracaibo, Barcelona, Valencia, Puerto La Cruz, Ciudad Guayana, 
+            Faja del Orinoco y todo el territorio venezolano con la tecnología más avanzada.
           </p>
         </motion.div>
 
