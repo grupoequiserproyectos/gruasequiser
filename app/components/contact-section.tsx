@@ -9,8 +9,10 @@ import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
 import Link from 'next/link'
 import { ContactForm } from './contact-form'
+import { useTranslations } from 'next-intl'
 
 export function ContactSection() {
+  const t = useTranslations('contactSection')
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -30,9 +32,9 @@ export function ContactSection() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Teléfono',
+      title: t('phone'),
       details: ['+58 422-6347624'],
-      action: 'Llamar Ahora',
+      action: t('callNow'),
       actionUrl: 'tel:+584226347624',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
       iconBg: '#FFC107',
@@ -44,9 +46,9 @@ export function ContactSection() {
     },
     {
       icon: MessageCircle,
-      title: 'WhatsApp 24/7',
-      details: ['Atención inmediata', 'Cotizaciones rápidas'],
-      action: 'Enviar WhatsApp',
+      title: t('whatsapp247'),
+      details: [t('immediateAttention'), t('quickQuotes')],
+      action: t('sendWhatsApp'),
       actionUrl: 'https://wa.me/message/IOBBJVBBVWNOI1',
       bgGradient: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
       iconBg: '#1E3A8A',
@@ -58,9 +60,9 @@ export function ContactSection() {
     },
     {
       icon: Mail,
-      title: 'Correos Electrónicos',
+      title: t('emails'),
       details: ['info@gruasequiser.net', 'direccionmercadeo@gruasequiser.net'],
-      action: 'Enviar Email',
+      action: t('sendEmail'),
       actionUrl: 'mailto:info@gruasequiser.net',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
       iconBg: '#FFC107',
@@ -72,9 +74,9 @@ export function ContactSection() {
     },
     {
       icon: MapPin,
-      title: 'Ubicación',
-      details: ['Autopista Puerto Cabello Morón', 'Sector La Paragüita, Morón, Carabobo'],
-      action: 'Ver Mapa',
+      title: t('location'),
+      details: [t('locationAddress1'), t('locationAddress2')],
+      action: t('viewMap'),
       actionUrl: 'https://maps.google.com/?q=Autopista+Puerto+Cabello+Moron+Sector+La+Paraguita+Moron+Carabobo',
       bgGradient: 'linear-gradient(135deg, #FFC107 0%, #FFD700 100%)',
       iconBg: '#1E3A8A',
@@ -158,10 +160,10 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            <span style={{ color: '#1E3A8A' }}>Contacto</span> Directo
+            <span style={{ color: '#1E3A8A' }}>{t('title')}</span> {t('titleHighlight')}
           </h2>
           <p className="text-xl max-w-3xl mx-auto font-bold" style={{ color: '#1E3A8A' }}>
-            Nuestro equipo está disponible 24/7 para brindarte la mejor solución para tu proyecto de izamiento o transporte pesado.
+            {t('description')}
           </p>
           <div className="w-32 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg, #FFC107, #FFD700)' }}></div>
 
@@ -262,13 +264,13 @@ export function ContactSection() {
               }}
             >
               <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💬</span>
-              INICIAR CHAT DIRECTO AHORA
+              {t('startChat')}
               <span className="text-2xl group-hover:translate-x-1 transition-transform duration-300">→</span>
             </button>
             
             <div className="mt-8 p-6 rounded-2xl max-w-3xl mx-auto" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
               <p className="font-bold text-lg" style={{ color: '#1E3A8A' }}>
-                ⚡ Respuesta inmediata garantizada | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional 24/7
+                {t('guaranteedResponse')}
               </p>
             </div>
           </motion.div>
@@ -294,11 +296,10 @@ export function ContactSection() {
               }}
             >
               <h4 className="text-2xl font-bold mb-6 flex items-center justify-center" style={{ color: '#1E3A8A' }}>
-                <span className="text-3xl mr-3">📱</span>
-                Síguenos en Redes Sociales
+                {t('followSocial')}
               </h4>
               <p className="text-center mb-8 font-medium" style={{ color: '#1E3A8A' }}>
-                Mantente al día con nuestros proyectos más recientes y novedades del sector.
+                {t('followDescription')}
               </p>
               
               <div className="flex space-x-6 justify-center">
@@ -345,8 +346,7 @@ export function ContactSection() {
               {/* Título principal */}
               <div className="text-center py-8 px-6" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
                 <h4 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3" style={{ color: '#1E3A8A' }}>
-                  <span className="text-2xl">📍</span>
-                  Nuestra Ubicación Exacta
+                  {t('exactLocation')}
                 </h4>
                 <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(90deg, #FFC107, #FFD700)' }}></div>
               </div>
@@ -355,19 +355,18 @@ export function ContactSection() {
               <div className="px-8 py-6" style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)' }}>
                 <div className="text-white text-center">
                   <h5 className="text-xl font-bold mb-3" style={{ color: '#FFC107' }}>
-                    Equiser Venezuela | Grúas Telescópicas e Industriales
+                    {t('companyName')}
                   </h5>
                   <p className="text-lg mb-2">
-                    <strong>Dirección:</strong> Autopista Puerto Cabello Morón, sector la Paragüita, 
-                    diagonal a Planta Centro, Morón estado Carabobo
+                    {t('addressFull')}
                   </p>
                   <p className="text-blue-100 mb-4">
-                    <strong>Coordenadas exactas:</strong> 10.4840568, -68.1628642
+                    {t('coordinates')}
                   </p>
                   <div className="flex items-center justify-center gap-3" style={{ color: '#FFC107' }}>
                     <span className="text-lg">⭐</span>
                     <span className="font-bold text-lg">4.7</span>
-                    <span className="text-blue-100">| 7 reseñas</span>
+                    <span className="text-blue-100">| {t('reviews')}</span>
                   </div>
                 </div>
               </div>
@@ -403,8 +402,7 @@ export function ContactSection() {
                       border: '2px solid #FFC107'
                     }}
                   >
-                    <span className="text-xl">🗺️</span>
-                    Ver en Google Maps
+                    {t('viewGoogleMaps')}
                     <span className="text-lg">→</span>
                   </button>
                 </div>
@@ -412,7 +410,7 @@ export function ContactSection() {
                 {/* Información adicional */}
                 <div className="mt-6 p-4 rounded-2xl text-center" style={{ background: 'rgba(30, 58, 138, 0.05)' }}>
                   <p className="font-semibold" style={{ color: '#1E3A8A' }}>
-                    ⚡ Fácil acceso vehicular | 🎯 Ubicación estratégica | 🚀 Disponibilidad 24/7
+                    {t('locationBenefits')}
                   </p>
                 </div>
               </div>

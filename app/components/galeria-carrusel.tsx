@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Camera } from 'lucide-react'
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface CarouselItem {
   id: number
@@ -211,6 +212,7 @@ const carouselItems: CarouselItem[] = [
 ]
 
 export function GaleriaCarrusel() {
+  const t = useTranslations('gallery')
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const totalSlides = carouselItems.length
@@ -262,10 +264,10 @@ export function GaleriaCarrusel() {
           className="text-center mb-12 sm:mb-16 px-4 sm:px-0"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6" style={{ color: '#1E3A8A' }}>
-            Galería de Proyectos
+            {t('title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-            Descubre nuestros proyectos más destacados con grúas de alta capacidad en diversos sectores industriales de Venezuela
+            {t('description')}
           </p>
         </motion.div>
 
@@ -324,12 +326,12 @@ export function GaleriaCarrusel() {
                     {currentSlide + 1}<span className="text-gray-400 text-2xl">/{carouselItems.length}</span>
                   </p>
                   <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">
-                    Proyectos
+                    {t('projects')}
                   </p>
                 </div>
                 <div className="mt-2 pt-2 border-t border-gray-200">
                   <p className="text-xs text-gray-500 font-medium">
-                    30+ años experiencia
+                    30+ {t('yearsExperience')}
                   </p>
                 </div>
               </motion.div>
@@ -356,7 +358,7 @@ export function GaleriaCarrusel() {
             <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm z-10">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-red-400'}`} />
-                {isAutoPlaying ? 'Auto' : 'Manual'}
+                {isAutoPlaying ? t('auto') : t('manual')}
               </div>
             </div>
           </div>
@@ -407,7 +409,7 @@ export function GaleriaCarrusel() {
         >
           <div className="mb-8">
             <p className="text-lg text-gray-600 mb-8 italic font-medium">
-              Desliza el cursor sobre la imagen para pausar la rotación automática
+              {t('pauseInfo')}
             </p>
             
             {/* Mensaje de Llamada a la Acción Principal - RESPONSIVE OPTIMIZADO */}
@@ -429,7 +431,7 @@ export function GaleriaCarrusel() {
                   letterSpacing: '1px'
                 }}
               >
-                GRÚAS EQUISER
+                {t('companyMessage')}
               </h3>
               <p 
                 className="font-semibold uppercase tracking-wider text-center leading-relaxed"
@@ -439,13 +441,13 @@ export function GaleriaCarrusel() {
                 }}
               >
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
-                  #1 Empresa Líder En Venezuela En Alquiler de
+                  {t('leaderMessage')}
                 </span>
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
-                  Grúas Móviles Telescópicas, Grúas Sobre Oruga
+                  {t('mobileCranes')}
                 </span>
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl block">
-                  y Equipos de Transporte Pesado y Sobredimensionado
+                  {t('heavyTransport')}
                 </span>
               </p>
             </motion.div>
@@ -468,8 +470,8 @@ export function GaleriaCarrusel() {
             }}
           >
             <Camera className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-            <span className="hidden sm:inline">💬 Solicitar Cotización Ahora</span>
-            <span className="sm:hidden">💬 Cotización</span>
+            <span className="hidden sm:inline">{t('requestQuote')}</span>
+            <span className="sm:hidden">{t('requestQuoteShort')}</span>
           </motion.a>
         </motion.div>
       </div>

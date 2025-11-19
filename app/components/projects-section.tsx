@@ -8,8 +8,10 @@ import { useInView } from 'react-intersection-observer'
 import { Filter, MapPin, Calendar, Wrench } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 export function ProjectsSection() {
+  const t = useTranslations('projects')
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -19,11 +21,11 @@ export function ProjectsSection() {
   const [projects, setProjects] = useState<any[]>([])
 
   const sectors = [
-    { id: 'todos', name: 'Todos los Proyectos', count: 22 },
-    { id: 'gruas-moviles', name: 'Grúas Móviles', count: 8 },
-    { id: 'gruas-sobre-oruga', name: 'Grúas Sobre Oruga', count: 4 },
-    { id: 'transporte-pesado', name: 'Transporte Pesado', count: 6 },
-    { id: 'proyectos-especiales', name: 'Proyectos Especiales', count: 4 }
+    { id: 'todos', name: t('filterAll'), count: 22 },
+    { id: 'gruas-moviles', name: t('filterMobile'), count: 8 },
+    { id: 'gruas-sobre-oruga', name: t('filterCrawler'), count: 4 },
+    { id: 'transporte-pesado', name: t('filterTransport'), count: 6 },
+    { id: 'proyectos-especiales', name: t('filterSpecial'), count: 4 }
   ]
 
   const allProjects = [
@@ -314,11 +316,10 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Proyectos <span className="text-equiser-blue">Ejecutados</span>
+            {t('title')} <span className="text-equiser-blue">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de 500 proyectos exitosos en los principales sectores industriales de Venezuela. 
-            Cada operación ejecutada con los más altos estándares de seguridad y calidad.
+            {t('description')}
           </p>
         </motion.div>
 
@@ -355,7 +356,7 @@ export function ProjectsSection() {
                 >
                   <span className="text-2xl">🔽</span>
                   <span className="text-2xl">🔍</span>
-                  Filtrar por sector:
+                  {t('filterTitle')}
                 </h3>
               </div>
 
@@ -410,7 +411,7 @@ export function ProjectsSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Proyectos Destacados</h3>
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">{t('featured')}</h3>
             <div className="grid md:grid-cols-2 gap-8">
               {allProjects.filter(p => p.featured).slice(0, 4).map((project, index) => (
                 <div
@@ -463,7 +464,7 @@ export function ProjectsSection() {
 
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                       <div className="flex flex-col gap-1">
-                        <span className="text-xs text-gray-500">Proyecto completado</span>
+                        <span className="text-xs text-gray-500">{t('completed')}</span>
                         <span className="text-sm font-bold text-gray-700">{project.year}</span>
                       </div>
                       <Button
@@ -471,7 +472,7 @@ export function ProjectsSection() {
                         onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
                         className="equiser-yellow equiser-yellow-hover text-equiser-blue font-bold px-5 py-2.5"
                       >
-                        Consultar Proyecto
+                        {t('btnConsult')}
                       </Button>
                     </div>
                   </div>
@@ -536,7 +537,7 @@ export function ProjectsSection() {
                     onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
                     className="equiser-yellow equiser-yellow-hover text-equiser-blue text-xs font-bold px-4 py-2"
                   >
-                    Consultar Proyecto
+                    {t('btnConsult')}
                   </Button>
                 </div>
               </div>
@@ -578,19 +579,19 @@ export function ProjectsSection() {
                   className="text-2xl font-bold mb-4 text-white"
                   style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
                 >
-                  ¿Necesitas Servicios De Alquiler De Grúas O Transporte Pesado?
+                  {t('ctaTitle')}
                 </h3>
                 <p 
                   className="text-blue-100 mb-6"
                   style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                 >
-                  Más de 30 años de experiencia con grúas hasta 1600 toneladas. Contáctanos para cotización inmediata.
+                  {t('ctaDescription')}
                 </p>
                 <Button
                   onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                   className="equiser-yellow equiser-yellow-hover text-equiser-blue px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all duration-200"
                 >
-                  Solicitar Cotización Ahora
+                  {t('ctaButton')}
                 </Button>
               </div>
             </div>

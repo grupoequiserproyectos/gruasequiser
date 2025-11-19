@@ -3,44 +3,47 @@
 
 import { motion } from 'framer-motion'
 import { Target, Eye, Brain, Star, CheckCircle } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export function NosotrosSection() {
+  const t = useTranslations('about')
+  
   const aboutCards = [
     {
       icon: Target,
-      title: 'MISIÓN',
-      content: 'Nuestro propósito es la prestación de servicios integrales de izamiento, movilización y transporte de carga pesada y extrapesada vía terrestre, una gran variedad de grúas actualizadas y de alta capacidad gruas moviles telescopicas y sobre oruga desde 25 toneladas hasta 1600 toneladas de las marcas alemanas Grove, Liebherr y Manitowoc y super lowboys hidraulicos para manejo de carga excepcionales como generadores eléctricos, vagones de metros de ferrocarril, turbinas y generadores petroleros e industriales. mediante el cumplimiento de criterios de seguridad, garantía, confiabilidad, responsabilidad y calidad, con la finalidad de anticipar y responder eficazmente a las necesidades y requerimientos de nuestros clientes, contando con un personal altamente calificado y capaz de lograr el más alto desempeño en las soluciones efectivas y rápidas en todos nuestros servicios.',
+      title: t('mission'),
+      content: t('missionContent'),
       isText: true
     },
     {
       icon: Eye,
-      title: 'VISIÓN',
-      content: 'Ser una empresa de servicio reconocida, nacional e internacionalmente, por su excelencia en la prestación de los servicios integrales de izamiento, movilización y transporte de carga pesada y extrapesada vía terrestre en Venezuela mejorando continuamente la efectividad, desarrollando así la capacidad de respuesta y el logro de la satisfacción de las necesidades de nuestros clientes.',
+      title: t('vision'),
+      content: t('visionContent'),
       list: [
-        'Brindar Servicios con Seguridad y Calidad bajo los más altos estándares',
-        'El cliente es y será siempre el centro de nuestra atención',
-        'Los negocios de nuestros clientes son nuestros negocios'
+        t('visionItem1'),
+        t('visionItem2'),
+        t('visionItem3')
       ]
     },
     {
       icon: Brain,
-      title: 'FILOSOFÍA',
+      title: t('philosophy'),
       list: [
-        'Dar a nuestros clientes la confiabilidad de cumplir',
-        'Ser certeros y objetivos en todos los servicios prestados',
-        'Contribuir al crecimiento y desarrollo del país Venezuela',
-        'Sus necesidades son nuestra prioridad',
-        'Ustedes son parte integral de "EQUISER, C.A."'
+        t('philosophyItem1'),
+        t('philosophyItem2'),
+        t('philosophyItem3'),
+        t('philosophyItem4'),
+        t('philosophyItem5')
       ]
     },
     {
       icon: Star,
-      title: 'VALORES',
+      title: t('values'),
       list: [
-        'Honestidad en todos nuestros actos',
-        'La Seguridad y Calidad en nuestras obras y servicios',
-        'Eficiencia y Responsabilidad de nuestros procesos productivos y administrativos',
-        'La Seguridad de nuestro personal y de las instalaciones encomendadas'
+        t('valuesItem1'),
+        t('valuesItem2'),
+        t('valuesItem3'),
+        t('valuesItem4')
       ]
     }
   ]
@@ -57,7 +60,7 @@ export function NosotrosSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-equiser-blue mb-6">
-            Nosotros
+            {t('title')}
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
         </motion.div>
@@ -137,7 +140,7 @@ export function NosotrosSection() {
             {/* Título Principal */}
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-5xl font-extrabold text-yellow-400 mb-5 uppercase tracking-wider">
-                🤝 Nuestro Compromiso
+                {t('commitment')}
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto rounded-full"></div>
             </div>
@@ -145,7 +148,7 @@ export function NosotrosSection() {
             {/* Contenido Principal */}
             <div className="bg-white bg-opacity-95 rounded-3xl p-6 md:p-12 mb-12 backdrop-blur-sm shadow-2xl">
               <p className="text-lg md:text-xl leading-relaxed text-equiser-blue text-center font-medium">
-                En <strong className="text-equiser-blue font-bold">GRÚAS EQUISER C.A.</strong>, cada proyecto es una oportunidad para demostrar nuestra <strong className="text-yellow-500">excelencia y compromiso con la seguridad</strong>. Con más de <strong className="text-equiser-blue">30 años de experiencia</strong>, continuamos siendo la empresa <strong className="text-yellow-500">líder en servicios de izamiento y transporte pesado en Venezuela</strong>, siempre enfocados en superar las expectativas de nuestros clientes.
+                {t('commitmentText')}
               </p>
             </div>
 
@@ -164,7 +167,7 @@ export function NosotrosSection() {
               >
                 <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">30+</div>
                 <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
-                  Años de Experiencia
+                  {t('yearsExperience')}
                 </h4>
               </motion.div>
 
@@ -180,7 +183,7 @@ export function NosotrosSection() {
               >
                 <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">1600T</div>
                 <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
-                  Capacidad Máxima
+                  {t('maxCapacity')}
                 </h4>
               </motion.div>
 
@@ -196,7 +199,7 @@ export function NosotrosSection() {
               >
                 <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">500+</div>
                 <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
-                  Proyectos Exitosos
+                  {t('successfulProjects')}
                 </h4>
               </motion.div>
 
@@ -212,7 +215,7 @@ export function NosotrosSection() {
               >
                 <div className="text-4xl md:text-5xl font-black text-equiser-blue mb-3">24/7</div>
                 <h4 className="text-base md:text-lg font-bold text-yellow-500 uppercase tracking-wide">
-                  Disponibilidad
+                  {t('availability')}
                 </h4>
               </motion.div>
             </div>
@@ -230,7 +233,7 @@ export function NosotrosSection() {
                 className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-300 text-equiser-blue px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl uppercase tracking-wide shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300"
                 style={{ boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)' }}
               >
-                🚀 Trabajemos Juntos
+                {t('ctaButton')}
               </motion.a>
             </div>
           </div>
