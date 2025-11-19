@@ -49,11 +49,21 @@ export function ServicesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-2 sm:px-0">
-            Nuestros <span className="text-equiser-blue">Servicios</span>
+          {/* Título principal estilo Transervica */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
+            <span className="text-green-700">Servicios Especializados de</span>
+            <br className="hidden sm:block" />
+            <span className="text-green-700">Izamiento en Venezuela</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
-            Soluciones integrales de alquiler de grúas industriales 25-1600 toneladas con cobertura nacional. 
+          
+          {/* Subtítulo destacado estilo Transervica */}
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-6 px-2 sm:px-0">
+            Soluciones especializadas para transporte y levantamiento de carga excepcional
+          </p>
+          
+          {/* Descripción adicional */}
+          <p className="text-base sm:text-lg text-gray-500 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
+            Grúas industriales 25-1600 toneladas con cobertura nacional. 
             Más de 30 años sirviendo a Maracaibo, Barcelona, Valencia, Puerto La Cruz, Ciudad Guayana, 
             Faja del Orinoco y todo el territorio venezolano con la tecnología más avanzada.
           </p>

@@ -197,22 +197,23 @@ export function HeroSection() {
                 </span>
               </Button>
 
-              {/* Botón Secundario: Ver Proyectos */}
+              {/* Botón Secundario: Ver Video Corporativo */}
               <Button
-                onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.open('https://www.youtube.com/watch?v=EJEMPLO', '_blank')}
                 variant="outline"
-                className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-equiser-blue w-full sm:w-auto"
+                className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:-translate-y-1 border-2 hover:border-white w-full sm:w-auto"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  color: '#1E3A8A',
-                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
+                  background: 'transparent',
+                  color: '#FFFFFF',
+                  boxShadow: '0 8px 25px rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  borderColor: 'rgba(30, 58, 138, 0.3)'
+                  borderColor: 'rgba(255, 255, 255, 0.5)'
                 }}
               >
                 <span className="flex items-center justify-center gap-2 sm:gap-3">
-                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Ver Proyectos
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
+                  <span className="hidden sm:inline">Ver Video Corporativo</span>
+                  <span className="sm:hidden">Video Corporativo</span>
                 </span>
               </Button>
             </div>

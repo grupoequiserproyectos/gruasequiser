@@ -425,11 +425,17 @@ export function ProjectsSection() {
                       className="object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-equiser-blue text-white px-4 py-2 rounded-full font-bold">
+                    
+                    {/* Etiquetas estilo Transervica */}
+                    <div className="absolute top-4 left-4 flex flex-col gap-2">
+                      <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+                        {sectors.find(s => s.id === project.sector)?.name || 'Industrial'}
+                      </div>
+                      <div className="bg-green-700 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
                         {project.capacity}
                       </div>
                     </div>
+
                     <div className="absolute bottom-4 left-4 text-white">
                       <div className="flex items-center space-x-2 text-sm mb-2">
                         <MapPin className="w-4 h-4" />
@@ -455,16 +461,17 @@ export function ProjectsSection() {
                       ))}
                     </div>
 
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-equiser-blue capitalize">
-                        {sectors.find(s => s.id === project.sector)?.name}
-                      </span>
+                    <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+                      <div className="flex flex-col gap-1">
+                        <span className="text-xs text-gray-500">Proyecto completado</span>
+                        <span className="text-sm font-bold text-gray-700">{project.year}</span>
+                      </div>
                       <Button
                         size="sm"
-                        onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
-                        className="equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
+                        onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
+                        className="bg-green-700 hover:bg-green-800 text-white font-bold px-5 py-2.5"
                       >
-                        Más Info
+                        Consultar Proyecto
                       </Button>
                     </div>
                   </div>
@@ -495,8 +502,13 @@ export function ProjectsSection() {
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute top-3 right-3">
-                  <div className="bg-equiser-blue text-white px-3 py-1 rounded-full text-sm font-bold">
+                
+                {/* Etiquetas estilo Transervica */}
+                <div className="absolute top-3 left-3 flex flex-col gap-2">
+                  <div className="bg-green-600 text-white px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
+                    {sectors.find(s => s.id === project.sector)?.name || 'Industrial'}
+                  </div>
+                  <div className="bg-green-700 text-white px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
                     {project.capacity}
                   </div>
                 </div>
@@ -515,16 +527,16 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-equiser-blue capitalize">
-                    {sectors.find(s => s.id === project.sector)?.name}
+                  <span className="text-xs text-gray-500 flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    {project.year}
                   </span>
                   <Button
                     size="sm"
-                    variant="outline"
-                    onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
-                    className="text-xs border-equiser-blue text-equiser-blue hover:bg-equiser-blue hover:text-white"
+                    onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
+                    className="bg-green-700 hover:bg-green-800 text-white text-xs font-bold px-4 py-2"
                   >
-                    Ver Detalles
+                    Consultar Proyecto
                   </Button>
                 </div>
               </div>

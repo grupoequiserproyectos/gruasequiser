@@ -21,30 +21,37 @@ export function StatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-r from-green-700 to-green-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Estadísticas principales */}
+        {/* Estadísticas principales estilo Transervica */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16"
         >
-          <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-12 text-equiser-blue">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold mb-2 text-equiser-blue">{stat.number}</div>
-                  <div className="text-equiser-blue/80 font-semibold mb-1">{stat.suffix}</div>
-                  <div className="text-sm text-equiser-blue/70">{stat.label}</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            {stats.map((stat, index) => (
+              <motion.div 
+                key={stat.label} 
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="text-5xl md:text-6xl lg:text-7xl font-black mb-3 text-white">
+                  {stat.number}
                 </div>
-              ))}
-            </div>
+                <div className="text-lg md:text-xl font-bold mb-2 text-white/90 uppercase tracking-wider">
+                  {stat.suffix}
+                </div>
+                <div className="text-sm md:text-base text-white/80 font-medium leading-relaxed px-2">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-
-
       </div>
     </section>
   )

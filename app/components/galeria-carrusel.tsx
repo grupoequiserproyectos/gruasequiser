@@ -310,6 +310,29 @@ export function GaleriaCarrusel() {
                   {carouselItems[currentSlide]?.description}
                 </p>
               </motion.div>
+
+              {/* Contador de Proyectos estilo Transervica */}
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-5 py-3 shadow-lg"
+              >
+                <div className="text-center">
+                  <p className="text-3xl font-black text-equiser-blue mb-1">
+                    {currentSlide + 1}<span className="text-gray-400 text-2xl">/{carouselItems.length}</span>
+                  </p>
+                  <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">
+                    Proyectos
+                  </p>
+                </div>
+                <div className="mt-2 pt-2 border-t border-gray-200">
+                  <p className="text-xs text-gray-500 font-medium">
+                    30+ años experiencia
+                  </p>
+                </div>
+              </motion.div>
             </div>
 
             {/* FLECHAS DE NAVEGACIÓN LATERALES - FUERA DE LA IMAGEN */}
