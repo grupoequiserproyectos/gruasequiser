@@ -9,8 +9,12 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '10');
     const category = searchParams.get('category');
     const featured = searchParams.get('featured');
+    const locale = searchParams.get('locale') || 'es'; // Default a español
 
-    const where: any = { published: true };
+    const where: any = { 
+      published: true,
+      locale: locale // Filtrar por idioma
+    };
     if (category) where.category = category;
     if (featured === 'true') where.featured = true;
 
@@ -32,6 +36,8 @@ export async function GET(request: NextRequest) {
           readTime: true,
           publishedAt: true,
           views: true,
+          locale: true,
+          translationId: true,
         },
       }),
       prisma.blog.count({ where }),

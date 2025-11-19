@@ -2,15 +2,18 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Search, Calendar, User, Clock, ArrowRight, Filter, Home, ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getAllCategories, getArticlesByCategory, getFeaturedArticles } from '@/lib/blog-data'
+import useSWR from 'swr'
 import { BlogNewsletter } from './blog-newsletter'
 import { Button } from '@/components/ui/button'
+import { useLocale } from '@/lib/i18n-utils'
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export function BlogHomePage() {
   const [ref, inView] = useInView({
@@ -18,23 +21,57 @@ export function BlogHomePage() {
     threshold: 0.1
   })
   
+  const locale = useLocale() // Obtener el idioma actual
   const [activeCategory, setActiveCategory] = useState('Todos')
   const [searchTerm, setSearchTerm] = useState('')
   
-  const categories = getAllCategories()
-  const allArticles = getArticlesByCategory(activeCategory)
-  const featuredArticles = getFeaturedArticles()
+  // Fetch blogs con filtro de idioma
+  const { data, error, isLoading } = useSWR(
+    `/api/blogs?locale=${locale}&limit=50`,
+    fetcher
+  )
   
-  const filteredArticles = allArticles.filter(article =>
+  const blogs = data?.blogs || []
+  
+  // Obtener categorías únicas de los blogs
+  const blogCategories = blogs.map((b: any) => b.category).filter((c: any) => typeof c === 'string') as string[]
+  const categories: string[] = ['Todos', ...Array.from(new Set(blogCategories))]
+  
+  // Filtrar por categoría
+  const categoryFiltered = activeCategory === 'Todos' 
+    ? blogs 
+    : blogs.filter((b: any) => b.category === activeCategory)
+  
+  // Blogs destacados
+  const featuredArticles = blogs.filter((b: any) => b.featured)
+  
+  // Filtrar por búsqueda
+  const filteredArticles = categoryFiltered.filter((article: any) =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    (article.tags && article.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase())))
   )
+
+  // Recargar datos cuando cambie el idioma
+  useEffect(() => {
+    const handleLocaleChange = () => {
+      window.location.reload()
+    }
+    window.addEventListener('localeChange', handleLocaleChange)
+    return () => window.removeEventListener('localeChange', handleLocaleChange)
+  }, [])
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    const monthsEs = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    const monthsEn = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const months = locale === 'es' ? monthsEs : monthsEn
+    
+    if (locale === 'es') {
+      return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+    } else {
+      return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+    }
   }
 
   // Agrupar artículos por fecha
