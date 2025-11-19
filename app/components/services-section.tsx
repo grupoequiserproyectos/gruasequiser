@@ -3,10 +3,12 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export function ServicesSection() {
+  const t = useTranslations('services')
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -14,27 +16,27 @@ export function ServicesSection() {
 
   const services = [
     {
-      title: 'Alquiler De Grúas Móviles Y Sobre Oruga',
-      description: 'Grúas móviles hidráulicas 25-500 ton y de oruga 300-1600 ton para sectores petrolero, petroquímico, siderúrgico y energético en toda Venezuela.',
-      features: ['Grúas Liebherr, Grove, Manitowoc', 'Certificadas PDVSA', '24/7 Disponibles', 'Operadores Certificados'],
+      title: t('service1Title'),
+      description: t('service1Desc'),
+      features: [t('service1Feature1'), t('service1Feature2'), t('service1Feature3'), t('service1Feature4')],
       image: '/images/grua de 800 ton.webp'
     },
     {
-      title: 'Transporte Pesado Y Extrapesado',
-      description: 'Super lowboy hidráulico hasta 250 ton para transformadores, turbinas y equipos industriales. Cobertura Maracaibo, Valencia, Barcelona, Ciudad Guayana.',
-      features: ['Super Lowboy Hidráulico', 'Hasta 250 Toneladas', 'Escoltas Especializadas', 'Permisos Gestionados'],
+      title: t('service2Title'),
+      description: t('service2Desc'),
+      features: [t('service2Feature1'), t('service2Feature2'), t('service2Feature3'), t('service2Feature4')],
       image: '/images/transporte-250-toneladas.webp'
     },
     {
-      title: 'Izamiento Industrial Especializado',
-      description: 'Rigging e ingeniería de izamiento para proyectos complejos en refinerías, plantas petroquímicas, siderúrgicas y puertos.',
-      features: ['Cálculos Estructurales', 'Planes de Izamiento', 'Certificación ISO 9001', 'Supervisión Técnica'],
+      title: t('service3Title'),
+      description: t('service3Desc'),
+      features: [t('service3Feature1'), t('service3Feature2'), t('service3Feature3'), t('service3Feature4')],
       image: '/images/trabajo de gantry 600 ton.webp'
     },
     {
-      title: 'Ingeniería y Planificación 3D',
-      description: 'Modelado 3D avanzado para proyectos PDVSA, Petromonagas, SIDOR y sector energético. Optimización de rutas y procedimientos.',
-      features: ['Modelado 3D Detallado', 'Análisis De Cargas', 'Simulación de Izamiento', 'Reportes Técnicos'],
+      title: t('service4Title'),
+      description: t('service4Desc'),
+      features: [t('service4Feature1'), t('service4Feature2'), t('service4Feature3'), t('service4Feature4')],
       image: '/images/ingenieria 3d.webp'
     }
   ]
@@ -51,21 +53,19 @@ export function ServicesSection() {
         >
           {/* Título principal estilo Transervica */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
-            <span className="text-equiser-blue">Servicios Especializados de</span>
+            <span className="text-equiser-blue">{t('title1')}</span>
             <br className="hidden sm:block" />
-            <span className="text-equiser-blue">Izamiento en Venezuela</span>
+            <span className="text-equiser-blue">{t('title2')}</span>
           </h2>
           
           {/* Subtítulo destacado estilo Transervica */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-6 px-2 sm:px-0">
-            Soluciones especializadas para transporte y levantamiento de carga excepcional
+            {t('subtitle')}
           </p>
           
           {/* Descripción adicional */}
           <p className="text-base sm:text-lg text-gray-500 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-            Grúas industriales 25-1600 toneladas con cobertura nacional. 
-            Más de 30 años sirviendo a Maracaibo, Barcelona, Valencia, Puerto La Cruz, Ciudad Guayana, 
-            Faja del Orinoco y todo el territorio venezolano con la tecnología más avanzada.
+            {t('description')}
           </p>
         </motion.div>
 
@@ -112,15 +112,15 @@ export function ServicesSection() {
           className="text-center mt-12 sm:mt-16 px-2 sm:px-0"
         >
           <div className="equiser-blue text-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-xl mx-2 sm:mx-0">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">¿Necesitas una cotización personalizada?</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">{t('ctaTitle')}</h3>
             <p className="text-blue-100 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
-              Contáctanos las 24 horas del día, los 7 días de la semana para recibir atención inmediata
+              {t('ctaDesc')}
             </p>
             <button
               onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg text-sm sm:text-base w-full sm:w-auto"
             >
-              Solicitar Cotización Ahora
+              {t('ctaButton')}
             </button>
           </div>
         </motion.div>

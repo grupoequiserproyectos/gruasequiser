@@ -8,8 +8,11 @@ import { ArrowRight, Play, Shield, Award, Clock, MessageCircle } from 'lucide-re
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export function HeroSection() {
+  const t = useTranslations('hero')
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -94,16 +97,16 @@ export function HeroSection() {
               EQUISER C.A.
             </span>
             <span className="text-white block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3">
-              Líder en Equipos Industriales Pesados Venezuela
+              {t('title')}
             </span>
             <span className="text-blue-200 block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold leading-relaxed">
-              Grúas Móviles Hidráulicas y de Oruga 
-              <span className="text-equiser-yellow font-bold"> 25-1600 Toneladas</span>
+              {t('subtitle1')}
+              <span className="text-equiser-yellow font-bold"> {t('subtitle2')}</span>
               <br className="hidden sm:block" />
-              Super Lowboy Hidráulico • Transporte Carga Sobredimensionada
+              {t('subtitle3')}
               <br className="hidden sm:block" />
               <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2 block">
-                Sectores: Petrolero | Petroquímico | Siderúrgico | Portuario | Energético
+                {t('sectors')}
               </span>
             </span>
           </motion.h1>
@@ -115,11 +118,10 @@ export function HeroSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <span className="font-bold text-equiser-yellow">30+ años de experiencia</span> sirviendo a la industria pesada venezolana. 
-            Proveedor certificado PDVSA con cobertura nacional:
+            {t('description')}
             <br />
             <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold mt-2 block">
-              📍 Maracaibo • Barcelona • Valencia • Puerto La Cruz • Faja del Orinoco • Ciudad Guayana • Caracas
+              {t('cities')}
             </span>
           </motion.p>
 
@@ -137,7 +139,7 @@ export function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.capacity)}T
               </div>
-              <div className="text-xs sm:text-sm text-blue-200 font-medium">Grúas Hasta</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">{t('stat1')}</div>
             </div>
             <div 
               className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
@@ -146,7 +148,7 @@ export function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.experience)}+
               </div>
-              <div className="text-xs sm:text-sm text-blue-200 font-medium">Años de Experiencia</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">{t('stat2')}</div>
             </div>
             <div 
               className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
@@ -155,7 +157,7 @@ export function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.sectors)}
               </div>
-              <div className="text-xs sm:text-sm text-blue-200 font-medium">Sectores Atendidos</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">{t('stat3')}</div>
             </div>
             <div 
               className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center border border-white/20"
@@ -164,7 +166,7 @@ export function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-equiser-yellow">
                 {Math.round(counts.projects)}+
               </div>
-              <div className="text-xs sm:text-sm text-blue-200 font-medium">Proyectos Ejecutados</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-medium">{t('stat4')}</div>
             </div>
           </motion.div>
 
@@ -191,8 +193,8 @@ export function HeroSection() {
               >
                 <span className="flex items-center justify-center gap-2 sm:gap-3">
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="hidden sm:inline">Solicitar Cotización WhatsApp</span>
-                  <span className="sm:hidden">Cotización WhatsApp</span>
+                  <span className="hidden sm:inline">{t('btnQuote')}</span>
+                  <span className="sm:hidden">{t('btnQuoteShort')}</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </Button>
@@ -212,8 +214,8 @@ export function HeroSection() {
               >
                 <span className="flex items-center justify-center gap-2 sm:gap-3">
                   <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
-                  <span className="hidden sm:inline">Ver Video Corporativo</span>
-                  <span className="sm:hidden">Video Corporativo</span>
+                  <span className="hidden sm:inline">{t('btnVideo')}</span>
+                  <span className="sm:hidden">{t('btnVideoShort')}</span>
                 </span>
               </Button>
             </div>
@@ -229,8 +231,8 @@ export function HeroSection() {
                 className="text-blue-100 text-xs sm:text-sm md:text-base font-medium italic leading-relaxed"
                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}
               >
-                <span className="hidden sm:inline">Respuesta inmediata por WhatsApp | Cotizaciones personalizadas</span>
-                <span className="sm:hidden">Respuesta inmediata por WhatsApp<br />Cotizaciones personalizadas</span>
+                <span className="hidden sm:inline">{t('infoResponse')} | {t('infoQuotes')}</span>
+                <span className="sm:hidden">{t('infoResponse')}<br />{t('infoQuotes')}</span>
               </p>
             </motion.div>
           </motion.div>

@@ -3,21 +3,21 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-
+import { useTranslations } from 'next-intl'
 
 export function StatsSection() {
+  const t = useTranslations('stats')
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
 
-
-
   const stats = [
-    { number: '1600', suffix: 'TONELADAS', label: 'Grúas Hasta' },
-    { number: '30+', suffix: 'AÑOS', label: 'De Experiencia En Venezuela' },
-    { number: '6', suffix: 'SECTORES', label: 'Industriales Atendidos' },
-    { number: '500+', suffix: 'PROYECTOS', label: 'Ejecutados' }
+    { number: '1600', suffix: t('toneladas'), label: t('gruasHasta') },
+    { number: '30+', suffix: t('años'), label: t('experiencia') },
+    { number: '6', suffix: t('sectores'), label: t('sectoresAtendidos') },
+    { number: '500+', suffix: t('proyectos'), label: t('proyectosEjecutados') }
   ]
 
   return (

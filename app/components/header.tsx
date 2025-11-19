@@ -8,8 +8,11 @@ import Link from 'next/link'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LanguageSwitcher } from '@/components/language-switcher'
+import { useTranslations } from 'next-intl'
 
 export function Header() {
+  const t = useTranslations('header')
+  
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -22,12 +25,12 @@ export function Header() {
   }, [])
 
   const navItems = [
-    { href: '#inicio', label: 'INICIO' },
-    { href: '#nosotros', label: 'NOSOTROS' },
-    { href: '#servicios', label: 'SERVICIOS' },
-    { href: '#proyectos', label: 'PROYECTOS' },
-    { href: '/blog', label: 'BLOG' },
-    { href: '/#contacto', label: 'CONTACTO' }
+    { href: '#inicio', label: t('inicio') },
+    { href: '#nosotros', label: t('nosotros') },
+    { href: '#servicios', label: t('servicios') },
+    { href: '#proyectos', label: t('proyectos') },
+    { href: '/blog', label: t('blog') },
+    { href: '/#contacto', label: t('contacto') }
   ]
 
   const handleWhatsApp = () => {
@@ -73,7 +76,7 @@ export function Header() {
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
-              SOLICITAR COTIZACIÓN
+              {t('contactWhatsApp').toUpperCase()}
             </Button>
             <LanguageSwitcher />
           </div>
@@ -110,7 +113,7 @@ export function Header() {
                   className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  SOLICITAR COTIZACIÓN
+                  {t('contactWhatsApp').toUpperCase()}
                 </Button>
               </div>
             </nav>

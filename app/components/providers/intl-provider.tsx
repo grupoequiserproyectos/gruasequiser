@@ -3,45 +3,40 @@
 
 import { NextIntlClientProvider } from 'next-intl';
 import { ReactNode, useEffect, useState } from 'react';
-import { getLocaleFromCookie } from '@/lib/i18n-utils';
+import Cookies from 'js-cookie';
+import esMessages from '@/messages/es.json';
+import enMessages from '@/messages/en.json';
 
 interface IntlProviderProps {
   children: ReactNode;
 }
 
 export function IntlProvider({ children }: IntlProviderProps) {
-  const [messages, setMessages] = useState<any>(null);
+  const [messages, setMessages] = useState(esMessages);
   const [locale, setLocale] = useState<string>('es');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const loadMessages = async () => {
-      const currentLocale = getLocaleFromCookie();
-      setLocale(currentLocale);
-      
-      try {
-        const messagesModule = await import(`@/messages/${currentLocale}.json`);
-        setMessages(messagesModule.default);
-      } catch (error) {
-        console.error('Error loading messages:', error);
-        // Fallback to Spanish
-        const messagesModule = await import(`@/messages/es.json`);
-        setMessages(messagesModule.default);
-      }
-    };
+    // Get locale from cookie
+    const savedLocale = Cookies.get('NEXT_LOCALE') || 'es';
+    setLocale(savedLocale);
+    setMessages(savedLocale === 'en' ? enMessages : esMessages);
+    setMounted(true);
 
-    loadMessages();
-
-    // Listen for locale changes
+    // Listen for locale changes via custom event
     const handleLocaleChange = () => {
-      loadMessages();
+      const newLocale = Cookies.get('NEXT_LOCALE') || 'es';
+      setLocale(newLocale);
+      setMessages(newLocale === 'en' ? enMessages : esMessages);
     };
 
-    window.addEventListener('storage', handleLocaleChange);
-    return () => window.removeEventListener('storage', handleLocaleChange);
+    window.addEventListener('localeChange', handleLocaleChange);
+    return () => window.removeEventListener('localeChange', handleLocaleChange);
   }, []);
 
-  if (!messages) {
-    return <>{children}</>;
+  // Show nothing until mounted to avoid hydration mismatch
+  if (!mounted) {
+    return null;
   }
 
   return (

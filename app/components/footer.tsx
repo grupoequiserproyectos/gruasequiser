@@ -6,8 +6,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen, Instagram, Twitter, Facebook } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export function Footer() {
+  const t = useTranslations('footer')
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
