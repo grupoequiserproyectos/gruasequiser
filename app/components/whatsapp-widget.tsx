@@ -48,7 +48,7 @@ export function WhatsappWidget() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-[calc(100vw-2rem)] sm:bottom-6 sm:right-6">
+    <div className="fixed bottom-20 right-4 z-[9997] max-w-[calc(100vw-2rem)] sm:bottom-6 sm:right-6">
       <AnimatePresence>
         {isOpen && (
           <motion.div

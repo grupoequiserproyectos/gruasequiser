@@ -829,3 +829,284 @@
     }
   }
 }
+/* ============================================
+   MEJORAS RESPONSIVE Y BOTONES FLOTANTES
+   ============================================ */
+
+/* Asegurar que los botones flotantes no se superpongan con otros elementos */
+.floating-elements-container {
+  pointer-events: none;
+}
+
+.floating-elements-container > * {
+  pointer-events: auto;
+}
+
+/* Espaciado entre botones flotantes en móvil */
+@media (max-width: 768px) {
+  /* Asegurar espacio para botones flotantes */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Espaciado adicional para botones flotantes */
+  .fixed {
+    touch-action: manipulation;
+  }
+
+  /* Prevenir overlapping de botones flotantes con WhatsApp widget */
+  [class*="whatsapp"] {
+    right: 1rem !important;
+    bottom: 5.5rem !important;
+  }
+}
+
+/* Botones con espaciado profesional */
+button, .button, a.button {
+  margin: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+  button, .button, a.button {
+    margin: 0.75rem;
+  }
+}
+
+/* Mejorar contraste de texto en botones */
+button:focus-visible, 
+.button:focus-visible,
+a.button:focus-visible {
+  outline: 3px solid var(--equiser-yellow);
+  outline-offset: 2px;
+}
+
+/* Optimización de z-index para elementos flotantes */
+.z-floating-low {
+  z-index: 9997;
+}
+
+.z-floating-mid {
+  z-index: 9998;
+}
+
+.z-floating-high {
+  z-index: 9999;
+}
+
+/* Animaciones suaves para cambios de idioma */
+[data-locale-change] {
+  animation: locale-fade 0.3s ease-in-out;
+}
+
+@keyframes locale-fade {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Mejorar visibilidad de banderas en modo oscuro (si aplica) */
+img[src*="flagcdn"] {
+  background: white;
+  border-radius: 50%;
+}
+
+/* Responsive spacing para secciones principales */
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 60px;
+  }
+}
+
+/* Asegurar que modales y overlays no interfieran con botones flotantes */
+.modal-overlay,
+.dialog-overlay {
+  z-index: 9996 !important;
+}
+
+/* Botones de acción flotantes con espaciado óptimo */
+.floating-action-button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+              0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-action-button:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2),
+              0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.floating-action-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15),
+              0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejoras de accesibilidad para controles táctiles */
+@media (hover: none) and (pointer: coarse) {
+  /* Aumentar área de toque en dispositivos táctiles */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Remover hover effects en táctiles */
+  button:hover,
+  a:hover {
+    transform: none;
+  }
+}
+
+/* Responsive containers para mejor legibilidad */
+@media (max-width: 640px) {
+  .container,
+  .container-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container,
+  .container-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container,
+  .container-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Asegurar que text no se corte en móviles */
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+  }
+}
+
+/* Optimización de imágenes responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevenir scroll horizontal en móviles */
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Smooth scroll con offset para navegación */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+}
+
+/* Mejorar rendimiento de animaciones en móvil */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 3px solid var(--equiser-yellow);
+  outline-offset: 2px;
+}
+
+/* Optimización de rendimiento para animaciones de scroll */
+.scroll-animate {
+  will-change: transform, opacity;
+}
+
+.scroll-animate.in-view {
+  animation-play-state: running;
+}
+
+/* Asegurar que los CTA buttons sean siempre visibles y accesibles */
+.cta-button,
+[class*="cta"] button,
+[class*="cta"] a {
+  min-height: 48px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .cta-button,
+  [class*="cta"] button,
+  [class*="cta"] a {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Prevenir zoom en inputs iOS - mejorado */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+  -webkit-appearance: none;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  input:focus,
+  textarea:focus,
+  select:focus {
+    font-size: 16px !important;
+  }
+}
