@@ -6,7 +6,6 @@ import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { WhatsappWidget } from '@/components/whatsapp-widget'
 import { IntlProvider } from '@/components/providers/intl-provider'
-import { FloatingLanguageSwitcher } from '@/components/floating-language-switcher'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -469,8 +468,6 @@ export default function RootLayout({
         <IntlProvider>
           {children}
           <WhatsappWidget />
-          <FloatingLanguageSwitcher position="top" />
-          <FloatingLanguageSwitcher position="bottom" />
           <Toaster />
         </IntlProvider>
       </body>

@@ -7,15 +7,38 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen, Instagram, Twitter, Facebook } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { useLocale, useChangeLocale, type Locale } from '@/lib/i18n-utils'
 
 export function Footer() {
   const t = useTranslations('footer')
+  const currentLocale = useLocale()
+  const changeLocale = useChangeLocale()
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')
+  }
+
+  const languages = [
+    { 
+      code: 'es' as Locale, 
+      name: 'Español', 
+      flag: 'https://flagcdn.com/ve.svg',
+      alt: '🇻🇪 Español'
+    },
+    { 
+      code: 'en' as Locale, 
+      name: 'English', 
+      flag: 'https://flagcdn.com/gb.svg',
+      alt: '🇬🇧 English'
+    }
+  ]
+
+  const handleLanguageChange = (locale: Locale) => {
+    changeLocale(locale)
   }
 
   return (
@@ -310,8 +333,9 @@ export function Footer() {
 
         {/* Copyright y certificaciones */}
         <div className="border-t border-gray-700 pt-8 pb-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-center md:text-left">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 gap-4">
+            {/* Columna izquierda: Copyright */}
+            <div className="text-center lg:text-left flex-1">
               <p className="text-gray-400 text-sm">
                 © 2025 Grúas Equiser C.A. - Todos los derechos reservados. | Líder en alquiler de grúas en Venezuela
               </p>
@@ -323,6 +347,7 @@ export function Footer() {
               </div>
             </div>
             
+            {/* Columna central: Marcas Premium */}
             <div className="flex items-center justify-center text-center">
               <div className="text-xs text-gray-400">
                 <div 
@@ -340,6 +365,67 @@ export function Footer() {
                   MARCAS PREMIUM
                 </div>
                 <div className="mt-2 text-gray-500">Liebherr • Grove • Manitowoc • Demag</div>
+              </div>
+            </div>
+
+            {/* Columna derecha: Selector de Idioma */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <div className="flex items-center gap-2 bg-gray-800 rounded-full px-3 py-2 shadow-lg border border-gray-700">
+                <span className="text-gray-400 text-xs font-medium hidden sm:inline">
+                  Idioma:
+                </span>
+                <div className="flex items-center gap-2">
+                  {languages.map((language) => {
+                    const isActive = currentLocale === language.code
+                    
+                    return (
+                      <motion.button
+                        key={language.code}
+                        onClick={() => handleLanguageChange(language.code)}
+                        className={`relative group ${isActive ? 'ring-2 ring-equiser-yellow ring-offset-2 ring-offset-gray-900' : ''}`}
+                        whileHover={{ scale: 1.15 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.2 }}
+                        aria-label={`Cambiar a ${language.name}`}
+                        title={language.name}
+                      >
+                        {/* Bandera */}
+                        <div 
+                          className={`
+                            w-8 h-8 
+                            rounded-full 
+                            overflow-hidden 
+                            shadow-md
+                            border-2
+                            ${isActive 
+                              ? 'border-equiser-yellow shadow-lg shadow-equiser-yellow/30' 
+                              : 'border-gray-600 group-hover:border-equiser-blue'
+                            }
+                            transition-all duration-200
+                          `}
+                        >
+                          <img 
+                            src={language.flag} 
+                            alt={language.alt}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+
+                        {/* Indicador activo */}
+                        {isActive && (
+                          <motion.div
+                            layoutId="active-language-footer"
+                            className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-equiser-yellow rounded-full"
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.2 }}
+                          />
+                        )}
+                      </motion.button>
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
