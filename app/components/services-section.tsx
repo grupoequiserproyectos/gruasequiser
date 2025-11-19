@@ -51,9 +51,9 @@ export function ServicesSection() {
         >
           {/* Título principal estilo Transervica */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
-            <span className="text-green-700">Servicios Especializados de</span>
+            <span className="text-equiser-blue">Servicios Especializados de</span>
             <br className="hidden sm:block" />
-            <span className="text-green-700">Izamiento en Venezuela</span>
+            <span className="text-equiser-blue">Izamiento en Venezuela</span>
           </h2>
           
           {/* Subtítulo destacado estilo Transervica */}

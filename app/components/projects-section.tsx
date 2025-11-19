@@ -428,10 +428,10 @@ export function ProjectsSection() {
                     
                     {/* Etiquetas estilo Transervica */}
                     <div className="absolute top-4 left-4 flex flex-col gap-2">
-                      <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+                      <div className="bg-equiser-blue text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
                         {sectors.find(s => s.id === project.sector)?.name || 'Industrial'}
                       </div>
-                      <div className="bg-green-700 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+                      <div className="equiser-yellow text-equiser-blue px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
                         {project.capacity}
                       </div>
                     </div>
@@ -469,7 +469,7 @@ export function ProjectsSection() {
                       <Button
                         size="sm"
                         onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
-                        className="bg-green-700 hover:bg-green-800 text-white font-bold px-5 py-2.5"
+                        className="equiser-yellow equiser-yellow-hover text-equiser-blue font-bold px-5 py-2.5"
                       >
                         Consultar Proyecto
                       </Button>
@@ -505,10 +505,10 @@ export function ProjectsSection() {
                 
                 {/* Etiquetas estilo Transervica */}
                 <div className="absolute top-3 left-3 flex flex-col gap-2">
-                  <div className="bg-green-600 text-white px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
+                  <div className="bg-equiser-blue text-white px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
                     {sectors.find(s => s.id === project.sector)?.name || 'Industrial'}
                   </div>
-                  <div className="bg-green-700 text-white px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
+                  <div className="equiser-yellow text-equiser-blue px-3 py-1.5 rounded-lg font-bold text-xs shadow-lg">
                     {project.capacity}
                   </div>
                 </div>
@@ -534,7 +534,7 @@ export function ProjectsSection() {
                   <Button
                     size="sm"
                     onClick={() => window.open(`https://wa.me/message/IOBBJVBBVWNOI1?text=Hola, me interesa información sobre: ${project.title}`, '_blank')}
-                    className="bg-green-700 hover:bg-green-800 text-white text-xs font-bold px-4 py-2"
+                    className="equiser-yellow equiser-yellow-hover text-equiser-blue text-xs font-bold px-4 py-2"
                   >
                     Consultar Proyecto
                   </Button>

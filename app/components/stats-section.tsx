@@ -21,7 +21,7 @@ export function StatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-r from-green-700 to-green-600">
+    <section className="py-20 bg-gradient-to-r from-equiser-blue to-blue-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Estadísticas principales estilo Transervica */}
         <motion.div
@@ -39,13 +39,13 @@ export function StatsSection() {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-5xl md:text-6xl lg:text-7xl font-black mb-3 text-white">
+                <div className="text-5xl md:text-6xl lg:text-7xl font-black mb-3 text-equiser-yellow">
                   {stat.number}
                 </div>
-                <div className="text-lg md:text-xl font-bold mb-2 text-white/90 uppercase tracking-wider">
+                <div className="text-lg md:text-xl font-bold mb-2 text-white uppercase tracking-wider">
                   {stat.suffix}
                 </div>
-                <div className="text-sm md:text-base text-white/80 font-medium leading-relaxed px-2">
+                <div className="text-sm md:text-base text-white/90 font-medium leading-relaxed px-2">
                   {stat.label}
                 </div>
               </motion.div>

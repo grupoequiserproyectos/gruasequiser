@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LanguageSwitcher } from '@/components/language-switcher'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -65,8 +66,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center">
+          {/* CTA y Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
             <Button
               onClick={handleWhatsApp}
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
@@ -74,15 +75,19 @@ export function Header() {
               <MessageCircle className="w-4 h-4 mr-2" />
               SOLICITAR COTIZACIÓN
             </Button>
+            <LanguageSwitcher />
           </div>
 
-          {/* Botón móvil */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Language Switcher Mobile y Botón móvil */}
+          <div className="flex md:hidden items-center gap-3">
+            <LanguageSwitcher />
+            <button
+              className="p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Menú móvil */}
