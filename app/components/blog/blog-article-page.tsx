@@ -3,13 +3,15 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Calendar, User, Clock, ArrowLeft, Share2, Tag, MessageCircle } from 'lucide-react'
+import { Calendar, User, Clock, ArrowLeft, Share2, Tag, MessageCircle, Home } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogArticle, getRelatedArticles } from '@/lib/blog-data'
 import { BlogComments } from './blog-comments'
 import { BlogNewsletter } from './blog-newsletter'
 import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 interface BlogArticlePageProps {
   article: BlogArticle
@@ -196,20 +198,80 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
     )
   }
 
+  const t = useTranslations('blog')
+  const tHeader = useTranslations('header')
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <nav className="py-6 bg-gray-50 border-b">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-equiser-blue">Inicio</Link>
-            <span className="text-gray-400">/</span>
-            <Link href="/blog" className="text-gray-500 hover:text-equiser-blue">Blog</Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-equiser-blue font-medium">{article.category}</span>
+      {/* Header completo del blog con logo grande */}
+      <header className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo grande clickeable */}
+            <div className="flex items-center">
+              <Link href="/" className="relative block">
+                <div className="relative" style={{ width: '180px', height: '60px' }}>
+                  <Image
+                    src="/images/logo-equiser-actualizado.webp"
+                    alt="GRÚAS EQUISER C.A. - Logo"
+                    fill
+                    className="object-contain hover:scale-105 transition-transform duration-200"
+                    priority
+                  />
+                </div>
+              </Link>
+            </div>
+            
+            {/* Título del Blog - Mobile */}
+            <div className="md:hidden flex-1 text-center px-2">
+              <h1 className="text-sm font-bold text-equiser-blue truncate">📝 {t('title')}</h1>
+            </div>
+
+            {/* Navegación */}
+            <nav className="hidden lg:flex items-center space-x-6">
+              <Link href="/" className="flex items-center text-gray-700 hover:text-equiser-blue transition-colors duration-200">
+                <Home className="w-4 h-4 mr-2" />
+                {tHeader('inicio')}
+              </Link>
+              <Link href="/blog" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
+                {t('title')}
+              </Link>
+              <Link href="/#nosotros" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
+                {tHeader('nosotros')}
+              </Link>
+              <Link href="/#proyectos" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
+                {tHeader('proyectos')}
+              </Link>
+              <Link href="/#contacto" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
+                {tHeader('contacto')}
+              </Link>
+            </nav>
+
+            {/* CTA Button */}
+            <div className="hidden md:flex items-center">
+              <Button
+                onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
+                className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full font-semibold"
+              >
+                {t('ctaButton')}
+              </Button>
+            </div>
           </div>
         </div>
-      </nav>
+        
+        {/* Breadcrumb - Desktop */}
+        <div className="hidden md:block border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div className="flex items-center text-sm text-gray-600">
+              <Link href="/" className="hover:text-equiser-blue">{tHeader('inicio')}</Link>
+              <span className="mx-2">/</span>
+              <Link href="/blog" className="hover:text-equiser-blue">{t('title')}</Link>
+              <span className="mx-2">/</span>
+              <span className="text-equiser-blue truncate">{article.title}</span>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Article Header */}
       <article className="py-12">

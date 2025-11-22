@@ -140,8 +140,8 @@ export function BlogHomePage() {
           <div className="flex items-center justify-between h-20">
             {/* Logo grande clickeable */}
             <div className="flex items-center">
-              <Link href="/" className="relative block mr-6">
-                <div className="relative" style={{ width: '250px', height: '80px' }}>
+              <Link href="/" className="relative block">
+                <div className="relative" style={{ width: '180px', height: '60px' }}>
                   <Image
                     src="/images/logo-equiser-actualizado.webp"
                     alt="GRÚAS EQUISER C.A. - Logo"
@@ -151,10 +151,11 @@ export function BlogHomePage() {
                   />
                 </div>
               </Link>
-              <div className="hidden md:block text-left">
-                <h1 className="text-xl font-bold text-equiser-blue">📝 {t('title')}</h1>
-                <p className="text-sm text-gray-600">{t('subtitle')}</p>
-              </div>
+            </div>
+            
+            {/* Título del Blog - Mobile */}
+            <div className="md:hidden flex-1 text-center px-2">
+              <h1 className="text-sm font-bold text-equiser-blue truncate">📝 {t('title')}</h1>
             </div>
 
             {/* Navegación */}
@@ -183,6 +184,14 @@ export function BlogHomePage() {
                 {t('ctaButton')}
               </Button>
             </div>
+          </div>
+        </div>
+        
+        {/* Título del Blog - Desktop */}
+        <div className="hidden md:block border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <h1 className="text-xl font-bold text-equiser-blue">📝 {t('title')}</h1>
+            <p className="text-sm text-gray-600">{t('subtitle')}</p>
           </div>
         </div>
       </header>
