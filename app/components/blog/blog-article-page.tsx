@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import { ContactForm } from '@/components/contact-form'
+import BlogImage from '@/components/BlogImage'
 
 interface BlogArticlePageProps {
   article: BlogArticle
@@ -324,16 +325,17 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
               </div>
             </div>
             
-            {/* Featured Image */}
-            <div className="relative w-full h-96 md:h-[500px] rounded-2xl overflow-hidden mb-12">
-              <Image
-                src={article.featuredImage}
+            {/* Hero Image */}
+            <div className="mb-12">
+              <BlogImage
+                blogSlug={article.slug}
+                imageIndex={0}
                 alt={article.title}
-                fill
-                className="object-cover"
+                width={1200}
+                height={500}
                 priority
+                className="w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
             
             {/* Schema.org structured data */}
@@ -385,6 +387,39 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           <div className="article-content">
             {renderContent(article.content)}
           </div>
+        </motion.div>
+        
+        {/* Additional Images Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <BlogImage
+            blogSlug={article.slug}
+            imageIndex={1}
+            alt={`${article.title} - Equipos y servicios especializados`}
+            width={800}
+            height={500}
+            className="w-full"
+          />
+          <BlogImage
+            blogSlug={article.slug}
+            imageIndex={2}
+            alt={`${article.title} - Proyectos industriales`}
+            width={800}
+            height={500}
+            className="w-full"
+          />
+          <BlogImage
+            blogSlug={article.slug}
+            imageIndex={3}
+            alt={`${article.title} - Seguridad y calidad garantizada`}
+            width={800}
+            height={500}
+            className="w-full"
+          />
         </motion.div>
         
         {/* Tags */}
