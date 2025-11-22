@@ -338,7 +338,7 @@ export function GaleriaCarrusel() {
             {/* Auto-play Indicator */}
             <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm z-10">
               <div className="flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-red-400'}`} />
+                <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-equiser-yellow' : 'bg-red-400'}`} />
                 {isAutoPlaying ? t('auto') : t('manual')}
               </div>
             </div>

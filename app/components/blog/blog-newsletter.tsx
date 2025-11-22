@@ -89,12 +89,12 @@ export function BlogNewsletter() {
                 animate={{ opacity: 1, y: 0 }}
                 className={`mt-4 p-4 rounded-lg flex items-center ${
                   status === 'success' 
-                    ? 'bg-green-500/20 border border-green-500' 
+                    ? 'bg-equiser-yellow/20 border border-equiser-yellow' 
                     : 'bg-red-500/20 border border-red-500'
                 }`}
               >
                 {status === 'success' ? (
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-equiser-yellow mr-3 flex-shrink-0" />
                 ) : (
                   <AlertCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                 )}

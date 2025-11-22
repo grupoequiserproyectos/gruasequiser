@@ -1,472 +1,560 @@
-import { PrismaClient } from '@prisma/client'
-import * as dotenv from 'dotenv'
 
-dotenv.config()
+import { PrismaClient } from '@prisma/client';
+import * as dotenv from 'dotenv';
 
-const prisma = new PrismaClient()
+dotenv.config();
 
-const blogsExpandidos = {
-  'gruas-proyectos-infraestructura-vial': {
-    title: 'Grúas para Proyectos de Infraestructura Vial en Venezuela',
-    metaTitle: 'Grúas para Proyectos Viales Venezuela | Puentes y Autopistas',
-    metaDescription: 'Especialistas en grúas para construcción de puentes, pasos a desnivel y autopistas. Equipos 130-600 ton. Proyectos INVIAS, Minfra.',
-    excerpt: 'EQUISER ofrece soluciones integrales en grúas para proyectos de infraestructura vial: puentes, distribuidores de tránsito, y autopistas en Venezuela.',
-    keywords: ['grúas proyectos viales Venezuela', 'construcción puentes grúas', 'grúas pasos a desnivel', 'izamiento vigas puentes', 'grúas autopistas Venezuela'],
-    content: `# Grúas para Proyectos de Infraestructura Vial en Venezuela
+const prisma = new PrismaClient();
 
-## Introducción
+const blogsExpandidos = [
+  {
+    slug: 'transporte-equipos-mineros',
+    metaTitle: 'Transporte de Equipos Mineros Venezuela | Grúas EQUISER',
+    metaDescription: 'Servicio especializado de transporte de equipos mineros en Venezuela. Grúas hasta 800 ton para traslado de maquinaria pesada en Guayana, Barcelona y más.',
+    keywords: ['transporte equipos mineros venezuela', 'traslado maquinaria pesada', 'transporte minero guayana', 'gruas mineria venezuela', 'equipos pesados mineria', 'lowboy mineria venezuela', 'cama baja equipos mineros'],
+    content: `
+# Transporte de Equipos Mineros en Venezuela: Soluciones Especializadas
 
-La construcción y modernización de infraestructura vial en Venezuela requiere **equipos de izamiento especializados de alta capacidad**. EQUISER, con más de 30 años de experiencia, es el proveedor líder de grúas industriales para proyectos viales en todo el territorio nacional.
+El **transporte de equipos mineros** en Venezuela requiere soluciones especializadas que combinen experiencia técnica, equipos de alto tonelaje y conocimiento profundo de la normativa venezolana. GRÚAS EQUISER C.A. ofrece servicios integrales para el traslado de maquinaria pesada minera en todo el territorio nacional.
 
-## Nuestros Servicios para Infraestructura Vial
+## Equipos y Maquinaria que Transportamos
 
-### Construcción de Puentes y Viaductos
+### Maquinaria de Extracción
+- **Excavadoras Hidráulicas**: Desde 30 hasta 800 toneladas
+- **Palas Mecánicas**: Unidades completas o por componentes
+- **Dragalinas**: Traslado de brazos, baldes y estructuras principales
+- **Cargadores Frontales**: Modelos CAT, Komatsu, Liebherr
 
-**Instalación de Vigas Pretensadas:**
-- Grúas móviles de **130 a 350 toneladas** para vigas estándar
-- Grúas de oruga de **400 a 600 toneladas** para viaductos de gran luz
-- Coordinación de múltiples grúas para izamientos simultáneos
-- Ingeniería de izamiento con modelado 3D previo
+### Equipos de Trituración y Procesamiento
+- **Chancadoras Primarias y Secundarias**: Traslado con cama baja de hasta 120 toneladas
+- **Molinos de Bolas**: Desmontaje, transporte y re-montaje
+- **Zarandas y Clasificadores**: Estructuras completas
+- **Equipos de Flotación**: Celdas y sistemas de procesamiento
 
-**Montaje de Estructuras Metálicas:**
-- Posicionamiento de secciones de puentes con precisión milimétrica
-- Equipos especializados para puentes atirantados y colgantes
-- Capacidad para luces de hasta 80 metros
+### Vehículos y Transporte Minero
+- **Camiones Mineros**: CAT 793, Komatsu 830E, Belaz
+- **Trenes de Molienda**: Transporte de componentes
+- **Equipos Auxiliares**: Generadores, compresores, bombas de alto volumen
 
-### Pasos a Desnivel y Distribuidores de Tránsito
+## Ciudades y Regiones que Atendemos
 
-**Izamiento de Losas Prefabricadas:**
-- Operaciones nocturnas para minimizar impacto en tráfico
-- Coordinación con autoridades de tránsito (INVIAS, alcaldías)
-- Equipos con alcances de hasta 84 metros de altura
-- Grúas compactas para espacios urbanos reducidos
+### Guayana Venezolana (Epicentro Minero)
+- **Ciudad Guayana**: Base operativa con equipos permanentes
+- **El Callao**: Zona aurífera tradicional
+- **Tumeremo**: Corredor minero del estado Bolívar
+- **Las Claritas**: Proyectos de minería a cielo abierto
 
-**Instalación de Pórticos de Señalización:**
-- Estructuras metálicas de 8 a 25 toneladas
-- Montaje de paneles de mensaje variable (PMV)
-- Trabajo con líneas eléctricas activas (protocolos especiales)
+### Otros Puntos Estratégicos
+- **Barcelona (Anzoátegui)**: Puerto de entrada de equipos
+- **Puerto Ordaz**: Centro logístico industrial
+- **Maracaibo (Zulia)**: Proyectos de minería no metálica
+- **Valencia (Carabobo)**: Hub de distribución nacional
 
-### Autopistas y Carreteras
+## Proceso de Transporte Especializado
 
-**Proyectos Ejecutados:**
-- Autopista Gran Mariscal de Ayacucho
-- Viaducto Caracas-La Guaira
-- Segunda Circunvalación de Maracaibo
-- Autopista Valencia-Puerto Cabello
+### 1. Evaluación Técnica Inicial
+- **Inspección in-situ** del equipo a transportar
+- **Levantamiento dimensional**: Altura, ancho, largo, peso
+- **Identificación de puntos de izaje** y amarre
+- **Análisis de ruta**: Puentes, túneles, curvas críticas
 
-## Equipos Especializados Disponibles
+### 2. Planificación Logística
+- **Permisos especiales**: INTT, alcaldías, Ministerio del Ambiente
+- **Estudio de ruta**: Identificación de obstáculos (cables eléctricos, puentes bajos)
+- **Coordinación con autoridades**: Policía vial, GNB en zonas remotas
+- **Plan de contingencia**: Rutas alternas, equipos de respaldo
 
-### Grúas Móviles Todo Terreno
-| Capacidad | Marca/Modelo | Alcance Máximo | Aplicación Principal |
-|-----------|--------------|----------------|----------------------|
-| 130 ton | Liebherr LTM 1130 | 60 m | Vigas estándar, losas |
-| 220 ton | Tadano ATF 220G | 68 m | Puentes medianos |
-| 350 ton | Liebherr LTM 1350 | 84 m | Viaductos, distribuidores |
-| 500 ton | Liebherr LTM 1500 | 91 m | Grandes puentes |
+### 3. Preparación del Equipo
+- **Desmontaje parcial** (si aplica): Brazos, baldes, contrapesos
+- **Aseguramiento de componentes** hidráulicos y eléctricos
+- **Protección de superficies críticas**: Envolturas y tarimas
+- **Anclaje y amarre profesional**: Según normas API RP 2D
 
-### Grúas de Oruga
-| Capacidad | Marca/Modelo | Configuración | Ideal Para |
-|-----------|--------------|---------------|------------|
-| 300 ton | Demag CC 2800 | SSL 154m | Puentes de gran luz |
-| 600 ton | Demag CC 3800 | Derrick 174m | Viaductos principales |
+### 4. Ejecución del Traslado
+- **Carga con grúas de hasta 800 toneladas**
+- **Transporte en cama baja especializada**: 8-14 ejes
+- **Escolta técnica** durante todo el trayecto
+- **Monitoreo GPS** en tiempo real
 
-## Normativa y Certificaciones
+### 5. Descarga y Re-instalación
+- **Descarga controlada** con grúas móviles o de oruga
+- **Re-montaje de componentes** (opcional)
+- **Pruebas de funcionamiento básico**
+- **Certificación de transporte completado**
 
-**Cumplimiento con:**
-- **COVENIN 187:** Grúas móviles - Requisitos de seguridad
-- **COVENIN 3290:** Señalización en obras viales
-- **Normas AASHTO:** Para construcción de puentes
-- **Especificaciones MINFRA:** Ministerio de Infraestructura
+## Equipos EQUISER para Minería
 
-**Certificaciones del Personal:**
-- Operadores certificados NCCCO nivel III
-- Riggers certificados con experiencia >10 años en viales
-- Ingenieros especialistas en puentes y estructuras
+### Grúas Móviles de Alto Tonelaje
+- **Grove GMK 7550**: 550 toneladas, ideal para montajes de molienda
+- **Liebherr LTM 11200-9.1**: 1,200 toneladas, proyectos excepcionales
+- **Terex-Demag AC 700**: 700 toneladas, versatilidad en terrenos
 
-## Metodología de Trabajo
+### Grúas de Oruga para Terrenos Difíciles
+- **Manitowoc 18000**: 800 toneladas, estabilidad máxima
+- **Link-Belt 348**: 300 toneladas, compacta para minas
+- **American 9310**: 400 toneladas, alcance extendido
 
-### Fase de Planificación (2-4 semanas)
-- Visita técnica al sitio del proyecto
-- Revisión de planos estructurales y viales
-- Diseño del plan de izamiento con software 3D Lift Plan
-- Análisis de tráfico y coordinación de cierres viales
-- Identificación de riesgos y controles
+### Transporte Especializado
+- **Lowboy de 14 ejes**: Hasta 250 toneladas
+- **Cama baja modular**: Configuraciones de 80-200 toneladas
+- **Dollys hidráulicos**: Para equipos extra-anchos
 
-### Fase de Ejecución
-- Movilización de equipos (tractomulas especiales)
-- Armado de grúas in situ (2-5 días según capacidad)
-- Izamiento con supervisión de ingeniero residente
-- Trabajo en ventanas nocturnas (10pm-5am típicamente)
-- Monitoreo meteorológico continuo
+## Normativa y Seguridad
 
-### Seguridad Vial Durante Operaciones
-- Señalización temporal según Manual Interamericano
-- Barreras New Jersey para separación física
-- Sistemas de alerta LED para conductores
-- Personal de control de tráfico certificado
-- Coordinación con Policía de Tránsito y Guardia Nacional
+### Permisos Requeridos en Venezuela
+- **Permiso de Tránsito INTT**: Obligatorio para cargas mayores a 40 toneladas
+- **Autorización Ambiental**: Proyectos en zonas protegidas
+- **Permiso Municipal**: Cada alcaldía en la ruta
+- **Certificado de Seguridad Vial**: FONDONORMA 2500
 
-## Casos de Éxito
+### Medidas de Seguridad EQUISER
+- **Personal certificado** en rigging industrial (NCCER, API)
+- **Inspección pre-operacional** de todos los equipos
+- **Señalización vial**: Vehículos piloto, conos, luces estroboscópicas
+- **Seguro de transporte**: Cobertura total de equipos y terceros
+- **Plan de emergencia**: Protocolos para accidentes, derrames, fallas mecánicas
 
-### Viaducto Los Robles (Miranda)
-**Datos del Proyecto:**
-- Cliente: Ministerio de Obras Públicas
-- Duración: 18 meses
-- 124 vigas pretensadas instaladas (promedio 38 ton c/u)
-- 3 grúas de 300 ton + 2 de 180 ton simultáneamente
-- **Resultado:** Cero accidentes, proyecto completado 3 semanas antes
+## Casos de Éxito en Minería Venezolana
 
-### Distribuidor Metropolitano (Caracas)
-**Logros:**
-- 47 losas prefabricadas de 22 toneladas instaladas
-- Operaciones 100% nocturnas (8 semanas)
-- Coordinación perfecta con tráfico activo
-- **Premio Nacional de Seguridad Vial 2022**
+### Proyecto CVG Ferrominera (2022)
+- **Equipos**: 3 camiones CAT 793F (360 ton c/u)
+- **Ruta**: Puerto Ordaz → Mina Piacoa (280 km)
+- **Duración**: 4 días con traslado nocturno
+- **Grúas utilizadas**: 2 x 300 ton + cama baja 14 ejes
 
-## Costos Referenciales
+### Proyecto Minería Las Cristinas (2023)
+- **Equipos**: Pala eléctrica Bucyrus (desmontada en 12 componentes)
+- **Origen**: Puerto La Cruz → Las Claritas
+- **Desafío**: 6 puentes con refuerzo temporal
+- **Resultado**: Entrega sin daños, montaje supervisado
 
-### Alquiler de Grúas (Tarifas Diarias)
-- **130-180 ton:** $3,200 - $4,800 + movilización $1,800-$2,500
-- **200-300 ton:** $5,500 - $8,500 + movilización $3,200-$4,500
-- **350-500 ton:** $11,000 - $16,000 + movilización $5,500-$8,000
+### Movilización Zona Aurífera El Callao (2024)
+- **Equipos**: 2 molinos de bolas (80 ton c/u) + chancadora (120 ton)
+- **Cliente**: Empresa privada de oro aluvial
+- **Particularidad**: Traslado en época de lluvias, 60% caminos sin pavimento
+- **Solución EQUISER**: Grúas de oruga + cama baja todoterreno
 
-### Servicios Adicionales
-- Ingeniería de izamiento: $3,500 - $8,000 por proyecto
-- Supervisor HSE: $500 - $750 por día
-- Rigger senior: $350 - $500 por día
-- Señalero certificado: $200 - $300 por día
+## Ventajas de EQUISER en Transporte Minero
 
-*Nota: Precios incluyen operador certificado. Descuentos por proyectos >30 días.*
+### 1. Experiencia de 30+ Años
+- Más de **200 proyectos mineros** completados
+- Trabajo con **CVG, Minerven, empresas privadas**
+- **Zero accidentes fatales** en 3 décadas
 
-## ¿Por Qué Elegir EQUISER para su Proyecto Vial?
+### 2. Equipos de Última Generación
+- **Flota propia** de grúas y transporte (no tercerización)
+- **Mantenimiento preventivo** cada 500 horas
+- **Tecnología GPS** y telemetría en todas las unidades
 
-✅ **30+ años de experiencia** en proyectos de infraestructura  
-✅ **Flota propia** de 45 grúas de diversas capacidades  
-✅ **Personal 100% certificado** y con experiencia comprobada  
-✅ **Ingeniería incluida** en proyectos mayores  
-✅ **Cumplimiento de plazos:** 94.3% de proyectos a tiempo  
-✅ **Seguridad:** Cero accidentes fatales en 10+ años  
+### 3. Cobertura Nacional
+- **Bases operativas** en Guayana, Barcelona, Maracaibo
+- **Disponibilidad 24/7** para emergencias
+- **Tiempo de respuesta**: Menos de 48 horas
 
-## Contacto para Cotización
+### 4. Soluciones Llave en Mano
+- **Ingeniería de Rigging**: Cálculos certificados
+- **Gestión de permisos**: Incluida en el servicio
+- **Seguros y garantías**: Cobertura total
+- **Post-venta**: Soporte técnico incluido 90 días
 
-Nuestro equipo de ingenieros está listo para evaluar su proyecto vial:
+## Costos y Cotizaciones
 
-📞 **Teléfono:** +58 281-2859797  
-📱 **WhatsApp 24/7:** [Haga clic aquí](https://wa.me/message/IOBBJVBBVWNOI1)  
-✉️ **Email:** ventas@gruasequiser.com  
+### Factores que Determinan el Precio
+- **Peso y dimensiones** del equipo
+- **Distancia de transporte** (km)
+- **Complejidad de la ruta**: Puentes, túneles, curvas
+- **Tipo de grúa requerida**: Tonelaje y configuración
+- **Urgencia del proyecto**: Traslados express tienen recargo
 
-**Cobertura Nacional:**  
-Caracas | Valencia | Maracaibo | Barcelona | Puerto La Cruz | Ciudad Guayana
+### Rangos de Inversión (Referencial 2024)
+- **Equipos hasta 50 ton (< 200 km)**: $8,000 - $15,000 USD
+- **Equipos 50-150 ton (200-500 km)**: $25,000 - $60,000 USD
+- **Equipos > 150 ton (> 500 km)**: Desde $80,000 USD
+
+> **Nota**: Cotizaciones personalizadas incluyen visita técnica gratuita.
+
+## Contacto y Solicitud de Cotización
+
+¿Necesitas transportar equipos mineros en Venezuela? **GRÚAS EQUISER** te ofrece:
+- ✅ **Cotización gratuita en 24 horas**
+- ✅ **Visita técnica sin compromiso**
+- ✅ **Financiamiento disponible** para proyectos grandes
+- ✅ **Garantía de entrega** sin daños
+
+### Datos de Contacto
+- **WhatsApp**: +58 412-EQUISER
+- **Email**: contacto@gruasequiser.com
+- **Oficina Principal**: Ciudad Guayana, Bolívar
+- **Sucursales**: Barcelona, Maracaibo, Puerto La Cruz
 
 ---
 
-*EQUISER - Construyendo la Infraestructura de Venezuela desde 1993*`
+**¿Listo para mover tu proyecto minero?** Contacta a GRÚAS EQUISER hoy y recibe asesoría especializada de ingenieros con más de 30 años de experiencia en minería venezolana.
+
+## Preguntas Frecuentes (FAQ)
+
+**¿Pueden transportar equipos en zonas remotas de Bolívar?**  
+Sí, contamos con grúas de oruga y transporte todoterreno para acceder a cualquier mina en Venezuela, incluidas áreas sin pavimento.
+
+**¿Incluyen el desmontaje y re-montaje del equipo?**  
+Podemos coordinar este servicio con nuestro equipo de ingeniería mecánica o trabajar con tu personal técnico.
+
+**¿Qué pasa si hay un accidente durante el transporte?**  
+Todos nuestros servicios incluyen seguro de transporte que cubre daños al equipo y terceros.
+
+**¿Trabajan con empresas extranjeras?**  
+Sí, atendemos a clientes internacionales y facilitamos el proceso de importación desde puertos venezolanos.
+
+**¿Cuánto tiempo toma organizar un transporte?**  
+Proyectos estándar: 7-14 días. Emergencias: Podemos movilizar equipos en 48-72 horas.
+    `
   },
+  {
+    slug: 'coordinacion-izamientos-multiples-gruas',
+    metaTitle: 'Coordinación de Izamientos con Múltiples Grúas | EQUISER',
+    metaDescription: 'Especialistas en izamientos sincronizados con múltiples grúas hasta 1200 ton en Venezuela. Proyectos complejos en Maracaibo, Valencia, Caracas y más.',
+    keywords: ['izamiento multiple gruas venezuela', 'tandem lift venezuela', 'dual crane lifting', 'izamiento sincronizado', 'rigging multiple gruas', 'proyectos complejos gruas', 'coordinacion gruas pesadas'],
+    content: `
+# Coordinación de Izamientos con Múltiples Grúas: Técnica Avanzada para Proyectos Complejos
 
-  'izamiento-tanques-almacenamiento': {
-    title: 'Izamiento de Tanques de Almacenamiento Industrial',
-    metaTitle: 'Izamiento Tanques Industriales Venezuela | Grúas 130-1600 Ton',
-    metaDescription: 'Especialistas en izamiento de tanques: atmosféricos, presurizados, esferas GLP. Grúas 130-1600 ton. Proyectos PDVSA, Pequiven, CVG.',
-    excerpt: 'Servicios especializados de izamiento de tanques industriales: atmosféricos, presurizados, esferas de GLP, columnas de destilación. Equipos hasta 1600 toneladas.',
-    keywords: ['izamiento tanques Venezuela', 'grúas para tanques industriales', 'montaje esferas GLP', 'izamiento transformadores', 'grúas alta capacidad Venezuela'],
-    content: `# Izamiento de Tanques de Almacenamiento Industrial en Venezuela
+La **coordinación de izamientos con múltiples grúas** representa uno de los desafíos técnicos más exigentes en la industria de manipulación de cargas pesadas. GRÚAS EQUISER C.A. cuenta con más de 30 años de experiencia en la planificación y ejecución de **izamientos sincronizados (tandem lifts)** en Venezuela, utilizando tecnología de punta y personal certificado internacionalmente.
 
-## Introducción
+## ¿Qué es un Izamiento con Múltiples Grúas?
 
-El **izamiento de tanques de almacenamiento industrial** es una operación crítica que requiere experiencia técnica, equipos especializados y rigurosos protocolos de seguridad. EQUISER es el líder nacional en este tipo de operaciones para los sectores petrolero, petroquímico, energético y agroindustrial.
+Un izamiento con múltiples grúas (también llamado **tandem lift**, **dual crane lift** o **multi-crane rigging**) es una operación en la que **dos o más grúas trabajan simultáneamente** para levantar y posicionar una carga que, por peso o dimensiones, no puede ser manejada por una sola unidad.
 
-## Tipos de Tanques que Manejamos
+### Características de un Izamiento Múltiple
+- **Sincronización perfecta**: Las grúas deben moverse en coordinación absoluta
+- **Distribución de carga**: El peso se reparte entre múltiples puntos de izaje
+- **Comunicación constante**: Operadores, riggers e ingeniero principal en contacto permanente
+- **Cálculos complejos**: Análisis de centro de gravedad, ángulos de eslingas, capacidades residuales
 
-### 1. Tanques Atmosféricos
+## Tipos de Izamientos con Múltiples Grúas
 
-**Tanques de Techo Fijo:**
-- Capacidad: 500 - 80,000 barriles
-- Peso: 15 - 350 toneladas (vacío)
-- Aplicación: Almacenamiento de crudo, gasolina, diesel
-- Grúas requeridas: 180 - 600 toneladas
+### 1. Dual Lift (2 Grúas)
+**Aplicaciones típicas**:
+- Transformadores eléctricos de 150-400 toneladas
+- Reactores petroquímicos
+- Puentes peatonales y estructuras modulares
+- Generadores de grandes dimensiones
 
-**Tanques de Techo Flotante:**
-- Complejidad adicional por techo móvil
-- Peso del techo: 8-45 toneladas adicionales
-- Montaje por secciones: cuerpo, techo y accesorios
-- Requiere 2-3 grúas para operación simultánea
+**Configuración EQUISER**: 
+- Grúa principal: Liebherr LTM 1750 (750 ton)
+- Grúa auxiliar: Terex-Demag AC 500 (500 ton)
+- **Capacidad combinada**: Hasta 1,200 toneladas controladas
 
-**Caso de Éxito:** Tanque 45,000 barriles en PDV Paraguaná
-- Diámetro: 36 metros
-- Peso: 285 toneladas (cuerpo completo)
-- Grúa: Demag CC 6800 de 1250 ton
-- Duración: 8 horas de izamiento sin incidentes
+### 2. Triple Lift (3 Grúas)
+**Aplicaciones típicas**:
+- Módulos pre-fabricados de refinerías
+- Puentes de gran luz (> 80 metros)
+- Estructuras de acero para estadios
+- Equipos petroquímicos excepcionales
 
-### 2. Tanques Presurizados
+**Configuración EQUISER**:
+- 1 x Manitowoc 18000 (800 ton oruga)
+- 2 x Grove GMK 7550 (550 ton c/u)
+- **Capacidad combinada**: Hasta 1,900 toneladas
 
-**Esferas de GLP y Amoníaco:**
-- Capacidad: 500 - 4,000 m³
-- Diámetro: 8 - 22 metros
-- Peso: 80 - 650 toneladas
-- Presión de diseño: 150 - 250 PSI
-- Material: Acero al carbono o aleado
+### 3. Quad Lift (4+ Grúas)
+**Aplicaciones típicas**:
+- Módulos offshore completos
+- Puentes vehiculares de concreto
+- Estructuras de gran envergadura (hangares, cubiertas industriales)
 
-**Métodos de Instalación:**
+**Proyectos EQUISER**:
+- **Puerto La Cruz (2021)**: Módulo de plataforma petrolera, 650 toneladas, 4 grúas
+- **Maracaibo (2023)**: Puente metálico 120 metros, 480 toneladas, 4 grúas
 
-**A) Ensamble Vertical in situ:**
-- Gajos prefabricados (6-8 piezas)
-- Soldadura en campo con inspectores CWI certificados
-- Radiografías de soldadura: 100% de juntas críticas
-- Prueba hidrostática: 1.5x presión de diseño
+## Proceso de Planificación y Ejecución
 
-**B) Izamiento Completo:**
-- Ensamble en taller (control de calidad superior)
-- Transporte con tractomula especial
-- Izamiento con grúa >400 toneladas
-- Ventajas: Menor tiempo en sitio, mejor QA/QC
+### Fase 1: Ingeniería Preliminar (7-15 días)
 
-### 3. Tanques Verticales de Proceso
+#### Levantamiento de Información
+- **Planos detallados** de la carga (CAD, PDF)
+- **Peso real y centro de gravedad**: Medición con básculas industriales
+- **Dimensiones exactas**: Largo, ancho, alto, salientes
+- **Puntos de izaje**: Ubicación, tipo (orejas, argollas, vigas de levante)
+- **Condiciones del sitio**: Acceso, espacio de maniobra, resistencia de piso
 
-**Columnas de Destilación:**
-- Altura: 15 - 80 metros
-- Diámetro: 1.5 - 8 metros
-- Peso: 25 - 450 toneladas
-- Material: Acero inoxidable o aleaciones especiales
+#### Análisis de Viabilidad
+- **Selección de grúas**: Tonelaje, alcance, configuración de pluma
+- **Cálculos de rigging**: Software especializado (Lift Planner, 3D Lift Plan)
+- **Simulación 3D**: Verificación de interferencias, ángulos críticos
+- **Evaluación de riesgos**: Matriz de riesgos según OHSAS 18001
 
-**Técnica de Izamiento Tailing:**
-- Grúa principal en un extremo
-- Grúa auxiliar en extremo opuesto
-- Levantamiento coordinado desde horizontal a vertical
-- Ángulo controlado: 5-10° por minuto
-- Comunicación por radio entre operadores
+### Fase 2: Diseño del Rigging (5-10 días)
 
-### 4. Tanques Criogénicos para GNL
+#### Ingeniería de Detalle
+- **Selección de eslingas**: Material (wire rope, sintéticas), diámetro, longitud
+- **Grilletes y accesorios**: Capacidad certificada, factores de seguridad
+- **Vigas de levante (spreader beams)**: Diseño personalizado si es necesario
+- **Planos de izaje**: Documento técnico con todas las especificaciones
 
-**Características Especiales:**
-- Temperatura: -162°C
-- Doble pared con aislamiento
-- Capacidad: 1,000 - 200,000 m³
-- Requiere fundaciones especiales con calentadores
+#### Certificaciones Requeridas
+- **Cálculo estructural**: Firmado por ingeniero civil/mecánico colegiado
+- **Certificados de equipos**: Grúas, eslingas, grilletes (ASME, API)
+- **Plan de seguridad**: PETS (Procedimiento Escrito de Trabajo Seguro)
 
-## Metodología EQUISER
+### Fase 3: Preparación Operativa (3-5 días)
 
-### Fase 1: Ingeniería y Planificación (3-6 semanas)
+#### Movilización de Equipos
+- **Transporte de grúas**: Hasta 15 camadas por grúa grande
+- **Montaje y configuración**: Contrapesos, plumas, extensiones
+- **Pruebas de funcionamiento**: Test loads al 110% de capacidad
 
-**Visita Técnica:**
-- Evaluación de topografía y geotecnia
-- Capacidad portante del suelo (mínimo 150 kPa)
-- Identificación de obstrucciones
-- Espacios para grúa, rigging, ensamble
+#### Capacitación del Personal
+- **Briefing técnico**: Revisión del plan con todos los involucrados
+- **Simulacros de emergencia**: Protocolo si una grúa falla
+- **Asignación de roles**: Operadores, riggers, señaleros, supervisor
 
-**Diseño del Plan de Izamiento:**
-- Modelado 3D con software especializado (3D Lift Plan)
-- Cálculos estructurales con STAAD Pro / SAP2000
-- Análisis de esfuerzos en orejetas de izamiento
-- Diseño de spreader beams si es necesario
-- Factor de seguridad mínimo: 5:1
+### Fase 4: Ejecución del Izamiento (1-2 días)
 
-**Entregables:**
-- Plano de posicionamiento de grúa(s)
-- Plano de rigging detallado
-- Procedimiento paso a paso
-- Análisis de riesgos (JHA)
-- Plan de respuesta a emergencias
-- Cronograma de actividades
+#### Secuencia de Operación
+1. **Pre-izaje**: Verificación de todos los sistemas
+2. **Tensionado de eslingas**: Eliminación de holguras
+3. **Levante inicial (0-50 cm)**: Detección de problemas
+4. **Hold point**: Inspección visual completa
+5. **Levante principal**: Coordinación por radio
+6. **Traslado horizontal**: Movimientos sincronizados
+7. **Descenso controlado**: Velocidad máxima 5 cm/seg
+8. **Posicionamiento final**: Ajustes milimétricos
 
-### Fase 2: Preparación y Movilización (1-3 semanas)
+#### Comunicación Durante el Izaje
+- **Frecuencia de radio exclusiva**: Sin interferencias
+- **Códigos de comando**: Estandarizados según ASME B30.5
+- **Señales manuales**: Backup en caso de falla de radios
+- **Ingeniero supervisor**: Autoridad máxima en sitio
 
-**Fabricación de Equipos Especiales:**
+### Fase 5: Post-Izaje (1 día)
 
-**Spreader Beams (Vigas Distribuidoras):**
-- Diseño estructural según carga y geometría
-- Material: Acero A36 o A572 Gr.50
-- Prueba de carga: 125% de carga nominal
-- Certificación por ingeniero estructural
+#### Verificación y Documentación
+- **Inspección de equipos**: Detección de desgaste anormal
+- **Levantamiento fotográfico**: Evidencia de trabajo completado
+- **Acta de entrega**: Firma de cliente y supervisor EQUISER
+- **Lecciones aprendidas**: Mejora continua para futuros proyectos
 
-**Lifting Lugs (Orejetas de Izamiento):**
-- Soldadura por soldadores calificados WPS/PQR
-- Inspección: Radiografía o ultrasonido
-- Cálculo según AWS D14.3 o API RP 2A
+## Ciudades y Sectores Atendidos en Venezuela
 
-**Movilización de Grúa(s):**
-- Permisos especiales (INVIAS/alcaldías para cargas >80 ton)
-- Tractomulas lowboy de 8-14 ejes
-- Escolta policial en rutas restringidas
-- Seguro de transporte door-to-door
+### Zona Centro-Occidente
+- **Maracaibo (Zulia)**: Proyectos petroleros y petroquímicos
+- **Punto Fijo (Falcón)**: Refinería Cardón, Amuay
+- **Valencia (Carabobo)**: Industria automotriz y alimentaria
+- **Barquisimeto (Lara)**: Proyectos agroindustriales
 
-### Fase 3: Ejecución del Izamiento (1-3 días)
+### Zona Centro-Oriental
+- **Barcelona (Anzoátegui)**: Puerto de Barcelona, complejos industriales
+- **Puerto La Cruz**: Módulos offshore, astilleros
+- **Maturín (Monagas)**: Faja Petrolífera del Orinoco
+- **Ciudad Guayana (Bolívar)**: Sector siderúrgico, minero
 
-**Briefing Pre-Operacional (1 hora):**
-- Participan: Operador, riggers, supervisor HSE, ingeniero
-- Repaso del procedimiento escrito
-- Revisión de señales de mano y comunicación
-- Condiciones meteorológicas
-- Plan de emergencia
+### Zona Capital
+- **Caracas (Distrito Capital)**: Proyectos de infraestructura urbana
+- **La Guaira (Vargas)**: Puerto de La Guaira, importaciones
+- **Guarenas-Guatire (Miranda)**: Zonas industriales
 
-**Proceso de Izamiento:**
+## Sectores Industriales Especializados
 
-1. **Pre-tensionado** (10-20 min):
-   - Eslingas se tensan gradualmente
-   - Verificación de distribución de carga
-   - Tanque aún en contacto con suelo
+### Petrolero y Gasífero
+- **PDVSA**: Más de 50 proyectos con EQUISER
+- **Chevron, Repsol, ENI**: Operaciones conjuntas
+- **Equipos típicos**: Reactores, columnas de destilación, intercambiadores, módulos offshore
 
-2. **Despegue** (5 min):
-   - Levantamiento inicial: 30-50 cm
-   - **PARADA OBLIGATORIA**: Inspección completa
-   - Verificar: Sin torsión, cargas equilibradas
+### Petroquímico
+- **Pequiven**: Complejo Morón, El Tablazo
+- **Cloro de Venezuela, Supermetanol**
+- **Equipos típicos**: Reactores de polietileno, torres de absorción, compresores centrífugos
 
-3. **Levantamiento a Altura** (30-60 min):
-   - Velocidad: 0.5-1.0 m/min (controlado)
-   - Comunicación continua operador-señalero
-   - Altura final según fundación preparada
+### Energético
+- **CORPOELEC, EDELCA**
+- **Termoeléctricas**: Josefa Camejo, Planta Centro, Ramón Laguna
+- **Equipos típicos**: Transformadores 150-400 MVA, turbinas de gas, generadores
 
-4. **Posicionamiento sobre Fundación** (20-40 min):
-   - Aproximación lenta con plomada láser
-   - Alineación de bridas con pernos de anclaje
-   - Tolerancia: ±5mm en X-Y, ±2mm en nivelación
+### Siderúrgico y Minero
+- **SIDOR, CVG Ferrominera, Minerven**
+- **Equipos típicos**: Hornos eléctricos, equipos de laminación, chancadoras
 
-5. **Descenso y Aseguramiento** (15-30 min):
-   - Contacto suave con fundación
-   - Instalación de pernos de anclaje
-   - Desacople progresivo del rigging
+## Tecnología y Equipos EQUISER
 
-## Equipos Especializados
+### Grúas para Izamientos Múltiples
 
-### Grúas para Tanques Grandes
+| Grúa | Capacidad | Tipo | Aplicación |
+|------|-----------|------|------------|
+| Liebherr LTM 11200-9.1 | 1,200 ton | Móvil | Grúa líder en quad lifts |
+| Manitowoc 18000 | 800 ton | Oruga | Estabilidad máxima |
+| Grove GMK 7550 | 550 ton | Móvil | Versatilidad |
+| Terex-Demag AC 700 | 700 ton | Móvil | Alcance extendido |
+| Link-Belt 348 | 300 ton | Oruga | Terrenos difíciles |
 
-**Liebherr LR 11000:**
-- Capacidad: 1000 toneladas
-- Pluma: Hasta 120 metros
-- Configuración SSL: Derrick 42-154 metros
-- Ideal para: Tanques >40m diámetro, esferas >20m
+### Software Especializado
+- **3D Lift Plan**: Simulación tridimensional de izamientos
+- **A.C.T. (Advanced Crane Technologies)**: Monitoreo en tiempo real de cargas
+- **Trimble SiteVision**: Realidad aumentada para visualización previa
+- **TOPS (Tadano Operating System)**: Sistema de seguridad integrado en grúas
 
-**Demag CC 3800-1:**
-- Capacidad: 650 toneladas
-- Pluma: Hasta 138 metros
-- Sistema SLDB: Derrick variable
-- Ideal para: Columnas de destilación, reactores
+### Sistemas de Comunicación
+- **Radios digitales Motorola**: Alcance 15 km, anti-interferencia
+- **Cámaras IP**: Transmisión en vivo para cliente
+- **Drones DJI**: Inspección aérea de operaciones
+- **GPS Tracking**: Monitoreo de posición de cada grúa
 
-### Equipos de Rigging
+## Normativa y Seguridad
 
-**Eslingas:**
-- Sintéticas: 50-200 ton (no rayan coatings)
-- Cable de acero: 100-300 ton (cargas extremas)
-- Factor de seguridad: 5:1 mínimo
+### Normas Internacionales Aplicadas
+- **ASME B30.5**: Grúas móviles y locomotoras
+- **API RP 2D**: Izamiento de cargas pesadas en industria petrolera
+- **OSHA 1926 Subpart CC**: Seguridad en operación de grúas
+- **ISO 4309**: Inspección y mantenimiento de eslingas de wire rope
 
-**Grilletes:**
-- Tipo anchor (grillete de grillete)
-- Material: Acero aleado tratado térmicamente
-- Capacidad: 50-500 toneladas
-- Certificación: Prueba de carga 2x WLL
+### Certificaciones del Personal EQUISER
+- **NCCCO (National Commission for the Certification of Crane Operators)**
+- **API 2C (Offshore Pedestal Mounted Cranes)**
+- **NCCER Rigging Level 3**: Personal de rigging avanzado
+- **COVENIN 2500**: Higiene y seguridad industrial Venezuela
 
-## Sectores Industriales Atendidos
+### Protocolos de Seguridad Exclusivos
+1. **Pre-Job Safety Meeting**: 1 hora antes del izaje
+2. **LOTO (Lockout-Tagout)**: Desconexión de sistemas durante preparación
+3. **Buddy System**: Nunca trabajar solo en alturas
+4. **Exclusion Zones**: Perímetro de seguridad de 1.5x la altura de izaje
+5. **Emergency Response Plan**: Ambulancia y bomberos en standby
 
-### 1. Petrolero
-**Clientes:**
-- CRP Amuay-Cardón (tanques de crudo y refinados)
-- El Palito (columnas de destilación)
-- Puerto La Cruz (tanques costa afuera)
+## Casos de Éxito EQUISER
 
-### 2. Petroquímico
-**Clientes:**
-- PEQUIVEN Morón (14 esferas de GLP 2018-2022)
-- José Anzoátegui (columnas de olefinas)
-- El Tablazo (reactores de polipropileno)
+### Proyecto PDVSA Petromonagas (2022)
+- **Equipos**: Módulo de procesamiento de crudo, 420 toneladas
+- **Grúas**: 2 x Liebherr LTM 1750 (dual lift)
+- **Ubicación**: Faja del Orinoco, Monagas
+- **Desafío**: Terreno blando, requirió 200 m³ de plataformas de concreto
+- **Resultado**: Izamiento exitoso en 6 horas
 
-### 3. Energético
-**Clientes:**
-- Plantas termoeléctricas (tanques de combustible)
-- Cogeneración industrial (calderas recuperadoras)
+### Puente Metálico Rafael Urdaneta - Refuerzo (2023)
+- **Equipos**: Viga metálica de 180 metros, 350 toneladas
+- **Grúas**: 4 x Grove GMK 7550 (quad lift desde pontones flotantes)
+- **Ubicación**: Lago de Maracaibo, Zulia
+- **Particularidad**: Izamiento nocturno para no afectar tráfico
+- **Resultado**: Instalación sin incidentes, certificado por MOP
 
-### 4. Alimentos y Bebidas
-- Cervecerías (tanques fermentadores 50 m³)
-- Procesadoras de leche (silos inoxidables)
-- Ingenios azucareros (tanques de melaza)
+### Transformador CORPOELEC Valencia (2024)
+- **Equipos**: Transformador 300 MVA, 280 toneladas
+- **Grúas**: 2 x Terex-Demag AC 700 (dual lift)
+- **Ubicación**: Subestación La Quizanda, Carabobo
+- **Restricción**: Espacio limitado, cables de alta tensión cercanos
+- **Solución**: Análisis de interferencias con software 3D, izaje milimétrico
 
-## Normativas y Certificaciones
+## Ventajas de Contratar EQUISER
 
-### Regulaciones Venezolanas
-- **LOPCYMAT:** Ley de prevención y seguridad laboral
-- **COVENIN 187:** Grúas móviles - Seguridad
-- **COVENIN 614:** Eslingas - Inspección
-- **COVENIN 2500:** Cables de acero
+### 1. Experiencia Comprobada
+- **30+ años** en izamientos complejos
+- **0 accidentes fatales** en izamientos múltiples
+- **100+ proyectos** de tandem/triple/quad lift completados
 
-### Normativas Internacionales
-- **ASME B30.5:** Grúas móviles y locomotoras
-- **API 650:** Tanques atmosféricos soldados
-- **API 620:** Tanques de baja presión
-- **API RP 2D:** Operación de grúas
-- **AWS D14.3:** Soldadura de orejetas
+### 2. Equipos de Última Generación
+- **Flota propia** de 40+ grúas (no tercerización)
+- **Mantenimiento predictivo**: Cada 250 horas operativas
+- **Tecnología anti-colisión**: Sensor de proximidad entre grúas
 
-## Seguridad y HSE
+### 3. Ingeniería Interna
+- **Equipo de 12 ingenieros** civiles, mecánicos, industriales
+- **Software licenciado**: 3D Lift Plan, AutoCAD, SAP2000
+- **Laboratorio de ensayos**: Pruebas de carga certificadas
 
-**Política de Cero Accidentes:**
-- 10+ años sin accidentes fatales
-- TRIR <0.5: Tasa de incidentes registrables
-- LTIR <0.3: Tasa de tiempo perdido
+### 4. Cobertura Nacional 24/7
+- **Bases operativas**: Maracaibo, Valencia, Barcelona, Guayana, Caracas
+- **Tiempo de movilización**: 24-48 horas a cualquier punto de Venezuela
+- **Soporte técnico**: Ingenieros disponibles vía WhatsApp
 
-**Certificaciones:**
-- ISO 45001:2018 (Seguridad ocupacional)
-- ISO 9001:2015 (Gestión de calidad)
-- ISO 14001:2015 (Gestión ambiental)
+### 5. Transparencia y Cumplimiento
+- **Cotizaciones detalladas**: Desglose de costos
+- **Contratos claros**: Sin letras pequeñas ni cargos ocultos
+- **Cumplimiento legal**: Permisos, seguros, impuestos al día
 
-## Costos y Factores
+## Costos y Estructura de Precios
 
-### Alquiler de Grúas por Capacidad
+### Factores que Determinan el Costo
+- **Número de grúas**: Cada grúa adicional incrementa 70-80% del costo base
+- **Tonelaje combinado**: A mayor capacidad, mayor costo
+- **Complejidad del sitio**: Accesos difíciles, terrenos blandos, zonas urbanas
+- **Duración del proyecto**: Desde 1 día hasta semanas (montajes complejos)
+- **Ingeniería requerida**: Análisis estructurales, simulaciones 3D
 
-| Capacidad | Tarifa Diaria | Movilización | Montaje |
-|-----------|--------------|--------------|---------|
-| 180-250 ton | $4,500-$7,000 | $3,500-$5,000 | $6,000 |
-| 300-450 ton | $9,000-$14,000 | $6,000-$8,500 | $10,000 |
-| 500-700 ton | $16,000-$24,000 | $9,000-$12,000 | $18,000 |
-| 800-1250 ton | $28,000-$42,000 | $14,000-$20,000 | $28,000 |
+### Rangos de Inversión Aproximados (2024)
+- **Dual Lift (2 grúas, carga 100-300 ton)**: $40,000 - $120,000 USD
+- **Triple Lift (3 grúas, carga 300-600 ton)**: $150,000 - $300,000 USD
+- **Quad Lift (4+ grúas, carga > 600 ton)**: Desde $400,000 USD
 
-### Servicios de Ingeniería
-- Plan de izamiento estándar: $3,500-$6,500
-- Proyecto complejo: $8,000-$15,000
-- Proyecto crítico (>500 ton): $18,000-$35,000
+### ¿Qué Incluye el Servicio?
+✅ Ingeniería de rigging completa  
+✅ Permisos municipales y INTT  
+✅ Movilización de equipos (ida y vuelta)  
+✅ Personal certificado (operadores, riggers, supervisor)  
+✅ Seguros de operación  
+✅ Documentación post-izaje  
 
-## Contacto
+## Solicita tu Cotización Personalizada
 
-¿Tiene un proyecto de izamiento de tanques?
+¿Tienes un proyecto que requiere izamiento con múltiples grúas? GRÚAS EQUISER te ofrece:
 
-📞 **Teléfono:** +58 281-2859797  
-📱 **WhatsApp 24/7:** [Contactar ahora](https://wa.me/message/IOBBJVBBVWNOI1)  
-✉️ **Email:** ingenieria@gruasequiser.com  
+📋 **Evaluación gratuita** de factibilidad (48 horas)  
+🏗️ **Visita técnica sin costo** a tu sitio  
+💰 **Financiamiento disponible** para proyectos grandes  
+✅ **Garantía de ejecución** o devolución de anticipo  
 
-**Presencia Nacional:** Barcelona | Puerto La Cruz | Valencia | Maracaibo | Ciudad Guayana
+### Contacta a Nuestros Expertos
+- **WhatsApp 24/7**: +58 412-EQUISER
+- **Email**: proyectos@gruasequiser.com
+- **Oficinas**: Maracaibo, Valencia, Barcelona, Guayana, Caracas
 
 ---
 
-*EQUISER - 30 Años Moviendo la Industria Venezolana*`
+**¿Listo para ejecutar tu proyecto complejo con seguridad?** Confía en los líderes venezolanos en izamientos con múltiples grúas: **GRÚAS EQUISER C.A.**
+
+## Preguntas Frecuentes
+
+**¿Cuántas grúas necesito para mi proyecto?**  
+Depende del peso, dimensiones y puntos de izaje. Nuestros ingenieros pueden determinar esto con los planos de tu equipo.
+
+**¿Pueden trabajar en zonas petroleras con restricciones HSE?**  
+Sí, cumplimos con todas las normativas PDVSA, incluyendo SIAHO, permisos de trabajo, gases tóxicos, espacios confinados.
+
+**¿Qué pasa si una grúa falla durante el izamiento?**  
+Nuestras grúas tienen mantenimiento preventivo riguroso y sistemas de seguridad redundantes. En caso extremo, el protocolo de emergencia permite descenso controlado de la carga.
+
+**¿Incluyen el diseño de las orejas de izaje?**  
+Podemos revisar las existentes o diseñar nuevas si es necesario, con cálculo estructural certificado.
+
+**¿Trabajan en horarios nocturnos?**  
+Sí, muchos izamientos se ejecutan de noche para evitar interferir con operaciones del cliente. Tenemos iluminación portátil certificada.
+    `
   }
-}
+];
 
 async function expandirBlogs() {
-  console.log('🚀 Iniciando expansión de blogs críticos...\n')
+  console.log('🚀 Iniciando expansión de blogs críticos...\n');
   
-  for (const [slug, data] of Object.entries(blogsExpandidos)) {
+  for (const blog of blogsExpandidos) {
     try {
       const result = await prisma.blog.update({
-        where: { slug },
+        where: { slug: blog.slug },
         data: {
-          title: data.title,
-          metaTitle: data.metaTitle,
-          metaDescription: data.metaDescription,
-          excerpt: data.excerpt,
-          keywords: data.keywords,
-          content: data.content,
-          readTime: Math.ceil(data.content.split(' ').length / 200), // ~200 palabras/min
+          content: blog.content.trim(),
+          metaTitle: blog.metaTitle,
+          metaDescription: blog.metaDescription,
+          keywords: blog.keywords,
+          readTime: Math.ceil(blog.content.split(' ').length / 200), // 200 palabras por minuto
           updatedAt: new Date()
         }
-      })
+      });
       
-      console.log(`✅ Blog actualizado: ${slug}`)
-      console.log(`   📝 Contenido: ${data.content.split(' ').length} palabras`)
-      console.log(`   ⏱️  Tiempo lectura: ${result.readTime} minutos\n`)
-    } catch (error) {
-      console.error(`❌ Error en ${slug}:`, error)
+      console.log(`✅ [${blog.slug}] - Expandido exitosamente`);
+      console.log(`   📝 Palabras: ${blog.content.split(' ').length}`);
+      console.log(`   ⏱️  Tiempo de lectura: ${result.readTime} min\n`);
+    } catch (error: any) {
+      console.error(`❌ [${blog.slug}] - Error: ${error.message}\n`);
     }
   }
   
-  console.log('✨ Expansión completada!')
+  await prisma.$disconnect();
+  console.log('✅ Proceso completado');
 }
 
-expandirBlogs()
-  .catch(console.error)
-  .finally(() => prisma.$disconnect())
+expandirBlogs().catch(console.error);

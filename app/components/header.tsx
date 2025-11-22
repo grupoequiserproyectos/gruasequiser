@@ -7,7 +7,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { LanguageSwitcher } from '@/components/language-switcher'
 import { useTranslations } from 'next-intl'
 
 export function Header() {
@@ -69,7 +68,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA y Language Switcher */}
+          {/* CTA Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <Button
               onClick={handleWhatsApp}
@@ -78,12 +77,10 @@ export function Header() {
               <MessageCircle className="w-4 h-4 mr-2" />
               {t('contactWhatsApp').toUpperCase()}
             </Button>
-            <LanguageSwitcher />
           </div>
 
-          {/* Language Switcher Mobile y Botón móvil */}
+          {/* Botón móvil */}
           <div className="flex md:hidden items-center gap-3">
-            <LanguageSwitcher />
             <button
               className="p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

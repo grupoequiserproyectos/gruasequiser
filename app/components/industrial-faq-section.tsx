@@ -36,7 +36,7 @@ export function IndustrialFAQSection() {
       type: "negative"
     },
     {
-      icon: <CheckCircle2 className="w-6 h-6 text-green-500" />,
+      icon: <CheckCircle2 className="w-6 h-6 text-equiser-yellow" />,
       question: t('q4Question'),
       answer: t('q4Answer'),
       type: "positive"
@@ -63,7 +63,7 @@ export function IndustrialFAQSection() {
     switch(type) {
       case 'negative': return 'bg-red-50 border-red-200 hover:bg-red-100'
       case 'warning': return 'bg-orange-50 border-orange-200 hover:bg-orange-100'
-      case 'positive': return 'bg-green-50 border-green-200 hover:bg-green-100'
+      case 'positive': return 'bg-yellow-50 border-equiser-yellow/30 hover:bg-yellow-100'
       case 'info': return 'bg-blue-50 border-blue-200 hover:bg-blue-100'
       default: return 'bg-gray-50 border-gray-200 hover:bg-gray-100'
     }
