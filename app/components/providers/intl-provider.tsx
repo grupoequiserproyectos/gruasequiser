@@ -11,17 +11,27 @@ interface IntlProviderProps {
   children: ReactNode;
 }
 
+// Get initial locale from cookie (server-safe)
+function getInitialLocale(): string {
+  if (typeof window === 'undefined') return 'es';
+  return Cookies.get('NEXT_LOCALE') || 'es';
+}
+
 export function IntlProvider({ children }: IntlProviderProps) {
-  const [messages, setMessages] = useState(esMessages);
-  const [locale, setLocale] = useState<string>('es');
-  const [mounted, setMounted] = useState(false);
+  // Initialize with default Spanish locale and messages
+  const initialLocale = getInitialLocale();
+  const initialMessages = initialLocale === 'en' ? enMessages : esMessages;
+  
+  const [messages, setMessages] = useState(initialMessages);
+  const [locale, setLocale] = useState(initialLocale);
 
   useEffect(() => {
-    // Get locale from cookie
+    // Verify locale from cookie matches state
     const savedLocale = Cookies.get('NEXT_LOCALE') || 'es';
-    setLocale(savedLocale);
-    setMessages(savedLocale === 'en' ? enMessages : esMessages);
-    setMounted(true);
+    if (savedLocale !== locale) {
+      setLocale(savedLocale);
+      setMessages(savedLocale === 'en' ? enMessages : esMessages);
+    }
 
     // Listen for locale changes via custom event
     const handleLocaleChange = () => {
@@ -34,13 +44,13 @@ export function IntlProvider({ children }: IntlProviderProps) {
     return () => window.removeEventListener('localeChange', handleLocaleChange);
   }, []);
 
-  // Show nothing until mounted to avoid hydration mismatch
-  if (!mounted) {
-    return null;
-  }
-
+  // Always render with provider and valid messages
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider 
+      locale={locale} 
+      messages={messages}
+      timeZone="America/Caracas"
+    >
       {children}
     </NextIntlClientProvider>
   );
