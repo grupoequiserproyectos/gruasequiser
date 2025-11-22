@@ -12,6 +12,7 @@ import { BlogNewsletter } from './blog-newsletter'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
+import { ContactForm } from '@/components/contact-form'
 
 interface BlogArticlePageProps {
   article: BlogArticle
@@ -221,11 +222,6 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                 </div>
               </Link>
             </div>
-            
-            {/* Título del Blog - Mobile */}
-            <div className="md:hidden flex-1 text-center px-2">
-              <h1 className="text-sm font-bold text-equiser-blue truncate">📝 {t('title')}</h1>
-            </div>
 
             {/* Navegación */}
             <nav className="hidden lg:flex items-center space-x-6">
@@ -255,19 +251,6 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
               >
                 {t('ctaButton')}
               </Button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Breadcrumb - Desktop */}
-        <div className="hidden md:block border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <div className="flex items-center text-sm text-gray-600">
-              <Link href="/" className="hover:text-equiser-blue">{tHeader('inicio')}</Link>
-              <span className="mx-2">/</span>
-              <Link href="/blog" className="hover:text-equiser-blue">{t('title')}</Link>
-              <span className="mx-2">/</span>
-              <span className="text-equiser-blue truncate">{article.title}</span>
             </div>
           </div>
         </div>
@@ -521,6 +504,36 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           </div>
         </section>
       )}
+
+      {/* Contact Form Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              ¿Necesitas una <span className="text-equiser-blue">Cotización?</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Completa el formulario y nuestro equipo de expertos te contactará en menos de 24 horas 
+              con una propuesta personalizada para tu proyecto.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <ContactForm />
+          </motion.div>
+        </div>
+      </section>
 
       {/* Newsletter */}
       <BlogNewsletter />

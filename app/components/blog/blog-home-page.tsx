@@ -152,11 +152,6 @@ export function BlogHomePage() {
                 </div>
               </Link>
             </div>
-            
-            {/* Título del Blog - Mobile */}
-            <div className="md:hidden flex-1 text-center px-2">
-              <h1 className="text-sm font-bold text-equiser-blue truncate">📝 {t('title')}</h1>
-            </div>
 
             {/* Navegación */}
             <nav className="hidden lg:flex items-center space-x-6">
@@ -184,14 +179,6 @@ export function BlogHomePage() {
                 {t('ctaButton')}
               </Button>
             </div>
-          </div>
-        </div>
-        
-        {/* Título del Blog - Desktop */}
-        <div className="hidden md:block border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <h1 className="text-xl font-bold text-equiser-blue">📝 {t('title')}</h1>
-            <p className="text-sm text-gray-600">{t('subtitle')}</p>
           </div>
         </div>
       </header>
