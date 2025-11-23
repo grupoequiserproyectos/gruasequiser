@@ -11,7 +11,6 @@ import { BlogComments } from './blog-comments'
 import { BlogNewsletter } from './blog-newsletter'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { useTranslations } from 'next-intl'
 import { ContactForm } from '@/components/contact-form'
 import BlogImage from '@/components/BlogImage'
 
@@ -22,6 +21,27 @@ interface BlogArticlePageProps {
 
 export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps) {
   const isEnglish = locale === 'en'
+  
+  // Traducciones estáticas
+  const translations = {
+    es: {
+      inicio: 'Inicio',
+      nosotros: 'Nosotros',
+      proyectos: 'Proyectos',
+      contacto: 'Contacto',
+      blog: 'Blog',
+      ctaButton: 'Contactar WhatsApp'
+    },
+    en: {
+      inicio: 'Home',
+      nosotros: 'About Us',
+      proyectos: 'Projects',
+      contacto: 'Contact',
+      blog: 'Blog',
+      ctaButton: 'Contact WhatsApp'
+    }
+  }
+  const t = translations[isEnglish ? 'en' : 'es']
   
   // Seleccionar contenido según el idioma
   const displayTitle = isEnglish && article.titleEn ? article.titleEn : article.title
@@ -217,9 +237,6 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
     )
   }
 
-  const t = useTranslations('blog')
-  const tHeader = useTranslations('header')
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header completo del blog con logo grande */}
@@ -245,19 +262,19 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
             <nav className="hidden lg:flex items-center space-x-6">
               <Link href="/" className="flex items-center text-gray-700 hover:text-equiser-blue transition-colors duration-200">
                 <Home className="w-4 h-4 mr-2" />
-                {tHeader('inicio')}
+                {t.inicio}
               </Link>
               <Link href="/blog" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                {t('title')}
+                {t.blog}
               </Link>
               <Link href="/#nosotros" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                {tHeader('nosotros')}
+                {t.nosotros}
               </Link>
               <Link href="/#proyectos" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                {tHeader('proyectos')}
+                {t.proyectos}
               </Link>
               <Link href="/#contacto" className="text-gray-700 hover:text-equiser-blue transition-colors duration-200">
-                {tHeader('contacto')}
+                {t.contacto}
               </Link>
             </nav>
 
@@ -267,7 +284,7 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
                 onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
                 className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full font-semibold"
               >
-                {t('ctaButton')}
+                {t.ctaButton}
               </Button>
             </div>
           </div>
