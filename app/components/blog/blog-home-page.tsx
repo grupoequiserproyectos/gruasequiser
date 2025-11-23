@@ -274,7 +274,7 @@ export function BlogHomePage() {
                     borderRadius: '25px',
                     fontSize: '14px',
                     fontWeight: '600',
-                    backgroundColor: activeCategory === category ? '#1E3A8A' : '#FFC107',
+                    backgroundColor: activeCategory === category ? '#1E3A8A' : '#FFD700',
                     color: activeCategory === category ? '#FFFFFF' : '#1E3A8A'
                   }}
                 >
