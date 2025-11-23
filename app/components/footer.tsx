@@ -178,13 +178,13 @@ export function Footer() {
 
             {/* Navegación rápida y blog */}
             <div>
-              <h4 className="text-xl font-bold mb-6">Navegación</h4>
+              <h4 className="text-xl font-bold mb-6">{t('navigationTitle')}</h4>
               <ul className="space-y-3">
                 {[
-                  { href: '#inicio', label: 'Inicio' },
-                  { href: '#nosotros', label: 'Nosotros' },
-                  { href: '#proyectos', label: 'Proyectos' },
-                  { href: '/#contacto', label: 'Contacto' }
+                  { href: '#inicio', label: t('navHome') },
+                  { href: '#nosotros', label: t('navAbout') },
+                  { href: '#proyectos', label: t('navProjects') },
+                  { href: '/#contacto', label: t('navContact') }
                 ].map((item) => (
                   <li key={item.href}>
                     <Link
@@ -201,20 +201,20 @@ export function Footer() {
                     className="flex items-center text-equiser-yellow hover:text-yellow-300 transition-colors duration-200 text-sm font-semibold"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    📝 Blog de Grúas
+                    {t('navBlog')}
                   </Link>
                 </li>
               </ul>
 
               <div className="mt-8">
-                <h5 className="text-lg font-semibold mb-4">Sectores Atendidos</h5>
+                <h5 className="text-lg font-semibold mb-4">{t('sectorsTitle')}</h5>
                 <div className="text-sm text-gray-400 space-y-1">
-                  <div>• Energético</div>
-                  <div>• Petrolero</div>
-                  <div>• Petroquímico</div>
-                  <div>• Industrial</div>
-                  <div>• Portuario</div>
-                  <div>• Siderúrgico</div>
+                  <div>• {t('sector1')}</div>
+                  <div>• {t('sector2')}</div>
+                  <div>• {t('sector3')}</div>
+                  <div>• {t('sector4')}</div>
+                  <div>• {t('sector5')}</div>
+                  <div>• {t('sector6')}</div>
                 </div>
               </div>
             </div>
@@ -245,17 +245,15 @@ export function Footer() {
                 className="text-4xl md:text-5xl font-extrabold text-equiser-blue mb-8"
                 style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
               >
-                ¿Necesitas Una Cotización Inmediata?
+                {t('ctaTitle')}
               </h3>
               
               {/* Texto explicativo mejorado */}
               <p 
                 className="text-xl md:text-2xl text-equiser-blue font-medium mb-10 leading-relaxed max-w-3xl mx-auto"
                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
-              >
-                Nuestro equipo está disponible <strong>24/7</strong> para brindarte la mejor solución 
-                para tu proyecto de izamiento o transporte pesado.
-              </p>
+                dangerouslySetInnerHTML={{ __html: t('ctaDesc') }}
+              />
 
               {/* Botón principal rediseñado */}
               <motion.button
@@ -274,7 +272,7 @@ export function Footer() {
                 }}
               >
                 <span className="text-2xl">💬</span>
-                Contactar Por WhatsApp Ahora
+                {t('ctaButton')}
                 <span className="text-xl">→</span>
               </motion.button>
 
@@ -291,7 +289,7 @@ export function Footer() {
                   className="text-equiser-blue font-bold text-lg"
                   style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
                 >
-                  ⚡ Respuesta inmediata | 🎯 Cotizaciones personalizadas | 🚀 Servicio profesional garantizado
+                  {t('ctaBenefits')}
                 </p>
               </div>
 
@@ -302,27 +300,27 @@ export function Footer() {
                     className="text-3xl font-bold text-equiser-blue"
                     style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
                   >
-                    30+
+                    {t('stat1')}
                   </div>
-                  <div className="text-equiser-blue font-medium">Años de Experiencia</div>
+                  <div className="text-equiser-blue font-medium">{t('stat1Label')}</div>
                 </div>
                 <div className="text-center">
                   <div 
                     className="text-3xl font-bold text-equiser-blue"
                     style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
                   >
-                    1600T
+                    {t('stat2')}
                   </div>
-                  <div className="text-equiser-blue font-medium">Capacidad Máxima</div>
+                  <div className="text-equiser-blue font-medium">{t('stat2Label')}</div>
                 </div>
                 <div className="text-center">
                   <div 
                     className="text-3xl font-bold text-equiser-blue"
                     style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}
                   >
-                    24/7
+                    {t('stat3')}
                   </div>
-                  <div className="text-equiser-blue font-medium">Disponibilidad</div>
+                  <div className="text-equiser-blue font-medium">{t('stat3Label')}</div>
                 </div>
               </div>
             </div>
@@ -335,13 +333,13 @@ export function Footer() {
             {/* Columna izquierda: Copyright */}
             <div className="text-center lg:text-left flex-1">
               <p className="text-gray-400 text-sm">
-                © 2025 Grúas Equiser C.A. - Todos los derechos reservados. | Líder en alquiler de grúas en Venezuela
+                {t('copyright')}
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                RIF: J-30007343-2 | Más de 30 años de experiencia en Venezuela
+                {t('rif')}
               </p>
               <div className="text-xs text-gray-400 mt-2">
-                📧 Instagram | 🐦 Twitter | 📘 Facebook
+                {t('socialIg')} | {t('socialTw')} | {t('socialFb')}
               </div>
             </div>
             
@@ -360,9 +358,9 @@ export function Footer() {
                   }}
                 >
                   <span className="text-base mr-2">⭐</span>
-                  MARCAS PREMIUM
+                  {t('premiumBrands')}
                 </div>
-                <div className="mt-2 text-gray-500">Liebherr • Grove • Manitowoc • Demag</div>
+                <div className="mt-2 text-gray-500">{t('brands')}</div>
               </div>
             </div>
 
@@ -370,7 +368,7 @@ export function Footer() {
             <div className="flex items-center justify-center lg:justify-end">
               <div className="flex items-center gap-3 bg-gray-800 rounded-full px-4 py-3 shadow-lg border-2 border-gray-700 hover:border-equiser-yellow transition-colors duration-300">
                 <span className="text-gray-300 text-sm font-semibold hidden sm:inline">
-                  🌐 Idioma:
+                  {t('languageLabel')}
                 </span>
                 <div className="flex items-center gap-3">
                   {languages.map((language) => {
@@ -450,12 +448,7 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-blue-900 text-xs sm:text-sm md:text-base font-extrabold tracking-wide leading-tight">
-              ⚠️ <span className="uppercase">ATENCIÓN:</span> Servicios <span className="underline">EXCLUSIVOS</span> para Industria Pesada B2B | 
-              Grúas <span className="font-black">25-1600 Toneladas</span> | 
-              <span className="hidden sm:inline">Sectores: <span className="font-bold">Petrolero, Petroquímico, Siderúrgico, Portuario y Energético</span> | </span>
-              <span className="font-black text-red-900">NO</span> Grúas de Remolque para Vehículos
-            </p>
+            <p className="text-blue-900 text-xs sm:text-sm md:text-base font-extrabold tracking-wide leading-tight" dangerouslySetInnerHTML={{ __html: t('warningBanner') }} />
           </motion.div>
         </div>
       </div>
