@@ -3,7 +3,7 @@
 export const PALABRAS_CLAVE_LONG_TAIL = [
   // Transaccionales con geo-localización
   "alquiler grúas telescópicas caracas precio 2024",
-  "grúas móviles hidráulicas maracaibo certificadas pdvsa",
+  "grúas móviles hidráulicas maracaibo certificadas sector petrolero",
   "transporte pesado valencia sector portuario venezuela",
   "grúas sobre oruga 600 toneladas faja orinoco",
   "super lowboy hidráulico barcelona anzoátegui",
@@ -15,7 +15,7 @@ export const PALABRAS_CLAVE_LONG_TAIL = [
   
   // Específicas por capacidad y sector
   "grúa liebherr ltm 1500 alquiler venezuela",
-  "grúas grove 130 toneladas proyectos pdvsa",
+  "grúas grove 130 toneladas proyectos pequiven",
   "manitowoc crawler crane 1600 ton venezuela",
   "demag cc 2800 alquiler sector petrolero",
   "grúas telescópicas 25-100 toneladas valencia",
@@ -24,9 +24,9 @@ export const PALABRAS_CLAVE_LONG_TAIL = [
   // Long-tail por problema/solución
   "como transportar generador 200 toneladas venezuela",
   "cuanto cuesta alquilar grúa 130 ton maracaibo",
-  "empresa certificada izamiento petromonagas",
+  "empresa certificada izamiento pequiven refinería el palito",
   "transporte carga sobredimensionada permisos venezuela",
-  "procedimientos rigging industrial pdvsa normas",
+  "procedimientos rigging industrial sector petrolero normas",
   "ingeniería izamiento 3d modelado autocad venezuela",
   
   // Comparativas y alternativas
@@ -37,7 +37,7 @@ export const PALABRAS_CLAVE_LONG_TAIL = [
   
   // Consultas informacionales con intención transaccional
   "mejores empresas alquiler grúas industriales venezuela",
-  "normativas seguridad grúas sector petrolero pdvsa",
+  "normativas seguridad grúas sector petrolero venezuela",
   "certificaciones operadores grúas venezuela requisitos",
   "mantenimiento preventivo grúas móviles checklist"
 ];
@@ -59,11 +59,11 @@ export const CIUDADES_KEYWORDS = {
       "grúas petroleras maracaibo zulia",
       "alquiler grúas sector petrolero maracaibo",
       "transporte pesado costa oriental lago",
-      "izamiento industrial maracaibo pdvsa",
+      "izamiento industrial maracaibo sector petrolero",
       "grúas certificadas occidente venezuela"
     ],
     sectores: ["petrolero", "petroquímico", "portuario"],
-    empresas: ["PDVSA Occidente", "Pequiven", "Puerto de Maracaibo"]
+    empresas: ["Pequiven", "Sector Petrolero", "Puerto de Maracaibo"]
   },
   "valencia": {
     keywords: [
@@ -85,7 +85,7 @@ export const CIUDADES_KEYWORDS = {
       "grúas certificadas oriente venezuela"
     ],
     sectores: ["petrolero", "petroquímico", "refinería"],
-    empresas: ["Complejo José", "Petromonagas", "PDVSA Oriente"]
+    empresas: ["Complejo José", "Pequiven", "Sector Petrolero"]
   },
   "ciudad-guayana": {
     keywords: [
@@ -98,6 +98,17 @@ export const CIUDADES_KEYWORDS = {
     sectores: ["siderúrgico", "minero", "industrial pesado"],
     empresas: ["SIDOR", "CVG", "Ferrominera", "Bauxilum"]
   },
+  "puerto-cabello": {
+    keywords: [
+      "grúas portuarias puerto cabello carabobo",
+      "alquiler grúas refinería el palito",
+      "transporte pesado terminal portuario",
+      "izamiento industrial pequiven morón",
+      "grúas certificadas sector petroquímico"
+    ],
+    sectores: ["portuario", "petroquímico", "refinería"],
+    empresas: ["Puerto Cabello", "Refinería El Palito", "Pequiven"]
+  },
   "puerto-la-cruz": {
     keywords: [
       "grúas portuarias puerto la cruz",
@@ -107,7 +118,7 @@ export const CIUDADES_KEYWORDS = {
       "grúas certificadas operaciones offshore"
     ],
     sectores: ["portuario", "petrolero offshore", "marítimo"],
-    empresas: ["Puerto La Cruz", "PDVSA Marina", "Terminales"]
+    empresas: ["Puerto La Cruz", "Terminales", "Sector Petrolero"]
   },
   "faja-orinoco": {
     keywords: [
@@ -146,7 +157,7 @@ export const TIPOS_CONTENIDO_AVANZADO = [
   {
     tipo: "sector-especializado",
     template: {
-      h1: "Grúas Especializadas Sector {sector} Venezuela | Certificadas PDVSA",
+      h1: "Grúas Especializadas Sector {sector} Venezuela | Certificadas",
       h2: [
         "Requisitos Específicos del Sector {sector}",
         "Equipos y Capacidades Recomendadas",
@@ -265,8 +276,8 @@ export const CTA_TEMPLATES = [
 
 export const ENLACES_AUTORIDAD_VENEZUELA = [
   {
-    dominio: "pdvsa.com",
-    tipo: "Normativas petroleras",
+    dominio: "pequiven.com",
+    tipo: "Sector petroquímico",
     relevancia: "alta"
   },
   {
@@ -303,11 +314,11 @@ export function generarMetadataUltraOptimizada(params: {
   if (tipo === "guia-completa-ciudad" && ciudad) {
     const ciudadData = CIUDADES_KEYWORDS[ciudad as keyof typeof CIUDADES_KEYWORDS];
     title = `Alquiler Grúas Industriales ${ciudad.charAt(0).toUpperCase() + ciudad.slice(1)} ${añoActual} | EQUISER 24/7`;
-    description = `✓ Grúas móviles y oruga 25-1600 ton en ${ciudad} ✓ Certificadas PDVSA ✓ ${ciudadData?.sectores.join(", ")} ✓ Cotización GRATIS 24/7 ☎️ +58 422-6347624`;
+    description = `✓ Grúas móviles y oruga 25-1600 ton en ${ciudad} ✓ Certificadas sector industrial ✓ ${ciudadData?.sectores.join(", ")} ✓ Cotización GRATIS 24/7 ☎️ +58 422-6347624`;
     slug = `alquiler-gruas-industriales-${ciudad}-${añoActual}`;
   } else if (tipo === "sector-especializado" && sector) {
     title = `Grúas Sector ${sector.charAt(0).toUpperCase() + sector.slice(1)} Venezuela ${añoActual} | Certificadas`;
-    description = `✓ Grúas especializadas sector ${sector} ✓ Normativas PDVSA ✓ Proyectos PDVSA, CVG, Pequiven ✓ Cobertura nacional ✓ Cotización inmediata`;
+    description = `✓ Grúas especializadas sector ${sector} ✓ Normativas industriales ✓ Proyectos CVG, Pequiven, Refinería El Palito ✓ Cobertura nacional ✓ Cotización inmediata`;
     slug = `gruas-especializadas-sector-${sector}-venezuela-${añoActual}`;
   }
   

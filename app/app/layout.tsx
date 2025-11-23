@@ -21,8 +21,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   title: 'Grúas Industriales 25-1600 Ton Venezuela | Transporte Carga Pesada | EQUISER',
-  description: '✓ Grúas móviles y oruga 25-1600 ton ✓ Super lowboy hidráulico ✓ Transporte sobredimensionado ✓ Proyectos PDVSA ✓ Izamiento industrial ✓ NO grúas de remolque. Maracaibo, Barcelona, Valencia, Faja Orinoco, Puerto La Cruz ☎️ +58 422-6347624',
-  keywords: 'grúas industriales Venezuela, alquiler grúas móviles hidráulicas, grúas sobre oruga 600 toneladas, super lowboy hidráulico, transporte carga sobredimensionada Venezuela, grúas telescópicas industriales, grúas alta capacidad, equipos izamiento industrial, grúas PDVSA certificadas, rigging industrial Venezuela, grúas Maracaibo, grúas Barcelona Anzoátegui, grúas Valencia Carabobo, grúas Faja del Orinoco, grúas Puerto La Cruz, grúas Ciudad Guayana, grúas sector petrolero, grúas sector petroquímico, grúas sector siderúrgico, transporte transformadores industriales',
+  description: '✓ Grúas móviles y oruga 25-1600 ton ✓ Super lowboy hidráulico ✓ Transporte sobredimensionado ✓ Proyectos industriales ✓ Izamiento industrial ✓ NO grúas de remolque. Maracaibo, Barcelona, Valencia, Puerto Cabello, Faja Orinoco, Puerto La Cruz ☎️ +58 422-6347624',
+  keywords: 'grúas industriales Venezuela, alquiler grúas móviles hidráulicas, grúas sobre oruga 600 toneladas, super lowboy hidráulico, transporte carga sobredimensionada Venezuela, grúas telescópicas industriales, grúas alta capacidad, equipos izamiento industrial, grúas certificadas sector petrolero, rigging industrial Venezuela, grúas Maracaibo, grúas Barcelona Anzoátegui, grúas Valencia Carabobo, grúas Puerto Cabello, grúas Faja del Orinoco, grúas Puerto La Cruz, grúas Ciudad Guayana, grúas sector petrolero, grúas sector petroquímico, grúas Pequiven, grúas Refinería El Palito, transporte transformadores industriales',
   
   // Configuración para PWA y móviles
   manifest: '/manifest.json',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   
   openGraph: {
     title: 'Grúas Industriales 25-1600 Ton Venezuela | EQUISER B2B',
-    description: '✓ Grúas móviles hidráulicas y de oruga ✓ Super lowboy hidráulico ✓ Proyectos PDVSA, petroleros, petroquímicos ✓ Cobertura nacional: Maracaibo, Valencia, Barcelona, Faja Orinoco ✓ NO grúas de remolque',
+    description: '✓ Grúas móviles hidráulicas y de oruga ✓ Super lowboy hidráulico ✓ Proyectos industriales petroleros, petroquímicos ✓ Cobertura nacional: Maracaibo, Valencia, Barcelona, Puerto Cabello, Faja Orinoco ✓ NO grúas de remolque',
     url: 'https://gruasequiser.com',
     siteName: 'EQUISER - Equipos Industriales Pesados',
     locale: 'es_VE',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Grúas Industriales 25-1600 Ton Venezuela | EQUISER',
-    description: '✓ Grúas móviles hidráulicas ✓ Grúas de oruga ✓ Super lowboy ✓ Proyectos PDVSA ✓ NO grúas de remolque',
+    description: '✓ Grúas móviles hidráulicas ✓ Grúas de oruga ✓ Super lowboy ✓ Proyectos industriales ✓ NO grúas de remolque',
     images: ['/images/grua-600-ton-y-grua-de-130-ton.webp'],
   },
   robots: {
@@ -335,7 +335,7 @@ export default function RootLayout({
               },
               "memberOf": {
                 "@type": "Organization",
-                "name": "Proveedores Certificados PDVSA"
+                "name": "Proveedores Certificados Sector Industrial Venezuela"
               },
               "knowsAbout": [
                 "Grúas móviles hidráulicas",
@@ -401,9 +401,9 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Izamiento y Montaje Industrial para PDVSA",
-                      "description": "Servicios especializados para proyectos PDVSA, Petromonagas, Complejo José y sector petrolero venezolano. Certificaciones y estándares específicos del sector",
-                      "serviceType": "PDVSA Certified Industrial Lifting"
+                      "name": "Izamiento y Montaje Industrial Sector Petrolero y Petroquímico",
+                      "description": "Servicios especializados para proyectos industriales en Pequiven, Refinería El Palito, Complejo José y sector petrolero venezolano. Certificaciones y estándares específicos del sector",
+                      "serviceType": "Industrial Lifting and Heavy Transport"
                     }
                   }
                 ]
