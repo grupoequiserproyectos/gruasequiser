@@ -1,24 +1,53 @@
 export interface BlogArticle {
+  // Identificador
+  id?: string
   slug: string
+  
+  // Títulos - ESPAÑOL e INGLÉS
   title: string
+  titleEn?: string
+  
+  // Descripciones cortas (excerpts) - ESPAÑOL e INGLÉS
   excerpt: string
+  excerptEn?: string
+  
+  // Contenido completo - ESPAÑOL e INGLÉS
   content: string
-  featuredImage: string
-  category: string
-  tags: string[]
-  author: {
-    name: string
-    image: string
-    bio: string
-  }
-  publishDate: string
-  lastModified: string
-  readTime: number
-  seoKeywords: string
+  contentEn?: string
+  
+  // Metadatos SEO - ESPAÑOL e INGLÉS
+  metaTitle?: string
+  metaTitleEn?: string
   metaDescription: string
-  canonicalUrl: string
-  featured: boolean
-  priority: 'high' | 'medium' | 'low'
+  metaDescriptionEn?: string
+  
+  // Keywords - ESPAÑOL e INGLÉS
+  keywords?: string[]
+  keywordsEn?: string[]
+  
+  // Categoría - ESPAÑOL e INGLÉS
+  category: string
+  categoryEn?: string
+  
+  // Etiquetas - ESPAÑOL e INGLÉS
+  tags: string[]
+  tagsEn?: string[]
+  
+  // Metadatos comunes
+  date?: string
+  author: string | { name: string; image: string; bio: string }
+  image?: string
+  readingTime?: number
+  featured?: boolean
+  priority?: 'high' | 'medium' | 'low'
+  
+  // Campos legacy para compatibilidad
+  featuredImage?: string
+  publishDate?: string
+  lastModified?: string
+  readTime?: number
+  seoKeywords?: string
+  canonicalUrl?: string
 }
 
 // Definir categorías según estrategia SEO
@@ -1239,7 +1268,11 @@ export function getAllCategories(): string[] {
 
 export function getRecentArticles(limit: number = 5): BlogArticle[] {
   return [...blogArticles]
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+    .sort((a, b) => {
+      const dateA = a.publishDate || a.date || new Date().toISOString()
+      const dateB = b.publishDate || b.date || new Date().toISOString()
+      return new Date(dateB).getTime() - new Date(dateA).getTime()
+    })
     .slice(0, limit)
 }
 
@@ -1254,4 +1287,35 @@ export function getRelatedArticles(currentSlug: string, limit: number = 3): Blog
        article.tags.some(tag => currentArticle.tags.includes(tag)))
     )
     .slice(0, limit)
+}
+
+// ============================================================================
+// FUNCIONES CRÍTICAS PARA SISTEMA DE BLOGS DINÁMICOS - ALIASES
+// ============================================================================
+
+// Alias para compatibilidad con rutas dinámicas
+export function getBlogBySlug(slug: string): BlogArticle | undefined {
+  const article = getBlogArticle(slug)
+  return article || undefined
+}
+
+// Búsqueda de blogs por query
+export function searchBlogs(query: string): BlogArticle[] {
+  const lowerQuery = query.toLowerCase()
+  return blogArticles.filter(article =>
+    article.title.toLowerCase().includes(lowerQuery) ||
+    (article.titleEn && article.titleEn.toLowerCase().includes(lowerQuery)) ||
+    article.excerpt.toLowerCase().includes(lowerQuery) ||
+    (article.keywords && article.keywords.some(k => k.toLowerCase().includes(lowerQuery)))
+  )
+}
+
+// Alias para compatibilidad
+export function getBlogsByCategory(category: string): BlogArticle[] {
+  return getArticlesByCategory(category)
+}
+
+// Alias para compatibilidad
+export function getLatestBlogs(count: number = 10): BlogArticle[] {
+  return getRecentArticles(count)
 }

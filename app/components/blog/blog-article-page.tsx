@@ -17,9 +17,26 @@ import BlogImage from '@/components/BlogImage'
 
 interface BlogArticlePageProps {
   article: BlogArticle
+  locale?: string
 }
 
-export function BlogArticlePage({ article }: BlogArticlePageProps) {
+export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps) {
+  const isEnglish = locale === 'en'
+  
+  // Seleccionar contenido según el idioma
+  const displayTitle = isEnglish && article.titleEn ? article.titleEn : article.title
+  const displayExcerpt = isEnglish && article.excerptEn ? article.excerptEn : article.excerpt
+  const displayContent = isEnglish && article.contentEn ? article.contentEn : article.content
+  const displayCategory = isEnglish && article.categoryEn ? article.categoryEn : article.category
+  const displayTags = isEnglish && article.tagsEn?.length ? article.tagsEn : article.tags
+  
+  // Manejar autor que puede ser string u objeto
+  const authorName = typeof article.author === 'string' ? article.author : article.author.name
+  const authorImage = typeof article.author === 'string' ? '/images/default-avatar.webp' : article.author.image
+  const authorBio = typeof article.author === 'string' ? '' : article.author.bio
+  
+  // Manejar fechas con valores por defecto
+  const articleDate = article.publishDate || article.date || new Date().toISOString()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -50,8 +67,8 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
     if (navigator?.share) {
       try {
         await navigator.share({
-          title: article.title,
-          text: article.excerpt,
+          title: displayTitle,
+          text: displayExcerpt,
           url: window.location.href,
         })
       } catch (error) {
@@ -277,15 +294,15 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
               
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <span className="bg-equiser-yellow text-equiser-blue px-4 py-2 rounded-full font-bold">
-                  {article.category}
+                  {displayCategory}
                 </span>
                 <div className="flex items-center text-gray-500 text-sm">
                   <Calendar className="w-4 h-4 mr-2" />
-                  <span>{formatDate(article.publishDate)}</span>
+                  <span>{formatDate(articleDate)}</span>
                 </div>
                 <div className="flex items-center text-gray-500 text-sm">
                   <Clock className="w-4 h-4 mr-2" />
-                  <span>{article.readTime} min de lectura</span>
+                  <span>{article.readTime || article.readingTime} min de lectura</span>
                 </div>
                 <button
                   onClick={handleShare}
@@ -297,18 +314,18 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
               </div>
               
               <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                {article.title}
+                {displayTitle}
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                {article.excerpt}
+                {displayExcerpt}
               </p>
               
               <div className="flex items-center mb-8">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src={article.author.image}
-                    alt={article.author.name}
+                    src={authorImage}
+                    alt={authorName}
                     fill
                     className="object-cover"
                     onError={(e) => {
@@ -319,8 +336,8 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{article.author.name}</div>
-                  <div className="text-gray-600 text-sm">{article.author.bio}</div>
+                  <div className="font-semibold text-gray-900">{authorName}</div>
+                  {authorBio && <div className="text-gray-600 text-sm">{authorBio}</div>}
                 </div>
               </div>
             </div>
@@ -330,7 +347,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
               <BlogImage
                 blogSlug={article.slug}
                 imageIndex={0}
-                alt={article.title}
+                alt={displayTitle}
                 width={1200}
                 height={500}
                 priority
@@ -345,12 +362,12 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "BlogPosting",
-                  "headline": article.title,
-                  "description": article.excerpt,
-                  "image": article.featuredImage,
+                  "headline": displayTitle,
+                  "description": displayExcerpt,
+                  "image": article.featuredImage || article.image || '/images/logo-equiser-grande.webp',
                   "author": {
                     "@type": "Person",
-                    "name": article.author.name
+                    "name": authorName
                   },
                   "publisher": {
                     "@type": "Organization",
@@ -360,15 +377,16 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                       "url": "/images/logo-equiser-grande.webp"
                     }
                   },
-                  "datePublished": article.publishDate,
-                  "dateModified": article.lastModified,
+                  "datePublished": articleDate,
+                  "dateModified": article.lastModified || articleDate,
                   "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id": `https://gruasequiser.net/blog/${article.slug}`
+                    "@id": `https://gruasequiser.com/${locale}/blog/${article.slug}`
                   },
-                  "keywords": article.seoKeywords,
-                  "articleSection": article.category,
-                  "wordCount": article.content.split(' ').length
+                  "keywords": (isEnglish && article.keywordsEn?.length ? article.keywordsEn : article.keywords)?.join(', ') || article.seoKeywords,
+                  "articleSection": displayCategory,
+                  "wordCount": displayContent.split(' ').length,
+                  "inLanguage": isEnglish ? "en-US" : "es-VE"
                 })
               }}
             />
@@ -385,7 +403,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           className="prose prose-lg max-w-none"
         >
           <div className="article-content">
-            {renderContent(article.content)}
+            {renderContent(displayContent)}
           </div>
         </motion.div>
         
@@ -399,7 +417,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           <BlogImage
             blogSlug={article.slug}
             imageIndex={1}
-            alt={`${article.title} - Equipos y servicios especializados`}
+            alt={`${displayTitle} - ${isEnglish ? 'Specialized equipment and services' : 'Equipos y servicios especializados'}`}
             width={800}
             height={500}
             className="w-full"
@@ -407,7 +425,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           <BlogImage
             blogSlug={article.slug}
             imageIndex={2}
-            alt={`${article.title} - Proyectos industriales`}
+            alt={`${displayTitle} - ${isEnglish ? 'Industrial projects' : 'Proyectos industriales'}`}
             width={800}
             height={500}
             className="w-full"
@@ -415,7 +433,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
           <BlogImage
             blogSlug={article.slug}
             imageIndex={3}
-            alt={`${article.title} - Seguridad y calidad garantizada`}
+            alt={`${displayTitle} - ${isEnglish ? 'Guaranteed safety and quality' : 'Seguridad y calidad garantizada'}`}
             width={800}
             height={500}
             className="w-full"
@@ -431,10 +449,10 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
         >
           <div className="flex items-center mb-4">
             <Tag className="w-5 h-5 text-equiser-blue mr-2" />
-            <span className="font-semibold text-gray-900">Etiquetas:</span>
+            <span className="font-semibold text-gray-900">{isEnglish ? 'Tags:' : 'Etiquetas:'}</span>
           </div>
           <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag) => (
+            {displayTags?.map((tag: string) => (
               <span
                 key={tag}
                 className="bg-gray-100 hover:bg-equiser-yellow hover:text-equiser-blue text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
@@ -497,7 +515,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                 >
                   <div className="relative h-48">
                     <Image
-                      src={relatedArticle.featuredImage}
+                      src={relatedArticle.featuredImage || relatedArticle.image || '/images/logo-equiser-grande.webp'}
                       alt={relatedArticle.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -519,7 +537,7 @@ export function BlogArticlePage({ article }: BlogArticlePageProps) {
                     
                     <div className="flex items-center text-xs text-gray-500 mb-4">
                       <Calendar className="w-3 h-3 mr-1" />
-                      <span>{formatDate(relatedArticle.publishDate)}</span>
+                      <span>{formatDate(relatedArticle.publishDate || relatedArticle.date || new Date().toISOString())}</span>
                       <span className="mx-2">•</span>
                       <Clock className="w-3 h-3 mr-1" />
                       <span>{relatedArticle.readTime}m</span>
