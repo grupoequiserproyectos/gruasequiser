@@ -33,8 +33,7 @@ export async function GET() {
         readTime: blog.readTime,
         published: blog.published,
         locale: blog.locale,
-        publishDate: new Date(blog.publishDate),
-        date: new Date(blog.date)
+        publishedAt: new Date(blog.publishDate)
       }
     });
     
@@ -94,8 +93,7 @@ export async function POST(req: NextRequest) {
             readTime: blog.readTime,
             published: blog.published,
             locale: blog.locale,
-            publishDate: new Date(blog.publishDate),
-            date: new Date(blog.date)
+            publishedAt: new Date(blog.publishDate)
           }
         });
         
