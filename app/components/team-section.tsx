@@ -4,8 +4,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Users, Award, Shield, BookOpen, Wrench, HardHat } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export function TeamSection() {
+  const t = useTranslations('team')
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -14,27 +17,27 @@ export function TeamSection() {
   const teamFeatures = [
     {
       icon: HardHat,
-      title: 'Operadores Certificados',
-      description: 'Personal altamente capacitado con certificaciones internacionales en operación de grúas de alta capacidad.',
-      stats: '50+ Operadores'
+      title: t('operators'),
+      description: t('operatorsDesc'),
+      stats: t('operatorsCount')
     },
     {
       icon: Wrench,
-      title: 'Técnicos Especialistas',
-      description: 'Equipo técnico especializado en mantenimiento y reparación de equipos Liebherr, Grove y Manitowoc.',
-      stats: '25+ Técnicos'
+      title: t('technicians'),
+      description: t('techniciansDesc'),
+      stats: t('techniciansCount')
     },
     {
       icon: Shield,
-      title: 'Supervisores de Seguridad',
-      description: 'Profesionales certificados en seguridad industrial y prevención de riesgos laborales.',
-      stats: '15+ Supervisores'
+      title: t('supervisors'),
+      description: t('supervisorsDesc'),
+      stats: t('supervisorsCount')
     },
     {
       icon: BookOpen,
-      title: 'Ingenieros Especialistas',
-      description: 'Ingenieros con experiencia en planificación de izamientos y análisis de cargas complejas.',
-      stats: '10+ Ingenieros'
+      title: t('engineers'),
+      description: t('engineersDesc'),
+      stats: t('engineersCount')
     }
   ]
 
@@ -51,11 +54,10 @@ export function TeamSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Personal <span className="text-blue-600">Especializado</span>
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nuestro equipo humano es nuestro mayor activo. Más de 100 profesionales altamente 
-            capacitados y certificados garantizan la excelencia en cada operación.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -112,7 +114,7 @@ export function TeamSection() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.9 }}
               >
-                ¿Por Qué Nuestro Equipo Marca la Diferencia?
+                {t('whyTitle')}
               </motion.h2>
               <div 
                 className="w-32 h-1 mx-auto rounded-full"
@@ -142,10 +144,10 @@ export function TeamSection() {
                     textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                   }}
                 >
-                  100+
+                  {t('stat1')}
                 </div>
                 <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
-                  Profesionales Certificados
+                  {t('stat1Label')}
                 </h4>
               </motion.div>
 
@@ -168,10 +170,10 @@ export function TeamSection() {
                     textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                   }}
                 >
-                  30+
+                  {t('stat2')}
                 </div>
                 <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
-                  Años de Experiencia Promedio
+                  {t('stat2Label')}
                 </h4>
               </motion.div>
 
@@ -194,10 +196,10 @@ export function TeamSection() {
                     textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                   }}
                 >
-                  0
+                  {t('stat3')}
                 </div>
                 <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
-                  Accidentes Laborales en 2024
+                  {t('stat3Label')}
                 </h4>
               </motion.div>
             </div>
@@ -214,7 +216,7 @@ export function TeamSection() {
               transition={{ duration: 0.8, delay: 1.3 }}
             >
               <p className="text-xl text-white text-center leading-relaxed font-medium max-w-4xl mx-auto">
-                La experiencia, especialización y compromiso de nuestro equipo humano nos permite ejecutar los proyectos más complejos con <strong style={{ color: '#FFC107' }}>total seguridad y precisión</strong>.
+                {t('differenceText')}
               </p>
             </motion.div>
 
@@ -233,7 +235,7 @@ export function TeamSection() {
                 transition={{ duration: 0.8, delay: 1.4 }}
                 whileHover={{ y: -3 }}
               >
-                👥 Conoce Más Sobre Nuestro Equipo
+                {t('ctaButton')}
               </motion.button>
             </div>
           </div>

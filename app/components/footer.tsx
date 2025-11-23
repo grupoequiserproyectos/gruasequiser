@@ -72,19 +72,18 @@ export function Footer() {
                   </div>
                 </a>
                 <div>
-                  <h3 className="text-xl font-bold">GRÚAS EQUISER C.A.</h3>
-                  <p className="text-equiser-yellow font-medium">Líder En Alquiler De Grúas Venezuela</p>
+                  <h3 className="text-xl font-bold">{t('companyName')}</h3>
+                  <p className="text-equiser-yellow font-medium">{t('companyTitle')}</p>
                 </div>
               </div>
               
               <p className="text-gray-300 leading-relaxed mb-6 text-sm">
-                Más de 30 años como empresa líder en Venezuela en alquiler de grúas móviles, 
-                sobre oruga y transporte pesado. Grúas hasta 1600 toneladas.
+                {t('description')}
               </p>
 
               {/* Redes sociales integradas */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white">Síguenos</h4>
+                <h4 className="text-lg font-semibold text-white">{t('followTitle')}</h4>
                 <div className="flex space-x-3">
                   <Link
                     href="https://www.instagram.com/gruasequiservzla/"
@@ -115,20 +114,19 @@ export function Footer() {
                   </Link>
                 </div>
                 <p className="text-gray-400 text-sm">
-                  Mantente conectado con nuestras actualizaciones y proyectos
+                  {t('followDesc')}
                 </p>
               </div>
             </div>
 
             {/* Información de contacto */}
             <div>
-              <h4 className="text-xl font-bold mb-6">Contacto</h4>
+              <h4 className="text-xl font-bold mb-6">{t('contactTitle')}</h4>
               <div className="space-y-4">
                 <div className="flex items-start text-gray-300">
                   <MapPin className="w-5 h-5 text-equiser-yellow mr-3 flex-shrink-0 mt-1" />
                   <span className="text-sm">
-                    Autopista Puerto Cabello Morón, sector la Paragüita, 
-                    diagonal a Planta Centro, Morón estado Carabobo
+                    {t('address1')}, {t('address2')}
                   </span>
                 </div>
                 
@@ -149,22 +147,22 @@ export function Footer() {
 
                 <div className="flex items-center text-gray-300">
                   <Clock className="w-5 h-5 text-equiser-yellow mr-3" />
-                  <span className="text-sm font-medium">Disponibilidad 24/7</span>
+                  <span className="text-sm font-medium">{t('availability247')}</span>
                 </div>
               </div>
             </div>
 
             {/* Servicios */}
             <div>
-              <h4 className="text-xl font-bold mb-6">Nuestros Servicios</h4>
+              <h4 className="text-xl font-bold mb-6">{t('servicesTitle')}</h4>
               <ul className="space-y-3">
                 {[
-                  'Alquiler De Grúas Móviles Y Sobre Oruga',
-                  'Transporte Pesado Y Extrapesado',
-                  'Manejo De Carga Excepcional',
-                  'Ingeniería 3D',
-                  'Consultoría Especializada',
-                  'Operadores Certificados'
+                  t('service1'),
+                  t('service2'),
+                  t('service3'),
+                  t('service4'),
+                  t('service5'),
+                  t('service6')
                 ].map((service) => (
                   <li key={service}>
                     <button

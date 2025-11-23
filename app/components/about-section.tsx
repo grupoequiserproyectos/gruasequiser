@@ -6,8 +6,11 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { CheckCircle, Award, Shield, Clock, MapPin, Users, Wrench, Target } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export function AboutSection() {
+  const t = useTranslations('whyChoose')
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -15,34 +18,34 @@ export function AboutSection() {
 
   const servicesInfo = [
     {
-      icon: '🏗️',
-      title: 'Grúas Móviles y Sobre Oruga desde 25 hasta 1600 toneladas',
-      description: 'La mayor capacidad disponible en Venezuela'
+      icon: t('feature1Icon'),
+      title: t('feature1Title'),
+      description: t('feature1Desc')
     },
     {
-      icon: '🛰️',
-      title: 'Sistema Integrado de Monitoreo Satelital',
-      description: 'Sistema integrado de monitoreo Satelital y estudio de ruta bajo los lineamientos de la INTT (Instituto Nacional de Transporte terrestre)'
+      icon: t('feature2Icon'),
+      title: t('feature2Title'),
+      description: t('feature2Desc')
     },
     {
-      icon: '✅',
-      title: 'Seguridad y Calidad Garantizada',
-      description: 'Protocolos estrictos en cada operación'
+      icon: t('feature3Icon'),
+      title: t('feature3Title'),
+      description: t('feature3Desc')
     },
     {
-      icon: '⏰',
-      title: 'Disponibilidad 24/7',
-      description: 'Servicio de emergencia y respuesta inmediata'
+      icon: t('feature4Icon'),
+      title: t('feature4Title'),
+      description: t('feature4Desc')
     },
     {
-      icon: '👷',
-      title: 'Operadores Certificados',
-      description: 'Personal altamente capacitado y especializado'
+      icon: t('feature5Icon'),
+      title: t('feature5Title'),
+      description: t('feature5Desc')
     },
     {
-      icon: '🏭',
-      title: '6 Sectores Industriales',
-      description: 'Energético, petrolero, petroquímico, industrial, portuario, siderúrgico'
+      icon: t('feature6Icon'),
+      title: t('feature6Title'),
+      description: t('feature6Desc')
     }
   ]
 
@@ -57,11 +60,10 @@ export function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            La Flota de Alquiler <span className="text-equiser-blue">Más Moderna y Completa</span> de Venezuela
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Con más de 30 años de experiencia, GRÚAS EQUISER C.A. se ha consolidado como la empresa 
-            líder en Venezuela en alquiler de grúas móviles, sobre oruga y servicios de transporte pesado.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -81,12 +83,10 @@ export function AboutSection() {
           >
             <div className="container max-w-5xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-equiser-blue mb-8 leading-tight">
-                ¿Por Qué Elegir Grúas EQUISER?
+                {t('mainTitle')}
               </h2>
               <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-equiser-blue max-w-4xl mx-auto font-medium">
-                Somos la única empresa en Venezuela que combina la más moderna tecnología 
-                de grúas con operadores certificados internacionalmente y un enfoque 
-                integral en seguridad y calidad.
+                {t('mainSubtitle')}
               </p>
             </div>
           </motion.section>
@@ -153,11 +153,10 @@ export function AboutSection() {
             <div className="bg-gradient-to-r from-equiser-yellow to-yellow-300 p-6 lg:p-8 xl:p-10 rounded-2xl text-equiser-blue shadow-xl">
               <div className="flex items-center mb-4 lg:mb-6">
                 <MapPin className="w-6 h-6 lg:w-8 lg:h-8 mr-3" />
-                <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold">Ubicación Estratégica</h4>
+                <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold">{t('locationTitle')}</h4>
               </div>
               <p className="font-medium text-base lg:text-lg xl:text-xl leading-relaxed">
-                Autopista Puerto Cabello Morón, sector la Paragüita, diagonal a Planta Centro, 
-                Morón estado Carabobo - Posición ideal para atender todo el territorio nacional.
+                {t('locationDesc')}
               </p>
             </div>
           </motion.div>
@@ -224,9 +223,9 @@ export function AboutSection() {
                 boxShadow: '0 15px 35px rgba(255, 215, 0, 0.4), 0 5px 15px rgba(30, 58, 138, 0.3)'
               }}
             >
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-equiser-blue text-center">30+</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-equiser-blue text-center">{t('stat1')}</div>
               <div className="text-sm lg:text-base xl:text-lg font-bold text-equiser-blue text-center whitespace-nowrap">
-                Años de<br />Experiencia
+                {t('stat1Label')}
               </div>
             </div>
           </motion.div>
@@ -244,25 +243,23 @@ export function AboutSection() {
             borderRadius: '15px'
           }}
         >
-          <h3 className="text-3xl font-bold mb-6 text-equiser-blue">Nuestro Compromiso Con La Excelencia</h3>
+          <h3 className="text-3xl font-bold mb-6 text-equiser-blue">{t('stat1Desc')}</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-4xl font-bold text-equiser-blue mb-2">500+</div>
-              <div className="text-equiser-blue font-semibold">Proyectos Ejecutados</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">{t('stat2')}</div>
+              <div className="text-equiser-blue font-semibold">{t('stat2Label')}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-equiser-blue mb-2">100%</div>
-              <div className="text-equiser-blue font-semibold">Éxito en Operaciones</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">{t('stat3')}</div>
+              <div className="text-equiser-blue font-semibold">{t('stat3Label')}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-equiser-blue mb-2">24/7</div>
-              <div className="text-equiser-blue font-semibold">Disponibilidad</div>
+              <div className="text-4xl font-bold text-equiser-blue mb-2">{t('stat4')}</div>
+              <div className="text-equiser-blue font-semibold">{t('stat4Label')}</div>
             </div>
           </div>
           <p className="mt-8 text-equiser-blue font-medium max-w-3xl mx-auto">
-            Cada proyecto que ejecutamos refleja nuestro compromiso inquebrantable con la seguridad, 
-            la calidad y la satisfacción del cliente. Somos el socio estratégico que las empresas 
-            venezolanas necesitan para sus operaciones más complejas.
+            {t('commitmentText')}
           </p>
         </motion.div>
 
