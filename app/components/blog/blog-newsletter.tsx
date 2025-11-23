@@ -6,10 +6,15 @@ import { motion } from 'framer-motion'
 import { Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
-export function BlogNewsletter() {
+interface BlogNewsletterProps {
+  locale?: string
+}
+
+export function BlogNewsletter({ locale = 'es' }: BlogNewsletterProps) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const isEnglish = locale === 'en'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,11 +26,15 @@ export function BlogNewsletter() {
     setTimeout(() => {
       if (email.includes('@')) {
         setStatus('success')
-        setMessage('¡Gracias! Te hemos suscrito exitosamente al newsletter de GRÚAS EQUISER.')
+        setMessage(isEnglish 
+          ? 'Thank you! You have been successfully subscribed to the GRÚAS EQUISER newsletter.' 
+          : '¡Gracias! Te hemos suscrito exitosamente al newsletter de GRÚAS EQUISER.')
         setEmail('')
       } else {
         setStatus('error')
-        setMessage('Por favor, introduce un email válido.')
+        setMessage(isEnglish 
+          ? 'Please enter a valid email.' 
+          : 'Por favor, introduce un email válido.')
       }
       
       setTimeout(() => {
@@ -49,12 +58,14 @@ export function BlogNewsletter() {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Newsletter <span className="text-equiser-yellow">GRÚAS EQUISER</span>
+            {isEnglish ? 'Newsletter' : 'Newsletter'} <span className="text-equiser-yellow">GRÚAS EQUISER</span>
           </h2>
           
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Mantente actualizado con las últimas novedades en grúas móviles, sobre oruga, 
-            transporte pesado y proyectos industriales en Venezuela.
+            {isEnglish 
+              ? 'Stay updated with the latest news on mobile cranes, crawler cranes, heavy transport and industrial projects in Venezuela.'
+              : 'Mantente actualizado con las últimas novedades en grúas móviles, sobre oruga, transporte pesado y proyectos industriales en Venezuela.'
+            }
           </p>
           
           <div className="max-w-md mx-auto">
@@ -64,7 +75,7 @@ export function BlogNewsletter() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="tu@email.com"
+                  placeholder={isEnglish ? 'your@email.com' : 'tu@email.com'}
                   className="w-full px-6 py-4 rounded-full text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-equiser-yellow"
                   disabled={status === 'loading'}
                 />
@@ -76,9 +87,9 @@ export function BlogNewsletter() {
                 className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-bold py-4 rounded-full text-lg transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 {status === 'loading' ? (
-                  'Suscribiendo...'
+                  isEnglish ? 'Subscribing...' : 'Suscribiendo...'
                 ) : (
-                  'Suscribirse al Newsletter'
+                  isEnglish ? 'Subscribe to Newsletter' : 'Suscribirse al Newsletter'
                 )}
               </Button>
             </form>
@@ -105,32 +116,52 @@ export function BlogNewsletter() {
           
           <div className="mt-8 grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <h3 className="font-semibold text-equiser-yellow mb-2">Artículos Técnicos</h3>
+              <h3 className="font-semibold text-equiser-yellow mb-2">
+                {isEnglish ? 'Technical Articles' : 'Artículos Técnicos'}
+              </h3>
               <p className="text-blue-200 text-sm">
-                Guías detalladas sobre equipos y procedimientos
+                {isEnglish 
+                  ? 'Detailed guides on equipment and procedures'
+                  : 'Guías detalladas sobre equipos y procedimientos'
+                }
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-equiser-yellow mb-2">Casos de Estudio</h3>
+              <h3 className="font-semibold text-equiser-yellow mb-2">
+                {isEnglish ? 'Case Studies' : 'Casos de Estudio'}
+              </h3>
               <p className="text-blue-200 text-sm">
-                Proyectos reales ejecutados en Venezuela
+                {isEnglish 
+                  ? 'Real projects executed in Venezuela'
+                  : 'Proyectos reales ejecutados en Venezuela'
+                }
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-equiser-yellow mb-2">Novedades del Sector</h3>
+              <h3 className="font-semibold text-equiser-yellow mb-2">
+                {isEnglish ? 'Industry News' : 'Novedades del Sector'}
+              </h3>
               <p className="text-blue-200 text-sm">
-                Últimas tendencias y tecnologías en grúas
+                {isEnglish 
+                  ? 'Latest trends and technologies in cranes'
+                  : 'Últimas tendencias y tecnologías en grúas'
+                }
               </p>
             </div>
           </div>
           
           <p className="text-blue-300 text-sm mt-6">
-            📧 Una vez por semana • Sin spam • Cancela cuando quieras
+            {isEnglish 
+              ? '📧 Once a week • No spam • Unsubscribe anytime'
+              : '📧 Una vez por semana • Sin spam • Cancela cuando quieras'
+            }
           </p>
           
           <div className="mt-6 text-xs text-blue-400">
-            Al suscribirte, aceptas recibir comunicaciones de GRÚAS EQUISER C.A. 
-            Puedes cancelar tu suscripción en cualquier momento.
+            {isEnglish 
+              ? 'By subscribing, you agree to receive communications from GRÚAS EQUISER C.A. You can cancel your subscription at any time.'
+              : 'Al suscribirte, aceptas recibir comunicaciones de GRÚAS EQUISER C.A. Puedes cancelar tu suscripción en cualquier momento.'
+            }
           </div>
         </motion.div>
       </div>

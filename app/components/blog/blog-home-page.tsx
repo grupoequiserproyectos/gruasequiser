@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer'
 import { Search, Calendar, User, Clock, ArrowRight, Filter, Home, ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import useSWR from 'swr'
 import { BlogNewsletter } from './blog-newsletter'
 import { Button } from '@/components/ui/button'
@@ -57,6 +58,7 @@ export function BlogHomePage() {
   })
   
   const locale = useLocale() // Obtener el idioma actual
+  const router = useRouter() // Para navegación programática
   const t = useTranslations('blog')
   const tHeader = useTranslations('header')
   const [activeCategory, setActiveCategory] = useState('Todos')
@@ -359,13 +361,13 @@ export function BlogHomePage() {
                                 </span>
                               ))}
                             </div>
-                            <Link
-                              href={`/blog/${article.slug}`}
-                              className="inline-flex items-center text-equiser-blue hover:text-blue-800 font-semibold text-sm transition-colors duration-200"
+                            <button
+                              onClick={() => router.push(`/${locale}/blog/${article.slug}`)}
+                              className="inline-flex items-center text-equiser-blue hover:text-blue-800 font-semibold text-sm transition-colors duration-200 cursor-pointer"
                             >
                               {t('readMore')}
                               <ArrowRight className="w-4 h-4 ml-1" />
-                            </Link>
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -393,7 +395,7 @@ export function BlogHomePage() {
       </section>
 
       {/* Newsletter */}
-      <BlogNewsletter />
+      <BlogNewsletter locale={locale} />
 
       {/* CTA section con fondo legible */}
       <section 
