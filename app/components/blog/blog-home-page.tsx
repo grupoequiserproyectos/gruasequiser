@@ -72,9 +72,12 @@ export function BlogHomePage() {
   
   const blogs = data?.blogs || []
   
-  // Obtener categorías únicas de los blogs
-  const blogCategories = blogs.map((b: any) => b.category).filter((c: any) => typeof c === 'string') as string[]
-  const categories: string[] = ['Todos', ...Array.from(new Set(blogCategories))]
+  // Obtener categorías únicas de los blogs (excluyendo "Todos")
+  const blogCategories = blogs
+    .map((b: any) => b.category)
+    .filter((c: any) => typeof c === 'string' && c !== '' && c !== 'Todos' && c !== 'All') as string[]
+  const uniqueCategories = Array.from(new Set(blogCategories))
+  const categories: string[] = ['Todos', ...uniqueCategories]
   
   // Filtrar por categoría
   const categoryFiltered = activeCategory === 'Todos' 
