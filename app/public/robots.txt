@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://gruasequiser.net/sitemap.xml
+Sitemap: https://gruasequiser.com/sitemap.xml
 
 # Disallow admin areas
 Disallow: /api/

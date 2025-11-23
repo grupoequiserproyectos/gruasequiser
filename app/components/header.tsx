@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from '@/components/language-switcher'
 
 export function Header() {
   const t = useTranslations('header')
@@ -68,8 +69,9 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Desktop */}
+          {/* CTA Desktop + Language Switcher */}
           <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
             <Button
               onClick={handleWhatsApp}
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
@@ -79,8 +81,9 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Botón móvil */}
+          {/* Language Switcher + Botón móvil */}
           <div className="flex md:hidden items-center gap-3">
+            <LanguageSwitcher />
             <button
               className="p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
