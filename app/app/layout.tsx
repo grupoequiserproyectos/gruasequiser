@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'verification-code-here',
+    google: 'juDqG9X59TFYYuUY2hgcxofkiWBdFsO6AvZzoMTlJfM',
   },
   alternates: {
     canonical: 'https://gruasequiser.com',
