@@ -1,34 +1,130 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME - MÁXIMA PRIORIDAD -->
   <url>
-    <loc>https://gruasequiser.net/</loc>
-    <lastmod>2025-07-31T19:00:00.000Z</lastmod>
+    <loc>https://gruasequiser.com/</loc>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- PÁGINAS PRINCIPALES -->
   <url>
-    <loc>https://gruasequiser.net/blog</loc>
-    <lastmod>2025-07-31T19:00:00.000Z</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://gruasequiser.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gruasequiser.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gruasequiser.com/"/>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://gruasequiser.net/blog/gruas-moviles-construccion</loc>
-    <lastmod>2025-07-31T19:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://gruasequiser.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gruasequiser.com/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gruasequiser.com/"/>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- BLOG LANDING -->
+  <url>
+    <loc>https://gruasequiser.com/blog</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ARTÍCULOS DE BLOG PRINCIPALES -->
   <url>
-    <loc>https://gruasequiser.net/blog/transporte-pesado-venezuela</loc>
-    <lastmod>2025-07-31T19:00:00.000Z</lastmod>
+    <loc>https://gruasequiser.com/blog/alquiler-gruas-industriales-venezuela</loc>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/alquiler-gruas-industriales-venezuela.png</image:loc>
+      <image:caption>Alquiler de grúas industriales en Venezuela</image:caption>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://gruasequiser.net/blog/seguridad-industrial-gruas</loc>
-    <lastmod>2025-07-31T19:00:00.000Z</lastmod>
+    <loc>https://gruasequiser.com/blog/gruas-moviles-130-toneladas</loc>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/grua-movil-130-ton.png</image:loc>
+      <image:caption>Grúas móviles de 130 toneladas en Venezuela</image:caption>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/gruas-600-toneladas-proyectos-industriales</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/gruas-600-toneladas-proyectos-industriales.png</image:loc>
+      <image:caption>Servicio de Grúas de 600 Toneladas para Proyectos Industriales</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/alquiler-gruas-industriales-maracaibo-zulia-2025</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/grua-600-ton-y-grua-de-130-ton.webp</image:loc>
+      <image:caption>Alquiler de Grúas Industriales en Maracaibo, Zulia</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/alquiler-gruas-industriales-barcelona-anzoategui-2025</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/grua-600-ton-y-grua-de-130-ton.webp</image:loc>
+      <image:caption>Alquiler de Grúas Industriales en Barcelona, Anzoátegui</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/alquiler-gruas-industriales-valencia-carabobo-2025</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/grua-600-ton-y-grua-de-130-ton.webp</image:loc>
+      <image:caption>Alquiler de Grúas Industriales en Valencia, Carabobo</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/costo-alquiler-grua-venezuela</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/costo-alquiler-grua-venezuela.png</image:loc>
+      <image:caption>¿Cuánto Cuesta Alquilar una Grúa en Venezuela?</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gruasequiser.com/blog/transporte-carga-sobredimensionada</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gruasequiser.com/images/transporte-carga-sobredimensionada.png</image:loc>
+      <image:caption>Transporte de Carga Sobredimensionada en Venezuela</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
