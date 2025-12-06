@@ -4,6 +4,8 @@ import { HeroSection } from '@/components/hero-section'
 import { NosotrosSection } from '@/components/nosotros-section'
 import { GaleriaCarrusel } from '@/components/galeria-carrusel'
 import { ServicesSection } from '@/components/services-section'
+import { SEOContentExpanded } from '@/components/seo-content-expanded'
+import { RelatedContentLinks } from '@/components/related-content-links'
 import { IndustrialFAQSection } from '@/components/industrial-faq-section'
 import { AboutSection } from '@/components/about-section'
 import { StatsSection } from '@/components/stats-section'
@@ -66,6 +68,8 @@ export default function HomePage() {
       <GaleriaCarrusel />
       <NosotrosSection />
       <ServicesSection />
+      <SEOContentExpanded />
+      <RelatedContentLinks />
       <IndustrialFAQSection />
       <AboutSection />
       <StatsSection />
