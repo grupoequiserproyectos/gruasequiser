@@ -179,10 +179,12 @@ export function ContactSection() {
                   className="group"
                 >
                   <div 
-                    className="rounded-3xl p-8 text-center shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
+                    className="rounded-3xl text-center shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
                     style={{
-                      background: info.bgGradient,
-                      border: `3px solid ${info.borderColor}`
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                      border: `4px solid ${info.borderColor}`,
+                      padding: '20px',
+                      borderRadius: '8px'
                     }}
                   >
                     {/* Icono con colores corporativos */}
@@ -200,8 +202,7 @@ export function ContactSection() {
                     </div>
                     
                     <h3 
-                      className="text-xl font-bold mb-4"
-                      style={{ color: info.textColor === 'white' ? '#FFC107' : '#1E3A8A' }}
+                      className="text-xl font-bold mb-4 text-equiser-blue"
                     >
                       {info.title}
                     </h3>
@@ -210,12 +211,7 @@ export function ContactSection() {
                       {info.details.map((detail, idx) => (
                         <p 
                           key={idx} 
-                          className="text-sm font-medium"
-                          style={{ 
-                            color: info.textColor === 'white' 
-                              ? 'rgba(255, 255, 255, 0.9)' 
-                              : '#1E3A8A' 
-                          }}
+                          className="text-sm font-medium text-gray-700"
                         >
                           {detail}
                         </p>

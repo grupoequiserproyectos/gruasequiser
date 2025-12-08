@@ -122,15 +122,16 @@ export function TeamSection() {
               />
             </div>
 
-            {/* Estadísticas en tarjetas azules */}
+            {/* Estadísticas en tarjetas - WCAG AA Compliant */}
             <div className="grid md:grid-cols-3 gap-10 mb-12">
               
               {/* 100+ Profesionales */}
               <motion.div 
-                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300 border-4 border-equiser-blue"
                 style={{
-                  background: 'rgba(30, 58, 138, 0.95)',
-                  backdropFilter: 'blur(10px)'
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  padding: '20px',
+                  borderRadius: '8px'
                 }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -140,23 +141,24 @@ export function TeamSection() {
                 <div 
                   className="text-6xl font-black mb-4"
                   style={{ 
-                    color: '#FFC107',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    color: '#1E3A8A',
+                    textShadow: 'none'
                   }}
                 >
                   {t('stat1')}
                 </div>
-                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                <h4 className="text-lg font-bold text-equiser-blue uppercase tracking-wider leading-tight">
                   {t('stat1Label')}
                 </h4>
               </motion.div>
 
               {/* 30+ Años */}
               <motion.div 
-                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300 border-4 border-equiser-blue"
                 style={{
-                  background: 'rgba(30, 58, 138, 0.95)',
-                  backdropFilter: 'blur(10px)'
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  padding: '20px',
+                  borderRadius: '8px'
                 }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -166,23 +168,24 @@ export function TeamSection() {
                 <div 
                   className="text-6xl font-black mb-4"
                   style={{ 
-                    color: '#FFC107',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    color: '#1E3A8A',
+                    textShadow: 'none'
                   }}
                 >
                   {t('stat2')}
                 </div>
-                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                <h4 className="text-lg font-bold text-equiser-blue uppercase tracking-wider leading-tight">
                   {t('stat2Label')}
                 </h4>
               </motion.div>
 
               {/* 0 Accidentes */}
               <motion.div 
-                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300"
+                className="rounded-2xl p-10 text-center shadow-2xl hover:scale-105 transition-all duration-300 border-4 border-equiser-blue"
                 style={{
-                  background: 'rgba(30, 58, 138, 0.95)',
-                  backdropFilter: 'blur(10px)'
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  padding: '20px',
+                  borderRadius: '8px'
                 }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -192,13 +195,13 @@ export function TeamSection() {
                 <div 
                   className="text-6xl font-black mb-4"
                   style={{ 
-                    color: '#FFC107',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    color: '#1E3A8A',
+                    textShadow: 'none'
                   }}
                 >
                   {t('stat3')}
                 </div>
-                <h4 className="text-lg font-bold text-white uppercase tracking-wider leading-tight">
+                <h4 className="text-lg font-bold text-equiser-blue uppercase tracking-wider leading-tight">
                   {t('stat3Label')}
                 </h4>
               </motion.div>

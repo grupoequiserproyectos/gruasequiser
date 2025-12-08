@@ -148,15 +148,15 @@ export function RelatedContentLinks() {
             </div>
           </div>
 
-          {/* Fila adicional con más enlaces */}
-          <div className="bg-gradient-to-r from-equiser-blue to-blue-900 text-white p-8 rounded-xl shadow-xl">
-            <h3 className="text-2xl font-bold mb-6 text-center">Casos de Estudio y Proyectos Destacados</h3>
+          {/* Fila adicional con más enlaces - WCAG AA Compliant */}
+          <div className="p-8 rounded-xl shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', padding: '20px', borderRadius: '8px' }}>
+            <h3 className="text-2xl font-bold mb-6 text-center text-equiser-blue">Casos de Estudio y Proyectos Destacados</h3>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link href="/blog/proyectos-izamiento-petromonagas" className="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition-all duration-300">
-                <span className="text-white font-semibold">→ Proyectos de Izamiento en Petromonagas</span>
+              <Link href="/blog/proyectos-izamiento-petromonagas" className="bg-equiser-blue/10 p-4 rounded-lg hover:bg-equiser-blue/20 transition-all duration-300 border border-equiser-blue/30" style={{ padding: '20px', borderRadius: '8px' }}>
+                <span className="text-equiser-blue font-semibold text-lg">→ Proyectos de Izamiento en Petromonagas</span>
               </Link>
-              <Link href="/blog/certificaciones-seguridad" className="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-white/20 transition-all duration-300">
-                <span className="text-white font-semibold">→ Certificaciones de Seguridad en Servicios de Grúas</span>
+              <Link href="/blog/certificaciones-seguridad" className="bg-equiser-blue/10 p-4 rounded-lg hover:bg-equiser-blue/20 transition-all duration-300 border border-equiser-blue/30" style={{ padding: '20px', borderRadius: '8px' }}>
+                <span className="text-equiser-blue font-semibold text-lg">→ Certificaciones de Seguridad en Servicios de Grúas</span>
               </Link>
             </div>
           </div>

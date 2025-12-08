@@ -110,8 +110,8 @@ export function SEOContentExpanded() {
         </motion.div>
       </section>
 
-      {/* SECTION 2: SERVICIOS ESPECIALIZADOS - 400 palabras */}
-      <section className="bg-gradient-to-r from-equiser-blue to-blue-900 text-white py-16">
+      {/* SECTION 2: SERVICIOS ESPECIALIZADOS - 400 palabras - WCAG AA Compliant */}
+      <section className="py-16" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -119,45 +119,45 @@ export function SEOContentExpanded() {
             variants={fadeIn}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-4xl font-bold text-center mb-6">
+            <h2 className="text-4xl font-bold text-center mb-6 text-equiser-blue">
               Servicios Especializados de Alquiler de Grúas en Venezuela
             </h2>
-            <p className="text-xl text-center mb-12 text-gray-200 max-w-4xl mx-auto">
+            <p className="text-xl text-center mb-12 text-gray-700 max-w-4xl mx-auto">
               Soluciones integrales para la industria pesada venezolana con 30+ años de experiencia comprobada
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <Wrench className="w-12 h-12 text-equiser-yellow mb-4" />
-                <h3 className="text-xl font-bold mb-3">Alquiler de Grúas Móviles y Sobre Oruga</h3>
-                <p className="text-gray-200 text-sm leading-relaxed">
+              <div className="rounded-xl transition-all duration-300 border border-equiser-blue/30 shadow-lg hover:shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', padding: '20px', borderRadius: '8px' }}>
+                <Wrench className="w-12 h-12 text-equiser-blue mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-equiser-blue">Alquiler de Grúas Móviles y Sobre Oruga</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Flota actualizada con grúas certificadas para operación en sectores petrolero, petroquímico, siderúrgico y energético. 
                   Incluye operadores certificados NCCCO y supervisores de seguridad industrial.
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <TrendingUp className="w-12 h-12 text-equiser-yellow mb-4" />
-                <h3 className="text-xl font-bold mb-3">Transporte Pesado y Extrapesado</h3>
-                <p className="text-gray-200 text-sm leading-relaxed">
+              <div className="rounded-xl transition-all duration-300 border border-equiser-blue/30 shadow-lg hover:shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', padding: '20px', borderRadius: '8px' }}>
+                <TrendingUp className="w-12 h-12 text-equiser-blue mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-equiser-blue">Transporte Pesado y Extrapesado</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Sistema Super Lowboy Hidráulico hasta 250 toneladas para movilización de transformadores, turbinas y generadores. 
                   Permisos especiales de tránsito y escoltas en todo el territorio nacional.
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <Shield className="w-12 h-12 text-equiser-yellow mb-4" />
-                <h3 className="text-xl font-bold mb-3">Izamiento Industrial Especializado</h3>
-                <p className="text-gray-200 text-sm leading-relaxed">
+              <div className="rounded-xl transition-all duration-300 border border-equiser-blue/30 shadow-lg hover:shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', padding: '20px', borderRadius: '8px' }}>
+                <Shield className="w-12 h-12 text-equiser-blue mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-equiser-blue">Izamiento Industrial Especializado</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Servicios de rigging e ingeniería 3D para proyectos complejos en Pequiven, Refinería El Palito, SIDOR y Faja del Orinoco. 
                   Cálculos estructurales certificados y análisis de cargas.
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <Users className="w-12 h-12 text-equiser-yellow mb-4" />
-                <h3 className="text-xl font-bold mb-3">Ingeniería y Planificación 3D</h3>
-                <p className="text-gray-200 text-sm leading-relaxed">
+              <div className="rounded-xl transition-all duration-300 border border-equiser-blue/30 shadow-lg hover:shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', padding: '20px', borderRadius: '8px' }}>
+                <Users className="w-12 h-12 text-equiser-blue mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-equiser-blue">Ingeniería y Planificación 3D</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Modelado 3D avanzado con AutoCAD y Solid Works, análisis de cargas con software LIFTPLANNER, 
                   simulación de izamiento para máxima precisión y seguridad en operaciones críticas.
                 </p>
