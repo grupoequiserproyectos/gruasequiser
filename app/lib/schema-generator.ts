@@ -86,33 +86,10 @@ export const companySchema = {
   ]
 }
 
-export const getFAQSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuáles son las capacidades de grúas disponibles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EQUISER ofrece grúas desde 25 hasta 1600 toneladas, incluyendo grúas móviles telescópicas y grúas sobre oruga, con la tecnología más moderna."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cubre EQUISER todo el territorio venezolano?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, tenemos cobertura nacional con base en Morón, Carabobo. Operamos en Maracaibo, Valencia, Puerto Cabello, Caracas, Faja del Orinoco, Ciudad Guayana, Maturín y más ciudades."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Disponibilidad 24/7?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, EQUISER está disponible 24/7 para emergencias, cotizaciones y atención inmediata. Contacta vía WhatsApp, teléfono o email."
-      }
-    }
-  ]
-})
+/**
+ * NOTA: FAQPage Schema fue movido a:
+ * - /lib/faq-data.ts (datos consolidados)
+ * - /components/structured-data/faq-schema.tsx (componente reutilizable)
+ * 
+ * NO recrear getFAQSchema() aquí para evitar duplicaciones de FAQPage en GSC
+ */

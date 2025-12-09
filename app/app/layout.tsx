@@ -6,7 +6,9 @@ import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { WhatsappWidget } from '@/components/whatsapp-widget'
 import { IntlProvider } from '@/components/providers/intl-provider'
-import { companySchema, getFAQSchema } from '@/lib/schema-generator'
+import { companySchema } from '@/lib/schema-generator'
+import { FAQSchema } from '@/components/structured-data/faq-schema'
+import { homeFAQs } from '@/lib/faq-data'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -140,10 +142,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(companySchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema()) }}
-        />
+        {/* FAQPage Schema Consolidado - 9 preguntas totales */}
+        <FAQSchema faqs={homeFAQs} />
         
         {/* BreadcrumbList Schema */}
         <script
