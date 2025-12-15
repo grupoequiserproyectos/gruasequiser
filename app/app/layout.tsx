@@ -111,10 +111,18 @@ export default function RootLayout({
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="msapplication-TileColor" content="#1E3A8A" />
         
-        {/* DNS Prefetch para recursos externos */}
+        {/* DNS Prefetch y Preconnect para recursos externos */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://wa.me" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload de recursos críticos - Hero images (LCP optimization) */}
+        <link rel="preload" href="/images/grua-600-ton-y-grua-de-130-ton.webp" as="image" type="image/webp" />
+        
+        {/* Preload de fuentes críticas (si se usan fuentes personalizadas) */}
+        {/* <link rel="preload" href="/fonts/inter-bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
         
         {/* Geo Tags */}
         <meta name="geo.region" content="VE-G" />
