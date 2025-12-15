@@ -365,7 +365,7 @@ export function BlogHomePage() {
                               ))}
                             </div>
                             <button
-                              onClick={() => router.push(`/${locale}/blog/${article.slug}`)}
+                              onClick={() => router.push(`/blog/${article.slug}`)}
                               className="inline-flex items-center text-equiser-blue hover:text-blue-800 font-semibold text-sm transition-colors duration-200 cursor-pointer"
                             >
                               {t('readMore')}
