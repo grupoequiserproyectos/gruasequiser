@@ -398,7 +398,7 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
                   "dateModified": article.lastModified || articleDate,
                   "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id": `https://gruasequiser.com/${locale}/blog/${article.slug}`
+                    "@id": `https://gruasequiser.com/blog/${article.slug}`
                   },
                   "keywords": (isEnglish && article.keywordsEn?.length ? article.keywordsEn : article.keywords)?.join(', ') || article.seoKeywords,
                   "articleSection": displayCategory,
