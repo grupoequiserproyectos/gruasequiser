@@ -29,18 +29,88 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     if (!blog) {
       return {
         title: 'Artículo no encontrado | Blog GRÚAS EQUISER',
+        robots: {
+          index: false,
+          follow: true,
+        },
       }
     }
 
+    const canonicalUrl = `https://gruasequiser.com/blog/${blog.slug}`
+    const metaDescription = blog.metaDescription || blog.excerpt
+    const ogImage = blog.featuredImage || '/images/trabajo de grua.webp'
+
     return {
       title: `${blog.title} | Blog GRÚAS EQUISER C.A.`,
-      description: blog.excerpt,
+      description: metaDescription,
       keywords: blog.keywords?.join(', ') || blog.tags.join(', '),
+      
+      // META ROBOTS - PERMITIR INDEXACIÓN
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      
+      // CANONICAL URL - CRÍTICO PARA SEO
+      alternates: {
+        canonical: canonicalUrl,
+      },
+      
+      // OPEN GRAPH - PARA REDES SOCIALES
+      openGraph: {
+        title: blog.title,
+        description: metaDescription,
+        url: canonicalUrl,
+        siteName: 'GRÚAS EQUISER C.A.',
+        images: [
+          {
+            url: ogImage,
+            width: 1200,
+            height: 630,
+            alt: blog.title,
+          },
+        ],
+        type: 'article',
+        publishedTime: blog.publishedAt?.toISOString() || blog.createdAt.toISOString(),
+        modifiedTime: blog.updatedAt?.toISOString() || blog.createdAt.toISOString(),
+        authors: [blog.author || 'Equipo EQUISER'],
+        tags: blog.tags,
+      },
+      
+      // TWITTER CARD
+      twitter: {
+        card: 'summary_large_image',
+        title: blog.title,
+        description: metaDescription,
+        images: [ogImage],
+      },
+      
+      // INFORMACIÓN DE AUTOR
+      authors: [
+        {
+          name: blog.author || 'Equipo EQUISER',
+          url: 'https://gruasequiser.com',
+        },
+      ],
+      
+      // CATEGORÍA
+      category: blog.category,
     }
   } catch (error) {
     console.error('Error generating metadata:', error)
     return {
       title: 'Blog GRÚAS EQUISER',
+      robots: {
+        index: false,
+        follow: true,
+      },
     }
   }
 }
