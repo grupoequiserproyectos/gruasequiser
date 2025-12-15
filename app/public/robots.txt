@@ -1,20 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /servicios/
 Disallow: /admin/
 Disallow: /api/
-Disallow: /?utm_
-Disallow: /?fbclid=
-Disallow: /search?
-Disallow: /*.json$
-
-User-agent: AdsBot-Google
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-# Crawl delay
+Disallow: /?
 Crawl-delay: 1
 
 Sitemap: https://gruasequiser.com/sitemap.xml
-Sitemap: https://gruasequiser.com/api/sitemap
