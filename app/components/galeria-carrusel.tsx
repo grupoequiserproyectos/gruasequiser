@@ -368,6 +368,7 @@ export function GaleriaCarrusel() {
                     fill
                     className="object-cover"
                     sizes="100px"
+                    loading="lazy"
                   />
                   
                   {/* Overlay para thumbnail activo */}
