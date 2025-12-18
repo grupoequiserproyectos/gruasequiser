@@ -106,7 +106,7 @@ function generarContenidoUltraOptimizado(params: {
   // H2: Proceso de contratación
   contenido += `## Proceso de Contratación (Paso a Paso)\n\n`;
   contenido += `### 1️⃣ Solicitud de Cotización\n`;
-  contenido += `Contáctanos vía **WhatsApp** (+58 422-6347624) o **email** (info@gruasequiser.net) con:\n`;
+  contenido += `Contáctanos vía **WhatsApp** (+58 422-6347624) o **email** (info@gruasequiser.com) con:\n`;
   contenido += `- Descripción del proyecto\n- Ubicación exacta\n- Fecha estimada\n- Capacidad requerida\n\n`;
   
   contenido += `### 2️⃣ Evaluación Técnica\n`;
@@ -151,7 +151,7 @@ function generarContenidoUltraOptimizado(params: {
   contenido += `¿Listo para ejecutar tu proyecto con la **empresa líder en ${keyword}**?\n\n`;
   contenido += `### 📞 Contacto Directo\n`;
   contenido += `- **WhatsApp 24/7:** [+58 422-6347624](https://wa.me/message/IOBBJVBBVWNOI1)\n`;
-  contenido += `- **Email:** info@gruasequiser.net | direccionmercadeo@gruasequiser.net\n`;
+  contenido += `- **Email:** info@gruasequiser.com | direccionmercadeo@gruasequiser.com\n`;
   contenido += `- **Ubicación:** Barcelona, Anzoátegui | Cobertura Nacional\n\n`;
   
   contenido += `### ✅ Garantías\n`;

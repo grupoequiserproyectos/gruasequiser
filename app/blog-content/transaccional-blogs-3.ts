@@ -7,7 +7,7 @@ export const transaccionalBlogs3 = [
     title: 'Grúas Liebherr Venezuela - Alquiler de Equipos Alemanes Premium',
     excerpt: 'Alquiler de grúas Liebherr en Venezuela con GRÚAS EQUISER. Equipos alemanes premium, tecnología de punta, capacidades hasta 1000 toneladas disponibles.',
     metaDescription: 'Grúas Liebherr Venezuela alquiler. Equipos alemanes premium hasta 1000t, tecnología de punta, disponibilidad inmediata. GRÚAS EQUISER distribuidor oficial.',
-    canonicalUrl: 'https://gruasequiser.net/blog/gruas-liebherr-venezuela-alquiler-equipos-alemanes',
+    canonicalUrl: 'https://gruasequiser.com/blog/gruas-liebherr-venezuela-alquiler-equipos-alemanes',
     content: `# Grúas Liebherr Venezuela - Alquiler de Equipos Alemanes Premium
 
 Las **grúas Liebherr** representan la cumbre de la ingeniería alemana en equipos de izamiento. Como distribuidor oficial en Venezuela, GRÚAS EQUISER ofrece la flota más moderna de equipos Liebherr del país, con capacidades desde 200 hasta 1000 toneladas y tecnología que define los estándares mundiales de la industria.
@@ -82,8 +82,8 @@ Flota Liebherr disponible inmediatamente
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Ingenieros Liebherr certificados disponibles  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito con Equipos Liebherr
 
@@ -210,8 +210,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 
@@ -254,7 +254,7 @@ Nos especializamos exclusivamente en proyectos industriales de gran envergadura.
     title: 'Transporte Sobredimensionado PDVSA - Servicios Certificados Equiser',
     excerpt: 'Transporte sobredimensionado certificado para PDVSA con GRÚAS EQUISER. Más de 15 años atendiendo refinerías, cumplimiento total de normativas PDVSA.',
     metaDescription: 'Transporte sobredimensionado PDVSA certificado. 15+ años experiencia, cumplimiento normativas PDVSA, equipos hasta 300t. GRÚAS EQUISER proveedor confiable.',
-    canonicalUrl: 'https://gruasequiser.net/blog/transporte-sobredimensionado-pdvsa-servicios-certificados',
+    canonicalUrl: 'https://gruasequiser.com/blog/transporte-sobredimensionado-pdvsa-servicios-certificados',
     content: `# Transporte Sobredimensionado PDVSA - Servicios Certificados Equiser
 
 El **transporte sobredimensionado para PDVSA** requiere el más alto nivel de especialización, certificaciones específicas y cumplimiento estricto de normativas corporativas. GRÚAS EQUISER, con más de 15 años como proveedor confiable de PDVSA, lidera el mercado nacional en logística especializada para la industria petrolera venezolana.
@@ -327,8 +327,8 @@ Certificados PDVSA vigentes
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Especialistas PDVSA disponibles  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Servicios Especializados para PDVSA
 
@@ -469,8 +469,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 

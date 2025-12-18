@@ -33,7 +33,7 @@ export function ContactSection() {
     {
       icon: Phone,
       title: t('phone'),
-      details: ['+58 422-6347624'],
+      details: ['+58 422-6347624', '+58 414-3432882'],
       action: t('callNow'),
       actionUrl: 'tel:+584226347624',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
@@ -61,9 +61,9 @@ export function ContactSection() {
     {
       icon: Mail,
       title: t('emails'),
-      details: ['info@gruasequiser.net', 'direccionmercadeo@gruasequiser.net'],
+      details: ['info@gruasequiser.com', 'direccionmercadeo@gruasequiser.com'],
       action: t('sendEmail'),
-      actionUrl: 'mailto:info@gruasequiser.net',
+      actionUrl: 'mailto:info@gruasequiser.com',
       bgGradient: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
       iconBg: '#FFC107',
       iconColor: '#1E3A8A',

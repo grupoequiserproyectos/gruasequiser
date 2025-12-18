@@ -153,7 +153,7 @@ Manitowoc ofrece soluciones para los proyectos más exigentes:
 
 Contáctenos a través de:
 - WhatsApp: +58-422-6347624 (disponible 24/7)
-- Formulario web en gruasequiser.net
+- Formulario web en gruasequiser.com
 - Visita a nuestras instalaciones en Morón, Carabobo
 
 ### 2. Evaluación del Proyecto
@@ -344,10 +344,10 @@ Para proyectos urgentes, podemos movilizar equipos en menos de 24 horas.
 Para solicitar una cotización o consultar disponibilidad:
 
 **WhatsApp**: +58-422-6347624 (24/7)  
-**Email**: info@gruasequiser.net  
+**Email**: info@gruasequiser.com  
 **Dirección**: Autopista Puerto Cabello - Morón, Sector La Paragüita, Morón, Carabobo
 
-Visite nuestra web: [gruasequiser.net](https://gruasequiser.net)
+Visite nuestra web: [gruasequiser.com](https://gruasequiser.com)
 
 ## Conclusión
 
@@ -984,8 +984,8 @@ En GRÚAS EQUISER, nuestro equipo de ingeniería evaluará tu proyecto sin costo
 
 **Contacta con nuestros expertos:**  
 WhatsApp: +58-422-6347624 (24/7)  
-Web: gruasequiser.net  
-Email: info@gruasequiser.net
+Web: gruasequiser.com  
+Email: info@gruasequiser.com
 
 ---
 
@@ -1689,8 +1689,8 @@ En GRÚAS EQUISER, con más de 30 años de experiencia, hemos participado en los
 Si tu proyecto requiere experiencia comprobada, equipos certificados y compromiso con la excelencia, contáctanos:
 
 **WhatsApp**: +58-422-6347624 (24/7)  
-**Web**: gruasequiser.net  
-**Email**: info@gruasequiser.net
+**Web**: gruasequiser.com  
+**Email**: info@gruasequiser.com
 
 **Ubicación**: Autopista Puerto Cabello - Morón, Sector La Paragüita, Morón, Carabobo
 
@@ -2465,8 +2465,8 @@ En GRÚAS EQUISER, con más de 30 años de experiencia, hemos desarrollado siste
 Si necesitas asesoría sobre cumplimiento normativo o deseas alquilar equipos totalmente certificados, contáctanos:
 
 **WhatsApp**: +58-422-6347624 (24/7)  
-**Web**: gruasequiser.net  
-**Email**: info@gruasequiser.net  
+**Web**: gruasequiser.com  
+**Email**: info@gruasequiser.com  
 **Ubicación**: Autopista Puerto Cabello - Morón, Sector La Paragüita, Morón, Carabobo
 
 ---

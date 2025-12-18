@@ -8,7 +8,7 @@ export const blogsTransaccionalesFaltantes: BlogArticle[] = [
     title: 'Alquiler Grúas Móviles Caracas - Precios Competitivos 2025',
     excerpt: 'Descubre las mejores tarifas para alquiler de grúas móviles en Caracas. GRÚAS EQUISER ofrece equipos alemanes desde 25 hasta 1600 toneladas con precios competitivos.',
     metaDescription: 'Alquiler de grúas móviles en Caracas con precios competitivos 2025. Equipos alemanes 25-1600t, disponibilidad 24/7. GRÚAS EQUISER líder en Venezuela.',
-    canonicalUrl: 'https://gruasequiser.net/blog/alquiler-gruas-moviles-caracas-precios-2025',
+    canonicalUrl: 'https://gruasequiser.com/blog/alquiler-gruas-moviles-caracas-precios-2025',
     content: `
 # Alquiler Grúas Móviles Caracas - Precios Competitivos 2025
 
@@ -76,8 +76,8 @@ El **alquiler de grúas móviles en Caracas** se ha convertido en un servicio es
 
 🔧 **ASESORÍA TÉCNICA ESPECIALIZADA**  
 Ingenieros 3D para tu proyecto  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Ventajas de GRÚAS EQUISER en Caracas
 
@@ -190,8 +190,8 @@ Disponibilidad inmediata
 📞 **CONTACTO DIRECTO CARACAS**
 +58 422-6347624 (Principal)
 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -217,7 +217,7 @@ Disponibilidad inmediata
     title: 'Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7',
     excerpt: 'Transporte especializado con bateas y equipos de carga extrapesada en Venezuela. GRÚAS EQUISER ofrece servicio 24/7 con flota moderna y operadores certificados.',
     metaDescription: 'Servicio de bateas y transporte pesado en Venezuela 24/7. Capacidad hasta 200 toneladas, flota moderna, permisos INTT. GRÚAS EQUISER líder nacional.',
-    canonicalUrl: 'https://gruasequiser.net/blog/servicio-bateas-transporte-pesado-venezuela-24-7',
+    canonicalUrl: 'https://gruasequiser.com/blog/servicio-bateas-transporte-pesado-venezuela-24-7',
     content: `
 # Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7
 
@@ -296,8 +296,8 @@ El **servicio de bateas y transporte pesado** es fundamental para el desarrollo 
 
 🔧 **LOGÍSTICA ESPECIALIZADA**  
 Ingeniería de transporte certificada  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Proceso de Transporte Pesado
 
@@ -424,8 +424,8 @@ Descuentos por volumen y contratos anuales
 Cotización en menos de 2 horas  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -451,7 +451,7 @@ Cotización en menos de 2 horas
     title: 'Grúas Liebherr Venezuela - Alquiler de Equipos Alemanes Premium',
     excerpt: 'Descubre la tecnología alemana Liebherr en Venezuela. GRÚAS EQUISER ofrece alquiler de grúas Liebherr LTM desde 55 hasta 1600 toneladas con tecnología LICCON.',
     metaDescription: 'Alquiler grúas Liebherr en Venezuela. Equipos alemanes LTM 55-1600 toneladas, tecnología LICCON, mantenimiento certificado. GRÚAS EQUISER distribuidor autorizado.',
-    canonicalUrl: 'https://gruasequiser.net/blog/gruas-liebherr-venezuela-alquiler-equipos-alemanes',
+    canonicalUrl: 'https://gruasequiser.com/blog/gruas-liebherr-venezuela-alquiler-equipos-alemanes',
     content: `
 # Grúas Liebherr Venezuela - Alquiler de Equipos Alemanes Premium
 
@@ -528,8 +528,8 @@ Las **grúas Liebherr** representan la excelencia alemana en tecnología de izam
 
 🔧 **SOPORTE TÉCNICO LIEBHERR**  
 Técnicos certificados en fábrica  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Comparativa Tecnológica Liebherr vs Competencia
 
@@ -673,8 +673,8 @@ Certificación Liebherr original
 Único distribuidor autorizado  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -700,7 +700,7 @@ Certificación Liebherr original
     title: 'Alquiler Grúas Telescópicas Puerto Cabello - Sector Portuario',
     excerpt: 'Servicios especializados de grúas telescópicas en Puerto Cabello. GRÚAS EQUISER ofrece equipos certificados para operaciones portuarias, logística y carga de buques.',
     metaDescription: 'Alquiler grúas telescópicas Puerto Cabello sector portuario. Equipos 25-600t certificados, operaciones 24/7, logística marítima. GRÚAS EQUISER especialistas.',
-    canonicalUrl: 'https://gruasequiser.net/blog/alquiler-gruas-telescopicas-puerto-cabello-sector-portuario',
+    canonicalUrl: 'https://gruasequiser.com/blog/alquiler-gruas-telescopicas-puerto-cabello-sector-portuario',
     content: `
 # Alquiler Grúas Telescópicas Puerto Cabello - Sector Portuario
 
@@ -775,8 +775,8 @@ Especialistas en logística marítima
 
 🔧 **SOPORTE TÉCNICO PORTUARIO**  
 Ingenieros especializados en logística marítima  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito en Puerto Cabello
 
@@ -903,8 +903,8 @@ Especialistas en logística marítima
 Coordinación directa con Bolipuertos  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 

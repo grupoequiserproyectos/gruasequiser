@@ -8,7 +8,7 @@ export const blogsTransaccionalesFinales: BlogArticle[] = [
     title: 'Grúas Terex Venezuela - Capacidad 500 a 1000 Toneladas Disponibles',
     excerpt: 'Alquiler de grúas Terex de alta capacidad en Venezuela. GRÚAS EQUISER ofrece equipos Superlift y Demag de 500-1000 toneladas para proyectos industriales complejos.',
     metaDescription: 'Grúas Terex Venezuela 500-1000 toneladas. Superlift 3800, Demag AC series, tecnología alemana. GRÚAS EQUISER líder en equipos de alta capacidad.',
-    canonicalUrl: 'https://gruasequiser.net/blog/gruas-terex-venezuela-capacidad-500-1000-toneladas',
+    canonicalUrl: 'https://gruasequiser.com/blog/gruas-terex-venezuela-capacidad-500-1000-toneladas',
     content: `
 # Grúas Terex Venezuela - Capacidad 500 a 1000 Toneladas Disponibles
 
@@ -84,8 +84,8 @@ Las **grúas Terex de alta capacidad** representan la ingeniería alemana más a
 
 🔧 **INGENIERÍA ESPECIALIZADA**  
 Proyectos de alta complejidad técnica  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito con Terex en Venezuela
 
@@ -239,8 +239,8 @@ Máxima capacidad - Tecnología alemana
 Únicos especialistas certificados  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -266,7 +266,7 @@ Máxima capacidad - Tecnología alemana
     title: 'Transporte Sobredimensionado PDVSA - Servicios Certificados Equiser',
     excerpt: 'Servicios especializados de transporte sobredimensionado para PDVSA. GRÚAS EQUISER ofrece logística certificada para refinerías, plantas y proyectos petroleros.',
     metaDescription: 'Transporte sobredimensionado PDVSA certificado. Reactores, torres, intercambiadores hasta 300t. GRÚAS EQUISER especialista petrolero Venezuela.',
-    canonicalUrl: 'https://gruasequiser.net/blog/transporte-sobredimensionado-pdvsa-servicios-certificados',
+    canonicalUrl: 'https://gruasequiser.com/blog/transporte-sobredimensionado-pdvsa-servicios-certificados',
     content: `
 # Transporte Sobredimensionado PDVSA - Servicios Certificados Equiser
 
@@ -351,8 +351,8 @@ Proveedor homologado sector petrolero
 
 🔧 **INGENIERÍA PETROLERA CERTIFICADA**  
 Especialistas en proyectos PDVSA  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Certificaciones y Homologaciones PDVSA
 
@@ -494,8 +494,8 @@ Proyectos petroleros prioritarios
 Homologación activa sector petrolero  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -521,7 +521,7 @@ Homologación activa sector petrolero
     title: 'Alquiler Grúas Demag Venezuela - Tecnología Alemana Confiable',
     excerpt: 'Alquiler de grúas Demag en Venezuela con tecnología alemana premium. GRÚAS EQUISER ofrece equipos AC series 130-1000 toneladas con soporte técnico especializado.',
     metaDescription: 'Grúas Demag Venezuela, alquiler AC series 130-1000t, tecnología alemana confiable. GRÚAS EQUISER distribuidor certificado con soporte técnico.',
-    canonicalUrl: 'https://gruasequiser.net/blog/alquiler-gruas-demag-venezuela-tecnologia-alemana',
+    canonicalUrl: 'https://gruasequiser.com/blog/alquiler-gruas-demag-venezuela-tecnologia-alemana',
     content: `
 # Alquiler Grúas Demag Venezuela - Tecnología Alemana Confiable
 
@@ -600,8 +600,8 @@ Confiabilidad alemana en Venezuela
 
 🔧 **SOPORTE TÉCNICO DEMAG**  
 Técnicos certificados en Alemania  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito Demag en Venezuela
 
@@ -748,8 +748,8 @@ Confiabilidad alemana certificada
 Distribuidor certificado exclusivo  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 
@@ -775,7 +775,7 @@ Distribuidor certificado exclusivo
     title: 'Grúas para Sector Petrolero Venezuela - Mantenimiento de Refinerías',
     excerpt: 'Servicios especializados de grúas para el sector petrolero venezolano. GRÚAS EQUISER ofrece equipos certificados para mantenimiento de refinerías PDVSA y plantas petroquímicas.',
     metaDescription: 'Grúas sector petrolero Venezuela, mantenimiento refinerías PDVSA. Equipos certificados 25-1000t, operadores homologados. GRÚAS EQUISER líder petrolero.',
-    canonicalUrl: 'https://gruasequiser.net/blog/gruas-sector-petrolero-venezuela-mantenimiento-refinerias',
+    canonicalUrl: 'https://gruasequiser.com/blog/gruas-sector-petrolero-venezuela-mantenimiento-refinerias',
     content: `
 # Grúas para Sector Petrolero Venezuela - Mantenimiento de Refinerías
 
@@ -857,8 +857,8 @@ El **sector petrolero venezolano** requiere servicios de grúas altamente especi
 
 🔧 **MANTENIMIENTO PETROLERO ESPECIALIZADO**  
 Técnicos homologados PDVSA  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Certificaciones Sector Petrolero
 
@@ -1032,8 +1032,8 @@ Especialistas sector energético
 25 años de experiencia sector petrolero  
 📞 +58 422-6347624 (Principal)  
 📞 +58 422-6347624 (Alternativo)  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ---
 

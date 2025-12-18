@@ -10,8 +10,8 @@ export const companySchema = {
   "image": "https://www.heavyliftnews.com/wp-content/uploads/2022/11/1102-Mammoet-1-768x1024.png",
   "telephone": "+584226347624",
   "email": [
-    "info@gruasequiser.net",
-    "direccionmercadeo@gruasequiser.net"
+    "info@gruasequiser.com",
+    "direccionmercadeo@gruasequiser.com"
   ],
   "foundingDate": "1995",
   "numberOfEmployees": {

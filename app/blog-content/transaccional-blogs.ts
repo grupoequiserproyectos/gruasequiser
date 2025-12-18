@@ -7,7 +7,7 @@ export const transaccionalBlogs = [
     title: 'Grúas sobre Orugas Venezuela - Alquiler y Servicios Especializados',
     excerpt: 'Alquila grúas sobre orugas en Venezuela con GRÚAS EQUISER. Equipos Liebherr, Manitowoc hasta 800 toneladas para terrenos difíciles. Disponible 24/7.',
     metaDescription: 'Grúas sobre orugas Venezuela. Alquiler Liebherr, Manitowoc hasta 800t para terrenos difíciles. Servicios especializados con GRÚAS EQUISER líder nacional.',
-    canonicalUrl: 'https://gruasequiser.net/blog/gruas-sobre-orugas-venezuela-alquiler-servicios',
+    canonicalUrl: 'https://gruasequiser.com/blog/gruas-sobre-orugas-venezuela-alquiler-servicios',
     content: `# Grúas sobre Orugas Venezuela - Alquiler y Servicios Especializados
 
 Las **grúas sobre orugas** representan la solución definitiva para proyectos industriales en terrenos complejos de Venezuela. Con capacidades de hasta 800 toneladas y la habilidad única de operar en condiciones donde las grúas móviles fallan, GRÚAS EQUISER lidera el mercado nacional con la flota más especializada del país.
@@ -80,8 +80,8 @@ Capacidad hasta 800 toneladas disponible
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Ingenieros 3D a tu disposición  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Ventajas Competitivas Exclusivas
 
@@ -137,8 +137,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 
@@ -181,7 +181,7 @@ Nos especializamos exclusivamente en proyectos industriales de gran envergadura.
     title: 'Transporte de Carga Sobredimensionada Venezuela - Equiser Líder',
     excerpt: 'Transporte de carga sobredimensionada en Venezuela con GRÚAS EQUISER. Equipos hasta 300 toneladas, permisos INTT, rutas especializadas. Líderes nacionales.',
     metaDescription: 'Transporte carga sobredimensionada Venezuela hasta 300t. Permisos INTT, rutas especializadas, logística completa. GRÚAS EQUISER líder nacional 20+ años.',
-    canonicalUrl: 'https://gruasequiser.net/blog/transporte-carga-sobredimensionada-venezuela-equiser',
+    canonicalUrl: 'https://gruasequiser.com/blog/transporte-carga-sobredimensionada-venezuela-equiser',
     content: `# Transporte de Carga Sobredimensionada Venezuela - Equiser Líder
 
 El **transporte de carga sobredimensionada** en Venezuela requiere experiencia técnica, equipos especializados y conocimiento profundo de la normativa nacional. GRÚAS EQUISER lidera este sector con más de 20 años transportando las cargas más complejas del país, desde reactores de 250 toneladas hasta estructuras de 40 metros de longitud.
@@ -254,8 +254,8 @@ GRÚAS EQUISER mantiene relaciones directas con INTT nacional y regional, garant
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Ingenieros 3D a tu disposición  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito en Proyectos Venezolanos
 
@@ -360,8 +360,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 

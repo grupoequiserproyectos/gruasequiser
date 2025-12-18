@@ -134,14 +134,15 @@ export function Footer() {
                   <Phone className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
                     <div>+58 422-6347624</div>
+                    <div>+58 414-3432882</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center text-gray-300">
                   <Mail className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
-                    <div>info@gruasequiser.net</div>
-                    <div>direccionmercadeo@gruasequiser.net</div>
+                    <div>info@gruasequiser.com</div>
+                    <div>direccionmercadeo@gruasequiser.com</div>
                   </div>
                 </div>
 

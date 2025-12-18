@@ -7,7 +7,7 @@ export const transaccionalBlogs2 = [
     title: 'Alquiler Grúas Móviles Caracas - Precios Competitivos 2025',
     excerpt: 'Alquiler de grúas móviles en Caracas con GRÚAS EQUISER. Precios competitivos 2025, equipos Liebherr y Demag, disponibilidad inmediata 24/7.',
     metaDescription: 'Alquiler grúas móviles Caracas 2025. Precios competitivos, equipos Liebherr y Demag hasta 500t. GRÚAS EQUISER líder en la región capital.',
-    canonicalUrl: 'https://gruasequiser.net/blog/alquiler-gruas-moviles-caracas-precios-2025',
+    canonicalUrl: 'https://gruasequiser.com/blog/alquiler-gruas-moviles-caracas-precios-2025',
     content: `# Alquiler Grúas Móviles Caracas - Precios Competitivos 2025
 
 El **alquiler de grúas móviles en Caracas** experimenta su mayor demanda en 15 años. Con más de 120 proyectos activos en la región capital y una inversión superior a $2.500 millones en desarrollo urbano e industrial, GRÚAS EQUISER ofrece la solución más competitiva del mercado con precios transparentes y equipos de última generación.
@@ -65,8 +65,8 @@ Precios especiales región capital 2025
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Cotización inmediata región capital  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Flota Especializada para Caracas
 
@@ -186,8 +186,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 
@@ -230,7 +230,7 @@ Nos especializamos exclusivamente en proyectos industriales de gran envergadura.
     title: 'Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7',
     excerpt: 'Servicio de bateas y transporte pesado 24/7 en Venezuela con GRÚAS EQUISER. Flota especializada, cobertura nacional, disponibilidad inmediata.',
     metaDescription: 'Servicio bateas transporte pesado Venezuela 24/7. Flota especializada hasta 120t, cobertura nacional, disponibilidad inmediata. GRÚAS EQUISER líder.',
-    canonicalUrl: 'https://gruasequiser.net/blog/servicio-bateas-transporte-pesado-venezuela-24-7',
+    canonicalUrl: 'https://gruasequiser.com/blog/servicio-bateas-transporte-pesado-venezuela-24-7',
     content: `# Servicio de Bateas y Transporte Pesado Venezuela - Disponible 24/7
 
 El **servicio de bateas y transporte pesado** opera como el sistema circulatorio de la industria venezolana. Con disponibilidad 24/7 los 365 días del año, GRÚAS EQUISER garantiza que ningún proyecto se detenga por falta de logística especializada, movilizando más de 15,000 toneladas mensualmente a través de todo el territorio nacional.
@@ -315,8 +315,8 @@ Disponibilidad 24/7 los 365 días del año
 
 📞 **CONSULTA TÉCNICA ESPECIALIZADA**  
 Servicio 24/7 disponible ahora  
-✉️ info@gruasequiser.net  
-✉️ direccionmercadeo@gruasequiser.net
+✉️ info@gruasequiser.com  
+✉️ direccionmercadeo@gruasequiser.com
 
 ## Casos de Éxito Servicio 24/7
 
@@ -414,8 +414,8 @@ Teléfono Principal: +58 422-6347624
 Teléfono Alternativo: +58 422-6347624
 
 ✉️ **CORREOS ELECTRÓNICOS**  
-Información General: info@gruasequiser.net  
-Mercadeo y Ventas: direccionmercadeo@gruasequiser.net
+Información General: info@gruasequiser.com  
+Mercadeo y Ventas: direccionmercadeo@gruasequiser.com
 
 🏗️ **SERVICIOS ESPECIALIZADOS**
 

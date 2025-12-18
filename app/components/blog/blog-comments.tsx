@@ -32,7 +32,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
         {
           id: '1-1',
           author: 'GRÚAS EQUISER',
-          email: 'info@gruasequiser.net',
+          email: 'info@gruasequiser.com',
           content: 'Gracias por tu comentario, Miguel. Nos alegra que la información te sea útil. Si necesitas más detalles sobre algún modelo específico, no dudes en contactarnos.',
           date: '2024-01-21'
         }

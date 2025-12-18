@@ -229,7 +229,7 @@ Atención inmediata de lunes a domingo
 Respuesta en menos de 15 minutos
 
 ### Email
-**info@gruasequiser.net**
+**info@gruasequiser.com**
 Cotizaciones en 24-48 horas
 
 ### Dirección
@@ -266,7 +266,7 @@ Sí, operamos 24 horas los 365 días del año con respuesta garantizada.
 **Métodos de contacto:**
 - Teléfono: +58 422-6347624
 - WhatsApp: +58 424-4633496
-- Email: info@gruasequiser.net
+- Email: info@gruasequiser.com
 
 **EQUISER: Tu aliado confiable en ${data.ciudad} para proyectos industriales de cualquier magnitud.**
 

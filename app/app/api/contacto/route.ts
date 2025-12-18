@@ -12,8 +12,8 @@ const EMAIL_RECIPIENTS = [
   'equiserdominios@gmail.com',
   'equisercadominios@gmail.com',
   'marketingimpulsoai@gmail.com',
-  'info@gruasequiser.net',
-  'direccionmercadeo@gruasequiser.net'
+  'info@gruasequiser.com',
+  'direccionmercadeo@gruasequiser.com'
 ]
 
 // Sistema de logging mejorado
@@ -69,7 +69,7 @@ const createEmailTransporter = () => {
     port: 587,
     secure: false,
     auth: {
-      user: emailUser || 'noreply@gruasequiser.net',
+      user: emailUser || 'noreply@gruasequiser.com',
       pass: emailPass || ''
     },
     tls: {
@@ -254,9 +254,10 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
           <p style="font-size: 18px; margin-bottom: 5px;">GRÚAS EQUISER C.A.</p>
           <p style="font-size: 14px;">Líder en Alquiler de Grúas en Venezuela</p>
           <p style="font-size: 13px; margin-top: 12px;">
+            📱 Teléfonos: +58 422-6347624 | +58 414-3432882<br>
             📱 WhatsApp: <a href="https://wa.me/message/IOBBJVBBVWNOI1">+58 422 6347624</a><br>
-            🌐 Web: <a href="https://gruasequiser.net">gruasequiser.net</a><br>
-            📧 Email: <a href="mailto:info@gruasequiser.net">info@gruasequiser.net</a>
+            🌐 Web: <a href="https://gruasequiser.com">gruasequiser.com</a><br>
+            📧 Email: <a href="mailto:info@gruasequiser.com">info@gruasequiser.com</a>
           </p>
         </div>
       </div>
@@ -287,7 +288,7 @@ async function sendEmailNotification(contactData: any): Promise<{ success: boole
     // Configurar el email usando Promise.all para enviar a todos los destinatarios
     const emailPromises = EMAIL_RECIPIENTS.map((recipient, index) => {
       return transporter.sendMail({
-        from: '"GRÚAS EQUISER - Sitio Web" <noreply@gruasequiser.net>',
+        from: '"GRÚAS EQUISER - Sitio Web" <noreply@gruasequiser.com>',
         to: recipient,
         subject: `🏗️ Nueva Consulta Web - ${contactData.nombre} - ${contactData.asunto}`,
         text: `
@@ -312,7 +313,8 @@ Canal: ${contactData.canal || 'web'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 GRÚAS EQUISER C.A. - Líder en Alquiler de Grúas en Venezuela
-WhatsApp: +58 422 6347624 | Web: gruasequiser.net
+Teléfonos: +58 422-6347624 | +58 414-3432882
+WhatsApp: +58 422-6347624 | Web: gruasequiser.com
         `,
         html: emailHTML
       }).then(() => {
