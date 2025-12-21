@@ -2,6 +2,7 @@
 'use client'
 
 import Image from 'next/image'
+import { ResponsiveImage } from '@/components/ResponsiveImage'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Camera } from 'lucide-react'
 import { useState, useEffect, useCallback } from 'react'
@@ -285,11 +286,10 @@ export function GaleriaCarrusel() {
           <div className="relative mb-5 bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* IMAGEN PRINCIPAL GRANDE */}
             <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] bg-gray-100">
-              <Image
+              <ResponsiveImage
                 src={carouselItems[currentSlide]?.src}
                 alt={carouselItems[currentSlide]?.alt}
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                 priority
               />

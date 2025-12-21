@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Filter, MapPin, Calendar, Wrench } from 'lucide-react'
 import Image from 'next/image'
+import { ResponsiveImage } from '@/components/ResponsiveImage'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 
@@ -419,12 +420,10 @@ export function ProjectsSection() {
                   className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
                 >
                   <div className="relative h-64 sm:h-72 lg:h-80 bg-gray-100">
-                    <Image
+                    <ResponsiveImage
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="object-contain group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -498,12 +497,10 @@ export function ProjectsSection() {
               className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="relative h-48 sm:h-56 lg:h-64 bg-gray-100">
-                <Image
+                <ResponsiveImage
                   src={project.image}
                   alt={project.title}
-                  fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
