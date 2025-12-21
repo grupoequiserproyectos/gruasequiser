@@ -34,6 +34,22 @@ export const metadata: Metadata = {
   description: '✓ Grúas móviles y oruga 25-1600 ton ✓ Super lowboy hidráulico ✓ Transporte sobredimensionado ✓ Proyectos industriales ✓ Izamiento industrial ✓ NO grúas de remolque. Maracaibo, Barcelona, Valencia, Puerto Cabello, Faja Orinoco, Puerto La Cruz ☎️ +58 422-6347624',
   keywords: 'grúas industriales Venezuela, alquiler grúas móviles hidráulicas, grúas sobre oruga 600 toneladas, super lowboy hidráulico, transporte carga sobredimensionada Venezuela, grúas telescópicas industriales, grúas alta capacidad, equipos izamiento industrial, grúas certificadas sector petrolero, rigging industrial Venezuela, grúas Maracaibo, grúas Barcelona Anzoátegui, grúas Valencia Carabobo, grúas Puerto Cabello, grúas Faja del Orinoco, grúas Puerto La Cruz, grúas Ciudad Guayana, grúas sector petrolero, grúas sector petroquímico, grúas Pequiven, grúas Refinería El Palito, transporte transformadores industriales',
   
+  // Iconos y Favicons
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
+  
   // Configuración para PWA y móviles
   manifest: '/manifest.json',
   appleWebApp: {

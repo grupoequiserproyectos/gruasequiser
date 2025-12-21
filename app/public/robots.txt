@@ -2,9 +2,22 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /servicios/
+Allow: /favicon.ico
+Allow: /?lang=
 Disallow: /admin/
 Disallow: /api/
-Disallow: /?
+Disallow: /cdn-cgi/
+Disallow: /_next/
+Disallow: /*.json$
 Crawl-delay: 1
 
+# Sitemaps
 Sitemap: https://gruasequiser.com/sitemap.xml
+
+# Instrucciones para motores de búsqueda
+# - favicon.ico: Permitido explícitamente para indexación
+# - ?lang=: Permitido para versiones multiidioma (es, en)
+# - /cdn-cgi/: Bloqueado (protección de emails de Cloudflare)
+# - /admin/, /api/: Bloqueados (contenido no público)
+# - /_next/: Bloqueado (archivos estáticos de Next.js)
+# - *.json: Bloqueados (archivos de configuración)
