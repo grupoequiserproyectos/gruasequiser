@@ -10,7 +10,12 @@ import { companySchema } from '@/lib/schema-generator'
 import { FAQSchema } from '@/components/structured-data/faq-schema'
 import { homeFAQs } from '@/lib/faq-data'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  adjustFontFallback: true
+})
 
 // Configuración viewport separada para optimizaciones móviles
 export const viewport = {

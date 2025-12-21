@@ -1,18 +1,21 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { Header } from '@/components/header'
 import { HeroSection } from '@/components/hero-section'
 import { NosotrosSection } from '@/components/nosotros-section'
-import { GaleriaCarrusel } from '@/components/galeria-carrusel'
-import { ServicesSection } from '@/components/services-section'
-import { SEOContentExpanded } from '@/components/seo-content-expanded'
-import { RelatedContentLinks } from '@/components/related-content-links'
-import { IndustrialFAQSection } from '@/components/industrial-faq-section'
-import { AboutSection } from '@/components/about-section'
-import { StatsSection } from '@/components/stats-section'
-import { ProjectsSection } from '@/components/projects-section'
-import { TeamSection } from '@/components/team-section'
-import { ContactSection } from '@/components/contact-section'
-import { Footer } from '@/components/footer'
+
+// Dynamic imports para componentes below-the-fold (optimización de performance)
+const GaleriaCarrusel = dynamic(() => import('@/components/galeria-carrusel').then(mod => ({ default: mod.GaleriaCarrusel })), { ssr: true })
+const ServicesSection = dynamic(() => import('@/components/services-section').then(mod => ({ default: mod.ServicesSection })), { ssr: true })
+const SEOContentExpanded = dynamic(() => import('@/components/seo-content-expanded').then(mod => ({ default: mod.SEOContentExpanded })), { ssr: true })
+const RelatedContentLinks = dynamic(() => import('@/components/related-content-links').then(mod => ({ default: mod.RelatedContentLinks })), { ssr: true })
+const IndustrialFAQSection = dynamic(() => import('@/components/industrial-faq-section').then(mod => ({ default: mod.IndustrialFAQSection })), { ssr: true })
+const AboutSection = dynamic(() => import('@/components/about-section').then(mod => ({ default: mod.AboutSection })), { ssr: true })
+const StatsSection = dynamic(() => import('@/components/stats-section').then(mod => ({ default: mod.StatsSection })), { ssr: true })
+const ProjectsSection = dynamic(() => import('@/components/projects-section').then(mod => ({ default: mod.ProjectsSection })), { ssr: true })
+const TeamSection = dynamic(() => import('@/components/team-section').then(mod => ({ default: mod.TeamSection })), { ssr: true })
+const ContactSection = dynamic(() => import('@/components/contact-section').then(mod => ({ default: mod.ContactSection })), { ssr: true })
+const Footer = dynamic(() => import('@/components/footer').then(mod => ({ default: mod.Footer })), { ssr: true })
 
 export const metadata: Metadata = {
   title: 'Alquiler de Grúas 25-1600 Toneladas en Venezuela | EQUISER Morón',
