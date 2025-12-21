@@ -64,7 +64,7 @@ export function ServicesSection() {
           </p>
           
           {/* Descripción adicional */}
-          <p className="text-base sm:text-lg text-gray-500 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
+          <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             {t('description')}
           </p>
         </motion.div>

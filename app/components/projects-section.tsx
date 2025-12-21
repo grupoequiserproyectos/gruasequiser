@@ -465,7 +465,7 @@ export function ProjectsSection() {
 
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                       <div className="flex flex-col gap-1">
-                        <span className="text-xs text-gray-500">{t('completed')}</span>
+                        <span className="text-xs text-gray-600">{t('completed')}</span>
                         <span className="text-sm font-bold text-gray-700">{project.year}</span>
                       </div>
                       <Button
@@ -520,7 +520,7 @@ export function ProjectsSection() {
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h4>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">{project.description}</p>
                 
-                <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+                <div className="flex items-center justify-between text-xs text-gray-600 mb-3">
                   <span className="flex items-center">
                     <MapPin className="w-3 h-3 mr-1" />
                     {project.location}
@@ -529,7 +529,7 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <span className="text-xs text-gray-600 flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {project.year}
                   </span>
