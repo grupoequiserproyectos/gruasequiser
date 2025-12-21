@@ -140,10 +140,30 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Preload de recursos críticos - Hero images (LCP optimization) */}
-        <link rel="preload" href="/images/grua-600-ton-y-grua-de-130-ton.webp" as="image" type="image/webp" />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/grua-600-ton-y-grua-de-130-ton-400w.webp"
+          media="(max-width: 640px)"
+          type="image/webp"
+        />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/grua-600-ton-y-grua-de-130-ton-800w.webp"
+          media="(min-width: 641px) and (max-width: 1024px)"
+          type="image/webp"
+        />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/grua-600-ton-y-grua-de-130-ton.webp"
+          media="(min-width: 1025px)"
+          type="image/webp"
+        />
         
-        {/* Preload de fuentes críticas (si se usan fuentes personalizadas) */}
-        {/* <link rel="preload" href="/fonts/inter-bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
+        {/* Preload de CSS crítico */}
+        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         
         {/* Geo Tags */}
         <meta name="geo.region" content="VE-G" />
