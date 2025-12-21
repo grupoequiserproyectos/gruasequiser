@@ -362,13 +362,12 @@ export function GaleriaCarrusel() {
                     height: '75px', // Desktop
                   }}
                 >
-                  <Image
-                    src={item.src}
+                  <img
+                    src={item.src.replace('.webp', '-400w.webp')}
                     alt={item.alt}
-                    fill
-                    className="object-cover"
-                    sizes="100px"
+                    className="w-full h-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                   
                   {/* Overlay para thumbnail activo */}

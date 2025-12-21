@@ -1,46 +1,24 @@
 [
   {
     "name": "TTFB",
-    "value": 99,
-    "id": "v5-1766351405696-8178732169369",
+    "value": 58,
+    "id": "v5-1766353828304-9238025656648",
     "rating": "good",
-    "delta": 99.19999999925494,
+    "delta": 58.30000000074506,
     "navigationType": "navigate",
-    "timestamp": "2025-12-21T21:10:09.633Z",
+    "timestamp": "2025-12-21T21:50:32.934Z",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
     "url": "https://157ff46517.preview.abacusai.app/"
   },
   {
     "name": "TTFB",
-    "value": 104,
-    "id": "v5-1766351733781-1065111498556",
+    "value": 163,
+    "id": "v5-1766354476185-7780250543696",
     "rating": "good",
-    "delta": 103.80000000074506,
+    "delta": 163.19999998807907,
     "navigationType": "navigate",
-    "timestamp": "2025-12-21T21:15:34.222Z",
+    "timestamp": "2025-12-21T22:01:16.690Z",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
-    "url": "https://157ff46517.preview.abacusai.app/"
-  },
-  {
-    "name": "LCP",
-    "value": 1824,
-    "id": "v5-1766351733784-4168516675895",
-    "rating": "good",
-    "delta": 1824,
-    "navigationType": "navigate",
-    "timestamp": "2025-12-21T21:15:42.599Z",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
-    "url": "https://157ff46517.preview.abacusai.app/"
-  },
-  {
-    "name": "TTFB",
-    "value": 53,
-    "id": "v5-1766351771650-5782773769029",
-    "rating": "good",
-    "delta": 53.100000001490116,
-    "navigationType": "navigate",
-    "timestamp": "2025-12-21T21:16:16.587Z",
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
     "url": "https://157ff46517.preview.abacusai.app/"
   }
 ]

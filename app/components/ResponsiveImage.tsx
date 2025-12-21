@@ -59,8 +59,8 @@ export function ResponsiveImage({
     `${src} 2000w`, // Original como fallback
   ].join(', ')
 
-  // Sizes optimizados para diferentes viewports
-  const sizes = props.sizes || '(max-width: 640px) 400px, (max-width: 1024px) 800px, (max-width: 1536px) 1200px, 1600px'
+  // Sizes optimizados para diferentes viewports - móvil primero
+  const sizes = props.sizes || '(max-width: 480px) 400px, (max-width: 768px) 800px, (max-width: 1280px) 1200px, 1600px'
 
   return (
     <div className="relative w-full h-full">
