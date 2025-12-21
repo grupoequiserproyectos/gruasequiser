@@ -86,5 +86,51 @@
     "timestamp": "2025-12-21T20:57:34.597Z",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
     "url": "https://157ff46517.preview.abacusai.app/"
+  },
+  {
+    "name": "TTFB",
+    "value": 100,
+    "id": "v5-1766350786902-4608288253726",
+    "rating": "good",
+    "delta": 99.80000000074506,
+    "navigationType": "navigate",
+    "timestamp": "2025-12-21T20:59:50.654Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "url": "https://157ff46517.preview.abacusai.app/"
+  },
+  {
+    "name": "TTFB",
+    "value": 100,
+    "id": "v5-1766350786895-6478605782916",
+    "rating": "good",
+    "delta": 99.80000000074506,
+    "navigationType": "navigate",
+    "timestamp": "2025-12-21T20:59:50.666Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "url": "https://157ff46517.preview.abacusai.app/"
+  },
+  {
+    "name": "FCP",
+    "value": 800,
+    "id": "v5-1766351080703-6614087329247",
+    "rating": "good",
+    "delta": 800,
+    "navigationType": "navigate",
+    "timestamp": "2025-12-21T21:04:41.456Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
+    "url": "https://157ff46517.preview.abacusai.app/"
+  },
+  {
+    "name": "CLS",
+    "value": 0,
+    "id": "v5-1766351080718-4002318543330",
+    "rating": "good",
+    "delta": 0,
+    "navigationType": "navigate",
+    "timestamp": "2025-12-21T21:04:49.414Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
+    "url": "https://157ff46517.preview.abacusai.app/"
+  }
+]
   }
 ]
