@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { WhatsappWidget } from '@/components/whatsapp-widget'
+import { WebVitals } from '@/components/web-vitals'
 import { IntlProvider } from '@/components/providers/intl-provider'
 import { companySchema } from '@/lib/schema-generator'
 import { FAQSchema } from '@/components/structured-data/faq-schema'
@@ -119,6 +120,106 @@ export default function RootLayout({
   return (
     <html lang="es-VE">
       <head>
+        {/* CSS Crítico Inline para Above-the-Fold (elimina bloqueo de renderizado) */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Reset y base styles críticos */
+            *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:currentColor}
+            html{line-height:1.5;-webkit-text-size-adjust:100%;tab-size:4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif}
+            body{margin:0;line-height:inherit;background-color:#fff}
+            
+            /* Hero section crítica */
+            .hero-section{
+              min-height:100vh;
+              display:flex;
+              align-items:center;
+              background:linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+              position:relative;
+              overflow:hidden;
+            }
+            .hero-content{
+              max-width:1200px;
+              margin:0 auto;
+              padding:0 20px;
+              position:relative;
+              z-index:10;
+            }
+            .hero-title{
+              font-size:clamp(2rem, 5vw, 3.5rem);
+              font-weight:700;
+              color:#fff;
+              margin-bottom:1rem;
+              line-height:1.2;
+            }
+            .hero-subtitle{
+              font-size:clamp(1rem, 2.5vw, 1.5rem);
+              color:#fbbf24;
+              font-weight:600;
+              margin-bottom:1.5rem;
+            }
+            .hero-description{
+              font-size:clamp(0.875rem, 1.5vw, 1.125rem);
+              color:#e0e7ff;
+              margin-bottom:2rem;
+              line-height:1.6;
+            }
+            
+            /* Header crítico */
+            header{
+              position:fixed;
+              top:0;
+              left:0;
+              right:0;
+              z-index:50;
+              background:rgba(255,255,255,0.95);
+              backdrop-filter:blur(10px);
+              box-shadow:0 1px 3px 0 rgba(0,0,0,0.1);
+            }
+            
+            /* Botones críticos */
+            .btn-primary{
+              background-color:#fbbf24;
+              color:#1e3a8a;
+              padding:0.75rem 1.5rem;
+              border-radius:0.5rem;
+              font-weight:600;
+              transition:all 0.3s ease;
+              display:inline-flex;
+              align-items:center;
+              gap:0.5rem;
+              min-height:44px;
+              min-width:44px;
+            }
+            .btn-primary:hover{
+              background-color:#f59e0b;
+              transform:translateY(-2px);
+              box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);
+            }
+            
+            /* Prevenir CLS en imágenes */
+            img{
+              max-width:100%;
+              height:auto;
+              display:block;
+              background-color:#f3f4f6;
+            }
+            
+            /* Skeleton loader para imágenes */
+            @keyframes pulse{
+              0%,100%{opacity:1}
+              50%{opacity:0.5}
+            }
+            .animate-pulse{
+              animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+            }
+            
+            /* Transiciones suaves globales */
+            *{
+              transition-timing-function:cubic-bezier(0.4,0,0.2,1);
+            }
+          `
+        }} />
+        
         {/* Optimizaciones específicas para móviles iOS y Android */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,12 +233,17 @@ export default function RootLayout({
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="msapplication-TileColor" content="#1E3A8A" />
         
-        {/* DNS Prefetch y Preconnect para recursos externos */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://wa.me" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        {/* DNS Prefetch y Preconnect para recursos externos críticos */}
+        {/* Preconnect para recursos críticos (fuentes) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS Prefetch para recursos menos críticos */}
+        <link rel="dns-prefetch" href="https://wa.me" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="dns-prefetch" href="https://api.whatsapp.com" />
         
         {/* Preload de recursos críticos - Hero images (LCP optimization) */}
         <link 
@@ -250,6 +356,7 @@ export default function RootLayout({
           {children}
           <WhatsappWidget />
           <Toaster />
+          <WebVitals />
         </IntlProvider>
       </body>
     </html>

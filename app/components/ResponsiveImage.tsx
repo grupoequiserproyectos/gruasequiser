@@ -12,6 +12,7 @@ interface ResponsiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement>
 /**
  * Componente de imagen responsive que usa srcset con versiones pre-generadas
  * Selecciona automáticamente la versión óptima según el viewport
+ * Incluye skeleton loader y transiciones suaves para mejor UX
  */
 export function ResponsiveImage({ 
   src, 
@@ -21,19 +22,26 @@ export function ResponsiveImage({
   ...props 
 }: ResponsiveImageProps) {
   const [error, setError] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  // Si hay error, usar src original
+  // Si hay error, usar src original con fallback
   if (error || src.startsWith('http')) {
     return (
-      <img
-        src={src}
-        alt={alt}
-        className={className}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
-        onError={() => setError(true)}
-        {...props}
-      />
+      <div className="relative w-full h-full">
+        {!isLoaded && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+        )}
+        <img
+          src={src}
+          alt={alt}
+          className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setError(true)}
+          {...props}
+        />
+      </div>
     )
   }
 
@@ -55,16 +63,25 @@ export function ResponsiveImage({
   const sizes = props.sizes || '(max-width: 640px) 400px, (max-width: 1024px) 800px, (max-width: 1536px) 1200px, 1600px'
 
   return (
-    <img
-      src={src}
-      srcSet={srcSet}
-      sizes={sizes}
-      alt={alt}
-      className={className}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      onError={() => setError(true)}
-      {...props}
-    />
+    <div className="relative w-full h-full">
+      {/* Skeleton loader mientras carga */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      
+      {/* Imagen con transición suave */}
+      <img
+        src={src}
+        srcSet={srcSet}
+        sizes={sizes}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setError(true)}
+        {...props}
+      />
+    </div>
   )
 }

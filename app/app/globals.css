@@ -1025,6 +1025,57 @@ img {
   display: block;
 }
 
+/* Aspect Ratio para prevenir CLS (Cumulative Layout Shift) */
+img,
+video,
+iframe {
+  /* Placeholder background para evitar flash */
+  background-color: #f3f4f6;
+  
+  /* Mejorar rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Aspect ratio containers para imágenes de hero */
+.aspect-hero {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+
+.aspect-card {
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optimización para lazy loading */
+img[loading="lazy"] {
+  /* Añade un mínimo de altura para evitar CLS */
+  min-height: 1px;
+}
+
+/* Transiciones suaves para imágenes */
+img {
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado de carga para imágenes */
+img.loading {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
 /* Prevenir scroll horizontal en móviles */
 body {
   overflow-x: hidden;
