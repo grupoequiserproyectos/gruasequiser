@@ -345,78 +345,6 @@ export function SEOContentExpanded() {
         </div>
       </section>
 
-      {/* SECTION 5: CASOS DE ÉXITO - 300 palabras */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-          variants={fadeIn}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <h2 className="text-4xl font-bold text-center mb-4 text-equiser-blue">
-            Casos de Éxito: Proyectos Ejecutados con EQUISER
-          </h2>
-          <p className="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-            Referencias verificables de proyectos completados con éxito total
-          </p>
-
-          <div className="space-y-8">
-            <article className="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg border-l-4 border-equiser-blue">
-              <h3 className="text-2xl font-bold mb-3 text-equiser-blue">
-                Izamiento Transformador 450 Toneladas - Planta Eléctrica Carabobo (2024)
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Desafío:</strong> Izamiento de transformador crítico en espacio limitado sin interrumpir operaciones de la planta.</p>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Solución:</strong> Grúa móvil telescópica de 500 toneladas + sistema de monitoreo satelital + 3 ingenieros especialistas + cálculos 3D</p>
-                  <p className="text-gray-700 mb-4"><strong className="text-equiser-blue">Resultado:</strong> Completado en 4 horas sin incidentes. Precisión de posicionamiento: ±2cm</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <p className="text-3xl font-bold text-equiser-yellow mb-1">$75,000 USD</p>
-                  <p className="text-sm text-gray-600 mb-3">Valor del proyecto</p>
-                  <p className="text-sm text-gray-700"><strong>Cliente:</strong> Compañía Anónima de Administración y Fomento Eléctrico (CADAFE)</p>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-gradient-to-r from-yellow-50 to-white p-8 rounded-xl shadow-lg border-l-4 border-equiser-yellow">
-              <h3 className="text-2xl font-bold mb-3 text-equiser-blue">
-                Operación Dual Grúas 600 Toneladas - Refinería El Palito (2024)
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Desafío:</strong> Sincronización perfecta de 2 grúas para reactor petroquímico de 1200 toneladas</p>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Solución:</strong> 2x Grúas móviles de 600 toneladas + coordinación satelital + ingeniería 3D + simulación virtual previa</p>
-                  <p className="text-gray-700 mb-4"><strong className="text-equiser-blue">Resultado:</strong> Operación perfecta sin desviaciones, 6 horas de trabajo continuo</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <p className="text-3xl font-bold text-equiser-yellow mb-1">$180,000 USD</p>
-                  <p className="text-sm text-gray-600 mb-3">Valor del proyecto</p>
-                  <p className="text-sm text-gray-700"><strong>Cliente:</strong> Refinería El Palito - Pequiven</p>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg border-l-4 border-equiser-blue">
-              <h3 className="text-2xl font-bold mb-3 text-equiser-blue">
-                Movilización e Izamiento - Complejo Petroquímico Pequiven José (2023)
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Desafío:</strong> Transporte de 180km + izamiento de torre de destilación 280 toneladas</p>
-                  <p className="text-gray-700 mb-2"><strong className="text-equiser-blue">Solución:</strong> Super Lowboy hidráulico + escoltas + grúa de 300 toneladas + permisos especiales</p>
-                  <p className="text-gray-700 mb-4"><strong className="text-equiser-blue">Resultado:</strong> Operación logística compleja ejecutada en 72 horas. Cero incidentes.</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                  <p className="text-3xl font-bold text-equiser-yellow mb-1">$95,000 USD</p>
-                  <p className="text-sm text-gray-600 mb-3">Valor del proyecto</p>
-                  <p className="text-sm text-gray-700"><strong>Cliente:</strong> Petroquímica de Venezuela (Pequiven)</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </motion.div>
-      </section>
 
       {/* SECTION 6: FAQ EXPANDIDA - 400 palabras */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-16">
@@ -435,42 +363,6 @@ export function SEOContentExpanded() {
             </p>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-equiser-blue hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-bold mb-3 text-equiser-blue">¿Cuál es el costo de alquiler de una grúa en Venezuela?</h3>
-                <p className="text-gray-700 mb-3 leading-relaxed">
-                  El costo varía según capacidad de tonelaje, ubicación del proyecto, duración del alquiler y complejidad de la operación. Rango aproximado:
-                </p>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Grúas 25-50 toneladas:</strong> $2,500-3,500 por día de operación</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Grúas 130-300 toneladas:</strong> $4,000-6,500 por día de operación</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Grúas 450-600 toneladas:</strong> $6,500-9,500 por día de operación</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Grúas 800-1600 toneladas:</strong> $9,500-15,000+ por día de operación</span>
-                  </li>
-                </ul>
-                <p className="text-sm text-gray-600 mt-3 italic">Solicita cotización personalizada para tu proyecto específico.</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-equiser-yellow hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-bold mb-3 text-equiser-blue">¿Cuánto cuesta el servicio completo de izamiento industrial?</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  El servicio completo incluye: alquiler de grúa, operador certificado NCCCO, supervisor de seguridad HSE, 
-                  ingeniería 3D con simulación, monitoreo satelital en tiempo real, y todos los permisos necesarios. 
-                  Presupuesto típico para operación completa: <strong className="text-equiser-blue">$8,000-20,000 USD</strong> por operación. 
-                  Factores que influyen: tonelaje, altura de izamiento, radio de operación, y complejidad del proyecto.
-                </p>
-              </div>
-
               <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-equiser-blue hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3 text-equiser-blue">¿Qué marcas de grúas maneja EQUISER?</h3>
                 <p className="text-gray-700 leading-relaxed">
