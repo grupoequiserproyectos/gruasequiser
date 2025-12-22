@@ -9,7 +9,26 @@ import path from 'path'
  */
 export async function POST(request: NextRequest) {
   try {
-    const metric = await request.json()
+    // Validar que el body no esté vacío
+    const text = await request.text()
+    if (!text || text.trim() === '') {
+      return NextResponse.json(
+        { error: 'Empty request body' },
+        { status: 400 }
+      )
+    }
+
+    // Intentar parsear el JSON
+    let metric
+    try {
+      metric = JSON.parse(text)
+    } catch (parseError) {
+      console.error('Error parsing web vitals JSON:', parseError)
+      return NextResponse.json(
+        { error: 'Invalid JSON format' },
+        { status: 400 }
+      )
+    }
 
     // Validar datos recibidos
     if (!metric.name || metric.value === undefined) {

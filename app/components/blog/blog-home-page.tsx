@@ -193,7 +193,7 @@ export function BlogHomePage() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
-          backgroundImage: 'url("/images/imagen grua.webp")',
+          backgroundImage: 'url("/images/imagen-grua.webp")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'
@@ -405,7 +405,7 @@ export function BlogHomePage() {
         className="py-16 text-white relative"
         style={{
           background: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
-          backgroundImage: 'url("/images/trabajo de grua.webp")',
+          backgroundImage: 'url("/images/trabajo-de-grua.webp")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay'

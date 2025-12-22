@@ -7,8 +7,8 @@ const imageDir = path.join(process.cwd(), 'public/images')
 // Imágenes críticas identificadas en PageSpeed que necesitan optimización urgente
 const CRITICAL_IMAGES = [
   'movilizacion-vagones-metro.webp',
-  'trabajo estadio copa america.webp',
-  'trabajo gruas de 600 ton demag.webp'
+  'trabajo-estadio-copa-america.webp',
+  'trabajo-gruas-de-600-ton-demag.webp'
 ]
 
 // Dimensiones para responsive images

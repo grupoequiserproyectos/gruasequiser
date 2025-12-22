@@ -4,15 +4,15 @@ import path from 'path';
 
 // TOP 10 imágenes más pesadas a optimizar
 const TOP_10_IMAGES = [
-  'trabajo grua 800 ton.png',
+  'trabajo-grua-800-ton.png',
   'movilizacion-topas-metro-caracas.png',
   'movilizacion-generador-sobredimensionado.png',
   'logo-equiser-actualizado.png',
-  'logo equiser actulizado sin fondo.png',
-  'trabajo estadio copa america.png',
-  'trabajo gruas de 600 ton demag.png',
-  'dos gruas de 600 ton.png',
-  'trabajo de grua.png',
+  'logo-equiser-actulizado-sin-fondo.png',
+  'trabajo-estadio-copa-america.png',
+  'trabajo-gruas-de-600-ton-demag.png',
+  'dos-gruas-de-600-ton.png',
+  'trabajo-de-grua.png',
   'movilizacion-vagones-ferrocarril.jpg'
 ];
 

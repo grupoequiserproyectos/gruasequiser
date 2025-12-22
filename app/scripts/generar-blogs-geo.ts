@@ -276,7 +276,7 @@ async function generarBlogsGeo() {
           slug,
           excerpt: metadata.description.substring(0, 200) + '...',
           content: contenido,
-          featuredImage: `/images/grua de 600 ton y grua de 130 ton.png`,
+          featuredImage: `/images/grua-de-600-ton-y-grua-de-130-ton.png`,
           category: 'Servicios por Ciudad',
           tags: [ciudad.nombre, ciudad.estado, ...ciudad.sectores, 'alquiler grúas', 'servicios industriales'],
           author: 'Equipo EQUISER',

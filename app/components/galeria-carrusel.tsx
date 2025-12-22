@@ -19,84 +19,84 @@ interface CarouselItem {
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    src: '/images/grua de 130 ton.webp',
+    src: '/images/grua-de-130-ton.webp',
     title: 'Grúa 130 Toneladas',
     description: 'Proyecto de Construcción Residencial',
     alt: 'Grúa de 130 toneladas en construcción'
   },
   {
     id: 2,
-    src: '/images/ingenieria 3d.webp',
+    src: '/images/ingenieria-3d.webp',
     title: 'Ingeniería 3D',
     description: 'Planificación y Diseño de Proyectos',
     alt: 'Diseño 3D de ingeniería con grúas'
   },
   {
     id: 3,
-    src: '/images/trabajo de grua 450 ton.webp',
+    src: '/images/trabajo-de-grua-450-ton.webp',
     title: 'Grúa 450 Toneladas',
     description: 'Sector Industrial Pesado',
     alt: 'Grúa de 450 toneladas en proyecto industrial'
   },
   {
     id: 4,
-    src: '/images/grua 500 ton.webp',
+    src: '/images/grua-500-ton.webp',
     title: 'Grúa 500 Toneladas',
     description: 'Instalación Industrial Compleja',
     alt: 'Grúa de 500 toneladas en instalación industrial'
   },
   {
     id: 5,
-    src: '/images/imagen grua.webp',
+    src: '/images/imagen-grua.webp',
     title: 'Instalación Industrial',
     description: 'Sector Petrolero y Energético',
     alt: 'Grúa en instalación industrial'
   },
   {
     id: 6,
-    src: '/images/grua de 600 ton y grua de 130 ton.webp',
+    src: '/images/grua-de-600-ton-y-grua-de-130-ton.webp',
     title: 'Grúas 600T + 130T',
     description: 'Trabajo Coordinado en Equipo',
     alt: 'Grúas de 600 y 130 toneladas trabajando juntas'
   },
   {
     id: 7,
-    src: '/images/trabajo de grua de 600 ton.webp',
+    src: '/images/trabajo-de-grua-de-600-ton.webp',
     title: 'Grúa 600 Toneladas',
     description: 'Sector Refinería y Petroquímica',
     alt: 'Grúa de 600 toneladas en refinería'
   },
   {
     id: 8,
-    src: '/images/grua de 800 ton.webp',
+    src: '/images/grua-de-800-ton.webp',
     title: 'Grúa 800 Toneladas',
     description: 'Proyecto Industrial de Gran Escala',
     alt: 'Grúa de 800 toneladas en proyecto industrial'
   },
   {
     id: 9,
-    src: '/images/trabajo de grua.webp',
+    src: '/images/trabajo-de-grua.webp',
     title: 'Proyecto Complejo',
     description: 'Múltiples Grúas Coordinadas',
     alt: 'Múltiples grúas en proyecto complejo'
   },
   {
     id: 10,
-    src: '/images/trabajo estadio copa america.webp',
+    src: '/images/trabajo-estadio-copa-america.webp',
     title: 'Estadio Copa América',
     description: 'Proyecto Deportivo Nacional',
     alt: 'Grúas en construcción del estadio Copa América'
   },
   {
     id: 11,
-    src: '/images/trabajo gruas de 600 ton demag.webp',
+    src: '/images/trabajo-gruas-de-600-ton-demag.webp',
     title: 'Grúas Demag 600T',
     description: 'Izamiento de Equipos Pesados',
     alt: 'Grúas Demag de 600 toneladas'
   },
   {
     id: 12,
-    src: '/images/trabajo grua 800 ton.webp',
+    src: '/images/trabajo-grua-800-ton.webp',
     title: 'Grúa 800T Izando',
     description: 'Manejo de Equipos Ultra Pesados',
     alt: 'Grúa de 800 toneladas izando equipo pesado'

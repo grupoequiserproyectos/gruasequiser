@@ -172,10 +172,10 @@ export function AboutSection() {
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <img
-                    src="/images/optimized/grua de 800 ton-800w.webp"
-                    srcSet="/images/optimized/grua de 800 ton-400w.webp 400w,
-                            /images/optimized/grua de 800 ton-800w.webp 800w,
-                            /images/optimized/grua de 800 ton-1200w.webp 1200w"
+                    src="/images/optimized/grua-de-800-ton-800w.webp"
+                    srcSet="/images/optimized/grua-de-800-ton-400w.webp 400w,
+                            /images/optimized/grua-de-800-ton-800w.webp 800w,
+                            /images/optimized/grua-de-800-ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     alt="Grúa de 800 toneladas EQUISER"
                     loading="lazy"
@@ -185,10 +185,10 @@ export function AboutSection() {
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <img
-                    src="/images/optimized/trabajo de grua 450 ton-800w.webp"
-                    srcSet="/images/optimized/trabajo de grua 450 ton-400w.webp 400w,
-                            /images/optimized/trabajo de grua 450 ton-800w.webp 800w,
-                            /images/optimized/trabajo de grua 450 ton-1200w.webp 1200w"
+                    src="/images/optimized/trabajo-de-grua-450-ton-800w.webp"
+                    srcSet="/images/optimized/trabajo-de-grua-450-ton-400w.webp 400w,
+                            /images/optimized/trabajo-de-grua-450-ton-800w.webp 800w,
+                            /images/optimized/trabajo-de-grua-450-ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     alt="Trabajo con grúa de 450 toneladas"
                     loading="lazy"
@@ -202,10 +202,10 @@ export function AboutSection() {
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8 sm:pt-6 lg:pt-8 xl:pt-10">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
                   <img
-                    src="/images/optimized/dos gruas de 600 ton-800w.webp"
-                    srcSet="/images/optimized/dos gruas de 600 ton-400w.webp 400w,
-                            /images/optimized/dos gruas de 600 ton-800w.webp 800w,
-                            /images/optimized/dos gruas de 600 ton-1200w.webp 1200w"
+                    src="/images/optimized/dos-gruas-de-600-ton-800w.webp"
+                    srcSet="/images/optimized/dos-gruas-de-600-ton-400w.webp 400w,
+                            /images/optimized/dos-gruas-de-600-ton-800w.webp 800w,
+                            /images/optimized/dos-gruas-de-600-ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     alt="Operación con dos grúas de 600 toneladas"
                     loading="lazy"
@@ -215,10 +215,10 @@ export function AboutSection() {
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
                   <img
-                    src="/images/optimized/ingenieria 3d-800w.webp"
-                    srcSet="/images/optimized/ingenieria 3d-400w.webp 400w,
-                            /images/optimized/ingenieria 3d-800w.webp 800w,
-                            /images/optimized/ingenieria 3d-1200w.webp 1200w"
+                    src="/images/optimized/ingenieria-3d-800w.webp"
+                    srcSet="/images/optimized/ingenieria-3d-400w.webp 400w,
+                            /images/optimized/ingenieria-3d-800w.webp 800w,
+                            /images/optimized/ingenieria-3d-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     alt="Ingeniería 3D EQUISER"
                     loading="lazy"

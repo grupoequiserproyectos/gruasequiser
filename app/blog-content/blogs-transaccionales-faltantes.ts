@@ -199,7 +199,7 @@ Disponibilidad inmediata
 *Líder en alquiler de grúas móviles en Caracas y toda Venezuela*  
 *Más de 30 años de experiencia - Equipos alemanes - Disponibilidad 24/7*
     `,
-    featuredImage: '/images/grua de 130 ton.png',
+    featuredImage: '/images/grua-de-130-ton.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Alquiler Grúas', 'Caracas', 'Grúas Móviles', 'Precios 2025', 'Construcción'],
     author: AUTHORS.CARLOS_RODRIGUEZ,
@@ -682,7 +682,7 @@ Certificación Liebherr original
 *Distribuidor Autorizado Liebherr en Venezuela*  
 *Tecnología alemana - Precisión certificada - Soporte especializado*
     `,
-    featuredImage: '/images/trabajo de grua 450 ton.png',
+    featuredImage: '/images/trabajo-de-grua-450-ton.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Liebherr', 'Grúas Alemanas', 'LICCON', 'Tecnología Premium', 'Venezuela'],
     author: AUTHORS.CARLOS_RODRIGUEZ,
@@ -912,7 +912,7 @@ Coordinación directa con Bolipuertos
 *Especialistas en operaciones portuarias Puerto Cabello*  
 *30 años sirviendo al comercio exterior venezolano*
     `,
-    featuredImage: '/images/trabajo de grua de 600 ton.png',
+    featuredImage: '/images/trabajo-de-grua-de-600-ton.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Puerto Cabello', 'Grúas Telescópicas', 'Sector Portuario', 'Logística Marítima', 'Venezuela'],
     author: AUTHORS.EDUARDO_MARTINEZ,

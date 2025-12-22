@@ -147,7 +147,7 @@ async function main() {
         brand: 'Liebherr',
         category: 'mobile',
         capacity: 500,
-        image: '/images/grua 500 ton.png',
+        image: '/images/grua-500-ton.png',
         description: 'Grúa móvil telescópica de 500 toneladas con tecnología alemana de punta para proyectos industriales complejos',
         features: [
           'Boom telescópico hasta 84 metros',
@@ -165,7 +165,7 @@ async function main() {
         brand: 'Grove',
         category: 'mobile',
         capacity: 400,
-        image: '/images/grua de 600 ton y grua de 130 ton.png',
+        image: '/images/grua-de-600-ton-y-grua-de-130-ton.png',
         description: 'Grúa móvil Grove de 400 toneladas versátil para aplicaciones industriales y de construcción pesada',
         features: [
           'Boom telescópico hasta 78 metros',
@@ -183,7 +183,7 @@ async function main() {
         brand: 'Grove',
         category: 'mobile',
         capacity: 130,
-        image: '/images/grua de 130 ton.png',
+        image: '/images/grua-de-130-ton.png',
         description: 'Grúa móvil de 130 toneladas ideal para proyectos medianos con máxima precisión y eficiencia',
         features: [
           'Boom telescópico 60 metros',
@@ -203,7 +203,7 @@ async function main() {
         brand: 'Liebherr',
         category: 'crawler',
         capacity: 600,
-        image: '/images/grua de 600 ton.png',
+        image: '/images/grua-de-600-ton.png',
         description: 'Grúa sobre oruga Liebherr de 600 toneladas para proyectos especializados de alta complejidad',
         features: [
           'Boom variable hasta 154 metros',
@@ -221,7 +221,7 @@ async function main() {
         brand: 'Liebherr',
         category: 'crawler',
         capacity: 750,
-        image: '/images/grua de 800 ton.png',
+        image: '/images/grua-de-800-ton.png',
         description: 'Grúa sobre oruga premium de 750 toneladas para aplicaciones industriales extremas',
         features: [
           'Boom variable hasta 168 metros',
@@ -239,7 +239,7 @@ async function main() {
         brand: 'Manitowoc',
         category: 'crawler',
         capacity: 1600,
-        image: '/images/trabajo grua 800 ton.png',
+        image: '/images/trabajo-grua-800-ton.png',
         description: 'La grúa de mayor capacidad en nuestro inventario, 1600 toneladas para proyectos únicos',
         features: [
           'Boom variable hasta 183 metros',
@@ -259,7 +259,7 @@ async function main() {
         brand: 'Specialized',
         category: 'transport',
         capacity: 600,
-        image: '/images/trabajo de gantry 600 ton.png',
+        image: '/images/trabajo-de-gantry-600-ton.png',
         description: 'Sistema de transporte modular Super Lowboy para cargas extrapesadas hasta 600 toneladas',
         features: [
           'Configuración modular adaptable',
@@ -277,7 +277,7 @@ async function main() {
         brand: 'EQUISER',
         category: 'transport',
         capacity: 600,
-        image: '/images/gantry 600 ton generador.png',
+        image: '/images/gantry-600-ton-generador.png',
         description: 'Sistema de pórtico especializado para maniobras de alta precisión y cargas excepcionales',
         features: [
           'Sistema de pórtico móvil',
@@ -299,7 +299,7 @@ async function main() {
       data: {
         title: 'Izamiento Transformador Eléctrico 450 TON',
         description: 'Proyecto de izamiento y posicionamiento de transformador eléctrico de alta capacidad en planta de generación. Operación crítica ejecutada con máxima precisión y seguridad.',
-        image: '/images/trabajo de grua 450 ton.png',
+        image: '/images/trabajo-de-grua-450-ton.png',
         capacity: '450 TON',
         location: 'Planta Eléctrica Central - Estado Carabobo',
         year: 2024,
@@ -312,7 +312,7 @@ async function main() {
       data: {
         title: 'Operación Coordinada Dual Grúas 600 TON',
         description: 'Operación especializada con dos grúas de 600 toneladas trabajando de forma coordinada para el izamiento de reactor petroquímico de dimensiones excepcionales.',
-        image: '/images/dos gruas de 600 ton.png',
+        image: '/images/dos-gruas-de-600-ton.png',
         capacity: '600 TON x2',
         location: 'Refinería Nacional - Estado Falcón',
         year: 2024,
@@ -325,7 +325,7 @@ async function main() {
       data: {
         title: 'Sistema Gantry Generador 600 TON',
         description: 'Instalación de generador de central termoeléctrica mediante sistema de pórtico especializado. Precisión milimétrica en operación crítica de infraestructura nacional.',
-        image: '/images/gantry 600 ton generador.png',
+        image: '/images/gantry-600-ton-generador.png',
         capacity: '600 TON',
         location: 'Central Termoeléctrica - Estado Zulia',
         year: 2023,
@@ -338,7 +338,7 @@ async function main() {
       data: {
         title: 'Izamiento Industrial Máxima Capacidad 800 TON',
         description: 'Proyecto de izamiento de estructura industrial de gran envergadura utilizando grúa de 800 toneladas. Operación compleja en ambiente industrial controlado.',
-        image: '/images/trabajo grua 800 ton.png',
+        image: '/images/trabajo-grua-800-ton.png',
         capacity: '800 TON',
         location: 'Complejo Industrial Pesado - Estado Miranda',
         year: 2023,
@@ -351,7 +351,7 @@ async function main() {
       data: {
         title: 'Mantenimiento Torres Destilación 500 TON',
         description: 'Operación de mantenimiento especializado en torres de destilación de complejo petroquímico utilizando grúa móvil de 500 toneladas.',
-        image: '/images/grua 500 ton.png',
+        image: '/images/grua-500-ton.png',
         capacity: '500 TON',
         location: 'Complejo Petroquímico - Estado Anzoátegui',
         year: 2023,
@@ -364,7 +364,7 @@ async function main() {
       data: {
         title: 'Operación Marina Plataforma 600 TON',
         description: 'Izamiento de equipos especializados en plataforma petrolera marina. Operación en ambiente marítimo con condiciones controladas.',
-        image: '/images/trabajo de grua de 600 ton.png',
+        image: '/images/trabajo-de-grua-de-600-ton.png',
         capacity: '600 TON',
         location: 'Plataforma Marina Petrolera - Costa Anzoátegui',
         year: 2023,
@@ -377,7 +377,7 @@ async function main() {
       data: {
         title: 'Izamiento Maquinaria Industrial 130 TON',
         description: 'Proyecto de izamiento e instalación de maquinaria industrial pesada en zona manufacturera. Operación de precisión en espacios reducidos.',
-        image: '/images/grua de 130 ton.png',
+        image: '/images/grua-de-130-ton.png',
         capacity: '130 TON',
         location: 'Zona Industrial Valencia - Estado Carabobo',
         year: 2024,
@@ -390,7 +390,7 @@ async function main() {
       data: {
         title: 'Operación Multi-Grúa Reactor Complejo',
         description: 'Operación coordinada con múltiples grúas para instalación de reactor de alta complejidad en refinería. Trabajo de precisión extrema.',
-        image: '/images/grua de 600 ton y grua de 130 ton.png',
+        image: '/images/grua-de-600-ton-y-grua-de-130-ton.png',
         capacity: '600T + 130T',
         location: 'Refinería El Palito - Estado Carabobo',
         year: 2023,
@@ -403,7 +403,7 @@ async function main() {
       data: {
         title: 'Hornos Industriales Siderúrgica 800 TON',
         description: 'Izamiento e instalación de hornos industriales de gran tonelaje en complejo siderúrgico. Operación en ambiente de alta temperatura.',
-        image: '/images/grua de 800 ton.png',
+        image: '/images/grua-de-800-ton.png',
         capacity: '800 TON',
         location: 'Siderúrgica Nacional - Estado Bolívar',
         year: 2023,
@@ -416,7 +416,7 @@ async function main() {
       data: {
         title: 'Operación Portuaria Gantry Especializado',
         description: 'Operación portuaria compleja utilizando sistema gantry para manejo de carga excepcional en terminal marítimo especializado.',
-        image: '/images/trabajo de gantry 600 ton.png',
+        image: '/images/trabajo-de-gantry-600-ton.png',
         capacity: '600 TON',
         location: 'Puerto de Puerto Cabello - Estado Carabobo',
         year: 2024,
@@ -429,7 +429,7 @@ async function main() {
       data: {
         title: 'Modernización Subestación Eléctrica',
         description: 'Proyecto integral de modernización de subestación eléctrica con equipos de alta tecnología. Operación crítica de infraestructura nacional.',
-        image: '/images/trabajo de grua.png',
+        image: '/images/trabajo-de-grua.png',
         capacity: '400 TON',
         location: 'Subestación Principal - Estado Lara',
         year: 2024,
@@ -442,7 +442,7 @@ async function main() {
       data: {
         title: 'Torres Perforación Campo Petrolero',
         description: 'Mantenimiento especializado de torres de perforación en campo petrolero activo. Operación continua sin interrumpir producción.',
-        image: '/images/imagen grua.png',
+        image: '/images/imagen-grua.png',
         capacity: '350 TON',
         location: 'Campo Petrolero Lagunillas - Estado Zulia',
         year: 2023,

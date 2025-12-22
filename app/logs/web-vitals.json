@@ -1,13 +1,15 @@
 [
   {
-    "name": "LCP",
-    "value": 1124,
-    "id": "v5-1766443041422-8375180131926",
+    "name": "FCP",
+    "value": 432,
+    "id": "v5-1766447302793-5789028682074",
     "rating": "good",
-    "delta": 1124,
+    "delta": 432,
     "navigationType": "navigate",
-    "timestamp": "2025-12-22T22:44:10.924Z",
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "timestamp": "2025-12-22T23:48:23.187Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
     "url": "https://157ff46517.preview.abacusai.app/"
+  }
+]usai.app/"
   }
 ]

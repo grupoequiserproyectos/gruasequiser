@@ -248,7 +248,7 @@ Máxima capacidad - Tecnología alemana
 *Especialistas Terex de Alta Capacidad en Venezuela*  
 *Tecnología alemana - Máxima capacidad - Soporte técnico 24/7*
     `,
-    featuredImage: '/images/trabajo grua 800 ton.png',
+    featuredImage: '/images/trabajo-grua-800-ton.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Terex', 'Alta Capacidad', '500-1000 Toneladas', 'Superlift', 'Venezuela'],
     author: AUTHORS.CARLOS_RODRIGUEZ,
@@ -757,7 +757,7 @@ Distribuidor certificado exclusivo
 *Distribuidor Certificado Demag en Venezuela*  
 *Tecnología alemana confiable - Soporte técnico especializado*
     `,
-    featuredImage: '/images/dos gruas de 600 ton.png',
+    featuredImage: '/images/dos-gruas-de-600-ton.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Demag', 'Grúas Alemanas', 'AC Series', 'Tecnología Confiable', 'Venezuela'],
     author: AUTHORS.CARLOS_RODRIGUEZ,
@@ -1041,7 +1041,7 @@ Especialistas sector energético
 *Especialistas certificados en sector petrolero venezolano*  
 *Homologación PDVSA activa - Contratista Clase A*
     `,
-    featuredImage: '/images/trabajo gruas de 600 ton demag.png',
+    featuredImage: '/images/trabajo-gruas-de-600-ton-demag.png',
     category: BLOG_CATEGORIES.TRANSACCIONAL,
     tags: ['Sector Petrolero', 'Mantenimiento Refinerías', 'PDVSA', 'Grúas Certificadas', 'Venezuela'],
     author: AUTHORS.ANA_RODRIGUEZ,

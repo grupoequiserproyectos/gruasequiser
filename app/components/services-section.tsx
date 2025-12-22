@@ -19,7 +19,7 @@ export function ServicesSection() {
       title: t('service1Title'),
       description: t('service1Desc'),
       features: [t('service1Feature1'), t('service1Feature2'), t('service1Feature3'), t('service1Feature4')],
-      image: '/images/grua de 800 ton.webp'
+      image: '/images/grua-de-800-ton.webp'
     },
     {
       title: t('service2Title'),
@@ -31,13 +31,13 @@ export function ServicesSection() {
       title: t('service3Title'),
       description: t('service3Desc'),
       features: [t('service3Feature1'), t('service3Feature2'), t('service3Feature3'), t('service3Feature4')],
-      image: '/images/trabajo de gantry 600 ton.webp'
+      image: '/images/trabajo-de-gantry-600-ton.webp'
     },
     {
       title: t('service4Title'),
       description: t('service4Desc'),
       features: [t('service4Feature1'), t('service4Feature2'), t('service4Feature3'), t('service4Feature4')],
-      image: '/images/ingenieria 3d.webp'
+      image: '/images/ingenieria-3d.webp'
     }
   ]
 

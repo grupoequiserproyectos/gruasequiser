@@ -6,30 +6,30 @@ const imagesDir = path.join(process.cwd(), 'public', 'images');
 
 // Imágenes a optimizar (las que aún son grandes)
 const imagesToOptimize = [
-  'trabajo grua 800 ton.png',
+  'trabajo-grua-800-ton.png',
   'movilizacion-topas-metro-caracas.png',
   'movilizacion-generador-sobredimensionado.png',
   'logo-equiser-actualizado.png',
-  'logo equiser actulizado sin fondo.png',
-  'trabajo estadio copa america.png',
-  'trabajo gruas de 600 ton demag.png',
-  'dos gruas de 600 ton.png',
-  'trabajo de grua.png',
+  'logo-equiser-actulizado-sin-fondo.png',
+  'trabajo-estadio-copa-america.png',
+  'trabajo-gruas-de-600-ton-demag.png',
+  'dos-gruas-de-600-ton.png',
+  'trabajo-de-grua.png',
   'movilizacion-vagones-ferrocarril.jpg',
   'proyecto-seguridad-calidad.png',
   'movilizacion-vagones-metro.jpg',
-  'grua de 800 ton.png',
+  'grua-de-800-ton.png',
   'gruas-oruga-terrenos-dificiles.png',
   'transporte-pieza-250-ton.png',
   'transporte-250-toneladas.png',
-  'trabajo de grua de 600 ton.png',
-  'grua de 600 ton y grua de 130 ton.png',
+  'trabajo-de-grua-de-600-ton.png',
+  'grua-de-600-ton-y-grua-de-130-ton.png',
   'transporte-carga-sobredimensionada.png',
-  'gantry 600 ton generador.png',
-  'trabajo de gantry 600 ton.png',
+  'gantry-600-ton-generador.png',
+  'trabajo-de-gantry-600-ton.png',
   'rigging-industrial-calculos.png',
-  'imagen grua.png',
-  'trabajo de grua 450 ton.png'
+  'imagen-grua.png',
+  'trabajo-de-grua-450-ton.png'
 ];
 
 async function optimizeImage(fileName: string) {

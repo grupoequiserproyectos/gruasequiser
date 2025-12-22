@@ -246,11 +246,11 @@ export default function RootLayout({
           rel="preload"
           as="image"
           type="image/webp"
-          href="/images/optimized/grua de 800 ton-800w.webp"
-          imageSrcSet="/images/optimized/grua de 800 ton-400w.webp 400w,
-                       /images/optimized/grua de 800 ton-800w.webp 800w,
-                       /images/optimized/grua de 800 ton-1200w.webp 1200w,
-                       /images/optimized/grua de 800 ton-1600w.webp 1600w"
+          href="/images/optimized/grua-de-800-ton-800w.webp"
+          imageSrcSet="/images/optimized/grua-de-800-ton-400w.webp 400w,
+                       /images/optimized/grua-de-800-ton-800w.webp 800w,
+                       /images/optimized/grua-de-800-ton-1200w.webp 1200w,
+                       /images/optimized/grua-de-800-ton-1600w.webp 1600w"
           imageSizes="100vw"
         />
         

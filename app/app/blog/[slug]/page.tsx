@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     const canonicalUrl = `https://gruasequiser.com/blog/${blog.slug}`
     const metaDescription = blog.metaDescription || blog.excerpt
-    const ogImage = blog.featuredImage || '/images/trabajo de grua.webp'
+    const ogImage = blog.featuredImage || '/images/trabajo-de-grua.webp'
 
     return {
       title: `${blog.title} | Blog GRÚAS EQUISER C.A.`,
@@ -129,7 +129,7 @@ export default async function BlogArticle({ params }: { params: { slug: string }
       title: blog.title,
       excerpt: blog.excerpt,
       content: blog.content,
-      featuredImage: blog.featuredImage || '/images/trabajo de grua.webp',
+      featuredImage: blog.featuredImage || '/images/trabajo-de-grua.webp',
       category: blog.category,
       tags: blog.tags,
       author: {
