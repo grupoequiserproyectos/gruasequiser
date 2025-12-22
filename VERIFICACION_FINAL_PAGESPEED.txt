@@ -1,0 +1,41 @@
+═══════════════════════════════════════════════════════════════════
+    VERIFICACIÓN FINAL PAGESPEED - PRELOADS OPTIMIZADOS
+═══════════════════════════════════════════════════════════════════
+
+🎯 DEPLOY COMPLETADO
+────────────────────────────────────────────────────────────────────
+✅ Cambio 1: Remover priority de GaleriaCarrusel
+✅ Cambio 2: Mantener preload único optimizado en layout.tsx
+✅ Build exitoso: 179 páginas, 0 errores TypeScript
+✅ Deploy exitoso: gruasequiser.com
+✅ Checkpoint: "Eliminación priority GaleriaCarrusel - Fix preloads"
+
+⏰ TIEMPO DE ESPERA: 10-15 MINUTOS
+────────────────────────────────────────────────────────────────────
+El CDN de Vercel necesita tiempo para propagar los cambios.
+
+🔍 VERIFICACIÓN PASO A PASO
+────────────────────────────────────────────────────────────────────
+
+PASO 1: Verificar Preloads en HTML
+curl -s https://gruasequiser.com | grep -c 'preload.*grua.*800'
+Esperado: 1 (solo uno)
+
+curl -s https://gruasequiser.com | grep -c 'preload.*grua.*130'
+Esperado: 0 (cero)
+
+PASO 2: Chrome DevTools - Verificar Descargas
+Móvil (375px): Solo grua-400w.webp (~28KB)
+Desktop (1920px): Solo grua-1200w.webp (~120KB)
+
+PASO 3: PageSpeed Insights
+https://pagespeed.web.dev/
+Móvil: 90-95/100, LCP <2.5s
+Desktop: 95-100/100, LCP <2.0s
+
+📊 RESULTADOS ESPERADOS
+────────────────────────────────────────────────────────────────────
+Performance Mobile: 74 → 90-95/100 (+16-21 pts)
+LCP: 9.3s → <2.0s (-78%)
+Payload Móvil: 250KB → 28KB (-89%)
+
