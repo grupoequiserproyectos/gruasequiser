@@ -233,50 +233,42 @@ export default function RootLayout({
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="msapplication-TileColor" content="#1E3A8A" />
         
-        {/* DNS Prefetch y Preconnect para recursos externos críticos */}
-        {/* Preconnect para recursos críticos (fuentes) */}
+        {/* DNS Prefetch */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+        
+        {/* Preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* DNS Prefetch para recursos menos críticos */}
-        <link rel="dns-prefetch" href="https://wa.me" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.facebook.com" />
-        <link rel="dns-prefetch" href="https://api.whatsapp.com" />
-        
-        {/* Preload de recursos críticos - Hero images responsive (LCP optimization) */}
-        {/* Móvil: 400w */}
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/images/optimized/grua de 800 ton-400w.webp"
-          media="(max-width: 640px)"
+        {/* PRELOAD ÚNICO CON IMAGESRCSET (más eficiente) */}
+        <link
+          rel="preload"
+          as="image"
           type="image/webp"
-        />
-        {/* Tablet: 800w */}
-        <link 
-          rel="preload" 
-          as="image" 
           href="/images/optimized/grua de 800 ton-800w.webp"
-          media="(min-width: 641px) and (max-width: 1024px)"
-          type="image/webp"
-        />
-        {/* Desktop: 1200w */}
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/images/optimized/grua de 800 ton-1200w.webp"
-          media="(min-width: 1025px)"
-          type="image/webp"
+          imageSrcSet="/images/optimized/grua de 800 ton-400w.webp 400w,
+                       /images/optimized/grua de 800 ton-800w.webp 800w,
+                       /images/optimized/grua de 800 ton-1200w.webp 1200w,
+                       /images/optimized/grua de 800 ton-1600w.webp 1600w"
+          imageSizes="100vw"
         />
         
-        {/* Preload Logo Header (también es crítico) */}
-        <link 
-          rel="preload" 
-          as="image" 
-          href="/images/logo-equiser-actualizado-400w.webp"
+        {/* Preload Logo */}
+        <link
+          rel="preload"
+          as="image"
           type="image/webp"
+          href="/images/logo-equiser-actualizado-400w.webp"
+        />
+        
+        {/* Preload Fuente */}
+        <link
+          rel="preload"
+          href="/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         
         {/* Preload de CSS crítico */}
