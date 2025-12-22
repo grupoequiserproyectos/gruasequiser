@@ -5,7 +5,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ArrowRight, Play, Shield, Award, Clock, MessageCircle } from 'lucide-react'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -62,16 +61,20 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
-      {/* IMAGEN HERO OPTIMIZADA (LCP Element) - CRITICAL for PageSpeed */}
+      {/* IMAGEN HERO OPTIMIZADA CON SRCSET (LCP Element) - CRITICAL for PageSpeed */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src="/images/optimized/grua de 800 ton-800w.webp"
-          alt="Grúas Móviles Hidráulicas y de Oruga - EQUISER - Alquiler de grúas industriales en Venezuela"
-          fill
-          priority={true}
-          quality={85}
+          srcSet="/images/optimized/grua de 800 ton-400w.webp 400w,
+                  /images/optimized/grua de 800 ton-800w.webp 800w,
+                  /images/optimized/grua de 800 ton-1200w.webp 1200w,
+                  /images/optimized/grua de 800 ton-1600w.webp 1600w"
           sizes="100vw"
-          className="object-cover object-center"
+          alt="Grúas Móviles Hidráulicas y de Oruga - EQUISER - Alquiler de grúas industriales en Venezuela"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-cover object-center"
+          style={{ position: 'absolute', inset: 0 }}
         />
         {/* Overlay fuerte para mejor legibilidad */}
         <div 

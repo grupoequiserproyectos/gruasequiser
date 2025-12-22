@@ -5,7 +5,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { CheckCircle, Award, Shield, Clock, MapPin, Users, Wrench, Target } from 'lucide-react'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 export function AboutSection() {
@@ -172,25 +171,29 @@ export function AboutSection() {
               {/* Primera columna */}
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
-                  <Image
+                  <img
                     src="/images/optimized/grua de 800 ton-800w.webp"
-                    alt="Grúa de 800 toneladas EQUISER"
-                    fill
-                    loading="lazy"
-                    quality={80}
-                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    srcSet="/images/optimized/grua de 800 ton-400w.webp 400w,
+                            /images/optimized/grua de 800 ton-800w.webp 800w,
+                            /images/optimized/grua de 800 ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    alt="Grúa de 800 toneladas EQUISER"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
-                  <Image
-                    src="/images/trabajo de grua 450 ton-400w.webp"
-                    alt="Trabajo con grúa de 450 toneladas"
-                    fill
-                    loading="lazy"
-                    quality={80}
-                    className="object-contain hover:scale-105 transition-transform duration-300"
+                  <img
+                    src="/images/optimized/trabajo de grua 450 ton-800w.webp"
+                    srcSet="/images/optimized/trabajo de grua 450 ton-400w.webp 400w,
+                            /images/optimized/trabajo de grua 450 ton-800w.webp 800w,
+                            /images/optimized/trabajo de grua 450 ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    alt="Trabajo con grúa de 450 toneladas"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -198,25 +201,29 @@ export function AboutSection() {
               {/* Segunda columna */}
               <div className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8 sm:pt-6 lg:pt-8 xl:pt-10">
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '280px' }}>
-                  <Image
+                  <img
                     src="/images/optimized/dos gruas de 600 ton-800w.webp"
-                    alt="Operación con dos grúas de 600 toneladas"
-                    fill
-                    loading="lazy"
-                    quality={80}
-                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    srcSet="/images/optimized/dos gruas de 600 ton-400w.webp 400w,
+                            /images/optimized/dos gruas de 600 ton-800w.webp 800w,
+                            /images/optimized/dos gruas de 600 ton-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    alt="Operación con dos grúas de 600 toneladas"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="relative w-full bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ height: '320px' }}>
-                  <Image
+                  <img
                     src="/images/optimized/ingenieria 3d-800w.webp"
-                    alt="Ingeniería 3D EQUISER"
-                    fill
-                    loading="lazy"
-                    quality={80}
-                    className="object-contain hover:scale-105 transition-transform duration-300"
+                    srcSet="/images/optimized/ingenieria 3d-400w.webp 400w,
+                            /images/optimized/ingenieria 3d-800w.webp 800w,
+                            /images/optimized/ingenieria 3d-1200w.webp 1200w"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    alt="Ingeniería 3D EQUISER"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>

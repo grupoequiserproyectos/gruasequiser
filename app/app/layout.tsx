@@ -245,26 +245,37 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.facebook.com" />
         <link rel="dns-prefetch" href="https://api.whatsapp.com" />
         
-        {/* Preload de recursos críticos - Hero images (LCP optimization) */}
+        {/* Preload de recursos críticos - Hero images responsive (LCP optimization) */}
+        {/* Móvil: 400w */}
         <link 
           rel="preload" 
           as="image" 
-          href="/images/grua-600-ton-y-grua-de-130-ton-400w.webp"
+          href="/images/optimized/grua de 800 ton-400w.webp"
           media="(max-width: 640px)"
           type="image/webp"
         />
+        {/* Tablet: 800w */}
         <link 
           rel="preload" 
           as="image" 
-          href="/images/grua-600-ton-y-grua-de-130-ton-800w.webp"
+          href="/images/optimized/grua de 800 ton-800w.webp"
           media="(min-width: 641px) and (max-width: 1024px)"
           type="image/webp"
         />
+        {/* Desktop: 1200w */}
         <link 
           rel="preload" 
           as="image" 
-          href="/images/grua-600-ton-y-grua-de-130-ton.webp"
+          href="/images/optimized/grua de 800 ton-1200w.webp"
           media="(min-width: 1025px)"
+          type="image/webp"
+        />
+        
+        {/* Preload Logo Header (también es crítico) */}
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/logo-equiser-actualizado-400w.webp"
           type="image/webp"
         />
         

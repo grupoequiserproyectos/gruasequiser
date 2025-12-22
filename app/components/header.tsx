@@ -3,7 +3,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -41,18 +40,17 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo actualizado MÁS GRANDE y clickeable */}
+          {/* Logo actualizado MÁS GRANDE y clickeable con srcset */}
           <div className="flex items-center">
             <Link href="/" className="relative block">
               <div className="relative w-40 h-16 sm:w-48 sm:h-18 md:w-56 md:h-20 lg:w-64 lg:h-22 xl:w-72 xl:h-24">
-                <Image
+                <img
                   src="/images/logo-equiser-actualizado-400w.webp"
                   alt="GRÚAS EQUISER C.A. - Logo"
-                  fill
-                  sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, (max-width: 1280px) 256px, 288px"
-                  quality={90}
-                  className="object-contain hover:scale-105 transition-transform duration-200"
-                  priority={true}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
+                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </div>
             </Link>
