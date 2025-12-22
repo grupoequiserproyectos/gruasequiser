@@ -62,23 +62,25 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
-      {/* Imagen de fondo con parallax */}
-      <div className="absolute inset-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: 'url("/images/imagen grua.webp")',
-            backgroundAttachment: 'fixed'
-          }}
+      {/* IMAGEN HERO OPTIMIZADA (LCP Element) - CRITICAL for PageSpeed */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/optimized/grua de 800 ton-800w.webp"
+          alt="Grúas Móviles Hidráulicas y de Oruga - EQUISER - Alquiler de grúas industriales en Venezuela"
+          fill
+          priority={true}
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-center"
         />
         {/* Overlay fuerte para mejor legibilidad */}
         <div 
-          className="absolute inset-0" 
+          className="absolute inset-0 z-10" 
           style={{ background: 'rgba(30, 58, 138, 0.95)' }}
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center text-white pt-6 sm:pt-8">
+      <div className="relative z-20 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center text-white pt-6 sm:pt-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
