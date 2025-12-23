@@ -290,7 +290,7 @@ export function GaleriaCarrusel() {
                 src={carouselItems[currentSlide]?.src}
                 alt={carouselItems[currentSlide]?.alt}
                 className="w-full h-full object-contain"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, (max-width: 1200px) 1000px, 1200px"
               />
 
               {/* Contador de Proyectos estilo Transervica */}

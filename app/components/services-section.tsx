@@ -83,6 +83,8 @@ export function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 640px) 400px, (max-width: 768px) 600px, (max-width: 1024px) 400px, 500px"
+                  quality={85}
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

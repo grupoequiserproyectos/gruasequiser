@@ -1,15 +1,13 @@
 [
   {
-    "name": "FCP",
-    "value": 432,
-    "id": "v5-1766447302793-5789028682074",
+    "name": "LCP",
+    "value": 1844,
+    "id": "v5-1766450189004-9286349591045",
     "rating": "good",
-    "delta": 432,
+    "delta": 1844,
     "navigationType": "navigate",
-    "timestamp": "2025-12-22T23:48:23.187Z",
+    "timestamp": "2025-12-23T00:36:38.057Z",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
     "url": "https://157ff46517.preview.abacusai.app/"
-  }
-]usai.app/"
   }
 ]
