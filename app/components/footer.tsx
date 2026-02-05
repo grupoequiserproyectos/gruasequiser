@@ -3,7 +3,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, ArrowUp, BookOpen, Instagram, Twitter, Facebook } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -63,13 +62,17 @@ export function Footer() {
                     className="relative" 
                     style={{ width: '250px', height: '80px', maxWidth: '250px' }}
                   >
-                    <Image
-                      src="/images/logo-equiser-con-fondo-400w.webp"
-                      alt="GRÚAS EQUISER C.A. - Logo"
-                      fill
+                    {/* Logo con fondo TRANSPARENTE - Alta resolución */}
+                    <img
+                      src="/images/logo-equiser-actulizado-sin-fondo-800w.webp"
+                      srcSet="/images/logo-equiser-actulizado-sin-fondo-400w.webp 400w,
+                              /images/logo-equiser-actulizado-sin-fondo-800w.webp 800w,
+                              /images/logo-equiser-actulizado-sin-fondo-1200w.webp 1200w"
                       sizes="250px"
-                      quality={85}
-                      className="object-contain hover:scale-105 transition-transform duration-200"
+                      alt="GRÚAS EQUISER C.A. - Logo"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
                     />
                   </div>
                 </a>
