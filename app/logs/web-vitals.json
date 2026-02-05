@@ -1,13 +1,26 @@
 [
   {
     "name": "LCP",
-    "value": 1844,
-    "id": "v5-1766450189004-9286349591045",
+    "value": 1664,
+    "id": "v5-1770254424802-9984754301063",
     "rating": "good",
-    "delta": 1844,
+    "delta": 1664,
     "navigationType": "navigate",
-    "timestamp": "2025-12-23T00:36:38.057Z",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.0.0 Safari/537.36",
-    "url": "https://157ff46517.preview.abacusai.app/"
+    "timestamp": "2026-02-05T01:20:27.876Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "FCP",
+    "value": 512,
+    "id": "v5-1770255976165-1853910718411",
+    "rating": "good",
+    "delta": 512,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-05T01:46:16.654Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  }
+]sai.app/"
   }
 ]

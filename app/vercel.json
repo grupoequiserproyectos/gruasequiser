@@ -1,70 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-DNS-Prefetch-Control",
-          "value": "on"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=63072000; includeSubDomains; preload"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://wa.me; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src https://www.google.com https://web.whatsapp.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
-        }
-      ]
-    },
-    {
-      "source": "/images/:path*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable, stale-while-revalidate=86400"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/:all*(svg|jpg|jpeg|png|gif|webp|ico|avif)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/:all*(woff|woff2|ttf|eot|otf)",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -73,7 +10,7 @@
       ]
     },
     {
-      "source": "/_next/static/:path*",
+      "source": "/_next/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -82,7 +19,7 @@
       ]
     },
     {
-      "source": "/_next/image/:path*",
+      "source": "/fonts/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -91,44 +28,14 @@
       ]
     },
     {
-      "source": "/manifest.json",
+      "source": "/(favicon.ico|manifest.json|robots.txt)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=86400, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
         }
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/:path+/",
-      "destination": "/:path+",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false
 }

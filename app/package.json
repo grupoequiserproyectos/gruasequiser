@@ -129,7 +129,12 @@
     "zustand": "5.0.3"
   },
   "browserslist": [
-    "ie >= 11",
+    "Chrome >= 90",
+    "Firefox >= 90",
+    "Safari >= 14",
+    "Edge >= 90",
+    "iOS >= 14",
+    "not IE 11",
     "> 0.5%",
     "last 2 versions",
     "not dead"
