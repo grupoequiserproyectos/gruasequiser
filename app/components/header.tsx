@@ -74,9 +74,10 @@ export function Header() {
             <LanguageSwitcher />
             <Button
               onClick={handleWhatsApp}
-              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold"
+              className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 py-2 rounded-full transition-all duration-200 hover:scale-105 font-semibold min-h-[44px]"
+              aria-label={`${t('contactWhatsApp')} - Contactar por WhatsApp`}
             >
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2" aria-hidden="true" />
               {t('contactWhatsApp').toUpperCase()}
             </Button>
           </div>
@@ -85,12 +86,12 @@ export function Header() {
           <div className="flex md:hidden items-center gap-3">
             <LanguageSwitcher />
             <button
-              className="p-2"
+              className="p-2 min-h-[44px] min-w-[44px]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -112,9 +113,10 @@ export function Header() {
               <div className="pt-4">
                 <Button
                   onClick={handleWhatsApp}
-                  className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold"
+                  className="w-full equiser-yellow equiser-yellow-hover text-equiser-blue font-semibold min-h-[44px]"
+                  aria-label={`${t('contactWhatsApp')} - Contactar por WhatsApp`}
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <MessageCircle className="w-4 h-4 mr-2" aria-hidden="true" />
                   {t('contactWhatsApp').toUpperCase()}
                 </Button>
               </div>

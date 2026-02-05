@@ -1,26 +1,37 @@
 [
   {
-    "name": "LCP",
-    "value": 1664,
-    "id": "v5-1770254424802-9984754301063",
+    "name": "FCP",
+    "value": 596,
+    "id": "v5-1770256170964-5502160662467",
     "rating": "good",
-    "delta": 1664,
+    "delta": 596,
     "navigationType": "navigate",
-    "timestamp": "2026-02-05T01:20:27.876Z",
+    "timestamp": "2026-02-05T01:49:31.163Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "CLS",
+    "value": 1852,
+    "id": "v5-1770256170969-2224918738977",
+    "rating": "poor",
+    "delta": 1.8523231154810103,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-05T01:50:49.983Z",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
   },
   {
     "name": "FCP",
-    "value": 512,
-    "id": "v5-1770255976165-1853910718411",
+    "value": 508,
+    "id": "v5-1770256516451-5023972552269",
     "rating": "good",
-    "delta": 512,
+    "delta": 508,
     "navigationType": "navigate",
-    "timestamp": "2026-02-05T01:46:16.654Z",
+    "timestamp": "2026-02-05T01:55:16.940Z",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
   }
-]sai.app/"
+]usai.app/"
   }
 ]

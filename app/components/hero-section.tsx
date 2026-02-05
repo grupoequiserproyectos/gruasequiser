@@ -62,6 +62,7 @@ export function HeroSection() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
       {/* IMAGEN HERO OPTIMIZADA CON SRCSET (LCP Element) - CRITICAL for PageSpeed */}
+      {/* Optimización según auditoría: fetchpriority="high", width/height explícitos para CLS=0 */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/optimized/grua-de-800-ton-800w.webp"
@@ -70,9 +71,12 @@ export function HeroSection() {
                   /images/optimized/grua-de-800-ton-1200w.webp 1200w,
                   /images/optimized/grua-de-800-ton-1600w.webp 1600w"
           sizes="100vw"
+          width={1600}
+          height={1068}
           alt="Grúas Móviles Hidráulicas y de Oruga - EQUISER - Alquiler de grúas industriales en Venezuela"
           loading="eager"
           decoding="async"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center"
           style={{ position: 'absolute', inset: 0 }}
         />

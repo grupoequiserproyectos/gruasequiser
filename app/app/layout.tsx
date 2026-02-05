@@ -11,11 +11,18 @@ import { companySchema } from '@/lib/schema-generator'
 import { FAQSchema } from '@/components/structured-data/faq-schema'
 import { homeFAQs } from '@/lib/faq-data'
 
+// Optimización de fuentes según auditoría PageSpeed
+// - subsets: Solo latino para reducir tamaño
+// - display: swap para evitar FOIT (Flash of Invisible Text)
+// - variable: CSS custom property para Tailwind
+// - adjustFontFallback: size-adjust automático para eliminar CLS
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
   preload: true,
-  adjustFontFallback: true
+  adjustFontFallback: true,
+  variable: '--font-inter',
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 })
 
 // Configuración viewport separada para optimizaciones móviles
@@ -118,7 +125,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es-VE">
+    <html lang="es-VE" className={inter.variable}>
       <head>
         {/* CSS Crítico Mínimo Inline - Solo lo esencial para FCP */}
         <style dangerouslySetInnerHTML={{
