@@ -58,23 +58,20 @@ export function Footer() {
             <div className="lg:col-span-1">
               <div className="flex flex-col items-start mb-6">
                 <a href="/" style={{ textDecoration: 'none' }} className="relative block mb-4">
-                  <div 
-                    className="relative" 
-                    style={{ width: '250px', height: '80px', maxWidth: '250px' }}
-                  >
-                    {/* Logo con fondo TRANSPARENTE - Alta resolución */}
-                    <img
-                      src="/images/logo-equiser-actulizado-sin-fondo-800w.webp"
-                      srcSet="/images/logo-equiser-actulizado-sin-fondo-400w.webp 400w,
-                              /images/logo-equiser-actulizado-sin-fondo-800w.webp 800w,
-                              /images/logo-equiser-actulizado-sin-fondo-1200w.webp 1200w"
-                      sizes="250px"
-                      alt="GRÚAS EQUISER C.A. - Logo"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
-                    />
-                  </div>
+                  {/* Logo NUEVO con fondo transparente - Width/Height explícitos para CLS=0 */}
+                  <img
+                    src="/images/logo-equiser-nuevo-400w.webp"
+                    srcSet="/images/logo-equiser-nuevo-200w.webp 200w,
+                            /images/logo-equiser-nuevo-300w.webp 300w,
+                            /images/logo-equiser-nuevo-400w.webp 400w"
+                    sizes="250px"
+                    width={250}
+                    height={139}
+                    alt="GRÚAS EQUISER C.A. - Equipos y Servicios - Logo"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-auto h-auto max-w-[250px] object-contain hover:scale-105 transition-transform duration-200"
+                  />
                 </a>
                 <div>
                   <h3 className="text-xl font-bold">{t('companyName')}</h3>

@@ -161,17 +161,23 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* PRELOAD ÚNICO CON IMAGESRCSET (más eficiente) */}
+        {/* PRELOAD Hero Image optimizada Q70 para LCP más rápido */}
         <link
           rel="preload"
           as="image"
           type="image/webp"
-          href="/images/optimized/grua-de-800-ton-800w.webp"
-          imageSrcSet="/images/optimized/grua-de-800-ton-400w.webp 400w,
-                       /images/optimized/grua-de-800-ton-800w.webp 800w,
-                       /images/optimized/grua-de-800-ton-1200w.webp 1200w,
-                       /images/optimized/grua-de-800-ton-1600w.webp 1600w"
+          href="/images/optimized/grua-de-800-ton-400w-q70.webp"
+          imageSrcSet="/images/optimized/grua-de-800-ton-400w-q70.webp 400w,
+                       /images/optimized/grua-de-800-ton-800w-q70.webp 800w"
           imageSizes="100vw"
+        />
+        
+        {/* Preload Logo para header */}
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/images/logo-equiser-nuevo-300w.webp"
         />
         
         {/* Las fuentes se precargan automáticamente por next/font/google */}

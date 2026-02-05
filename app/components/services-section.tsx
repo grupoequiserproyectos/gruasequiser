@@ -4,7 +4,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 
 export function ServicesSection() {
   const t = useTranslations('services')
@@ -19,25 +18,29 @@ export function ServicesSection() {
       title: t('service1Title'),
       description: t('service1Desc'),
       features: [t('service1Feature1'), t('service1Feature2'), t('service1Feature3'), t('service1Feature4')],
-      image: '/images/grua-de-800-ton.webp'
+      image: '/images/grua-de-800-ton-400w.webp',
+      srcSet: '/images/grua-de-800-ton-400w.webp 400w, /images/grua-de-800-ton-600w.webp 600w'
     },
     {
       title: t('service2Title'),
       description: t('service2Desc'),
       features: [t('service2Feature1'), t('service2Feature2'), t('service2Feature3'), t('service2Feature4')],
-      image: '/images/transporte-250-toneladas.webp'
+      image: '/images/transporte-250-toneladas-400w.webp',
+      srcSet: '/images/transporte-250-toneladas-400w.webp 400w, /images/transporte-250-toneladas-600w.webp 600w'
     },
     {
       title: t('service3Title'),
       description: t('service3Desc'),
       features: [t('service3Feature1'), t('service3Feature2'), t('service3Feature3'), t('service3Feature4')],
-      image: '/images/trabajo-de-gantry-600-ton.webp'
+      image: '/images/trabajo-de-gantry-600-ton-400w.webp',
+      srcSet: '/images/trabajo-de-gantry-600-ton-400w.webp 400w, /images/trabajo-de-gantry-600-ton-600w.webp 600w'
     },
     {
       title: t('service4Title'),
       description: t('service4Desc'),
       features: [t('service4Feature1'), t('service4Feature2'), t('service4Feature3'), t('service4Feature4')],
-      image: '/images/ingenieria-3d.webp'
+      image: '/images/ingenieria-3d-400w.webp',
+      srcSet: '/images/ingenieria-3d-400w.webp 400w, /images/ingenieria-3d-new-600w.webp 600w'
     }
   ]
 
@@ -78,14 +81,17 @@ export function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 mx-2 sm:mx-0"
             >
-              <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gray-100">
-                <Image
+              <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gray-100 overflow-hidden">
+                <img
                   src={service.image}
+                  srcSet={service.srcSet}
+                  sizes="(max-width: 640px) 400px, 600px"
                   alt={service.title}
-                  fill
-                  sizes="(max-width: 640px) 400px, (max-width: 768px) 600px, (max-width: 1024px) 400px, 500px"
-                  quality={85}
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  width={400}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>

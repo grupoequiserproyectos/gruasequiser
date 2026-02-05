@@ -40,25 +40,24 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo actualizado con fondo TRANSPARENTE - Alta resolución */}
+          {/* Logo NUEVO con fondo transparente y alta resolución - Width/Height explícitos para CLS=0 */}
           <div className="flex items-center">
             <Link href="/" className="relative block">
-              <div className="relative w-40 h-16 sm:w-48 sm:h-18 md:w-56 md:h-20 lg:w-64 lg:h-22 xl:w-72 xl:h-24">
-                <img
-                  src="/images/logo-equiser-actulizado-sin-fondo-800w.webp"
-                  srcSet="/images/logo-equiser-actulizado-sin-fondo-400w.webp 400w,
-                          /images/logo-equiser-actulizado-sin-fondo-800w.webp 800w,
-                          /images/logo-equiser-actulizado-sin-fondo-1200w.webp 1200w,
-                          /images/logo-equiser-actulizado-sin-fondo-1600w.webp 1600w"
-                  sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 288px"
-                  alt="GRÚAS EQUISER C.A. - Logo"
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="high"
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
-              </div>
+              <img
+                src="/images/logo-equiser-nuevo-300w.webp"
+                srcSet="/images/logo-equiser-nuevo-200w.webp 200w,
+                        /images/logo-equiser-nuevo-300w.webp 300w,
+                        /images/logo-equiser-nuevo-400w.webp 400w,
+                        /images/logo-equiser-nuevo-500w.webp 500w"
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
+                width={300}
+                height={167}
+                alt="GRÚAS EQUISER C.A. - Equipos y Servicios - Logo"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain hover:scale-105 transition-transform duration-200"
+              />
             </Link>
           </div>
 
