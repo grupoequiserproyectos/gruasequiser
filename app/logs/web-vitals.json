@@ -53,5 +53,38 @@
     "timestamp": "2026-02-09T17:18:06.491Z",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "FCP",
+    "value": 1068,
+    "id": "v5-1770657830416-1116089956585",
+    "rating": "good",
+    "delta": 1068,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T17:23:50.949Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "TTFB",
+    "value": 327,
+    "id": "v5-1770657830416-3402787318415",
+    "rating": "good",
+    "delta": 327,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T17:23:50.979Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "CLS",
+    "value": 1614,
+    "id": "v5-1770657830427-5151070075676",
+    "rating": "poor",
+    "delta": 1.6144313775892725,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T17:23:53.213Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
   }
 ]
