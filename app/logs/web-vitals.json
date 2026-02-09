@@ -1,37 +1,57 @@
 [
   {
-    "name": "TTFB",
-    "value": 133,
-    "id": "v5-1770258917589-6080634832809",
-    "rating": "good",
-    "delta": 133.1000000005588,
+    "name": "CLS",
+    "value": 1000,
+    "id": "v5-1770657341295-3624969268300",
+    "rating": "poor",
+    "delta": 1,
     "navigationType": "navigate",
-    "timestamp": "2026-02-05T02:35:17.739Z",
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "timestamp": "2026-02-09T17:16:17.130Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
   },
   {
     "name": "LCP",
-    "value": 912,
-    "id": "v5-1770258917592-3750071006923",
+    "value": 1044,
+    "id": "v5-1770657341291-8532896426891",
     "rating": "good",
-    "delta": 912,
+    "delta": 1044,
     "navigationType": "navigate",
-    "timestamp": "2026-02-05T02:35:19.959Z",
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+    "timestamp": "2026-02-09T17:16:17.147Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
   },
   {
-    "name": "FCP",
-    "value": 564,
-    "id": "v5-1770261253994-5119933494593",
+    "name": "TTFB",
+    "value": 68,
+    "id": "v5-1770657445133-6678038559779",
     "rating": "good",
-    "delta": 564,
+    "delta": 68.10000000009313,
     "navigationType": "navigate",
-    "timestamp": "2026-02-05T03:14:14.455Z",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
+    "timestamp": "2026-02-09T17:17:25.652Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
-  }
-]usai.app/"
+  },
+  {
+    "name": "TTFB",
+    "value": 68,
+    "id": "v5-1770657445130-6085015482073",
+    "rating": "good",
+    "delta": 68.10000000009313,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T17:17:25.665Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "CLS",
+    "value": 1614,
+    "id": "v5-1770657445138-4575959524358",
+    "rating": "poor",
+    "delta": 1.6144313775892725,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T17:18:06.491Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
   }
 ]
