@@ -174,5 +174,27 @@
     "timestamp": "2026-02-09T18:06:53.254Z",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
     "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "TTFB",
+    "value": 858,
+    "id": "v5-1770663576311-3081253809339",
+    "rating": "needs-improvement",
+    "delta": 858.1000000005588,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T18:59:37.404Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
+  },
+  {
+    "name": "FCP",
+    "value": 536,
+    "id": "v5-1770663970899-7114147734847",
+    "rating": "good",
+    "delta": 536,
+    "navigationType": "navigate",
+    "timestamp": "2026-02-09T19:06:11.343Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/144.0.0.0 Safari/537.36",
+    "url": "https://c0fc3ccdd.preview.abacusai.app/"
   }
-]
+]]

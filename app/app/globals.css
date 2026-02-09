@@ -1161,3 +1161,23 @@ select {
     font-size: 16px !important;
   }
 }
+
+/* ========================================
+   DESACTIVAR TODAS LAS ANIMACIONES 
+   Para carga instantánea sin efectos lentos
+   ======================================== */
+*, *::before, *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Forzar visibilidad inmediata de todos los elementos */
+[style*="opacity"] {
+  opacity: 1 !important;
+}
+
+[style*="transform"] {
+  transform: none !important;
+}
