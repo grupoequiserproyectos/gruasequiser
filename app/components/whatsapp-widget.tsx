@@ -2,21 +2,27 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle, X, Wrench, Truck, Zap } from 'lucide-react'
+import { MessageCircle, X, Wrench, Truck, Zap, Send, User, Phone, FileText } from 'lucide-react'
 
 export function WhatsappWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [showPulse, setShowPulse] = useState(true)
+  const [showForm, setShowForm] = useState(false)
+  const [selectedService, setSelectedService] = useState('')
+  const [formData, setFormData] = useState({
+    nombre: '',
+    telefono: '',
+    mensaje: ''
+  })
+  const [sending, setSending] = useState(false)
 
   useEffect(() => {
-    // Mostrar el pulso cada 25 segundos si el widget no está abierto
     const interval = setInterval(() => {
       if (!isOpen) {
         setShowPulse(true)
         setTimeout(() => setShowPulse(false), 4000)
       }
     }, 25000)
-
     return () => clearInterval(interval)
   }, [isOpen])
 
@@ -25,26 +31,75 @@ export function WhatsappWidget() {
       icon: Wrench,
       title: 'Solicitar Grúa Móvil o Oruga 25-1600 ton',
       description: 'Equipos certificados disponibles',
-      color: 'bg-gradient-to-r from-green-500 to-green-600'
+      color: 'bg-gradient-to-r from-green-500 to-green-600',
+      service: 'Grúa Móvil/Oruga 25-1600 ton'
     },
     {
       icon: Truck,
       title: 'Cotiza Transporte Especial',
       description: 'Transporte pesado y sobredimensionado',
-      color: 'bg-gradient-to-r from-purple-500 to-purple-600'
+      color: 'bg-gradient-to-r from-purple-500 to-purple-600',
+      service: 'Transporte Especial'
     },
     {
       icon: Zap,
       title: 'Asesoría Personalizada',
       description: 'Consulta técnica sin costo',
-      color: 'bg-gradient-to-r from-blue-500 to-blue-600'
+      color: 'bg-gradient-to-r from-blue-500 to-blue-600',
+      service: 'Asesoría Técnica'
     }
   ]
 
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/message/IOBBJVBBVWNOI1'
+  const handleOptionClick = (service: string) => {
+    setSelectedService(service)
+    setFormData(prev => ({ ...prev, mensaje: `Hola, me interesa: ${service}` }))
+    setShowForm(true)
+  }
+
+  const handleSubmitAndWhatsApp = async () => {
+    if (!formData.nombre.trim()) {
+      alert('Por favor ingrese su nombre')
+      return
+    }
+
+    setSending(true)
+    
+    // Enviar copia por correo
+    try {
+      await fetch('/api/whatsapp-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          telefono: formData.telefono,
+          mensaje: formData.mensaje,
+          servicio: selectedService,
+          fecha: new Date().toISOString()
+        })
+      })
+    } catch (error) {
+      console.log('Error enviando copia por correo:', error)
+    }
+
+    // Abrir WhatsApp con mensaje prellenado
+    const mensajeWhatsApp = encodeURIComponent(
+      `Hola, soy ${formData.nombre}${formData.telefono ? ` (Tel: ${formData.telefono})` : ''}.\n\n${formData.mensaje}`
+    )
+    const whatsappUrl = `https://wa.me/message/IOBBJVBBVWNOI1?text=${mensajeWhatsApp}`
     window.open(whatsappUrl, '_blank')
+    
+    // Reset
+    setSending(false)
+    setShowForm(false)
+    setFormData({ nombre: '', telefono: '', mensaje: '' })
+    setSelectedService('')
     setIsOpen(false)
+  }
+
+  const handleDirectWhatsApp = () => {
+    setSelectedService('Contacto Directo')
+    setFormData(prev => ({ ...prev, mensaje: 'Hola, necesito información sobre sus servicios de grúas industriales.' }))
+    setShowForm(true)
   }
 
   return (
@@ -79,39 +134,104 @@ export function WhatsappWidget() {
               </div>
             </div>
 
-            {/* Content simplificado */}
+            {/* Content */}
             <div className="p-3 space-y-3 overflow-y-auto max-h-[50vh] sm:max-h-[60vh]">
-              {/* Opciones comerciales mejoradas */}
-              <div className="space-y-2">
-                {quickOptions.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={handleWhatsAppClick}
-                    className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-50 transition-all group text-left border border-gray-100 hover:border-gray-200 hover:shadow-sm"
-                  >
-                    <div className={`w-10 h-10 ${option.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm`}>
-                      <option.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-gray-900 text-sm truncate">{option.title}</div>
-                      <div className="text-xs text-gray-600 truncate">{option.description}</div>
-                    </div>
-                  </button>
-                ))}
-              </div>
+              {!showForm ? (
+                <>
+                  {/* Opciones de servicio */}
+                  <div className="space-y-2">
+                    {quickOptions.map((option, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleOptionClick(option.service)}
+                        className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-50 transition-all group text-left border border-gray-100 hover:border-gray-200 hover:shadow-sm"
+                      >
+                        <div className={`w-10 h-10 ${option.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm`}>
+                          <option.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-semibold text-gray-900 text-sm truncate">{option.title}</div>
+                          <div className="text-xs text-gray-600 truncate">{option.description}</div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
 
-              {/* Botón principal prominente */}
-              <div className="border-t pt-3">
-                <button
-                  onClick={handleWhatsAppClick}
-                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>💬 Chatear por WhatsApp</span>
-                </button>
-              </div>
+                  {/* Botón directo */}
+                  <div className="border-t pt-3">
+                    <button
+                      onClick={handleDirectWhatsApp}
+                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      <span>💬 Chatear por WhatsApp</span>
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Mini Formulario */}
+                  <div className="space-y-3">
+                    <div className="bg-equiser-blue/10 p-2 rounded-lg">
+                      <p className="text-xs text-equiser-blue font-medium">📝 {selectedService}</p>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                        <input
+                          type="text"
+                          placeholder="Tu nombre *"
+                          value={formData.nombre}
+                          onChange={(e) => setFormData(prev => ({ ...prev, nombre: e.target.value }))}
+                          className="w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:border-equiser-yellow focus:ring-1 focus:ring-equiser-yellow outline-none"
+                        />
+                      </div>
+                      
+                      <div className="relative">
+                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                        <input
+                          type="tel"
+                          placeholder="Teléfono (opcional)"
+                          value={formData.telefono}
+                          onChange={(e) => setFormData(prev => ({ ...prev, telefono: e.target.value }))}
+                          className="w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:border-equiser-yellow focus:ring-1 focus:ring-equiser-yellow outline-none"
+                        />
+                      </div>
+                      
+                      <div className="relative">
+                        <FileText className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
+                        <textarea
+                          placeholder="Mensaje"
+                          value={formData.mensaje}
+                          onChange={(e) => setFormData(prev => ({ ...prev, mensaje: e.target.value }))}
+                          rows={2}
+                          className="w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:border-equiser-yellow focus:ring-1 focus:ring-equiser-yellow outline-none resize-none"
+                        />
+                      </div>
+                    </div>
 
-              {/* Footer compacto */}
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => { setShowForm(false); setSelectedService(''); }}
+                        className="flex-1 py-2.5 px-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50"
+                      >
+                        ← Volver
+                      </button>
+                      <button
+                        onClick={handleSubmitAndWhatsApp}
+                        disabled={sending}
+                        className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2.5 px-3 rounded-lg text-sm flex items-center justify-center space-x-1 disabled:opacity-50"
+                      >
+                        <Send className="w-4 h-4" />
+                        <span>{sending ? 'Enviando...' : 'Enviar'}</span>
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* Footer */}
               <div className="text-center">
                 <p className="text-xs text-gray-500">
                   ⚡ <span className="font-semibold text-equiser-yellow">Respuesta garantizada en 2 minutos</span>
