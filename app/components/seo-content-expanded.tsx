@@ -52,15 +52,15 @@ export function SEOContentExpanded() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 25-50 toneladas:</strong> Perfectas para proyectos pequeños a medianos, montaje de estructuras metálicas ligeras, mantenimiento industrial y obras de construcción urbana.</span>
+                  <span className="text-black"><strong>Grúas de 25-50 toneladas:</strong> Perfectas para proyectos pequeños a medianos, montaje de estructuras metálicas ligeras, mantenimiento industrial y obras de construcción urbana.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 130-300 toneladas:</strong> Aplicaciones industriales estándar como izamiento de transformadores eléctricos, turbinas, tanques de almacenamiento y equipos petroquímicos.</span>
+                  <span className="text-black"><strong>Grúas de 130-300 toneladas:</strong> Aplicaciones industriales estándar como izamiento de transformadores eléctricos, turbinas, tanques de almacenamiento y equipos petroquímicos.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 450-600 toneladas:</strong> Para proyectos de máxima complejidad en refinerías, plantas siderúrgicas y complejos petroleros con cargas críticas.</span>
+                  <span className="text-black"><strong>Grúas de 450-600 toneladas:</strong> Para proyectos de máxima complejidad en refinerías, plantas siderúrgicas y complejos petroleros con cargas críticas.</span>
                 </li>
               </ul>
               <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-equiser-blue">
@@ -88,15 +88,15 @@ export function SEOContentExpanded() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 300-600 toneladas:</strong> Industrial pesado en plantas petroquímicas, refinerías y proyectos de infraestructura portuaria.</span>
+                  <span className="text-black"><strong>Grúas de 300-600 toneladas:</strong> Industrial pesado en plantas petroquímicas, refinerías y proyectos de infraestructura portuaria.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 800-1200 toneladas:</strong> Mega proyectos en la Faja Petrolífera del Orinoco, complejos siderúrgicos SIDOR y desarrollos energéticos.</span>
+                  <span className="text-black"><strong>Grúas de 800-1200 toneladas:</strong> Mega proyectos en la Faja Petrolífera del Orinoco, complejos siderúrgicos SIDOR y desarrollos energéticos.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-equiser-yellow mr-2 mt-1 flex-shrink-0" />
-                  <span><strong>Grúas de 1600 toneladas:</strong> La mayor capacidad disponible en Venezuela para proyectos únicos que requieren precisión extrema.</span>
+                  <span className="text-black"><strong>Grúas de 1600 toneladas:</strong> La mayor capacidad disponible en Venezuela para proyectos únicos que requieren precisión extrema.</span>
                 </li>
               </ul>
               <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-equiser-yellow">
