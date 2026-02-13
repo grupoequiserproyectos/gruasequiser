@@ -7,13 +7,11 @@ import path from 'path'
 
 export const dynamic = 'force-dynamic'
 
-// 📧 CONFIGURACIÓN DE CORREOS DESTINATARIOS - ACTUALIZADO CON 5 CORREOS
+// 📧 CONFIGURACIÓN DE CORREOS DESTINATARIOS - 3 CORREOS
 const EMAIL_RECIPIENTS = [
-  'equiserdominios@gmail.com',
-  'equisercadominios@gmail.com',
-  'marketingimpulsoai@gmail.com',
-  'info@gruasequiser.com',
-  'direccionmercadeo@gruasequiser.com'
+  'cranesequiser@gmail.com',
+  'direccionmercadeo@gruasequiser.com',
+  'info@gruasequiser.com'
 ]
 
 // Sistema de logging mejorado
