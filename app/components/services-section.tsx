@@ -126,6 +126,7 @@ export function ServicesSection() {
             </p>
             <button
               onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
+              aria-label="Solicitar cotización de servicios por WhatsApp"
               className="equiser-yellow equiser-yellow-hover text-equiser-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg text-sm sm:text-base w-full sm:w-auto"
             >
               {t('ctaButton')}

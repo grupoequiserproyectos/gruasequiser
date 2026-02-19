@@ -303,14 +303,14 @@ export function GaleriaCarrusel() {
               >
                 <div className="text-center">
                   <p className="text-3xl font-black text-equiser-blue mb-1">
-                    {currentSlide + 1}<span className="text-gray-400 text-2xl">/{carouselItems.length}</span>
+                    {currentSlide + 1}<span className="text-gray-700 text-2xl">/{carouselItems.length}</span>
                   </p>
                   <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide">
                     {t('projects')}
                   </p>
                 </div>
                 <div className="mt-2 pt-2 border-t border-gray-200">
-                  <p className="text-xs text-gray-500 font-medium">
+                  <p className="text-xs text-gray-700 font-medium">
                     30+ {t('yearsExperience')}
                   </p>
                 </div>

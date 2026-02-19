@@ -140,10 +140,12 @@ export function IndustrialFAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
+                aria-label={`${openIndex === index ? 'Cerrar' : 'Abrir'} pregunta: ${faq.question}`}
                 className="w-full px-6 py-5 flex items-center justify-between text-left transition-all duration-300 hover:shadow-md"
               >
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="mt-1">
+                  <div className="mt-1" aria-hidden="true">
                     {faq.icon}
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight pr-4">
@@ -151,9 +153,10 @@ export function IndustrialFAQSection() {
                   </h3>
                 </div>
                 <ChevronDown 
-                  className={`w-6 h-6 text-gray-600 transition-transform duration-300 flex-shrink-0 ${
+                  className={`w-6 h-6 text-gray-700 transition-transform duration-300 flex-shrink-0 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
+                  aria-hidden="true"
                 />
               </button>
               

@@ -127,9 +127,10 @@ export function WhatsappWidget() {
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
+                  aria-label="Cerrar widget de WhatsApp"
                   className="w-7 h-7 bg-equiser-blue/20 rounded-full flex items-center justify-center hover:bg-equiser-blue/30 transition-colors"
                 >
-                  <X className="w-4 h-4 text-equiser-blue" />
+                  <X className="w-4 h-4 text-equiser-blue" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -144,6 +145,7 @@ export function WhatsappWidget() {
                       <button
                         key={index}
                         onClick={() => handleOptionClick(option.service)}
+                        aria-label={`Solicitar ${option.service}`}
                         className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-50 transition-all group text-left border border-gray-100 hover:border-gray-200 hover:shadow-sm"
                       >
                         <div className={`w-10 h-10 ${option.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm`}>
@@ -161,6 +163,7 @@ export function WhatsappWidget() {
                   <div className="border-t pt-3">
                     <button
                       onClick={handleDirectWhatsApp}
+                      aria-label="Iniciar chat por WhatsApp"
                       className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2"
                     >
                       <MessageCircle className="w-5 h-5" />
@@ -214,13 +217,15 @@ export function WhatsappWidget() {
                     <div className="flex space-x-2">
                       <button
                         onClick={() => { setShowForm(false); setSelectedService(''); }}
-                        className="flex-1 py-2.5 px-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50"
+                        aria-label="Volver a opciones de servicio"
+                        className="flex-1 py-2.5 px-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50"
                       >
                         ← Volver
                       </button>
                       <button
                         onClick={handleSubmitAndWhatsApp}
                         disabled={sending}
+                        aria-label="Enviar formulario y abrir WhatsApp"
                         className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2.5 px-3 rounded-lg text-sm flex items-center justify-center space-x-1 disabled:opacity-50"
                       >
                         <Send className="w-4 h-4" />
@@ -233,10 +238,10 @@ export function WhatsappWidget() {
 
               {/* Footer */}
               <div className="text-center">
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-700">
                   ⚡ <span className="font-semibold text-equiser-yellow">Respuesta garantizada en 2 minutos</span>
                 </p>
-                <p className="text-xs text-gray-400 mt-1">
+                <p className="text-xs text-gray-600 mt-1">
                   🏗️ Equipos certificados • 24/7 disponible
                 </p>
               </div>
@@ -248,6 +253,8 @@ export function WhatsappWidget() {
       {/* Botón principal mejorado */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Cerrar chat de WhatsApp" : "Abrir chat de WhatsApp"}
+        aria-expanded={isOpen}
         className="relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full shadow-2xl flex items-center justify-center hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -261,7 +268,7 @@ export function WhatsappWidget() {
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-6 h-6 sm:w-8 sm:h-8 text-equiser-blue" />
+              <X className="w-6 h-6 sm:w-8 sm:h-8 text-equiser-blue" aria-hidden="true" />
             </motion.div>
           ) : (
             <motion.div
@@ -271,7 +278,7 @@ export function WhatsappWidget() {
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-equiser-blue" />
+              <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-equiser-blue" aria-hidden="true" />
             </motion.div>
           )}
         </AnimatePresence>

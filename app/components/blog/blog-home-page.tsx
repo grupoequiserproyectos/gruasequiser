@@ -234,7 +234,7 @@ export function BlogHomePage() {
 
               {/* Búsqueda */}
               <div className="max-w-2xl mx-auto relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-700 w-5 h-5" />
                 <input
                   type="text"
                   placeholder={t('searchPlaceholder')}
@@ -257,7 +257,7 @@ export function BlogHomePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center justify-center mb-8">
-              <Filter className="w-5 h-5 text-gray-500 mr-3" />
+              <Filter className="w-5 h-5 text-gray-700 mr-3" />
               <span className="text-gray-700 font-medium">{t('categories')}:</span>
             </div>
             
@@ -269,6 +269,8 @@ export function BlogHomePage() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
+                  aria-label={`Filtrar por categoría: ${translatedCategory}`}
+                  aria-pressed={activeCategory === category}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:scale-105 ${
                     activeCategory === category
                       ? 'border-2 border-equiser-blue shadow-blue-200 scale-105'
@@ -343,11 +345,11 @@ export function BlogHomePage() {
                           <p className="text-gray-600 mb-4 text-sm line-clamp-3">{article.excerpt}</p>
                           
                           <div className="flex items-center justify-between mb-4">
-                            <div className="flex items-center text-sm text-gray-500">
+                            <div className="flex items-center text-sm text-gray-700">
                               <User className="w-4 h-4 mr-1" />
                               <span>{article.author?.name || 'Autor'}</span>
                             </div>
-                            <div className="flex items-center text-sm text-gray-500">
+                            <div className="flex items-center text-sm text-gray-700">
                               <Clock className="w-4 h-4 mr-1" />
                               <span>{article.readTime}</span>
                             </div>
@@ -366,10 +368,11 @@ export function BlogHomePage() {
                             </div>
                             <button
                               onClick={() => router.push(`/blog/${article.slug}`)}
+                              aria-label={`Leer artículo completo: ${article.title}`}
                               className="inline-flex items-center text-equiser-blue hover:text-blue-800 font-semibold text-sm transition-colors duration-200 cursor-pointer"
                             >
                               {t('readMore')}
-                              <ArrowRight className="w-4 h-4 ml-1" />
+                              <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
                             </button>
                           </div>
                         </div>
@@ -382,7 +385,7 @@ export function BlogHomePage() {
             </div>
           ) : (
             <div className="text-center py-16">
-              <div className="text-gray-500 text-lg">{t('noResults')}</div>
+              <div className="text-gray-700 text-lg">{t('noResults')}</div>
               <Button
                 onClick={() => {
                   setSearchTerm('')

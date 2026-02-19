@@ -313,19 +313,20 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
                 <span className="bg-equiser-yellow text-equiser-blue px-4 py-2 rounded-full font-bold">
                   {displayCategory}
                 </span>
-                <div className="flex items-center text-gray-500 text-sm">
+                <div className="flex items-center text-gray-700 text-sm">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>{formatDate(articleDate)}</span>
                 </div>
-                <div className="flex items-center text-gray-500 text-sm">
+                <div className="flex items-center text-gray-700 text-sm">
                   <Clock className="w-4 h-4 mr-2" />
                   <span>{article.readTime || article.readingTime} min de lectura</span>
                 </div>
                 <button
                   onClick={handleShare}
-                  className="flex items-center text-gray-500 hover:text-equiser-blue text-sm transition-colors"
+                  aria-label="Compartir artículo"
+                  className="flex items-center text-gray-700 hover:text-equiser-blue text-sm transition-colors"
                 >
-                  <Share2 className="w-4 h-4 mr-2" />
+                  <Share2 className="w-4 h-4 mr-2" aria-hidden="true" />
                   Compartir
                 </button>
               </div>
@@ -552,7 +553,7 @@ export function BlogArticlePage({ article, locale = 'es' }: BlogArticlePageProps
                       {relatedArticle.excerpt}
                     </p>
                     
-                    <div className="flex items-center text-xs text-gray-500 mb-4">
+                    <div className="flex items-center text-xs text-gray-700 mb-4">
                       <Calendar className="w-3 h-3 mr-1" />
                       <span>{formatDate(relatedArticle.publishDate || relatedArticle.date || new Date().toISOString())}</span>
                       <span className="mx-2">•</span>

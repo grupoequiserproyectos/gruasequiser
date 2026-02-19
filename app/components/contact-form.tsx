@@ -198,6 +198,7 @@ export function ContactForm() {
           <div className="mt-8">
             <button
               onClick={() => setShowSuccess(false)}
+              aria-label="Enviar otro mensaje de contacto"
               className="px-8 py-3 bg-white rounded-full font-bold transition-all duration-300 hover:scale-105"
               style={{ color: '#1E3A8A' }}
             >

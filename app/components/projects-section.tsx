@@ -367,6 +367,8 @@ export function ProjectsSection() {
                   <button
                     key={sector.id}
                     onClick={() => setActiveFilter(sector.id)}
+                    aria-label={`Filtrar proyectos por: ${sector.name}`}
+                    aria-pressed={activeFilter === sector.id}
                     className={`px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg ${
                       activeFilter === sector.id
                         ? 'text-equiser-blue border-4 border-equiser-blue shadow-yellow-200'

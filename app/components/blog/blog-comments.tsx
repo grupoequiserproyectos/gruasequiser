@@ -170,7 +170,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
               />
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-700">
                 Tu email no será publicado. Los campos obligatorios están marcados con *
               </p>
               <Button
@@ -208,7 +208,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
                 <div className="flex-1">
                   <div className="flex items-center space-x-4 mb-2">
                     <h4 className="font-semibold text-gray-900">{comment.author}</h4>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-700">
                       <Calendar className="w-4 h-4 mr-1" />
                       <span>{formatDate(comment.date)}</span>
                     </div>
@@ -224,7 +224,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
                         <div key={reply.id} className="bg-gray-50 rounded-lg p-4">
                           <div className="flex items-center space-x-4 mb-2">
                             <h5 className="font-semibold text-equiser-blue">{reply.author}</h5>
-                            <div className="flex items-center text-sm text-gray-500">
+                            <div className="flex items-center text-sm text-gray-700">
                               <Calendar className="w-3 h-3 mr-1" />
                               <span>{formatDate(reply.date)}</span>
                             </div>
@@ -244,7 +244,7 @@ export function BlogComments({ articleSlug }: BlogCommentsProps) {
 
         {comments.length === 0 && (
           <div className="text-center py-12">
-            <MessageCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <MessageCircle className="w-16 h-16 text-gray-600 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">
               Sé el primero en comentar
             </h3>

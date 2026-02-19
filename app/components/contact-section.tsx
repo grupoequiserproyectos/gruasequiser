@@ -226,6 +226,7 @@ export function ContactSection() {
                           window.open(info.actionUrl, '_blank')
                         }
                       }}
+                      aria-label={info.action}
                       className="px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
                       style={{
                         background: info.buttonBg,
@@ -250,6 +251,7 @@ export function ContactSection() {
           >
             <button
               onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
+              aria-label="Solicitar cotización gratuita por WhatsApp"
               className="px-16 py-6 text-white font-bold rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl inline-flex items-center gap-4 text-xl group animate-pulse"
               style={{
                 background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
@@ -389,6 +391,7 @@ export function ContactSection() {
                 <div className="text-center mt-8">
                   <button
                     onClick={() => window.open('https://www.google.com/maps/place/Equiser+Venezuela+%7C+Gruas+Telescópicas+e+Industriales/@10.4840621,-68.1654391,17z/', '_blank')}
+                    aria-label="Ver ubicación en Google Maps"
                     className="px-12 py-4 text-lg font-bold text-white rounded-full shadow-lg hover:scale-105 transition-all duration-300 inline-flex items-center gap-3"
                     style={{
                       background: 'linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%)',
@@ -399,7 +402,7 @@ export function ContactSection() {
                     }}
                   >
                     {t('viewGoogleMaps')}
-                    <span className="text-lg">→</span>
+                    <span className="text-lg" aria-hidden="true">→</span>
                   </button>
                 </div>
 

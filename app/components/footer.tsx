@@ -45,9 +45,10 @@ export function Footer() {
       {/* Botón scroll to top */}
       <button
         onClick={scrollToTop}
+        aria-label="Volver al inicio de la página"
         className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 equiser-blue equiser-blue-hover rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
       >
-        <ArrowUp className="w-6 h-6 text-white" />
+        <ArrowUp className="w-6 h-6 text-white" aria-hidden="true" />
       </button>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +80,7 @@ export function Footer() {
                 </div>
               </div>
               
-              <p className="text-gray-300 leading-relaxed mb-6 text-sm">
+              <p className="text-gray-200 leading-relaxed mb-6 text-sm">
                 {t('description')}
               </p>
 
@@ -115,7 +116,7 @@ export function Footer() {
                     <Twitter className="w-6 h-6" />
                   </Link>
                 </div>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-200 text-sm">
                   {t('followDesc')}
                 </p>
               </div>
@@ -125,14 +126,14 @@ export function Footer() {
             <div>
               <h4 className="text-xl font-bold mb-6">{t('contactTitle')}</h4>
               <div className="space-y-4">
-                <div className="flex items-start text-gray-300">
+                <div className="flex items-start text-gray-200">
                   <MapPin className="w-5 h-5 text-equiser-yellow mr-3 flex-shrink-0 mt-1" />
                   <span className="text-sm">
                     {t('address1')}, {t('address2')}
                   </span>
                 </div>
                 
-                <div className="flex items-center text-gray-300">
+                <div className="flex items-center text-gray-200">
                   <Phone className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
                     <div>+58 422-6347624</div>
@@ -140,7 +141,7 @@ export function Footer() {
                   </div>
                 </div>
                 
-                <div className="flex items-center text-gray-300">
+                <div className="flex items-center text-gray-200">
                   <Mail className="w-5 h-5 text-equiser-yellow mr-3" />
                   <div className="text-sm">
                     <div>info@gruasequiser.com</div>
@@ -148,7 +149,7 @@ export function Footer() {
                   </div>
                 </div>
 
-                <div className="flex items-center text-gray-300">
+                <div className="flex items-center text-gray-200">
                   <Clock className="w-5 h-5 text-equiser-yellow mr-3" />
                   <span className="text-sm font-medium">{t('availability247')}</span>
                 </div>
@@ -170,7 +171,7 @@ export function Footer() {
                   <li key={service}>
                     <button
                       onClick={() => window.open('https://wa.me/message/IOBBJVBBVWNOI1', '_blank')}
-                      className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm text-left"
+                      className="text-gray-300 hover:text-equiser-yellow transition-colors duration-200 text-sm text-left"
                     >
                       {service}
                     </button>
@@ -192,7 +193,7 @@ export function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-gray-400 hover:text-equiser-yellow transition-colors duration-200 text-sm"
+                      className="text-gray-300 hover:text-equiser-yellow transition-colors duration-200 text-sm"
                     >
                       {item.label}
                     </Link>
@@ -211,7 +212,7 @@ export function Footer() {
 
               <div className="mt-8">
                 <h5 className="text-lg font-semibold mb-4">{t('sectorsTitle')}</h5>
-                <div className="text-sm text-gray-400 space-y-1">
+                <div className="text-sm text-gray-300 space-y-1">
                   <div>• {t('sector1')}</div>
                   <div>• {t('sector2')}</div>
                   <div>• {t('sector3')}</div>
@@ -335,20 +336,20 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 gap-4">
             {/* Columna izquierda: Copyright */}
             <div className="text-center lg:text-left flex-1">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 {t('copyright')}
               </p>
-              <p className="text-gray-500 text-xs mt-1">
+              <p className="text-gray-300 text-xs mt-1">
                 {t('rif')}
               </p>
-              <div className="text-xs text-gray-400 mt-2">
+              <div className="text-xs text-gray-300 mt-2">
                 {t('socialIg')} | {t('socialTw')} | {t('socialFb')}
               </div>
             </div>
             
             {/* Columna central: Marcas Premium */}
             <div className="flex items-center justify-center text-center">
-              <div className="text-xs text-gray-400">
+              <div className="text-xs text-gray-300">
                 <div 
                   className="font-bold text-lg px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
                   style={{
@@ -363,14 +364,14 @@ export function Footer() {
                   <span className="text-base mr-2">⭐</span>
                   {t('premiumBrands')}
                 </div>
-                <div className="mt-2 text-gray-500">{t('brands')}</div>
+                <div className="mt-2 text-gray-300">{t('brands')}</div>
               </div>
             </div>
 
             {/* Columna derecha: Selector de Idioma - OPTIMIZADO MOBILE Y DESKTOP */}
             <div className="flex items-center justify-center lg:justify-end">
               <div className="flex items-center gap-3 bg-gray-800 rounded-full px-4 py-3 shadow-lg border-2 border-gray-700 hover:border-equiser-yellow transition-colors duration-300">
-                <span className="text-gray-300 text-sm font-semibold hidden sm:inline">
+                <span className="text-gray-200 text-sm font-semibold hidden sm:inline">
                   {t('languageLabel')}
                 </span>
                 <div className="flex items-center gap-3">

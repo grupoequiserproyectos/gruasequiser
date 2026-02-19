@@ -76,6 +76,8 @@ export function LanguageSwitcher() {
                 <button
                   key={language.code}
                   onClick={() => handleLanguageChange(language.code)}
+                  aria-label={`Cambiar idioma a ${language.name}`}
+                  aria-pressed={currentLocale === language.code}
                   className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors ${
                     currentLocale === language.code ? 'bg-blue-50' : ''
                   }`}
